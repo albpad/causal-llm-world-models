@@ -1,0 +1,3086 @@
+{
+  "kimi-k2.5": {
+    "sid": 34,
+    "total": 153,
+    "sid_normalised": 0.2222222222222222,
+    "details": [
+      {
+        "pert_id": "A1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.07692307692307693,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P1",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 0.972972972972973,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "tlm",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.45454545454545453,
+        "significant": true,
+        "wrong": true,
+        "reason": "unexpected_reduction"
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 1.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.3333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "exclude",
+        "base_rate": 0.17391304347826086,
+        "pert_rate": 0.3333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "tlm",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.42857142857142855,
+        "significant": true,
+        "wrong": true,
+        "reason": "unexpected_reduction"
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 0.972972972972973,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "rt_accelerated",
+        "expected": "maintain",
+        "base_rate": 0.02564102564102564,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.3333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "exclude",
+        "base_rate": 0.17391304347826086,
+        "pert_rate": 0.4,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A2-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.3333333333333333,
+        "pert_rate": 0.1111111111111111,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A2-P1",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 0.7560975609756098,
+        "pert_rate": 0.7777777777777778,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P1",
+        "treatment": "rt_accelerated",
+        "expected": "maintain",
+        "base_rate": 0.023809523809523808,
+        "pert_rate": 0.125,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.3333333333333333,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A2-P2",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 0.7560975609756098,
+        "pert_rate": 0.875,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P2",
+        "treatment": "rt_accelerated",
+        "expected": "maintain",
+        "base_rate": 0.023809523809523808,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "tlm",
+        "expected": "maintain",
+        "base_rate": 0.3333333333333333,
+        "pert_rate": 0.16666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 1.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.18181818181818182,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.8333333333333334,
+        "pert_rate": 0.8333333333333334,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "ophl_any",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P4",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.3333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.75,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.75,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "ophl_any",
+        "expected": "exclude",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.2,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "ophl_type_ii",
+        "expected": "exclude",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "ophl_type_i",
+        "expected": "maintain",
+        "base_rate": 0.5333333333333333,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P3",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P3",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P4",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.8333333333333334,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P4",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 0.6666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.4,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.6666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.5333333333333333,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.16666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.3333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.8571428571428571,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.07692307692307693,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.0,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P1",
+        "treatment": "ophl_any",
+        "expected": "exclude",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.25,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.0,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.42857142857142855,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "ophl_type_ii",
+        "expected": "exclude",
+        "base_rate": 0.8,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.5714285714285714,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.75,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.42857142857142855,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P4",
+        "treatment": "ophl_any",
+        "expected": "exclude",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P4",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P5",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.0,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P5",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.42857142857142855,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P5",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS01",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS01",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.7857142857142857,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS02",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS02",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS03",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS03",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.9,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS04",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS04",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.75,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS05",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.14285714285714285,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS05",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS06",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.35714285714285715,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS06",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.9,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS07",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS07",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.7692307692307693,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS08",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.07142857142857142,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS08",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS09",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.06666666666666667,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS09",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 1.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS10",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS10",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.9285714285714286,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL01",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": true,
+        "reason": "unexpected_reduction"
+      },
+      {
+        "pert_id": "G1-REL02",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.7333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL03",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.3076923076923077,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL04",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ECOG-TUM",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ECOG-COM",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.23076923076923078,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ECOG-COM",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.4166666666666667,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-GREY-S70",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.7333333333333333,
+        "pert_rate": 0.25,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS11",
+        "treatment": "concurrent_crt",
+        "expected": "exclude",
+        "base_rate": 0.5384615384615384,
+        "pert_rate": 0.6,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.6153846153846154,
+        "pert_rate": 0.9230769230769231,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P1",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.6153846153846154,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "exclude",
+        "base_rate": 0.0,
+        "pert_rate": 0.4,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.6153846153846154,
+        "pert_rate": 0.07142857142857142,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.9285714285714286,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P3",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.6153846153846154,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.9285714285714286,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P4",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.6153846153846154,
+        "pert_rate": 0.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P4",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 1.0,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P1",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.0,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H2-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9166666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9166666666666666,
+        "pert_rate": 0.9285714285714286,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.3333333333333333,
+        "pert_rate": 0.13333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9166666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.5714285714285714,
+        "pert_rate": 0.06666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P1",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 0.2,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.42857142857142855,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P3",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.8181818181818182,
+        "pert_rate": 0.8333333333333334,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "I1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.5714285714285714,
+        "pert_rate": 0.625,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P3",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.8181818181818182,
+        "pert_rate": 0.75,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.23076923076923078,
+        "pert_rate": 0.3333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.6923076923076923,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.23076923076923078,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.23076923076923078,
+        "pert_rate": 0.16666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P4",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.8181818181818182,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P5",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.9166666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P6",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P7",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.75,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      }
+    ]
+  },
+  "llama-3.1-8b": {
+    "sid": 44,
+    "total": 154,
+    "sid_normalised": 0.2857142857142857,
+    "details": [
+      {
+        "pert_id": "A1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A1-P1",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "tlm",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.03333333333333333,
+        "pert_rate": 0.23333333333333334,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.0,
+        "pert_rate": 0.2727272727272727,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "exclude",
+        "base_rate": 0.3,
+        "pert_rate": 0.2,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "tlm",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "rt_accelerated",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "exclude",
+        "base_rate": 0.3,
+        "pert_rate": 0.2857142857142857,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A2-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A2-P1",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P1",
+        "treatment": "rt_accelerated",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "A2-P2",
+        "treatment": "rt_alone",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P2",
+        "treatment": "rt_accelerated",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "tlm",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.4666666666666667,
+        "pert_rate": 0.7666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "A2-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6666666666666666,
+        "pert_rate": 0.4666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P1",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "ophl_any",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.03333333333333333,
+        "pert_rate": 0.06666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P3",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P4",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P4",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P4",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P5",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P6",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P7",
+        "treatment": "ophl_type_ii",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "ophl_any",
+        "expected": "exclude",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P8",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.03333333333333333,
+        "pert_rate": 0.16666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "B1-P9",
+        "treatment": "ophl_type_ii",
+        "expected": "exclude",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6086956521739131,
+        "pert_rate": 0.8125,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P1",
+        "treatment": "ophl_type_i",
+        "expected": "maintain",
+        "base_rate": 0.9,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6086956521739131,
+        "pert_rate": 0.7619047619047619,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P2",
+        "treatment": "ophl_type_iib",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P3",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6086956521739131,
+        "pert_rate": 0.65,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P4",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P4",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6086956521739131,
+        "pert_rate": 0.6875,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "C1-P5",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.6086956521739131,
+        "pert_rate": 0.7142857142857143,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.9655172413793104,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "D1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P1",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P1",
+        "treatment": "ophl_any",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.36666666666666664,
+        "pert_rate": 0.5666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.36666666666666664,
+        "pert_rate": 0.23333333333333334,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.36666666666666664,
+        "pert_rate": 0.2,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P4",
+        "treatment": "ophl_any",
+        "expected": "exclude",
+        "base_rate": 1.0,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P4",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.36666666666666664,
+        "pert_rate": 0.36666666666666664,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P5",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "F1-P5",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.9666666666666667,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "F1-P5",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.36666666666666664,
+        "pert_rate": 0.4666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS01",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS01",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.7,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS02",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS02",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.9090909090909091,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS03",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS03",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS04",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS04",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS05",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS05",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.9,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS06",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS06",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS07",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS07",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.9230769230769231,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS08",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS08",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS09",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS09",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.9285714285714286,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS10",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ABS10",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL01",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL02",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL03",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-REL04",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.9666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ECOG-TUM",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ECOG-COM",
+        "treatment": "cisplatin_high_dose",
+        "expected": "exclude",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.7,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "G1-ECOG-COM",
+        "treatment": "cetuximab_concurrent",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.8461538461538461,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-GREY-S70",
+        "treatment": "cisplatin_high_dose",
+        "expected": "maintain",
+        "base_rate": 0.9333333333333333,
+        "pert_rate": 0.7666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "G1-ABS11",
+        "treatment": "concurrent_crt",
+        "expected": "exclude",
+        "base_rate": 0.9285714285714286,
+        "pert_rate": 1.0,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.8333333333333334,
+        "pert_rate": 0.7666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P1",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.7,
+        "pert_rate": 0.5333333333333333,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "exclude",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.06666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P2",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.8333333333333334,
+        "pert_rate": 0.6,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.6666666666666666,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P3",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.7,
+        "pert_rate": 0.3793103448275862,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.5333333333333333,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H1-P4",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.7,
+        "pert_rate": 0.5666666666666667,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "H1-P4",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.06666666666666667,
+        "pert_rate": 0.9666666666666667,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P1",
+        "treatment": "rt_alone",
+        "expected": "exclude",
+        "base_rate": 0.8333333333333334,
+        "pert_rate": 0.3333333333333333,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.3,
+        "pert_rate": 0.8666666666666667,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.3,
+        "pert_rate": 0.7333333333333333,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 1.0,
+        "pert_rate": 0.8666666666666667,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "H2-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.3,
+        "pert_rate": 0.3,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.3684210526315789,
+        "pert_rate": 0.6521739130434783,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.3684210526315789,
+        "pert_rate": 0.6470588235294118,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P3",
+        "treatment": "tlm",
+        "expected": "exclude",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.8333333333333334,
+        "significant": false,
+        "wrong": true,
+        "reason": "no_shift_when_expected"
+      },
+      {
+        "pert_id": "I1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.7,
+        "pert_rate": 0.8,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "I1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.7142857142857143,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P1",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.4,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P1",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.3333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P1",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.6666666666666666,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P2",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.7333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P3",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.7666666666666667,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P3",
+        "treatment": "ict_rt",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.6666666666666666,
+        "significant": true,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P3",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P4",
+        "treatment": "concurrent_crt",
+        "expected": "maintain",
+        "base_rate": 0.16666666666666666,
+        "pert_rate": 0.5,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P4",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.6333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P5",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.7333333333333333,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      },
+      {
+        "pert_id": "J1-P6",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.4482758620689655,
+        "significant": true,
+        "wrong": true,
+        "reason": "unexpected_reduction"
+      },
+      {
+        "pert_id": "J1-P7",
+        "treatment": "total_laryngectomy",
+        "expected": "maintain",
+        "base_rate": 0.8666666666666667,
+        "pert_rate": 0.6,
+        "significant": false,
+        "wrong": false,
+        "reason": ""
+      }
+    ]
+  }
+}

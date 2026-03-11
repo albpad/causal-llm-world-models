@@ -1,0 +1,289 @@
+{
+  "kimi-k2.5": {
+    "S5R": {
+      "detected": false,
+      "n_probes": 20,
+      "detection_rate": 0.05
+    },
+    "S22": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "S23R": {
+      "detected": false,
+      "n_probes": 25,
+      "detection_rate": 0.24
+    },
+    "S4R": {
+      "detected": false,
+      "n_probes": 17,
+      "detection_rate": 0.29411764705882354
+    },
+    "S28": {
+      "detected": false,
+      "n_probes": 24,
+      "detection_rate": 0.20833333333333334
+    },
+    "SA2": {
+      "detected": false,
+      "n_probes": 8,
+      "detection_rate": 0.125
+    },
+    "S8": {
+      "detected": false,
+      "n_probes": 17,
+      "detection_rate": 0.058823529411764705
+    },
+    "S6R": {
+      "detected": false,
+      "n_probes": 31,
+      "detection_rate": 0.0
+    },
+    "S80": {
+      "detected": false,
+      "n_probes": 61,
+      "detection_rate": 0.0
+    },
+    "S7R": {
+      "detected": false,
+      "n_probes": 38,
+      "detection_rate": 0.0
+    },
+    "S14": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S27": {
+      "detected": false,
+      "n_probes": 13,
+      "detection_rate": 0.07692307692307693
+    },
+    "S45": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S46": {
+      "detected": false,
+      "n_probes": 10,
+      "detection_rate": 0.0
+    },
+    "S40R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S41R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S49R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S16R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S39R": {
+      "detected": false,
+      "n_probes": 30,
+      "detection_rate": 0.0
+    },
+    "S42R": {
+      "detected": false,
+      "n_probes": 11,
+      "detection_rate": 0.0
+    },
+    "S17R": {
+      "detected": false,
+      "n_probes": 4,
+      "detection_rate": 0.0
+    },
+    "S18R": {
+      "detected": false,
+      "n_probes": 4,
+      "detection_rate": 0.0
+    },
+    "S10R": {
+      "detected": false,
+      "n_probes": 25,
+      "detection_rate": 0.0
+    },
+    "S9R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S24R": {
+      "detected": false,
+      "n_probes": 15,
+      "detection_rate": 0.0
+    },
+    "S12": {
+      "detected": false,
+      "n_probes": 19,
+      "detection_rate": 0.0
+    },
+    "S43": {
+      "detected": false,
+      "n_probes": 25,
+      "detection_rate": 0.0
+    },
+    "S112": {
+      "detected": false,
+      "n_probes": 5,
+      "detection_rate": 0.0
+    },
+    "S19R": {
+      "detected": false,
+      "n_probes": 42,
+      "detection_rate": 0.0
+    },
+    "S115": {
+      "detected": false,
+      "n_probes": 24,
+      "detection_rate": 0.0
+    },
+    "S38R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S15R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S47R": {
+      "detected": false,
+      "n_probes": 5,
+      "detection_rate": 0.0
+    },
+    "S35R": {
+      "detected": false,
+      "n_probes": 5,
+      "detection_rate": 0.0
+    },
+    "S68R": {
+      "detected": false,
+      "n_probes": 59,
+      "detection_rate": 0.1694915254237288
+    },
+    "S69R": {
+      "detected": false,
+      "n_probes": 35,
+      "detection_rate": 0.02857142857142857
+    },
+    "S77R": {
+      "detected": false,
+      "n_probes": 8,
+      "detection_rate": 0.0
+    },
+    "S52R": {
+      "detected": false,
+      "n_probes": 5,
+      "detection_rate": 0.0
+    },
+    "S70": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S67": {
+      "detected": false,
+      "n_probes": 4,
+      "detection_rate": 0.25
+    },
+    "S55R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "S116": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "S119R": {
+      "detected": false,
+      "n_probes": 14,
+      "detection_rate": 0.07142857142857142
+    },
+    "S31R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "S120R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "S30": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "SA6": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.3333333333333333
+    },
+    "S121R": {
+      "detected": false,
+      "n_probes": 20,
+      "detection_rate": 0.25
+    },
+    "S88": {
+      "detected": false,
+      "n_probes": 18,
+      "detection_rate": 0.2222222222222222
+    },
+    "S84": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.1111111111111111
+    },
+    "S111R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.1111111111111111
+    },
+    "S89": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.3333333333333333
+    },
+    "S13": {
+      "detected": false,
+      "n_probes": 16,
+      "detection_rate": 0.1875
+    },
+    "S75R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S20R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S74R": {
+      "detected": false,
+      "n_probes": 13,
+      "detection_rate": 0.0
+    },
+    "S21": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    }
+  }
+}

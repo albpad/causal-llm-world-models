@@ -1,0 +1,1492 @@
+[
+  {
+    "pert_id": "A1-P1",
+    "base_id": "A1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "A1-P1:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.0,
+    "edges": [
+      "S5R",
+      "S22"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "rt_alone"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "A1-P2",
+    "base_id": "A1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "total_laryngectomy",
+    "test_key": "A1-P2:llama-3.1-8b:total_laryngectomy",
+    "p_value": 1.0,
+    "odds_ratio": 1.0909090909090908,
+    "base_rec_rate": 0.21428571428571427,
+    "pert_rec_rate": 0.2,
+    "jsd": 0.026092019118745917,
+    "overall_jsd": 0.020270339252891893,
+    "edges": [
+      "S23R",
+      "S4R",
+      "S28"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "tlm",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "total_laryngectomy"
+    ],
+    "type": "escalate",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "total_laryngectomy should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "A1-P3",
+    "base_id": "A1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "total_laryngectomy",
+    "test_key": "A1-P3:llama-3.1-8b:total_laryngectomy",
+    "p_value": 0.7115127919911012,
+    "odds_ratio": 0.6818181818181818,
+    "base_rec_rate": 0.21428571428571427,
+    "pert_rec_rate": 0.2857142857142857,
+    "jsd": 0.02731502441341289,
+    "overall_jsd": 0.0054630048826825785,
+    "edges": [
+      "SA2",
+      "S23R",
+      "S8"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "tlm",
+      "rt_accelerated",
+      "rt_alone"
+    ],
+    "exp_exc": [
+      "total_laryngectomy"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "total_laryngectomy should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "A2-P1",
+    "base_id": "A2-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "A2-P1:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.002923425437152478,
+    "edges": [
+      "S7R",
+      "S8"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "rt_accelerated",
+      "rt_alone"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "A2-P2",
+    "base_id": "A2-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "A2-P2:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.005846850874304956,
+    "edges": [
+      "S5R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "rt_accelerated",
+      "rt_alone"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P1",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P1:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.008770276311457435,
+    "edges": [
+      "S7R",
+      "S14",
+      "S27",
+      "S28"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P2",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P2:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.028154120889845407,
+    "edges": [
+      "S45",
+      "S46",
+      "S40R",
+      "S41R",
+      "S49R"
+    ],
+    "exp_rec": [
+      "total_laryngectomy",
+      "concurrent_crt",
+      "ophl_any"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "escalate",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P3",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P3:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.02025210350827417,
+    "edges": [
+      "S7R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P4",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P4:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.020325207137412666,
+    "edges": [
+      "S7R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P5",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P5:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.008770276311457435,
+    "edges": [
+      "S7R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P6",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P6:llama-3.1-8b:tlm",
+    "p_value": 0.4915254237288136,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.023679731614670758,
+    "overall_jsd": 0.02332047521465749,
+    "edges": [
+      "S5R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P7",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P7:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.008770276311457435,
+    "edges": [
+      "S7R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P8",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P8:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.027376007089822962,
+    "edges": [
+      "S16R",
+      "S39R",
+      "S42R"
+    ],
+    "exp_rec": [
+      "concurrent_crt",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm",
+      "surgical_lp",
+      "ophl_any"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P8",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "ophl_any",
+    "test_key": "B1-P8:llama-3.1-8b:ophl_any",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.9666666666666667,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.02310490409482892,
+    "overall_jsd": 0.027376007089822962,
+    "edges": [
+      "S16R",
+      "S39R",
+      "S42R"
+    ],
+    "exp_rec": [
+      "concurrent_crt",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm",
+      "surgical_lp",
+      "ophl_any"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "ophl_any should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P9",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "ophl_type_ii",
+    "test_key": "B1-P9:llama-3.1-8b:ophl_type_ii",
+    "p_value": 0.6119536128456735,
+    "odds_ratio": 3.2222222222222223,
+    "base_rec_rate": 0.9666666666666667,
+    "pert_rec_rate": 0.9,
+    "jsd": 0.04680517381547192,
+    "overall_jsd": 0.01865949628150413,
+    "edges": [
+      "S17R",
+      "S18R"
+    ],
+    "exp_rec": [
+      "ophl_type_iii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "ophl_type_ii",
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "ophl_type_ii should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "B1-P9",
+    "base_id": "B1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "B1-P9:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.01865949628150413,
+    "edges": [
+      "S17R",
+      "S18R"
+    ],
+    "exp_rec": [
+      "ophl_type_iii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "ophl_type_ii",
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "C1-P1",
+    "base_id": "C1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "C1-P1:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.01778711776792294,
+    "edges": [
+      "S10R"
+    ],
+    "exp_rec": [
+      "ict_rt",
+      "concurrent_crt",
+      "ophl_type_i"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "escalate",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "C1-P2",
+    "base_id": "C1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "C1-P2:llama-3.1-8b:tlm",
+    "p_value": 0.4915254237288136,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.023679731614670758,
+    "overall_jsd": 0.03300411059503279,
+    "edges": [
+      "S10R"
+    ],
+    "exp_rec": [
+      "ict_rt",
+      "ophl_type_iib",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "escalate",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "C1-P3",
+    "base_id": "C1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "C1-P3:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.017799912072648107,
+    "edges": [
+      "S9R",
+      "S10R"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "C1-P4",
+    "base_id": "C1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "C1-P4:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": Infinity,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011693701748609913,
+    "overall_jsd": 0.005077135002929054,
+    "edges": [
+      "S24R"
+    ],
+    "exp_rec": [
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "C1-P5",
+    "base_id": "C1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "C1-P5:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.011843129521776049,
+    "edges": [
+      "S12",
+      "S43",
+      "S112"
+    ],
+    "exp_rec": [
+      "ict_rt",
+      "concurrent_crt",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "E1-NULL",
+    "base_id": "E1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "E1-NULL:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": 1.5,
+    "base_rec_rate": 0.6666666666666666,
+    "pert_rec_rate": 0.5714285714285714,
+    "jsd": 0.16806323485163618,
+    "overall_jsd": 0.08342013951630375,
+    "edges": [
+      "S80"
+    ],
+    "exp_rec": [
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm",
+      "nonsurgical_lp",
+      "ophl_any"
+    ],
+    "type": "null",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "E1-NULL",
+    "base_id": "E1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "ophl_any",
+    "test_key": "E1-NULL:llama-3.1-8b:ophl_any",
+    "p_value": 0.6083916083916084,
+    "odds_ratio": 3.0,
+    "base_rec_rate": 0.6,
+    "pert_rec_rate": 0.3333333333333333,
+    "jsd": 0.16561732321357886,
+    "overall_jsd": 0.08342013951630375,
+    "edges": [
+      "S80"
+    ],
+    "exp_rec": [
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm",
+      "nonsurgical_lp",
+      "ophl_any"
+    ],
+    "type": "null",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "ophl_any should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "F1-P1",
+    "base_id": "F1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "F1-P1:llama-3.1-8b:tlm",
+    "p_value": 0.6119536128456735,
+    "odds_ratio": 3.2222222222222223,
+    "base_rec_rate": 0.9666666666666667,
+    "pert_rec_rate": 0.9,
+    "jsd": 0.009316167094629287,
+    "overall_jsd": 0.020663760463338038,
+    "edges": [
+      "S38R",
+      "S39R"
+    ],
+    "exp_rec": [
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm",
+      "ophl_any"
+    ],
+    "type": "escalate",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "F1-P1",
+    "base_id": "F1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "ophl_any",
+    "test_key": "F1-P1:llama-3.1-8b:ophl_any",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.020663760463338038,
+    "edges": [
+      "S38R",
+      "S39R"
+    ],
+    "exp_rec": [
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm",
+      "ophl_any"
+    ],
+    "type": "escalate",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "ophl_any should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "F1-P2",
+    "base_id": "F1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "F1-P2:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.9666666666666667,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.0,
+    "overall_jsd": 0.05179123473902103,
+    "edges": [
+      "S15R"
+    ],
+    "exp_rec": [
+      "concurrent_crt",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "ophl_type_ii",
+      "tlm",
+      "ophl_type_i"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "F1-P4",
+    "base_id": "F1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "ophl_any",
+    "test_key": "F1-P4:llama-3.1-8b:ophl_any",
+    "p_value": 1.0,
+    "odds_ratio": NaN,
+    "base_rec_rate": 1.0,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.0,
+    "overall_jsd": 0.012627607099521545,
+    "edges": [
+      "S24R",
+      "S46"
+    ],
+    "exp_rec": [
+      "concurrent_crt",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "ophl_any"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "ophl_any should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "F1-P5",
+    "base_id": "F1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "F1-P5:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": 2.0714285714285716,
+    "base_rec_rate": 0.9666666666666667,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.002977856944273015,
+    "overall_jsd": 0.022103918632228322,
+    "edges": [
+      "S12",
+      "S43"
+    ],
+    "exp_rec": [
+      "concurrent_crt",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS01",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS01:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.0,
+    "overall_jsd": 0.08515092988011201,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS02",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS02:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.01438410266067108,
+    "overall_jsd": 0.030206277623803027,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS03",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS03:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 0.4827586206896552,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011698658378430857,
+    "overall_jsd": 0.11491238211004523,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS04",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS04:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 0.4827586206896552,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011698658378430857,
+    "overall_jsd": 0.04299186436287352,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS05",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS05:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.0,
+    "overall_jsd": 0.08839341390640776,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS06",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS06:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 0.4915254237288136,
+    "odds_ratio": 0.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.023679730687410156,
+    "overall_jsd": 0.11890607287970499,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 29,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS07",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS07:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9333333333333333,
+    "jsd": 0.01438410266067108,
+    "overall_jsd": 0.023632013551907055,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS08",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS08:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 0.4827586206896552,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011698658378430857,
+    "overall_jsd": 0.11491238211004523,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS09",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS09:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 0.4915254237288136,
+    "odds_ratio": 0.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.023679730687410156,
+    "overall_jsd": 0.10599954695951756,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS10",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ABS10:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 1.0,
+    "odds_ratio": 0.4827586206896552,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.9666666666666667,
+    "jsd": 0.011698658378430857,
+    "overall_jsd": 0.11491238211004523,
+    "edges": [
+      "S68R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ECOG-COM",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "cisplatin_high_dose",
+    "test_key": "G1-ECOG-COM:llama-3.1-8b:cisplatin_high_dose",
+    "p_value": 0.04190011890841873,
+    "odds_ratio": 6.0,
+    "base_rec_rate": 0.9333333333333333,
+    "pert_rec_rate": 0.7,
+    "jsd": 0.048682572206413983,
+    "overall_jsd": 0.06981090220746843,
+    "edges": [
+      "S68R",
+      "S77R"
+    ],
+    "exp_rec": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "exp_exc": [
+      "cisplatin_high_dose"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 0.4501576877596781,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "cisplatin_high_dose should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "G1-ABS11",
+    "base_id": "G1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "concurrent_crt",
+    "test_key": "G1-ABS11:llama-3.1-8b:concurrent_crt",
+    "p_value": 1.0,
+    "odds_ratio": 0.0,
+    "base_rec_rate": 0.9285714285714286,
+    "pert_rec_rate": 1.0,
+    "jsd": 0.025416782399088615,
+    "overall_jsd": 0.008472260799696206,
+    "edges": [
+      "S67"
+    ],
+    "exp_rec": [],
+    "exp_exc": [
+      "ict_rt",
+      "concurrent_crt",
+      "nonsurgical_lp"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "concurrent_crt should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "H1-P1",
+    "base_id": "H1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "rt_alone",
+    "test_key": "H1-P1:llama-3.1-8b:rt_alone",
+    "p_value": 0.28817964270091767,
+    "odds_ratio": 2.0416666666666665,
+    "base_rec_rate": 0.7,
+    "pert_rec_rate": 0.5333333333333333,
+    "jsd": 0.03761130552485685,
+    "overall_jsd": 0.06638167928789128,
+    "edges": [
+      "S55R",
+      "S116",
+      "S119R",
+      "S31R",
+      "S120R",
+      "S30"
+    ],
+    "exp_rec": [
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "rt_alone",
+      "total_laryngectomy"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "rt_alone should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "H1-P1",
+    "base_id": "H1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "total_laryngectomy",
+    "test_key": "H1-P1:llama-3.1-8b:total_laryngectomy",
+    "p_value": 1.0,
+    "odds_ratio": 1.0,
+    "base_rec_rate": 0.06666666666666667,
+    "pert_rec_rate": 0.06666666666666667,
+    "jsd": 0.07829395833611273,
+    "overall_jsd": 0.06638167928789128,
+    "edges": [
+      "S55R",
+      "S116",
+      "S119R",
+      "S31R",
+      "S120R",
+      "S30"
+    ],
+    "exp_rec": [
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "rt_alone",
+      "total_laryngectomy"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "total_laryngectomy should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "H1-P3",
+    "base_id": "H1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "rt_alone",
+    "test_key": "H1-P3:llama-3.1-8b:rt_alone",
+    "p_value": 0.019096056845063342,
+    "odds_ratio": 3.8181818181818183,
+    "base_rec_rate": 0.7,
+    "pert_rec_rate": 0.3793103448275862,
+    "jsd": 0.08827325628626759,
+    "overall_jsd": 0.14925825619190672,
+    "edges": [
+      "S121R"
+    ],
+    "exp_rec": [
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "rt_alone"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 0.2353308181788688,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "rt_alone should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "H1-P4",
+    "base_id": "H1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "rt_alone",
+    "test_key": "H1-P4:llama-3.1-8b:rt_alone",
+    "p_value": 0.4219753810199023,
+    "odds_ratio": 1.7843137254901962,
+    "base_rec_rate": 0.7,
+    "pert_rec_rate": 0.5666666666666667,
+    "jsd": 0.042157980377082065,
+    "overall_jsd": 0.19620158477568683,
+    "edges": [],
+    "exp_rec": [
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "rt_alone",
+      "nonsurgical_lp"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "rt_alone should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "I1-P3",
+    "base_id": "I1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "tlm",
+    "test_key": "I1-P3:llama-3.1-8b:tlm",
+    "p_value": 1.0,
+    "odds_ratio": 1.3,
+    "base_rec_rate": 0.8666666666666667,
+    "pert_rec_rate": 0.8333333333333334,
+    "jsd": 0.04048406840233103,
+    "overall_jsd": 0.044363166718441475,
+    "edges": [
+      "S75R",
+      "S13"
+    ],
+    "exp_rec": [
+      "ophl_type_ii",
+      "ict_rt",
+      "concurrent_crt"
+    ],
+    "exp_exc": [
+      "tlm"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 1.0,
+    "significant": false,
+    "divergence_type": "missing_edge",
+    "detail": "tlm should be excluded but no significant shift detected"
+  },
+  {
+    "pert_id": "J1-P6",
+    "base_id": "J1-BASE",
+    "model": "llama-3.1-8b",
+    "treatment": "total_laryngectomy",
+    "test_key": "J1-P6:llama-3.1-8b:total_laryngectomy",
+    "p_value": 0.0009162440773562209,
+    "odds_ratio": 8.0,
+    "base_rec_rate": 0.8666666666666667,
+    "pert_rec_rate": 0.4482758620689655,
+    "jsd": 0.12755245705227417,
+    "overall_jsd": 0.04251748568409139,
+    "edges": [
+      "S74R"
+    ],
+    "exp_rec": [
+      "surgical_lp",
+      "total_laryngectomy"
+    ],
+    "exp_exc": [
+      "nonsurgical_lp"
+    ],
+    "type": "flip",
+    "grey_zone": null,
+    "n_base": 30,
+    "n_pert": 30,
+    "adjusted_p": 0.02559375122748377,
+    "significant": true,
+    "divergence_type": "wrong_direction",
+    "detail": "total_laryngectomy should remain viable but dropped (87%->45%)"
+  }
+]

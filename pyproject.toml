@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "causal-llm-eval"
+version = "0.2.0"
+description = "Behavioural causal discovery toolkit for evaluating LLM world models in clinical oncology"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "requests>=2.31",
+  "python-docx>=1.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "build>=1.2",
+]
+
+[project.scripts]
+causal-llm-query = "causal_llm_eval.llm_query_runner:main"
+causal-llm-parse = "causal_llm_eval.response_parser:main"
+causal-llm-world-model = "causal_llm_eval.world_model_metrics_v2:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

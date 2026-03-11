@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.env
+dist/
+build/
+*.egg-info/
+htmlcov/
+.coverage
+results/raw/*/run_*.jsonl
