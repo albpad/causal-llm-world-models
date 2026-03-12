@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KG Review Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Clinical Review Workspace</p>
+          <h1>KG Review Studio</h1>
+          <p class="subtle">Review what the system understood from each case, confirm the clinical interpretation, and compare model behaviour in plain language.</p>
+        </div>
+        <div class="dataset-panel">
+          <label for="datasetSelect">Study set</label>
+          <select id="datasetSelect"></select>
+          <div id="datasetMeta" class="dataset-meta"></div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="cases">1. Review Cases</button>
+            <button class="nav-tab" data-tab="edges">2. Review Rule Links</button>
+            <button class="nav-tab" data-tab="evaluation">3. Compare Models</button>
+          </nav>
+
+          <section class="guide-card">
+            <h2>How To Use This Page</h2>
+            <ol class="guide-list">
+              <li>Choose one patient case.</li>
+              <li>Read the case summary and the model responses.</li>
+              <li>Confirm or correct the extracted treatments in the parser review section.</li>
+              <li>Save your review.</li>
+            </ol>
+          </section>
+
+          <section id="casesFilters" class="filters active">
+            <h2>Find A Case</h2>
+            <input id="caseSearch" class="field" type="search" placeholder="Search case ID, family, or question" />
+            <select id="familyFilter" class="field">
+              <option value="">All case groups</option>
+            </select>
+            <select id="caseStatusFilter" class="field">
+              <option value="">All review states</option>
+              <option value="unreviewed">Not reviewed yet</option>
+              <option value="accepted">Looks correct</option>
+              <option value="corrected">Corrected</option>
+              <option value="flagged">Needs discussion</option>
+            </select>
+            <button id="resetCaseFilters" class="ghost-btn" type="button">Clear Case Filters</button>
+          </section>
+
+          <section id="edgesFilters" class="filters">
+            <h2>Find A Rule Link</h2>
+            <input id="edgeSearch" class="field" type="search" placeholder="Search rule ID or perturbation" />
+            <select id="edgeStatusFilter" class="field">
+              <option value="">All review states</option>
+              <option value="unreviewed">Not reviewed yet</option>
+              <option value="accepted">Looks correct</option>
+              <option value="corrected">Corrected</option>
+              <option value="flagged">Needs discussion</option>
+            </select>
+            <button id="resetEdgeFilters" class="ghost-btn" type="button">Clear Rule Filters</button>
+          </section>
+
+          <section class="notes-panel">
+            <div class="panel-heading">
+              <h2>Shared Notes</h2>
+              <button id="saveGlobalNotes" class="ghost-btn">Save Notes</button>
+            </div>
+            <textarea id="globalNotes" class="notes-area" placeholder="Shared notes for this study set"></textarea>
+          </section>
+
+          <section class="guide-card">
+            <h2>Plain Language Glossary</h2>
+            <div class="glossary-list">
+              <p><strong>Parser</strong>: the part of the system that turns free text into treatment labels.</p>
+              <p><strong>Rule link</strong>: a clinical relationship the study expects the model to recognize.</p>
+              <p><strong>Model comparison</strong>: how closely different models agree with expert expectations.</p>
+            </div>
+          </section>
+        </aside>
+
+        <section class="content">
+          <div id="casesTab" class="tab-pane active">
+            <div class="split-view">
+              <section class="list-panel">
+                <div class="panel-heading">
+                  <h2>Patient Cases</h2>
+                  <span id="caseCount" class="pill"></span>
+                </div>
+                <div id="casesList" class="list"></div>
+              </section>
+              <section id="caseDetail" class="detail-panel empty-state">
+                Select a patient case to review what the system understood and to validate the parser output.
+              </section>
+            </div>
+          </div>
+
+          <div id="edgesTab" class="tab-pane">
+            <div class="split-view">
+              <section class="list-panel">
+                <div class="panel-heading">
+                  <h2>Clinical Rule Links</h2>
+                  <span id="edgeCount" class="pill"></span>
+                </div>
+                <div id="edgesList" class="list"></div>
+              </section>
+              <section id="edgeDetail" class="detail-panel empty-state">
+                Select a rule link to inspect the supporting cases and graph evidence.
+              </section>
+            </div>
+          </div>
+
+          <div id="evaluationTab" class="tab-pane">
+            <section class="hero-metrics">
+              <div id="metricCards" class="metric-grid"></div>
+            </section>
+            <section class="evaluation-grid">
+              <article class="card">
+                <div class="panel-heading">
+                  <h2>At A Glance</h2>
+                </div>
+                <div id="evaluationTable"></div>
+              </article>
+              <article class="card">
+                <div class="panel-heading">
+                  <h2>Overall Model Judgement</h2>
+                </div>
+                <div id="worldModelTable"></div>
+              </article>
+              <article class="card wide">
+                <div class="panel-heading">
+                  <h2>Main Problems Detected</h2>
+                </div>
+                <div id="divergenceSummary"></div>
+              </article>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,8 @@
+Rerunning 767 manifest entries
+Output: results/recovery/kimi-k2.5_rerun_live/run_20260311_2206.jsonl
+Phase 2 context mode: none
+Workers: 4
+[1/767] A1-P3 kimi-k2.5 run=5 phase1:start
+[2/767] A1-P3 kimi-k2.5 run=8 phase1:start
+[3/767] A1-P3 kimi-k2.5 run=14 phase1:start
+[4/767] A2-NULL kimi-k2.5 run=3 phase1:start

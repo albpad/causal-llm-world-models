@@ -241,6 +241,21 @@ def make_hash(item_id, model, run):
     return hashlib.md5(f"{item_id}:{model}:{run}".encode()).hexdigest()[:12]
 
 
+def is_nonempty_text(value):
+    return bool((value or "").strip())
+
+
+def is_complete_result(result, require_phase1=True, require_phase2=True):
+    """Return True if a saved row is usable as a completed query."""
+    if result.get("error") is not None:
+        return False
+    if require_phase1 and not is_nonempty_text(result.get("phase1_response")):
+        return False
+    if require_phase2 and not is_nonempty_text(result.get("phase2_response")):
+        return False
+    return True
+
+
 def load_battery(path):
     with open(path) as f:
         bat = json.load(f)
@@ -305,7 +320,7 @@ def run_single_query(item, model_name, run_idx, rl, api_key, dry_run=False):
     return result
 
 
-def load_completed(path):
+def load_completed(path, require_phase1=True, require_phase2=True):
     done = set()
     if Path(path).exists():
         with open(path) as f:
@@ -313,13 +328,15 @@ def load_completed(path):
                 if line.strip():
                     try:
                         r = json.loads(line)
-                        if r.get("error") is None: done.add(r["hash"])
+                        if is_complete_result(r, require_phase1=require_phase1, require_phase2=require_phase2):
+                            done.add(r["hash"])
                     except: pass
     return done
 
 
 def run_battery(battery_path, model_names, n_runs=30, item_filter=None,
-                output_dir="results", dry_run=False, max_retries=3):
+                output_dir="results", dry_run=False, max_retries=3,
+                require_phase1=True, require_phase2=True):
     items = load_battery(battery_path)
     if item_filter:
         items = [i for i in items if i["id"] in item_filter]
@@ -349,7 +366,7 @@ def run_battery(battery_path, model_names, n_runs=30, item_filter=None,
     # Scan ALL .jsonl files in results dir (in case of multiple checkpoint files)
     done = set()
     for jf in out.glob("run_*.jsonl"):
-        done |= load_completed(str(jf))
+        done |= load_completed(str(jf), require_phase1=require_phase1, require_phase2=require_phase2)
     if done: print(f"Resuming: {len(done)} completed across all checkpoint files")
 
     work = [(i, m, r) for i in items for m in model_names for r in range(n_runs)
@@ -388,6 +405,10 @@ def main():
     p.add_argument("--outdir", default="results")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--list-models", action="store_true")
+    p.add_argument("--allow-empty-phase1", action="store_true",
+                   help="Treat rows with blank phase 1 as completed when resuming.")
+    p.add_argument("--allow-empty-phase2", action="store_true",
+                   help="Treat rows with blank phase 2 as completed when resuming.")
     args = p.parse_args()
 
     if args.list_models:
@@ -399,7 +420,16 @@ def main():
     if not args.battery: p.error("--battery required")
     models = [m.strip() for m in args.models.split(",")]
     filt = [i.strip() for i in args.items.split(",")] if args.items else None
-    run_battery(args.battery, models, args.runs, filt, args.outdir, args.dry_run)
+    run_battery(
+        args.battery,
+        models,
+        args.runs,
+        filt,
+        args.outdir,
+        args.dry_run,
+        require_phase1=not args.allow_empty_phase1,
+        require_phase2=not args.allow_empty_phase2,
+    )
 
 if __name__ == "__main__":
     main()

@@ -77,6 +77,26 @@ python -m causal_llm_eval.response_parser       --results results/raw/kimi-k2.5/
 python -m causal_llm_eval.world_model_metrics_v2       --analysis-dir results/analysis/kimi-k2.5       --outdir results/world_model/v2
 ```
 
+### 7) Run the research app
+
+The notebooks can be replaced by a single application entrypoint with presets for the main experiment variants:
+
+```bash
+causal-llm-research --preset full-study
+causal-llm-research --preset single-model --items A1-BASE,A1-P1,A1-P2,A1-NULL1
+python scripts/colab_kimi_k25.py --skip-query --results-file results_kimi_k25/run_YYYYMMDD_HHMM.jsonl
+```
+
+### 8) Launch the clinician review app
+
+This starts a local browser UI for reviewing automatic parsing, graph edges, and model-level evaluation artifacts:
+
+```bash
+python scripts/review_app.py
+```
+
+Then open `http://127.0.0.1:8765`.
+
 ## Current included artifacts
 
 The repository preserves the original project outputs, including:
