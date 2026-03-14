@@ -1,0 +1,289 @@
+{
+  "kimi-k2.5": {
+    "S5R": {
+      "detected": false,
+      "n_probes": 27,
+      "detection_rate": 0.07407407407407407
+    },
+    "S22": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.1111111111111111
+    },
+    "S23R": {
+      "detected": false,
+      "n_probes": 26,
+      "detection_rate": 0.23076923076923078
+    },
+    "S4R": {
+      "detected": false,
+      "n_probes": 18,
+      "detection_rate": 0.2777777777777778
+    },
+    "S28": {
+      "detected": false,
+      "n_probes": 27,
+      "detection_rate": 0.18518518518518517
+    },
+    "SA2": {
+      "detected": false,
+      "n_probes": 8,
+      "detection_rate": 0.125
+    },
+    "S8": {
+      "detected": false,
+      "n_probes": 17,
+      "detection_rate": 0.058823529411764705
+    },
+    "S6R": {
+      "detected": false,
+      "n_probes": 33,
+      "detection_rate": 0.030303030303030304
+    },
+    "S80": {
+      "detected": false,
+      "n_probes": 65,
+      "detection_rate": 0.03076923076923077
+    },
+    "S7R": {
+      "detected": false,
+      "n_probes": 53,
+      "detection_rate": 0.07547169811320754
+    },
+    "S14": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.0
+    },
+    "S27": {
+      "detected": false,
+      "n_probes": 18,
+      "detection_rate": 0.05555555555555555
+    },
+    "S45": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.2222222222222222
+    },
+    "S46": {
+      "detected": false,
+      "n_probes": 16,
+      "detection_rate": 0.125
+    },
+    "S40R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.2222222222222222
+    },
+    "S41R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.2222222222222222
+    },
+    "S49R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.2222222222222222
+    },
+    "S16R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.3333333333333333
+    },
+    "S39R": {
+      "detected": false,
+      "n_probes": 38,
+      "detection_rate": 0.10526315789473684
+    },
+    "S42R": {
+      "detected": false,
+      "n_probes": 17,
+      "detection_rate": 0.17647058823529413
+    },
+    "S17R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.3333333333333333
+    },
+    "S18R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.3333333333333333
+    },
+    "S10R": {
+      "detected": false,
+      "n_probes": 33,
+      "detection_rate": 0.06060606060606061
+    },
+    "S9R": {
+      "detected": false,
+      "n_probes": 11,
+      "detection_rate": 0.18181818181818182
+    },
+    "S24R": {
+      "detected": false,
+      "n_probes": 18,
+      "detection_rate": 0.0
+    },
+    "S12": {
+      "detected": false,
+      "n_probes": 26,
+      "detection_rate": 0.11538461538461539
+    },
+    "S43": {
+      "detected": false,
+      "n_probes": 32,
+      "detection_rate": 0.09375
+    },
+    "S112": {
+      "detected": false,
+      "n_probes": 11,
+      "detection_rate": 0.09090909090909091
+    },
+    "S19R": {
+      "detected": false,
+      "n_probes": 45,
+      "detection_rate": 0.022222222222222223
+    },
+    "S115": {
+      "detected": false,
+      "n_probes": 25,
+      "detection_rate": 0.04
+    },
+    "S38R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.14285714285714285
+    },
+    "S15R": {
+      "detected": false,
+      "n_probes": 8,
+      "detection_rate": 0.0
+    },
+    "S47R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S35R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.0
+    },
+    "S68R": {
+      "detected": false,
+      "n_probes": 71,
+      "detection_rate": 0.23943661971830985
+    },
+    "S69R": {
+      "detected": false,
+      "n_probes": 38,
+      "detection_rate": 0.15789473684210525
+    },
+    "S77R": {
+      "detected": false,
+      "n_probes": 11,
+      "detection_rate": 0.18181818181818182
+    },
+    "S52R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.16666666666666666
+    },
+    "S70": {
+      "detected": false,
+      "n_probes": 5,
+      "detection_rate": 0.2
+    },
+    "S67": {
+      "detected": false,
+      "n_probes": 5,
+      "detection_rate": 0.2
+    },
+    "S55R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.2857142857142857
+    },
+    "S116": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.2857142857142857
+    },
+    "S119R": {
+      "detected": false,
+      "n_probes": 14,
+      "detection_rate": 0.14285714285714285
+    },
+    "S31R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.2857142857142857
+    },
+    "S120R": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.2857142857142857
+    },
+    "S30": {
+      "detected": false,
+      "n_probes": 7,
+      "detection_rate": 0.2857142857142857
+    },
+    "SA6": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.5
+    },
+    "S121R": {
+      "detected": false,
+      "n_probes": 19,
+      "detection_rate": 0.3157894736842105
+    },
+    "S88": {
+      "detected": false,
+      "n_probes": 18,
+      "detection_rate": 0.2777777777777778
+    },
+    "S84": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.2222222222222222
+    },
+    "S111R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.2222222222222222
+    },
+    "S89": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.3333333333333333
+    },
+    "S13": {
+      "detected": false,
+      "n_probes": 18,
+      "detection_rate": 0.16666666666666666
+    },
+    "S75R": {
+      "detected": false,
+      "n_probes": 9,
+      "detection_rate": 0.0
+    },
+    "S20R": {
+      "detected": false,
+      "n_probes": 6,
+      "detection_rate": 0.0
+    },
+    "S74R": {
+      "detected": false,
+      "n_probes": 15,
+      "detection_rate": 0.0
+    },
+    "S21": {
+      "detected": false,
+      "n_probes": 8,
+      "detection_rate": 0.125
+    }
+  }
+}

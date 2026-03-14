@@ -1,0 +1,23 @@
+{
+  "kimi-k2.5": {
+    "model": "kimi-k2.5",
+    "true_positives": 12,
+    "false_negatives": 43,
+    "false_positives": 19,
+    "precision": 0.3870967741935484,
+    "recall": 0.21818181818181817,
+    "f1": 0.27906976744186046,
+    "shd": 66,
+    "soft_true_positives": 41,
+    "soft_recall": 0.7454545454545455,
+    "soft_f1": 0.7130434782608696,
+    "direction_errors": 4,
+    "direction_accuracy": 0.6666666666666666,
+    "weighted_recall": 0.0,
+    "weighted_precision": 0.0,
+    "weight_correlation": 0.0,
+    "calibration_error": 0.0,
+    "null_jsd_mean": 0.07783191036005703,
+    "null_jsd_95": 0.2794648799104472
+  }
+}

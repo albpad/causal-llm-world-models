@@ -1,0 +1,24 @@
+{
+  "kimi-k2.5": {
+    "snr": 2.9481170187217693,
+    "mean_causal_jsd": 0.22945757953211132,
+    "mean_null_jsd": 0.07783191036005703,
+    "median_causal_jsd": 0.14880912845906202,
+    "median_null_jsd": 0.03828859093756508,
+    "null_jsd_95": 0.27946487991044716,
+    "n_causal": 165,
+    "n_null": 96,
+    "detection_power": 0.28484848484848485
+  },
+  "llama-3.1-8b": {
+    "snr": 0.4572927895156319,
+    "mean_causal_jsd": 0.04293036442345745,
+    "mean_null_jsd": 0.09387938189213442,
+    "median_causal_jsd": 0.02310490409482892,
+    "median_null_jsd": 0.023679731614670758,
+    "null_jsd_95": 0.6931471772333264,
+    "n_causal": 154,
+    "n_null": 70,
+    "detection_power": 0.0
+  }
+}

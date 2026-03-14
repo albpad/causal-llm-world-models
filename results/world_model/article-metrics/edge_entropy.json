@@ -1,0 +1,527 @@
+{
+  "kimi-k2.5": {
+    "mean_entropy": 0.5971512605515215,
+    "median_entropy": 0.7219280948844771,
+    "stance_flip_rate": 0.543859649122807,
+    "most_entropic": [
+      {
+        "item_id": "G1-BASE",
+        "treatment": "ict_rt",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "excluded": 1,
+          "relative_ci": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "ict_rt",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "excluded": 1,
+          "relative_ci": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "B1-NULL1",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 6,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 2,
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "C1-P2",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 1,
+          "excluded": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "C1-P4",
+        "treatment": "ophl_type_ii",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 6,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 2,
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "A1-P3",
+        "treatment": "ict_rt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "B1-P7",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 6,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 3,
+          "relative_ci": 3
+        }
+      },
+      {
+        "item_id": "C1-P5",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "relative_ci": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "G1-ABS09",
+        "treatment": "concurrent_crt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 12,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 6,
+          "excluded": 6
+        }
+      },
+      {
+        "item_id": "G1-REL02",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 3
+        }
+      },
+      {
+        "item_id": "B1-BASE",
+        "treatment": "concurrent_crt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "C1-BASE",
+        "treatment": "concurrent_crt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "D1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 15
+        }
+      },
+      {
+        "item_id": "D1-BASE",
+        "treatment": "ophl_any",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 15
+        }
+      },
+      {
+        "item_id": "E1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 12,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 12
+        }
+      },
+      {
+        "item_id": "E1-BASE",
+        "treatment": "ophl_any",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 14,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 14
+        }
+      },
+      {
+        "item_id": "E1-BASE",
+        "treatment": "total_laryngectomy",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "E1-BASE",
+        "treatment": "tors",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 3
+        }
+      }
+    ]
+  },
+  "llama-3.1-8b": {
+    "mean_entropy": 0.44863593449787903,
+    "median_entropy": 0.40887106876650037,
+    "stance_flip_rate": 0.39870689655172414,
+    "most_entropic": [
+      {
+        "item_id": "G1-NULL",
+        "treatment": "tlm",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "uncertain",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "uncertain": 1,
+          "relative_ci": 1,
+          "excluded": 1
+        }
+      },
+      {
+        "item_id": "J1-BASE",
+        "treatment": "ophl_any",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "B1-P8",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "uncertain",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "uncertain": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "C1-P5",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "F1-P5",
+        "treatment": "ict_rt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 10,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 5,
+          "excluded": 5
+        }
+      },
+      {
+        "item_id": "G1-NULL",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "relative_ci": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "ophl_any",
+        "entropy": 0.9983636725909277,
+        "normalised_entropy": 0.9983636725909277,
+        "n_runs": 21,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5238095238095238,
+        "distribution": {
+          "excluded": 10,
+          "recommended": 11
+        }
+      },
+      {
+        "item_id": "H2-P2",
+        "treatment": "rt_alone",
+        "entropy": 1.5801454700420337,
+        "normalised_entropy": 0.9969607920206751,
+        "n_runs": 30,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.36666666666666664,
+        "distribution": {
+          "excluded": 11,
+          "relative_ci": 9,
+          "recommended": 10
+        }
+      },
+      {
+        "item_id": "A2-BASE",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "recommended": 7,
+          "excluded": 8
+        }
+      },
+      {
+        "item_id": "H1-P3",
+        "treatment": "ophl_any",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "excluded": 7,
+          "recommended": 8
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_accelerated",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-P1",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-P1",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 3
+        }
+      },
+      {
+        "item_id": "A1-P1",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-P1",
+        "treatment": "rt_accelerated",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 4
+        }
+      },
+      {
+        "item_id": "A2-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 30,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 30
+        }
+      }
+    ]
+  }
+}

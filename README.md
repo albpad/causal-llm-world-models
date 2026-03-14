@@ -105,6 +105,26 @@ The repository preserves the original project outputs, including:
 - v1 and v2 world-model reports
 - the draft manuscript and a plain-text export for quick browsing
 
+## Current article-facing results
+
+The manuscript-facing comparison now uses the recovered Kimi run and a combined article analysis under:
+
+- `results/raw/kimi-k2.5_recovered/run_20260309_1924_merged.jsonl`
+- `results/analysis/article-metrics/`
+- `results/world_model/article-metrics/world_model_report.md`
+- `results/world_model/article-metrics/world_model_metrics.json`
+
+Key metrics used in the article:
+
+| Model | Soft recall | Hard recall | Direction accuracy | SID | Mean causal JSD | Mean null JSD | SNR | Detection power |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Kimi K2.5 (recovered) | 74.5% (41/55) | 18.2% (10/55) | 70.0% | 37/165 (22.4%) | 0.229 | 0.078 | 2.95 | 28.5% |
+| Llama 3.1-8B | 7.3% (4/55) | 1.8% (1/55) | 100.0%* | 44/154 (28.6%) | 0.043 | 0.094 | 0.46 | 0.0% |
+
+\* `100.0%` direction accuracy for Llama is computed only on the 4 soft-detected edges, so it should not be interpreted as evidence of a coherent graph-level world model.
+
+Use these article-facing outputs for manuscript text, tables, and figures. The `results/world_model/v2/` artifacts remain useful for the newer composite scoring framework, but they are not the primary results cited in the current manuscript draft.
+
 ## Production-readiness improvements in this version
 
 - installable `src/` package structure

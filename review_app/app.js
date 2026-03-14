@@ -75,6 +75,43 @@ function collectTreatmentOptions(item) {
   return Array.from(values).sort();
 }
 
+function consensusSelectionMap(item) {
+  const selected = {
+    recommended: [],
+    excluded: [],
+    relative_ci: [],
+    uncertain: [],
+  };
+  (item.consensus || []).forEach((row) => {
+    if (row.top_stance && selected[row.top_stance]) {
+      selected[row.top_stance].push(row.treatment);
+    }
+  });
+  return selected;
+}
+
+function summarySentence(item) {
+  const groups = consensusSelectionMap(item);
+  const parts = [];
+  if (groups.recommended.length) parts.push(`Recommended: ${groups.recommended.join(", ")}`);
+  if (groups.excluded.length) parts.push(`Not appropriate: ${groups.excluded.join(", ")}`);
+  if (groups.relative_ci.length) parts.push(`Possible with caution: ${groups.relative_ci.join(", ")}`);
+  if (groups.uncertain.length) parts.push(`Uncertain: ${groups.uncertain.join(", ")}`);
+  return parts.length ? parts.join(" | ") : "No parser summary is available for this case.";
+}
+
+function parserState(item) {
+  const validation = item.annotation?.parser_validation || {};
+  const defaults = consensusSelectionMap(item);
+  return {
+    verdict: validation.verdict || "",
+    recommended: validation.recommended || defaults.recommended,
+    excluded: validation.excluded || defaults.excluded,
+    relative_ci: validation.relative_ci || defaults.relative_ci,
+    uncertain: validation.uncertain || defaults.uncertain,
+  };
+}
+
 function renderChecklist(title, group, options, selected) {
   return `
     <div class="checklist-card">
@@ -335,8 +372,9 @@ function renderCaseDetail() {
   }
   const annotation = item.annotation || {};
   const currentStatus = annotation.status || "unreviewed";
-  const parserValidation = annotation.parser_validation || {};
+  const parserValidation = parserState(item);
   const treatmentOptions = collectTreatmentOptions(item);
+  const consensusDefaults = consensusSelectionMap(item);
   els.caseDetail.className = "detail-panel";
   els.caseDetail.innerHTML = `
     <div class="detail-grid">
@@ -381,62 +419,64 @@ function renderCaseDetail() {
         ${consensusMarkup(item.consensus)}
       </section>
 
-      <section class="card-block review-form">
+      <section class="card-block quick-review-card">
         <div class="panel-heading">
-          <h3>Case Review</h3>
-          <button class="action-btn" data-save-case="${escapeHtml(item.item_id)}">Save Case Review</button>
+          <h3>Quick Validation</h3>
+          <span class="pill">${escapeHtml(prettyReviewStatus(currentStatus))}</span>
         </div>
-        <div class="status-row">
-          ${["unreviewed", "accepted", "corrected", "flagged"]
-            .map(
-              (status) => `
-            <button class="status-chip ${currentStatus === status ? "active" : ""}" data-case-status="${escapeHtml(status)}" data-case-id="${escapeHtml(
-                item.item_id
-              )}" data-status="${escapeHtml(status)}">${escapeHtml(prettyReviewStatus(status))}</button>
-          `
-            )
-            .join("")}
+        <p class="helper-copy">This is the shortest possible workflow: confirm the parser if the summary is clinically acceptable, or open the correction box only when it needs adjustment.</p>
+        <div class="snapshot-card">
+          <strong>Current parser summary</strong>
+          <p>${escapeHtml(summarySentence(item))}</p>
         </div>
-        <textarea id="caseNotes" class="notes-area" placeholder="Short note for other reviewers">${escapeHtml(
-          annotation.notes || ""
-        )}</textarea>
-        <textarea id="caseCorrections" class="notes-area" placeholder="Optional free-text correction">${escapeHtml(
-          annotation.corrections || ""
-        )}</textarea>
+        <div class="quick-actions">
+          <button class="action-btn" data-quick-case="confirm" data-case-id="${escapeHtml(item.item_id)}">Confirm Parser Summary</button>
+          <button class="ghost-btn" data-toggle-correction="true">Correct This Case</button>
+          <button class="ghost-btn" data-quick-case="flag" data-case-id="${escapeHtml(item.item_id)}">Mark For Discussion</button>
+        </div>
+        <details class="correction-panel" ${currentStatus === "corrected" || currentStatus === "flagged" ? "open" : ""}>
+          <summary>Open correction box</summary>
+          <div class="review-form">
+            <p class="helper-copy">Only adjust the final treatment labels. Free-text notes are optional.</p>
+            <div class="checklist-grid">
+              ${renderChecklist("Recommended", "recommended", treatmentOptions, parserValidation.recommended || consensusDefaults.recommended)}
+              ${renderChecklist("Not appropriate", "excluded", treatmentOptions, parserValidation.excluded || consensusDefaults.excluded)}
+              ${renderChecklist("Possible with caution", "relative_ci", treatmentOptions, parserValidation.relative_ci || consensusDefaults.relative_ci)}
+              ${renderChecklist("Uncertain", "uncertain", treatmentOptions, parserValidation.uncertain || consensusDefaults.uncertain)}
+            </div>
+            <textarea id="caseNotes" class="notes-area compact" placeholder="Optional short note">${escapeHtml(annotation.notes || "")}</textarea>
+            <div class="panel-heading">
+              <select id="parserVerdict" class="field compact-select">
+                <option value="correct">Correct</option>
+                <option value="partly-correct" ${parserValidation.verdict === "partly-correct" ? "selected" : ""}>Partly correct</option>
+                <option value="incorrect" ${parserValidation.verdict === "incorrect" ? "selected" : ""}>Incorrect</option>
+              </select>
+              <button class="action-btn" data-save-case="${escapeHtml(item.item_id)}">Save Correction</button>
+            </div>
+          </div>
+        </details>
       </section>
 
-      <section class="card-block review-form">
-        <div class="panel-heading">
-          <h3>Validate The Parser Output</h3>
-        </div>
-        <p class="helper-copy">Use this section to confirm what the parser should finally record for this case. This is the main validation step for the parser itself.</p>
-        <select id="parserVerdict" class="field">
-          <option value="">Choose parser judgement</option>
-          <option value="correct" ${parserValidation.verdict === "correct" ? "selected" : ""}>The parser output is correct</option>
-          <option value="partly-correct" ${parserValidation.verdict === "partly-correct" ? "selected" : ""}>The parser output is partly correct</option>
-          <option value="incorrect" ${parserValidation.verdict === "incorrect" ? "selected" : ""}>The parser output is incorrect</option>
-        </select>
-        <div class="checklist-grid">
-          ${renderChecklist("Treatments that should be recommended", "recommended", treatmentOptions, parserValidation.recommended || [])}
-          ${renderChecklist("Treatments that should be marked not appropriate", "excluded", treatmentOptions, parserValidation.excluded || [])}
-          ${renderChecklist("Treatments that should remain uncertain or conditional", "uncertain", treatmentOptions, parserValidation.uncertain || [])}
-        </div>
-      </section>
-
-      <section class="card-block">
+      <section class="card-block compact-block">
         <div class="panel-heading">
           <h3>Run-By-Run Parser Output</h3>
         </div>
-        <p class="helper-copy">Each row below shows what the parser extracted from one model response.</p>
-        ${item.parsed_runs.map(runMarkup).join("") || `<p class="subtle">No parsed runs for this item.</p>`}
+        <details>
+          <summary>Show detailed parser output</summary>
+          <p class="helper-copy">Open only if the quick summary looks wrong or unclear.</p>
+          ${item.parsed_runs.map(runMarkup).join("") || `<p class="subtle">No parsed runs for this item.</p>`}
+        </details>
       </section>
 
-      <section class="card-block">
+      <section class="card-block compact-block">
         <div class="panel-heading">
           <h3>Original Model Responses</h3>
         </div>
-        <p class="helper-copy">Open these sections if you want to verify the parser against the original wording written by the model.</p>
-        ${item.raw_runs.map(rawMarkup).join("") || `<p class="subtle">No raw responses were found for this dataset.</p>`}
+        <details>
+          <summary>Show original model responses</summary>
+          <p class="helper-copy">Use only when you need to verify the parser against the source text.</p>
+          ${item.raw_runs.map(rawMarkup).join("") || `<p class="subtle">No raw responses were found for this dataset.</p>`}
+        </details>
       </section>
     </div>
   `;
@@ -750,6 +790,50 @@ function bindEvents() {
   });
 
   els.caseDetail.addEventListener("click", async (event) => {
+    const quickButton = event.target.closest("[data-quick-case]");
+    if (quickButton) {
+      const item = (state.bundle?.cases ?? []).find((entry) => entry.item_id === quickButton.dataset.caseId);
+      if (!item) return;
+      const defaults = consensusSelectionMap(item);
+      if (quickButton.dataset.quickCase === "confirm") {
+        await saveAnnotation("cases", quickButton.dataset.caseId, {
+          status: "accepted",
+          notes: item.annotation?.notes || "",
+          corrections: "",
+          parser_validation: {
+            verdict: "correct",
+            recommended: defaults.recommended,
+            excluded: defaults.excluded,
+            relative_ci: defaults.relative_ci,
+            uncertain: defaults.uncertain,
+          },
+        });
+        return;
+      }
+      if (quickButton.dataset.quickCase === "flag") {
+        await saveAnnotation("cases", quickButton.dataset.caseId, {
+          status: "flagged",
+          notes: item.annotation?.notes || "",
+          corrections: "",
+          parser_validation: {
+            verdict: "incorrect",
+            recommended: checkedValues("recommended"),
+            excluded: checkedValues("excluded"),
+            relative_ci: checkedValues("relative_ci"),
+            uncertain: checkedValues("uncertain"),
+          },
+        });
+        return;
+      }
+    }
+
+    const correctionToggle = event.target.closest("[data-toggle-correction]");
+    if (correctionToggle) {
+      const details = els.caseDetail.querySelector(".correction-panel");
+      if (details) details.open = true;
+      return;
+    }
+
     const statusButton = event.target.closest("[data-case-status]");
     if (statusButton) {
       document.querySelectorAll("[data-case-status]").forEach((button) => button.classList.remove("active"));
@@ -759,15 +843,15 @@ function bindEvents() {
 
     const saveButton = event.target.closest("[data-save-case]");
     if (saveButton) {
-      const activeStatus = document.querySelector("[data-case-status].active")?.dataset.caseStatus || "unreviewed";
       await saveAnnotation("cases", saveButton.dataset.saveCase, {
-        status: activeStatus,
+        status: "corrected",
         notes: document.getElementById("caseNotes").value,
-        corrections: document.getElementById("caseCorrections").value,
+        corrections: "",
         parser_validation: {
           verdict: document.getElementById("parserVerdict").value,
           recommended: checkedValues("recommended"),
           excluded: checkedValues("excluded"),
+          relative_ci: checkedValues("relative_ci"),
           uncertain: checkedValues("uncertain"),
         },
       });
