@@ -18,6 +18,10 @@ def parse_args():
     parser.add_argument("--model", required=True, help="Short model name to filter on, e.g. kimi-k2.5")
     parser.add_argument("--max-run-idx", type=int, default=None,
                         help="Only include runs with run_idx <= this value. Useful to isolate the main study.")
+    parser.add_argument("--items", default=None,
+                        help="Comma-separated list of item IDs to include. Useful for targeted reruns.")
+    parser.add_argument("--include-complete", action="store_true",
+                        help="Include matching rows even if they are already complete.")
     parser.add_argument("--out", required=True, help="Output JSON manifest path")
     parser.add_argument("--allow-empty-phase1", action="store_true")
     parser.add_argument("--allow-empty-phase2", action="store_true")
@@ -28,6 +32,9 @@ def main():
     args = parse_args()
     rows = [json.loads(line) for line in open(args.results) if line.strip()]
     items_by_id = {item["id"]: item for item in load_battery(args.battery)}
+    selected_items = None
+    if args.items:
+        selected_items = {item.strip() for item in args.items.split(",") if item.strip()}
 
     manifest_rows = []
     for row in rows:
@@ -35,7 +42,9 @@ def main():
             continue
         if args.max_run_idx is not None and row.get("run_idx", -1) > args.max_run_idx:
             continue
-        if is_complete_result(
+        if selected_items and row.get("item_id") not in selected_items:
+            continue
+        if not args.include_complete and is_complete_result(
             row,
             require_phase1=not args.allow_empty_phase1,
             require_phase2=not args.allow_empty_phase2,
@@ -64,6 +73,8 @@ def main():
         "battery_path": args.battery,
         "model_name": args.model,
         "max_run_idx": args.max_run_idx,
+        "items": sorted(selected_items) if selected_items else None,
+        "include_complete": args.include_complete,
         "require_phase1": not args.allow_empty_phase1,
         "require_phase2": not args.allow_empty_phase2,
         "n_incomplete": len(unique),

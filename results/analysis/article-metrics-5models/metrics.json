@@ -1,0 +1,47 @@
+{
+  "kimi-k2.5": {
+    "n_items": 88,
+    "rec_accuracy": 0.7258566978193146,
+    "exc_accuracy": 0.8714285714285714,
+    "rec_precision": 0.9628099173553719,
+    "cond_rate": 1.0,
+    "unc_rate": 1.0,
+    "null_spec": 0.16666666666666666
+  },
+  "llama-3.1-8b": {
+    "n_items": 88,
+    "rec_accuracy": 0.8598130841121495,
+    "exc_accuracy": 0.19402985074626866,
+    "rec_precision": 0.8363636363636363,
+    "cond_rate": 1.0,
+    "unc_rate": 1.0,
+    "null_spec": 0.25
+  },
+  "deepseek-r1": {
+    "n_items": 88,
+    "rec_accuracy": 0.660436137071651,
+    "exc_accuracy": 0.8142857142857143,
+    "rec_precision": 0.9422222222222222,
+    "cond_rate": 0.9166666666666666,
+    "unc_rate": 0.6666666666666666,
+    "null_spec": 0.16666666666666666
+  },
+  "qwen3-next-80b-instruct": {
+    "n_items": 88,
+    "rec_accuracy": 0.6105919003115264,
+    "exc_accuracy": 0.7101449275362319,
+    "rec_precision": 0.9074074074074074,
+    "cond_rate": 1.0,
+    "unc_rate": 0.6666666666666666,
+    "null_spec": 0.16666666666666666
+  },
+  "mistral-small-24b": {
+    "n_items": 88,
+    "rec_accuracy": 0.7881619937694704,
+    "exc_accuracy": 0.6956521739130435,
+    "rec_precision": 0.9233576642335767,
+    "cond_rate": 1.0,
+    "unc_rate": 1.0,
+    "null_spec": 0.25
+  }
+}

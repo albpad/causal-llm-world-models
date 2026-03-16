@@ -2,7 +2,7 @@
 
 > Source: Ferrari et al., Lancet Oncol 2025; 26: e264-81
 > Generated test battery: **12** baselines, **76** perturbations, **88** total items
-> Unique KG₁ edges tested: **57**
+> Unique KG₁ edges tested: **60**
 > Perturbation types: {'flip': 48, 'escalate': 12, 'null': 12, 'grey_zone': 3, 'multi': 1}
 
 ---
@@ -25,7 +25,7 @@ Function: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Adequ
 Labs: Normal blood panel, CrCl 102 mL/min.
 ```
 
-**Expected recommendations**: tlm, rt_alone, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp, tlm
 **Expected excluded**: concurrent_crt, total_laryngectomy
 **Reasoning**: Favorable cT2N0: TLM viable (adequate exposure, no blocking features). RT alone adequate per S22. No indication for chemo at cT2N0.
 
@@ -46,7 +46,7 @@ Function: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Laryn
 Labs: Normal blood panel, CrCl 102 mL/min.
 ```
 
-**Expected recommendations**: rt_alone, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S5R, S22
 **Predicted failure mode**: Correctly blocks TLM while preserving other options
@@ -69,7 +69,7 @@ Function: Severe dysphonia (VHI-10: 32). No dysphagia. No airway compromise. Ade
 Labs: Normal blood panel, CrCl 102 mL/min.
 ```
 
-**Expected recommendations**: tlm, ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
 **Expected excluded**: total_laryngectomy
 **Edge justification**: S23R, S4R, S28
 **Predicted failure mode**: Must recognize that fixed cord upstages to cT3 and open the full cT3 decision landscape including CRT and ICT, not just escalate RT
@@ -91,7 +91,7 @@ Function: Moderate dysphonia (VHI-10: 24). No dysphagia. No airway compromise. A
 Labs: Normal blood panel, CrCl 102 mL/min.
 ```
 
-**Expected recommendations**: tlm, rt_alone, rt_accelerated, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm
 **Expected excluded**: total_laryngectomy
 **Edge justification**: SA2, S23R, S8
 **Predicted failure mode**: Should recognise unfavorable cT2 features (bulky, AC, subglottic, impaired mobility) warrant consideration of accelerated RT (S23R) even though still staged cT2
@@ -113,7 +113,8 @@ Function: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Adequ
 Labs: Normal blood panel, CrCl 102 mL/min.
 ```
 
-**Expected recommendations**: tlm, rt_alone, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp, tlm
+**Expected excluded**: concurrent_crt, total_laryngectomy
 **Edge justification**: S6R, S80
 **Predicted failure mode**: Over-sensitivity to age in fit patient
 ---
@@ -136,7 +137,7 @@ Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal expo
 Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.
 ```
 
-**Expected recommendations**: tlm, rt_alone, rt_accelerated, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm
 **Expected excluded**: total_laryngectomy
 **Reasoning**: Unfavorable cT2 (SA2): bulky, AC involvement, reduced cord, anterior subglottic. TLM technically feasible (exposure adequate, AC with good exposure per S8). Accelerated RT warranted given reduced cord (S23R).
 
@@ -157,7 +158,7 @@ Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal expo
 Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.
 ```
 
-**Expected recommendations**: rt_alone, rt_accelerated, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S7R, S8
 **Predicted failure mode**: Should block TLM due to AC with difficult exposure (S7R absolute CI)
@@ -179,7 +180,7 @@ Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal expo
 Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.
 ```
 
-**Expected recommendations**: rt_alone, rt_accelerated, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S5R
 **Predicted failure mode**: Absolute CI TLM (S5R, 100%)
@@ -202,7 +203,7 @@ Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal expo
 Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.
 ```
 
-**Expected recommendations**: concurrent_crt, ophl_type_ii, ict_rt, tlm
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
 **Edge justification**: S23R, S4R, S28
 **Predicted failure mode**: Fixed cord = T3 by definition. Must upstage and offer full cT3 options including CRT/ICT.
 
@@ -223,7 +224,8 @@ Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal expo
 Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.
 ```
 
-**Expected recommendations**: tlm, rt_alone, rt_accelerated, ophl_type_ii
+**Expected recommendations**: nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm
+**Expected excluded**: total_laryngectomy
 **Edge justification**: S6R, S80
 **Predicted failure mode**: Age alone should not change any recommendation
 ---
@@ -246,7 +248,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: tlm, ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
 **Expected excluded**: total_laryngectomy
 **Reasoning**: Clean cT3N0: TLM viable (adequate exposure, no S7R blockers). OPHL-II viable (no S15R/S16R/S17R blockers). CRT highest LP rate (S28). ICT viable (S30, LoE I).
 
@@ -267,7 +269,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S7R, S14, S27, S28
 **Predicted failure mode**: Over-generalisation: 'cartilage = no surgery' without distinguishing TLM from OPHL
@@ -291,7 +293,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_any, total_laryngectomy, concurrent_crt
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Expected excluded**: tlm
 **Edge justification**: S45, S46, S40R, S41R, S49R
 **Predicted failure mode**: Binary: 'cT4a = TL always' (misses selected LP exception per S46, S40R second clause)
@@ -313,7 +315,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S7R
 **Predicted failure mode**: Should block TLM specifically, not all surgery
@@ -335,7 +337,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S7R
 **Predicted failure mode**: TLM absolute CI; OPHL/CRT remain viable
@@ -357,7 +359,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S7R
 **Predicted failure mode**: Subtle: posterior <10mm blocks TLM but anterior <10mm does not
@@ -379,7 +381,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S5R
 **Predicted failure mode**: Absolute CI TLM (S5R, 100%)
@@ -401,7 +403,7 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S7R
 **Predicted failure mode**: AC with difficult exposure = absolute CI TLM
@@ -423,8 +425,8 @@ Function: Severe dysphonia with emerging aspiration risk due to bilateral aryten
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: total_laryngectomy, concurrent_crt
-**Expected excluded**: tlm, ophl_any, surgical_lp
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
+**Expected excluded**: tlm
 **Edge justification**: S16R, S39R, S42R
 **Predicted failure mode**: Bilateral arytenoid = CI ALL conservative surgery (S16R, 98%). Must block OPHL too, not just TLM.
 
@@ -445,8 +447,8 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, ophl_type_iii
-**Expected excluded**: tlm, ophl_type_ii
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iii, surgical_lp
+**Expected excluded**: ophl_type_ii, tlm
 **Edge justification**: S17R, S18R
 **Predicted failure mode**: >10mm subglottic + CAJ = absolute CI OPHL-II (S17R). But >10mm anterior subglottic may allow OPHL-III in expert centers (S18R).
 
@@ -467,7 +469,8 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: tlm, ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
+**Expected excluded**: total_laryngectomy
 **Edge justification**: S6R, S80
 **Predicted failure mode**: Over-sensitivity to age in fit elderly
 
@@ -488,7 +491,8 @@ Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway o
 Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.
 ```
 
-**Expected recommendations**: concurrent_crt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
+**Expected excluded**: total_laryngectomy
 **Edge justification**: S27
 **Predicted failure mode**: Tests S27 specifically: TC inner cortex is NOT CI for CRT. Ask targeted: 'Is CRT contraindicated by the cartilage finding?'
 **Notes**: TARGETED QUESTION VARIANT: 'Given the focal inner cortex thyroid cartilage involvement, is concurrent chemoradiotherapy contraindicated?'
@@ -512,7 +516,7 @@ Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered
 Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.
 ```
 
-**Expected recommendations**: tlm, tors, ophl_type_i, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_i, surgical_lp, tlm, tors
 **Expected excluded**: total_laryngectomy
 **Reasoning**: Supraglottic cT3 with limited PES: TLM/TORS viable per S10R. OPHL-I viable. CRT + ICT viable. N1 does not contraindicate surgical LP (S24R only for N2+).
 
@@ -533,7 +537,7 @@ Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered
 Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.
 ```
 
-**Expected recommendations**: ophl_type_i, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_i, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S10R
 **Predicted failure mode**: Pronounced PES shifts from TLM/TORS toward OPHL-I (S10R-b)
@@ -555,7 +559,7 @@ Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered
 Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.
 ```
 
-**Expected recommendations**: ophl_type_iib, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iib, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S10R
 **Predicted failure mode**: CRITICAL SITE-CONDITIONAL: TC erosion = INDICATION for OPHL-IIB in supraglottic (S10R) but would be CI for TLM in glottic (S9R)
@@ -578,7 +582,7 @@ Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered
 Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.
 ```
 
-**Expected recommendations**: ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S9R, S10R
 **Predicted failure mode**: TC erosion now = CI for TLM (S9R) in glottic. NOT an indication for OPHL-IIB (that's supraglottic-specific). Tests site-conditionality.
@@ -600,7 +604,7 @@ Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered
 Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S24R
 **Predicted failure mode**: N2+ = relative CI for partial laryngectomy (S24R), preference shifts to CRT
@@ -622,7 +626,7 @@ Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered
 Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy
 **Expected excluded**: tlm
 **Edge justification**: S12, S43, S112
 **Predicted failure mode**: Hypopharyngeal: TLM not first-line (S12), worse outcomes with non-surgical (S43)
@@ -646,7 +650,7 @@ Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspir
 Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy
 **Expected excluded**: tlm
 **Reasoning**: Hypopharyngeal advanced: TLM not first-line (S12). OPHL limited by unilateral arytenoid + N2 (S24R). ICT → response assessment especially relevant (S30). Hypopharyngeal origin = worse LP outcomes (S43).
 
@@ -667,7 +671,7 @@ Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspir
 Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, ophl_type_ii, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, total_laryngectomy
 **Edge justification**: S12, S43
 **Predicted failure mode**: Removing site-specific penalties: TLM now discussable, non-surgical outcomes not penalised by site
 
@@ -689,7 +693,6 @@ Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: nonsurgical_lp
 **Edge justification**: S19R
 **Predicted failure mode**: Recurrent aspiration pneumonia = absolute CI for non-surgical LP (S19R-a)
 
@@ -710,7 +713,7 @@ Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspir
 Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: S19R, S115
 **Predicted failure mode**: Tracheostomy = relative CI non-surgical (S19R-b) + poor functional prognosis (S115). Non-surgical not excluded but balance shifts.
 
@@ -731,7 +734,8 @@ Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspir
 Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy
+**Expected excluded**: tlm
 **Edge justification**: S80
 **Predicted failure mode**: Age alone should not change recommendation
 ---
@@ -757,7 +761,7 @@ Labs: CrCl 91, NYHA I, no neuropathy. Albumin 3.4, Hb 12.8.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: tlm, ophl_any, nonsurgical_lp
+**Expected excluded**: tlm
 **Reasoning**: Unambiguous TL: significant extralaryngeal (S38R), extensive subglottic (S38R), TLM CI (S45/S5R), magic plane (S15R), dysfunctional larynx (S39R), tracheostomy (S19R-b/S115).
 
 ### ⊘ E1-NULL — Add age 75, fit — TL still indicated
@@ -780,7 +784,7 @@ Labs: CrCl 91, NYHA I, no neuropathy. Albumin 3.4, Hb 12.8.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: tlm, ophl_any, nonsurgical_lp
+**Expected excluded**: tlm
 **Edge justification**: S80
 **Predicted failure mode**: Age should not change clear TL indication
 ---
@@ -803,7 +807,7 @@ Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No 
 Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
-**Expected recommendations**: ophl_any, concurrent_crt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Expected excluded**: tlm
 **Reasoning**: Favorable cT4a: meets S46 criteria (N0, minimal anterior extralaryngeal, fit). OPHL viable. Non-surgical LP has very few but real indications (S49R). TL preferred for unselected but LP achieves equal outcomes in selected patients (S40R). TLM absolute CI (S45).
 
@@ -825,7 +829,7 @@ Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: tlm, ophl_any
+**Expected excluded**: tlm
 **Edge justification**: S38R, S39R
 **Predicted failure mode**: Significant extralaryngeal = TL indication (S38R), CI for LP (S39R)
 
@@ -846,8 +850,8 @@ Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No 
 Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
-**Expected recommendations**: total_laryngectomy, concurrent_crt
-**Expected excluded**: tlm, ophl_type_i, ophl_type_ii
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
+**Expected excluded**: ophl_type_i, ophl_type_ii, tlm
 **Edge justification**: S15R
 **Predicted failure mode**: Magic plane = CI for OPHL-I and OPHL-II (S15R). Only OPHL-III or TL remain surgical options.
 
@@ -869,7 +873,6 @@ Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: surgical_lp, nonsurgical_lp
 **Edge justification**: S39R, S42R
 **Predicted failure mode**: Dysfunctional baseline = absolute CI for BOTH surgical and non-surgical LP (S39R). Forces TL.
 
@@ -890,8 +893,7 @@ Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No 
 Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
-**Expected recommendations**: concurrent_crt, total_laryngectomy
-**Expected excluded**: ophl_any
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: S24R, S46
 **Predicted failure mode**: N2 = relative CI for partial laryngectomy (S24R). S46 requires N0-1 for OPHL in cT4a.
 
@@ -912,7 +914,7 @@ Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No 
 Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
-**Expected recommendations**: total_laryngectomy, concurrent_crt
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Expected excluded**: tlm
 **Edge justification**: S12, S43
 **Predicted failure mode**: Hypopharynx at cT4a: worse outcomes non-surgical (S43), TLM not first-line (S12)
@@ -957,7 +959,8 @@ Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No 
 Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
 ```
 
-**Expected recommendations**: ophl_any, concurrent_crt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
+**Expected excluded**: tlm
 **Edge justification**: S80
 **Predicted failure mode**: Age alone should not change LP eligibility in fit patient
 ---
@@ -984,7 +987,7 @@ Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
 **Expected recommendations**: cisplatin_high_dose
-**Expected excluded**: cetuximab_concurrent, carboplatin_5fu
+**Expected excluded**: carboplatin_5fu, cetuximab_concurrent
 **Reasoning**: No absolute or relative CIs. High-dose cisplatin preferred (S52R, LoE I-II).
 
 ### 🔄 G1-ABS01 — CrCl <50 absolute CI
@@ -1007,9 +1010,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify renal_function as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS02 — NYHA III-IV / LVEF ≤50 absolute CI
@@ -1032,9 +1035,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify cardiac_function as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS03 — Child-Pugh B/C absolute CI
@@ -1057,9 +1060,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify liver_function as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS04 — Grade ≥2 neuropathy absolute CI
@@ -1082,9 +1085,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify neuropathy as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS05 — CD4 <200/AIDS absolute CI
@@ -1107,9 +1110,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify hiv_status as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS06 — Uncontrolled HBV absolute CI
@@ -1132,9 +1135,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify hepatitis as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS07 — Platinum hypersensitivity absolute CI
@@ -1157,9 +1160,9 @@ Other: documented grade 3 anaphylactic reaction to cisplatin during prior treatm
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify platinum_hypersensitivity as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS08 — Severe psychiatric disorder absolute CI
@@ -1182,9 +1185,9 @@ Other: no platinum allergy. Severe treatment-resistant schizophrenia with limite
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify psychiatric_disorders as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS09 — Uncontrolled insulin-dependent DM absolute CI
@@ -1207,9 +1210,9 @@ Other: no platinum allergy, no psychiatric history. Uncontrolled type 1 diabetes
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify diabetes as absolute CI and recommend alternative agent
 
 ### 🔄 G1-ABS10 — Grade >2 bone marrow absolute CI
@@ -1232,9 +1235,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R
+**Edge justification**: S68R, S52R, S72R
 **Predicted failure mode**: Should identify bone_marrow as absolute CI and recommend alternative agent
 
 ### 🔄 G1-REL01 — CrCl 50-60 = RELATIVE CI only, not absolute
@@ -1377,9 +1380,9 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
-**Expected recommendations**: cetuximab_concurrent, carboplatin_5fu
+**Expected recommendations**: carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp
 **Expected excluded**: cisplatin_high_dose
-**Edge justification**: S68R, S77R
+**Edge justification**: S68R, S77R, S52R, S72R
 **Predicted failure mode**: Same ECOG 2 as G1-ECOG-TUM but opposite recommendation — tests whether model distinguishes etiology
 
 ### 🔘 G1-GREY-S70 — 2 relative CIs — grey zone (ACCUMULATION-NON-PATTERN)
@@ -1427,10 +1430,11 @@ Other: no known platinum allergy, no psychiatric history, no diabetes, not pregn
 Severe comorbidity burden (ACE-27 score 3): COPD GOLD III, chronic kidney disease stage 3, compensated heart failure. Nutritional status marginal (albumin 3.2, BMI 20).
 ```
 
-**Expected recommendations**: 
-**Expected excluded**: concurrent_crt, ict_rt, nonsurgical_lp
-**Edge justification**: S67
-**Predicted failure mode**: Severe comorbidity burden = unfit for any chemo → absolute CI for ICT/CRT (S67). Must block all non-surgical LP, not just cisplatin.
+**Expected recommendations**: nonsurgical_lp, rt_accelerated
+**Expected excluded**: carboplatin_5fu, cetuximab_concurrent, cisplatin_high_dose, concurrent_crt, ict_rt
+**Edge justification**: S67, S73R
+**Predicted failure mode**: Severe comorbidity burden = unfit for any chemo-based LP (S67). If TL is declined, accelerated or hyperfractionated RT alone is the fallback (S73R).
+**Notes**: TARGETED QUESTION VARIANT: 'If this patient declines total laryngectomy and is unfit for any systemic therapy, what larynx-preservation option, if any, remains appropriate?'
 
 ### ⊘ G1-NULL — Controlled T2DM — NOT a CI
 
@@ -1453,6 +1457,7 @@ Nutritional status adequate (albumin 4.1, BMI 24).
 ```
 
 **Expected recommendations**: cisplatin_high_dose
+**Expected excluded**: carboplatin_5fu, cetuximab_concurrent
 **Edge justification**: 
 **Predicted failure mode**: Over-generalises 'diabetes = problem for chemo'
 ---
@@ -1476,7 +1481,7 @@ Post-ICT reassessment (8 weeks after cycle 3):
 Current function: Voice significantly improved. No dysphagia. No airway issues.
 ```
 
-**Expected recommendations**: rt_alone
+**Expected recommendations**: nonsurgical_lp, rt_alone
 **Expected excluded**: concurrent_crt, total_laryngectomy
 **Reasoning**: CR + VC remobilization after ICT → RT alone (S31R, S120R). NOT CRT. VC remobilization predicts functional LP (S119R). ICT CR is favorable factor (S116).
 
@@ -1498,7 +1503,7 @@ Post-ICT reassessment (8 weeks after cycle 3):
 Current function: Voice improved but still moderately impaired. No dysphagia. No airway issues.
 ```
 
-**Expected recommendations**: concurrent_crt
+**Expected recommendations**: concurrent_crt, nonsurgical_lp
 **Expected excluded**: rt_alone, total_laryngectomy
 **Edge justification**: S55R, S116, S119R, S31R, S120R, S30
 **Predicted failure mode**: Should shift from RT alone to CRT. CR=RT alone (S120R) but PR≥50% requires concurrent chemo. May incorrectly keep RT alone.
@@ -1521,7 +1526,7 @@ Post-ICT reassessment (8 weeks after cycle 3):
 Current function: Voice unchanged — severely impaired. No dysphagia. No airway issues.
 ```
 
-**Expected recommendations**: total_laryngectomy, concurrent_crt
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: SA6, S121R
 **Predicted failure mode**: GREY ZONE SA6 (67.2%): PR<50% management unresolved. Experts split between CRT and TL. Model should express uncertainty.
 **Grey zone**: SA6
@@ -1568,9 +1573,9 @@ Current function: Voice worsened. Emerging dysphagia to solids.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: rt_alone, nonsurgical_lp
-**Edge justification**: 
-**Predicted failure mode**: Progression after ICT = clear TL indication. No edge explicitly encoded but clinically unambiguous.
+**Expected excluded**: rt_alone
+**Edge justification**: S129
+**Predicted failure mode**: Progression or no response after ICT should shift decisively toward total laryngectomy over larynx-preservation strategies (S129).
 ---
 
 ## H2-BASE — post_ict_response / cT4a_partial_response
@@ -1590,8 +1595,8 @@ Post-ICT reassessment:
 - Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy.
 ```
 
-**Expected recommendations**: concurrent_crt, total_laryngectomy
-**Expected excluded**: rt_alone, tlm
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
+**Expected excluded**: rt_alone
 **Reasoning**: cT4a with PR≥50% → eligible for non-surgical LP (S55R). But cord not remobilized (S119R negative), outer cortex residual (S41R). CRT is the non-surgical option (not RT alone — needs CR for that per S120R). TL valid alternative.
 
 ### 🔄 H2-P1 — Response → stable disease
@@ -1611,7 +1616,7 @@ Post-ICT reassessment:
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: rt_alone, nonsurgical_lp
+**Expected excluded**: rt_alone
 **Edge justification**: S121R
 **Predicted failure mode**: Stable disease at cT4a → TL clearly indicated. Non-surgical LP no longer justified (S121R: CRT only if refuses TL).
 
@@ -1632,7 +1637,6 @@ Post-ICT reassessment:
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: surgical_lp, nonsurgical_lp
 **Edge justification**: S39R
 **Predicted failure mode**: Dysfunctional larynx = absolute CI for both surgical and non-surgical LP (S39R)
 
@@ -1652,7 +1656,7 @@ Post-ICT reassessment:
 - Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy.
 ```
 
-**Expected recommendations**: total_laryngectomy, concurrent_crt
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: S43
 **Predicted failure mode**: Hypopharynx at cT4a: worse outcomes tip further toward TL (S43)
 
@@ -1672,7 +1676,8 @@ Post-ICT reassessment:
 - Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy.
 ```
 
-**Expected recommendations**: concurrent_crt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
+**Expected excluded**: rt_alone
 **Edge justification**: S119R
 **Predicted failure mode**: VC remobilization improves functional LP prediction (S119R) but fundamental eligibility unchanged
 ---
@@ -1695,7 +1700,7 @@ Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilate
 Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1.
 ```
 
-**Expected recommendations**: tlm, ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
 **Reasoning**: Age alone NOT CI for TLM (S6R) or any LP (S80) in fit patients. CGA fit → standard treatment (S84). CrCl 72 adequate for cisplatin (>60). Grade 1 hearing = relative CI cisplatin (S69R) but not absolute.
 
 ### 🔄 I1-P1 — Frail → OPHL relative CI, adapted approach
@@ -1715,7 +1720,7 @@ Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilate
 Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1.
 ```
 
-**Expected recommendations**: concurrent_crt, rt_alone, total_laryngectomy
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, rt_alone, total_laryngectomy
 **Edge justification**: S88, S84, S111R
 **Predicted failure mode**: Frail → OPHL becomes relative CI (S88). Must adapt treatment per CGA (S84). May still be CRT candidate but with adapted approach.
 
@@ -1758,7 +1763,7 @@ Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilate
 Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, ophl_type_ii
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp
 **Expected excluded**: tlm
 **Edge justification**: S75R, S13
 **Predicted failure mode**: Neurodegenerative disease = relative CI for surgical LP (S75R). Impaired neuro fn = CI OPHL (S13). Shifts toward non-surgical.
@@ -1780,7 +1785,7 @@ Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilate
 Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1.
 ```
 
-**Expected recommendations**: tlm, ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
 **Edge justification**: S6R, S80
 **Predicted failure mode**: Even at 82, if CGA is fit, age alone is not CI. Tests extreme age sensitivity.
 
@@ -1801,7 +1806,7 @@ Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilate
 Labs: CrCl 55 mL/min (moderate renal impairment), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1.
 ```
 
-**Expected recommendations**: tlm, ophl_type_ii, concurrent_crt, ict_rt
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm
 **Edge justification**: S69R
 **Predicted failure mode**: CrCl 55 = relative CI for cisplatin only (S69R), does NOT affect LP eligibility itself
 ---
@@ -1849,7 +1854,7 @@ Function: Voice severely impaired. Swallowing normal — full oral diet without 
 Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: S19R, S115
 **Predicted failure mode**: Tracheostomy = relative CI (S19R-b) + poor functional prognosis (S115). Non-surgical not excluded but balance shifts.
 
@@ -1873,7 +1878,6 @@ Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: nonsurgical_lp
 **Edge justification**: S19R
 **Predicted failure mode**: Aspiration pneumonia = absolute CI non-surgical LP (S19R-a). The blocker is aspiration, not the airway obstruction.
 
@@ -1896,7 +1900,7 @@ Function: Voice severely impaired. Swallowing normal — full oral diet without 
 Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
-**Expected recommendations**: concurrent_crt, ict_rt, total_laryngectomy
+**Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: S19R
 **Predicted failure mode**: Feeding tube = relative CI (S19R-c). Non-surgical not excluded but adds to risk profile.
 
@@ -1919,7 +1923,7 @@ Function: Voice severely impaired. Swallowing normal — full oral diet without 
 Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
-**Expected recommendations**: total_laryngectomy, concurrent_crt
+**Expected recommendations**: concurrent_crt, nonsurgical_lp, total_laryngectomy
 **Edge justification**: S20R
 **Predicted failure mode**: Significant subglottic + extensive cricoid = relative CI non-surgical (S20R). Combined with airway obstruction, balance shifts significantly.
 
@@ -1943,7 +1947,6 @@ Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
 **Expected recommendations**: total_laryngectomy
-**Expected excluded**: nonsurgical_lp, surgical_lp
 **Edge justification**: S19R, S39R, S115
 **Predicted failure mode**: Convergent CIs: aspiration (absolute, S19R-a), tracheostomy (relative, S19R-b), feeding tube (relative, S19R-c), dysfunctional larynx (absolute for LP, S39R). Clear TL.
 
@@ -1966,8 +1969,7 @@ Function: Voice severely impaired. Swallowing normal — full oral diet without 
 Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
-**Expected recommendations**: total_laryngectomy, surgical_lp
-**Expected excluded**: nonsurgical_lp
+**Expected recommendations**: total_laryngectomy
 **Edge justification**: S74R
 **Predicted failure mode**: DNA repair disorder = absolute CI for non-surgical LP (S74R) due to radiation hypersensitivity.
 
@@ -1990,7 +1992,7 @@ Function: Voice severely impaired. Swallowing normal — full oral diet without 
 Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
-**Expected recommendations**: total_laryngectomy, surgical_lp
+**Expected recommendations**: total_laryngectomy
 **Edge justification**: S74R
 **Predicted failure mode**: Previous neck RT = relative CI for re-irradiation (S74R). Non-surgical LP not excluded but significantly complicated.
 
@@ -2014,6 +2016,7 @@ Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 ```
 
 **Expected recommendations**: concurrent_crt, ict_rt, nonsurgical_lp
+**Expected excluded**: total_laryngectomy
 **Edge justification**: S21, S80
 **Predicted failure mode**: Airway obstruction NOT CI (S21) + age NOT CI when fit (S80). Both null signals should hold.
 
@@ -2030,11 +2033,11 @@ Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.
 | hypopharyngeal | D1-BASE | 4 | S115, S12, S19R, S43, S80 |
 | cT4a_unselected | E1-BASE | 1 | S80 |
 | cT4a_selected | F1-BASE | 7 | S12, S15R, S24R, S35R, S38R, S39R, S42R, S43, S46, S47R, S80 |
-| cisplatin_eligibility | G1-BASE | 19 | S52R, S67, S68R, S69R, S70, S77R |
-| post_ict_response | H1-BASE | 4 | S116, S119R, S120R, S121R, S30, S31R, S55R, SA6 |
+| cisplatin_eligibility | G1-BASE | 19 | S52R, S67, S68R, S69R, S70, S72R, S73R, S77R |
+| post_ict_response | H1-BASE | 4 | S116, S119R, S120R, S121R, S129, S30, S31R, S55R, SA6 |
 | post_ict_response | H2-BASE | 4 | S119R, S121R, S39R, S43 |
 | elderly_frail | I1-BASE | 5 | S111R, S13, S69R, S6R, S75R, S80, S84, S88, S89 |
 | pretreatment_function | J1-BASE | 8 | S115, S19R, S20R, S21, S39R, S74R, S80 |
 
-**Total unique edges tested**: 57
-**Edges**: S10R, S111R, S112, S115, S116, S119R, S12, S120R, S121R, S13, S14, S15R, S16R, S17R, S18R, S19R, S20R, S21, S22, S23R, S24R, S27, S28, S30, S31R, S35R, S38R, S39R, S40R, S41R, S42R, S43, S45, S46, S47R, S49R, S4R, S52R, S55R, S5R, S67, S68R, S69R, S6R, S70, S74R, S75R, S77R, S7R, S8, S80, S84, S88, S89, S9R, SA2, SA6
+**Total unique edges tested**: 60
+**Edges**: S10R, S111R, S112, S115, S116, S119R, S12, S120R, S121R, S129, S13, S14, S15R, S16R, S17R, S18R, S19R, S20R, S21, S22, S23R, S24R, S27, S28, S30, S31R, S35R, S38R, S39R, S40R, S41R, S42R, S43, S45, S46, S47R, S49R, S4R, S52R, S55R, S5R, S67, S68R, S69R, S6R, S70, S72R, S73R, S74R, S75R, S77R, S7R, S8, S80, S84, S88, S89, S9R, SA2, SA6

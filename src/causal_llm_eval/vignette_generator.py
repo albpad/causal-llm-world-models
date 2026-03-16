@@ -15,6 +15,11 @@ from dataclasses import dataclass, field, asdict
 from typing import Optional
 from pathlib import Path
 
+try:
+    from .label_space import normalise_expected_label_lists
+except ImportError:
+    from label_space import normalise_expected_label_lists
+
 # ═══════════════════════════════════════════════════════════════════
 # DATA STRUCTURES
 # ═══════════════════════════════════════════════════════════════════
@@ -44,6 +49,7 @@ class Perturbation:
     predicted_failure_mode: str
     notes: str = ""
     grey_zone_statement: Optional[str] = None
+    family_override: Optional[str] = None
 
 @dataclass
 class BaselineTemplate:
@@ -162,7 +168,8 @@ Labs: Normal blood panel, CrCl 102 mL/min.""",
              tr("Mild dysphonia (VHI-10: 18).","Severe dysphonia (VHI-10: 32).")],
             ["tlm","ophl_type_ii","concurrent_crt","ict_rt"],["total_laryngectomy"],
             ["S23R","S4R","S28"],
-            "Must recognize that fixed cord upstages to cT3 and open the full cT3 decision landscape including CRT and ICT, not just escalate RT"),
+            "Must recognize that fixed cord upstages to cT3 and open the full cT3 decision landscape including CRT and ICT, not just escalate RT",
+            family_override="glottic_cT3"),
         Perturbation("A1-P3","flip","Add unfavorable cT2 features without fixation (SA2)",
             [vc("unfavorable_ct2","false","true"),
              vc("tumor_volume","low","high"),
@@ -239,7 +246,8 @@ Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.""",
              tr("cT2N0 glottic SCC.","cT3N0 glottic SCC.")],
             ["concurrent_crt","ophl_type_ii","ict_rt","tlm"], [],
             ["S23R","S4R","S28"],
-            "Fixed cord = T3 by definition. Must upstage and offer full cT3 options including CRT/ICT."),
+            "Fixed cord = T3 by definition. Must upstage and offer full cT3 options including CRT/ICT.",
+            family_override="glottic_cT3"),
         Perturbation("A2-NULL","null","Age 73, fit",
             [vc("age","under_70","70_plus")], None,
             [tr("Patient: 61-year-old male, ECOG 0.",
@@ -440,7 +448,8 @@ Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.""",
                 "no pre-epiglottic space involvement. Thyroid cartilage erosion on CT, without full-thickness infiltration or outer cortex invasion.")],
             ["ophl_type_ii","concurrent_crt","ict_rt"], ["tlm"],
             ["S9R","S10R"],
-            "TC erosion now = CI for TLM (S9R) in glottic. NOT an indication for OPHL-IIB (that's supraglottic-specific). Tests site-conditionality."),
+            "TC erosion now = CI for TLM (S9R) in glottic. NOT an indication for OPHL-IIB (that's supraglottic-specific). Tests site-conditionality.",
+            family_override="glottic_cT3"),
         Perturbation("C1-P4","flip","N2 → relative CI partial laryngectomy",
             [vc("n_stage","cN1","cN2")], None,
             [tr("a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).",
@@ -715,7 +724,7 @@ Nutritional status adequate (albumin 4.1, BMI 24).""",
             [vc(var, fr, to)], None,
             [tr(old_txt, new_txt)],
             ["cetuximab_concurrent","carboplatin_5fu"], ["cisplatin_high_dose"],
-            [edge],
+            [edge, "S52R", "S72R"],
             f"Should identify {var} as absolute CI and recommend alternative agent"))
 
     # Relative CIs
@@ -752,7 +761,7 @@ Nutritional status adequate (albumin 4.1, BMI 24).""",
          tr("Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.",
             "Cardiac: NYHA class II, LVEF 55%. COPD GOLD III, FEV1 35% predicted.")],
         ["cetuximab_concurrent","carboplatin_5fu"], ["cisplatin_high_dose"],
-        ["S68R","S77R"],
+        ["S68R","S77R","S52R","S72R"],
         "Same ECOG 2 as G1-ECOG-TUM but opposite recommendation — tests whether model distinguishes etiology"))
 
     # Grey zone: 2 relative CIs
@@ -776,9 +785,10 @@ Nutritional status adequate (albumin 4.1, BMI 24).""",
         [vc("comorbidity_burden","none_mild","severe")], None,
         [tr("Nutritional status adequate (albumin 4.1, BMI 24).",
             "Severe comorbidity burden (ACE-27 score 3): COPD GOLD III, chronic kidney disease stage 3, compensated heart failure. Nutritional status marginal (albumin 3.2, BMI 20).")],
-        [], ["concurrent_crt","ict_rt","nonsurgical_lp"],
-        ["S67"],
-        "Severe comorbidity burden = unfit for any chemo → absolute CI for ICT/CRT (S67). Must block all non-surgical LP, not just cisplatin."))
+        ["rt_accelerated"], ["cisplatin_high_dose","cetuximab_concurrent","carboplatin_5fu","concurrent_crt","ict_rt","nonsurgical_lp"],
+        ["S67","S73R"],
+        "Severe comorbidity burden = unfit for any chemo-based LP (S67). If TL is declined, accelerated or hyperfractionated RT alone is the fallback (S73R).",
+        notes="TARGETED QUESTION VARIANT: 'If this patient declines total laryngectomy and is unfit for any systemic therapy, what larynx-preservation option, if any, remains appropriate?'"))
 
     # Null: controlled diabetes
     g1.perturbations.append(Perturbation(
@@ -879,8 +889,8 @@ Current function: Voice significantly improved. No dysphagia. No airway issues."
              tr("Voice significantly improved. No dysphagia. No airway issues.",
                 "Voice worsened. Emerging dysphagia to solids.")],
             ["total_laryngectomy"], ["rt_alone","nonsurgical_lp"],
-            [],
-            "Progression after ICT = clear TL indication. No edge explicitly encoded but clinically unambiguous."),
+            ["S129"],
+            "Progression or no response after ICT should shift decisively toward total laryngectomy over larynx-preservation strategies (S129)."),
     ]
     templates.append(h1)
 
@@ -912,7 +922,7 @@ Post-ICT reassessment:
 - Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy.""",
         question="Is this patient eligible for non-surgical larynx preservation following this partial response to ICT?",
         expected_recommendations=["concurrent_crt","total_laryngectomy"],
-        expected_excluded=["rt_alone","tlm"],
+        expected_excluded=["rt_alone"],
         expected_reasoning="cT4a with PR≥50% → eligible for non-surgical LP (S55R). But cord not remobilized (S119R negative), outer cortex residual (S41R). CRT is the non-surgical option (not RT alone — needs CR for that per S120R). TL valid alternative.",
     )
     h2.perturbations = [
@@ -1172,7 +1182,7 @@ def apply_perturbation(baseline: BaselineTemplate, pert: Perturbation) -> dict:
     return {
         "id": pert.id,
         "baseline_id": baseline.id,
-        "family": baseline.family,
+        "family": pert.family_override or baseline.family,
         "type": pert.pert_type,
         "label": pert.label,
         "variables_changed": [
@@ -1192,6 +1202,29 @@ def apply_perturbation(baseline: BaselineTemplate, pert: Perturbation) -> dict:
         "notes": pert.notes,
         "consistency_warnings": warnings,
     }
+
+
+def _normalise_null_controls(battery: dict) -> None:
+    """Null items should preserve baseline expectations exactly."""
+    baseline_map = {row["id"]: row for row in battery["baselines"]}
+    for pert in battery["perturbations"]:
+        if pert.get("type") != "null":
+            continue
+        baseline = baseline_map.get(pert["baseline_id"])
+        if not baseline:
+            continue
+        pert["expected_recommendations"] = list(baseline.get("expected_recommendations", []))
+        pert["expected_excluded"] = list(baseline.get("expected_excluded", []))
+
+
+def _normalise_expected_labels(battery: dict) -> None:
+    for row in battery["baselines"] + battery["perturbations"]:
+        rec, exc = normalise_expected_label_lists(
+            row.get("expected_recommendations", []),
+            row.get("expected_excluded", []),
+        )
+        row["expected_recommendations"] = rec
+        row["expected_excluded"] = exc
 
 
 def generate_battery(templates: list) -> dict:
@@ -1230,6 +1263,9 @@ def generate_battery(templates: list) -> dict:
         for pert in tmpl.perturbations:
             pdict = apply_perturbation(tmpl, pert)
             battery["perturbations"].append(pdict)
+
+    _normalise_null_controls(battery)
+    _normalise_expected_labels(battery)
 
     battery["meta"]["total_baselines"] = len(battery["baselines"])
     battery["meta"]["total_perturbations"] = len(battery["perturbations"])

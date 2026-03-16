@@ -15,6 +15,11 @@ from pathlib import Path
 from collections import defaultdict
 from dataclasses import dataclass, asdict
 
+try:
+    from .label_space import derive_aggregate_stance_records
+except ImportError:
+    from label_space import derive_aggregate_stance_records
+
 # =====================================================================
 # TREATMENT ALIASES & STANCE PATTERNS
 # =====================================================================
@@ -43,6 +48,8 @@ TREATMENT_ALIASES = {
     "cisplatin_high_dose": [r"high.dose cisplatin", r"cisplatin 100\s*mg", r"cisplatin q3w"],
     "cetuximab_concurrent": [r"cetuximab", r"erbitux", r"bioradiation"],
     "carboplatin_5fu": [r"carboplatin.*5.?FU", r"carboplatin.*fluorouracil"],
+    "nonsurgical_lp": [r"non.?surgical (?:organ|larynx) preservation", r"non.?surgical LP", r"organ preservation protocols?"],
+    "surgical_lp": [r"surgical larynx preservation", r"conservative surgery", r"conservative laryngeal surgery"],
 }
 
 # Structured label patterns (highest priority — from Phase 2 formatted output)
@@ -201,6 +208,7 @@ def parse_result(r):
     for s in s2:
         if s["treatment"] not in smap or s["confidence"] >= smap[s["treatment"]]["confidence"]:
             smap[s["treatment"]] = s
+    smap = derive_aggregate_stance_records(smap)
     return {
         "item_id": r["item_id"], "model_name": r["model_name"], "run_idx": r["run_idx"],
         "stances": list(smap.values()),

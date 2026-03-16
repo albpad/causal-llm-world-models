@@ -1,0 +1,3539 @@
+{
+  "results_file": "results/raw/article_models_h15_repaired/run_20260315_h15_harmonized.jsonl",
+  "battery_file": "data/vignettes/vignette_battery.json",
+  "annotations_file": null,
+  "model_filter": null,
+  "row_level": {
+    "n_rows": 2640,
+    "exact_match_rate": 0.024242424242424242,
+    "label_metrics": {
+      "recommended": {
+        "tp": 6376,
+        "fp": 4230,
+        "fn": 3254,
+        "precision": 0.6011691495379974,
+        "recall": 0.6620976116303219,
+        "f1": 0.6301640640442775
+      },
+      "excluded": {
+        "tp": 756,
+        "fp": 2833,
+        "fn": 1434,
+        "precision": 0.2106436333240457,
+        "recall": 0.3452054794520548,
+        "f1": 0.26163696141200904
+      },
+      "relative_ci": {
+        "tp": 0,
+        "fp": 2797,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null
+      },
+      "uncertain": {
+        "tp": 0,
+        "fp": 319,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "consensus_level": {
+    "n_cases": 176,
+    "exact_match_rate": 0.0,
+    "label_metrics": {
+      "recommended": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 642,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null
+      },
+      "excluded": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 146,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null
+      },
+      "relative_ci": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "uncertain": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "completeness": {
+    "rows": 2640,
+    "parsed_rows": 2640,
+    "unparsed_rows": 0,
+    "blank_phase1": 0,
+    "blank_phase2": 0,
+    "zero_stance_rows": 0,
+    "error_rows": 0
+  },
+  "gold_sources": {
+    "battery_expectation": 2640
+  },
+  "examples": [
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 7,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Assessment:** This is a favorable intermediate-stage (cT2N0) glottic squamous cell carcinoma in a physiologically young, healthy patient with excellent laryngeal exposure. The absence of deep structural invasion (carti",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion permits complete en"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 7,
+      "treatment": "rt_accelerated",
+      "predicted": "relative_ci",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Assessment:** This is a favorable intermediate-stage (cT2N0) glottic squamous cell carcinoma in a physiologically young, healthy patient with excellent laryngeal exposure. The absence of deep structural invasion (carti",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion permits complete en"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 7,
+      "treatment": "total_laryngectomy",
+      "predicted": "absent",
+      "gold": "excluded",
+      "matched": false,
+      "phase1_preview": "**Assessment:** This is a favorable intermediate-stage (cT2N0) glottic squamous cell carcinoma in a physiologically young, healthy patient with excellent laryngeal exposure. The absence of deep structural invasion (carti",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion permits complete en"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 4,
+      "treatment": "ophl_any",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "Based on this clinical presentation, this patient has favorable **cT2N0 glottic squamous cell carcinoma** amenable to organ-preserving treatment. I recommend offering **both Transoral Laser Microsurgery (TLM) and primary",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: The tumor is confined to the true vocal cord without paraglottic space invasion, cartilage involvement, or subglottic extension, and adequate laryngeal expos"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 4,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "Based on this clinical presentation, this patient has favorable **cT2N0 glottic squamous cell carcinoma** amenable to organ-preserving treatment. I recommend offering **both Transoral Laser Microsurgery (TLM) and primary",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: The tumor is confined to the true vocal cord without paraglottic space invasion, cartilage involvement, or subglottic extension, and adequate laryngeal expos"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 4,
+      "treatment": "rt_accelerated",
+      "predicted": "relative_ci",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "Based on this clinical presentation, this patient has favorable **cT2N0 glottic squamous cell carcinoma** amenable to organ-preserving treatment. I recommend offering **both Transoral Laser Microsurgery (TLM) and primary",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: The tumor is confined to the true vocal cord without paraglottic space invasion, cartilage involvement, or subglottic extension, and adequate laryngeal expos"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 9,
+      "treatment": "ophl_any",
+      "predicted": "excluded",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Treatment Recommendation:**\n\nFor this patient with cT2N0 glottic SCC, the appropriate treatment options are **(1) Transoral Laser Microsurgery (TLM)** as the preferred surgical approach, or **(2) Primary Radiotherapy (",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE  \nReasoning: Confirmed adequate laryngeal exposure on suspension laryngoscopy and the absence of cartilage involvement or paraglottic space invasion make this T2 lesion"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 9,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Treatment Recommendation:**\n\nFor this patient with cT2N0 glottic SCC, the appropriate treatment options are **(1) Transoral Laser Microsurgery (TLM)** as the preferred surgical approach, or **(2) Primary Radiotherapy (",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE  \nReasoning: Confirmed adequate laryngeal exposure on suspension laryngoscopy and the absence of cartilage involvement or paraglottic space invasion make this T2 lesion"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 9,
+      "treatment": "rt_accelerated",
+      "predicted": "relative_ci",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Treatment Recommendation:**\n\nFor this patient with cT2N0 glottic SCC, the appropriate treatment options are **(1) Transoral Laser Microsurgery (TLM)** as the preferred surgical approach, or **(2) Primary Radiotherapy (",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE  \nReasoning: Confirmed adequate laryngeal exposure on suspension laryngoscopy and the absence of cartilage involvement or paraglottic space invasion make this T2 lesion"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 0,
+      "treatment": "ophl_any",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2bN0 Glottic Squamous Cell Carcinoma**\n\nThis is a straightforward T2 glottic cancer with impaired vocal cord mobility (T2b by subsite classification), arising from the left true vocal cord wit",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy and the absence of cartilage or paraglottic space invasion indicate this cT2b tumor i"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 0,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2bN0 Glottic Squamous Cell Carcinoma**\n\nThis is a straightforward T2 glottic cancer with impaired vocal cord mobility (T2b by subsite classification), arising from the left true vocal cord wit",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy and the absence of cartilage or paraglottic space invasion indicate this cT2b tumor i"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 0,
+      "treatment": "rt_accelerated",
+      "predicted": "recommended",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2bN0 Glottic Squamous Cell Carcinoma**\n\nThis is a straightforward T2 glottic cancer with impaired vocal cord mobility (T2b by subsite classification), arising from the left true vocal cord wit",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy and the absence of cartilage or paraglottic space invasion indicate this cT2b tumor i"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 0,
+      "treatment": "total_laryngectomy",
+      "predicted": "absent",
+      "gold": "excluded",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2bN0 Glottic Squamous Cell Carcinoma**\n\nThis is a straightforward T2 glottic cancer with impaired vocal cord mobility (T2b by subsite classification), arising from the left true vocal cord wit",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy and the absence of cartilage or paraglottic space invasion indicate this cT2b tumor i"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 10,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Discussion: cT2N0 Glottic Squamous Cell Carcinoma**\n\nBased on the clinical findings presented, I recommend **Transoral Laser Microsurgery (TLM)** as the primary treatment modality, with **definitive radiati",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: The patient has adequate laryngeal exposure confirmed on suspension laryngoscopy and T2 disease without paraglottic space invasion or cartilage involvement, "
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 10,
+      "treatment": "rt_accelerated",
+      "predicted": "relative_ci",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Discussion: cT2N0 Glottic Squamous Cell Carcinoma**\n\nBased on the clinical findings presented, I recommend **Transoral Laser Microsurgery (TLM)** as the primary treatment modality, with **definitive radiati",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: The patient has adequate laryngeal exposure confirmed on suspension laryngoscopy and T2 disease without paraglottic space invasion or cartilage involvement, "
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 10,
+      "treatment": "total_laryngectomy",
+      "predicted": "recommended",
+      "gold": "excluded",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Discussion: cT2N0 Glottic Squamous Cell Carcinoma**\n\nBased on the clinical findings presented, I recommend **Transoral Laser Microsurgery (TLM)** as the primary treatment modality, with **definitive radiati",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: The patient has adequate laryngeal exposure confirmed on suspension laryngoscopy and T2 disease without paraglottic space invasion or cartilage involvement, "
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 3,
+      "treatment": "ophl_any",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Assessment:**\n\nThis is a favorable **cT2N0M0 squamous cell carcinoma of the left glottis** in a physiologically young, fit patient with excellent laryngeal exposure. The impaired mobility (without fixation) places this",
+      "phase2_preview": "1. **Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion makes complete e"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 3,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Assessment:**\n\nThis is a favorable **cT2N0M0 squamous cell carcinoma of the left glottis** in a physiologically young, fit patient with excellent laryngeal exposure. The impaired mobility (without fixation) places this",
+      "phase2_preview": "1. **Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion makes complete e"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 3,
+      "treatment": "rt_accelerated",
+      "predicted": "relative_ci",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Assessment:**\n\nThis is a favorable **cT2N0M0 squamous cell carcinoma of the left glottis** in a physiologically young, fit patient with excellent laryngeal exposure. The impaired mobility (without fixation) places this",
+      "phase2_preview": "1. **Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion makes complete e"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 3,
+      "treatment": "total_laryngectomy",
+      "predicted": "absent",
+      "gold": "excluded",
+      "matched": false,
+      "phase1_preview": "**Assessment:**\n\nThis is a favorable **cT2N0M0 squamous cell carcinoma of the left glottis** in a physiologically young, fit patient with excellent laryngeal exposure. The impaired mobility (without fixation) places this",
+      "phase2_preview": "1. **Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure confirmed on suspension laryngoscopy combined with imaging showing no cartilage or paraglottic space invasion makes complete e"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 12,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Response: cT2N0 Glottic Squamous Cell Carcinoma**\n\nBased on the clinical findings, this patient has a **cT2N0M0 glottic squamous cell carcinoma (AJCC 8th Edition)**. The key anatomical discriminator here is",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure has been confirmed on suspension simulation, and imaging demonstrates no cartilage involvement or paraglottic space invasion that"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 12,
+      "treatment": "rt_accelerated",
+      "predicted": "relative_ci",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Response: cT2N0 Glottic Squamous Cell Carcinoma**\n\nBased on the clinical findings, this patient has a **cT2N0M0 glottic squamous cell carcinoma (AJCC 8th Edition)**. The key anatomical discriminator here is",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Adequate laryngeal exposure has been confirmed on suspension simulation, and imaging demonstrates no cartilage involvement or paraglottic space invasion that"
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 11,
+      "treatment": "ict_rt",
+      "predicted": "excluded",
+      "gold": "absent",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2N0 Glottic SCC**\n\nBased on the clinical findings presented, this patient has **intermediate-stage glottic cancer** with two primary treatment pathways: **transoral laser microsurgery (TLM)** ",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Suspension laryngoscopy confirming adequate exposure and the absence of cartilage or paraglottic space invasion on imaging render this T2 lesion amenable to "
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 11,
+      "treatment": "ophl_any",
+      "predicted": "excluded",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2N0 Glottic SCC**\n\nBased on the clinical findings presented, this patient has **intermediate-stage glottic cancer** with two primary treatment pathways: **transoral laser microsurgery (TLM)** ",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Suspension laryngoscopy confirming adequate exposure and the absence of cartilage or paraglottic space invasion on imaging render this T2 lesion amenable to "
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "run_idx": 11,
+      "treatment": "ophl_type_ii",
+      "predicted": "absent",
+      "gold": "recommended",
+      "matched": false,
+      "phase1_preview": "**Tumor Board Assessment: cT2N0 Glottic SCC**\n\nBased on the clinical findings presented, this patient has **intermediate-stage glottic cancer** with two primary treatment pathways: **transoral laser microsurgery (TLM)** ",
+      "phase2_preview": "**Transoral laser microsurgery (TLM)**: APPROPRIATE\nReasoning: Suspension laryngoscopy confirming adequate exposure and the absence of cartilage or paraglottic space invasion on imaging render this T2 lesion amenable to "
+    }
+  ],
+  "by_treatment": {
+    "carboplatin_5fu": {
+      "n": 423,
+      "accuracy": 0.018912529550827423,
+      "top_errors": [
+        [
+          "recommended->absent",
+          321
+        ],
+        [
+          "excluded->absent",
+          89
+        ],
+        [
+          "absent->recommended",
+          2
+        ],
+        [
+          "recommended->excluded",
+          1
+        ],
+        [
+          "absent->excluded",
+          1
+        ]
+      ]
+    },
+    "cetuximab_concurrent": {
+      "n": 555,
+      "accuracy": 0.35855855855855856,
+      "top_errors": [
+        [
+          "recommended->absent",
+          125
+        ],
+        [
+          "absent->recommended",
+          94
+        ],
+        [
+          "excluded->absent",
+          37
+        ],
+        [
+          "excluded->recommended",
+          30
+        ],
+        [
+          "absent->excluded",
+          29
+        ]
+      ]
+    },
+    "cisplatin_high_dose": {
+      "n": 714,
+      "accuracy": 0.36134453781512604,
+      "top_errors": [
+        [
+          "excluded->recommended",
+          158
+        ],
+        [
+          "excluded->relative_ci",
+          93
+        ],
+        [
+          "recommended->relative_ci",
+          82
+        ],
+        [
+          "absent->recommended",
+          80
+        ],
+        [
+          "absent->excluded",
+          19
+        ]
+      ]
+    },
+    "concurrent_crt": {
+      "n": 2401,
+      "accuracy": 0.41357767596834655,
+      "top_errors": [
+        [
+          "absent->recommended",
+          444
+        ],
+        [
+          "absent->excluded",
+          305
+        ],
+        [
+          "recommended->relative_ci",
+          276
+        ],
+        [
+          "absent->relative_ci",
+          184
+        ],
+        [
+          "recommended->excluded",
+          93
+        ]
+      ]
+    },
+    "ict_rt": {
+      "n": 1682,
+      "accuracy": 0.31272294887039237,
+      "top_errors": [
+        [
+          "absent->recommended",
+          406
+        ],
+        [
+          "absent->excluded",
+          227
+        ],
+        [
+          "recommended->absent",
+          141
+        ],
+        [
+          "recommended->relative_ci",
+          129
+        ],
+        [
+          "absent->relative_ci",
+          103
+        ]
+      ]
+    },
+    "nonsurgical_lp": {
+      "n": 2564,
+      "accuracy": 0.5955538221528861,
+      "top_errors": [
+        [
+          "absent->recommended",
+          379
+        ],
+        [
+          "recommended->relative_ci",
+          250
+        ],
+        [
+          "absent->relative_ci",
+          125
+        ],
+        [
+          "recommended->absent",
+          98
+        ],
+        [
+          "absent->excluded",
+          96
+        ]
+      ]
+    },
+    "ophl_any": {
+      "n": 1780,
+      "accuracy": 0.3146067415730337,
+      "top_errors": [
+        [
+          "absent->recommended",
+          457
+        ],
+        [
+          "absent->excluded",
+          302
+        ],
+        [
+          "absent->relative_ci",
+          143
+        ],
+        [
+          "recommended->relative_ci",
+          112
+        ],
+        [
+          "recommended->excluded",
+          108
+        ]
+      ]
+    },
+    "ophl_type_i": {
+      "n": 207,
+      "accuracy": 0.20772946859903382,
+      "top_errors": [
+        [
+          "absent->recommended",
+          59
+        ],
+        [
+          "absent->excluded",
+          45
+        ],
+        [
+          "excluded->absent",
+          29
+        ],
+        [
+          "absent->relative_ci",
+          13
+        ],
+        [
+          "recommended->relative_ci",
+          12
+        ]
+      ]
+    },
+    "ophl_type_ii": {
+      "n": 1039,
+      "accuracy": 0.3310875842155919,
+      "top_errors": [
+        [
+          "recommended->absent",
+          320
+        ],
+        [
+          "absent->recommended",
+          125
+        ],
+        [
+          "absent->excluded",
+          74
+        ],
+        [
+          "recommended->relative_ci",
+          54
+        ],
+        [
+          "recommended->excluded",
+          45
+        ]
+      ]
+    },
+    "ophl_type_iib": {
+      "n": 146,
+      "accuracy": 0.136986301369863,
+      "top_errors": [
+        [
+          "absent->recommended",
+          78
+        ],
+        [
+          "absent->excluded",
+          33
+        ],
+        [
+          "recommended->excluded",
+          4
+        ],
+        [
+          "absent->relative_ci",
+          3
+        ],
+        [
+          "recommended->relative_ci",
+          3
+        ]
+      ]
+    },
+    "ophl_type_iii": {
+      "n": 55,
+      "accuracy": 0.0,
+      "top_errors": [
+        [
+          "recommended->absent",
+          29
+        ],
+        [
+          "absent->excluded",
+          12
+        ],
+        [
+          "absent->recommended",
+          8
+        ],
+        [
+          "absent->relative_ci",
+          5
+        ],
+        [
+          "recommended->excluded",
+          1
+        ]
+      ]
+    },
+    "rt_accelerated": {
+      "n": 285,
+      "accuracy": 0.3368421052631579,
+      "top_errors": [
+        [
+          "absent->recommended",
+          54
+        ],
+        [
+          "recommended->relative_ci",
+          50
+        ],
+        [
+          "absent->relative_ci",
+          45
+        ],
+        [
+          "recommended->uncertain",
+          18
+        ],
+        [
+          "recommended->excluded",
+          13
+        ]
+      ]
+    },
+    "rt_alone": {
+      "n": 905,
+      "accuracy": 0.3756906077348066,
+      "top_errors": [
+        [
+          "absent->excluded",
+          193
+        ],
+        [
+          "absent->recommended",
+          155
+        ],
+        [
+          "absent->relative_ci",
+          61
+        ],
+        [
+          "excluded->recommended",
+          49
+        ],
+        [
+          "recommended->absent",
+          31
+        ]
+      ]
+    },
+    "surgical_lp": {
+      "n": 2033,
+      "accuracy": 0.3635022134776193,
+      "top_errors": [
+        [
+          "absent->recommended",
+          650
+        ],
+        [
+          "absent->relative_ci",
+          263
+        ],
+        [
+          "absent->excluded",
+          210
+        ],
+        [
+          "recommended->relative_ci",
+          90
+        ],
+        [
+          "absent->uncertain",
+          40
+        ]
+      ]
+    },
+    "tlm": {
+      "n": 1753,
+      "accuracy": 0.32686822589845976,
+      "top_errors": [
+        [
+          "excluded->recommended",
+          386
+        ],
+        [
+          "absent->excluded",
+          269
+        ],
+        [
+          "absent->recommended",
+          184
+        ],
+        [
+          "excluded->relative_ci",
+          122
+        ],
+        [
+          "recommended->relative_ci",
+          85
+        ]
+      ]
+    },
+    "tors": {
+      "n": 220,
+      "accuracy": 0.09090909090909091,
+      "top_errors": [
+        [
+          "absent->excluded",
+          78
+        ],
+        [
+          "absent->recommended",
+          73
+        ],
+        [
+          "absent->relative_ci",
+          39
+        ],
+        [
+          "recommended->relative_ci",
+          7
+        ],
+        [
+          "recommended->excluded",
+          2
+        ]
+      ]
+    },
+    "total_laryngectomy": {
+      "n": 2046,
+      "accuracy": 0.43304007820136853,
+      "top_errors": [
+        [
+          "absent->excluded",
+          294
+        ],
+        [
+          "absent->recommended",
+          186
+        ],
+        [
+          "recommended->excluded",
+          158
+        ],
+        [
+          "excluded->recommended",
+          114
+        ],
+        [
+          "absent->relative_ci",
+          104
+        ]
+      ]
+    }
+  },
+  "consensus_rows": [
+    {
+      "item_id": "A1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "concurrent_crt": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_i": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "tors": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 9,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 5,
+      "n_runs": 15
+    },
+    {
+      "item_id": "E1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 6,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "concurrent_crt": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended",
+        "carboplatin_5fu": "excluded",
+        "cetuximab_concurrent": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "rt_alone": "recommended",
+        "concurrent_crt": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-BASE",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P4",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P5",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P6",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P7",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P8",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P9",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_iii": "recommended",
+        "surgical_lp": "recommended",
+        "ophl_type_ii": "excluded",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-NULL1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-NULL2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_i": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_iib": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P4",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P5",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 5,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 5,
+      "n_runs": 15
+    },
+    {
+      "item_id": "E1-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "ophl_type_i": "excluded",
+        "ophl_type_ii": "excluded",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 6,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P4",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P5",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-GREY1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {},
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 0,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS01",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS02",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS03",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS04",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS05",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS06",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS07",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS08",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS09",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS10",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL01",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL02",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL03",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL04",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ECOG-TUM",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ECOG-COM",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-GREY-S70",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS11",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "rt_accelerated": "recommended",
+        "carboplatin_5fu": "excluded",
+        "cetuximab_concurrent": "excluded",
+        "cisplatin_high_dose": "excluded",
+        "concurrent_crt": "excluded",
+        "ict_rt": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended",
+        "carboplatin_5fu": "excluded",
+        "cetuximab_concurrent": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "rt_alone": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P4",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "rt_alone": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-NULL1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-NULL2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P1",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P2",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P3",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P4",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P5",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P6",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P7",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-NULL",
+      "model_name": "kimi-k2.5",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "concurrent_crt": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 6,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_i": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "tors": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 9,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 5,
+      "n_runs": 15
+    },
+    {
+      "item_id": "E1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended",
+        "carboplatin_5fu": "excluded",
+        "cetuximab_concurrent": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "rt_alone": "recommended",
+        "concurrent_crt": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-BASE",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A1-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "concurrent_crt": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "A2-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "rt_accelerated": "recommended",
+        "rt_alone": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P4",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P5",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P6",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P7",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P8",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-P9",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_iii": "recommended",
+        "surgical_lp": "recommended",
+        "ophl_type_ii": "excluded",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-NULL1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "B1-NULL2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 8,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_i": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_iib": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P4",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "C1-P5",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 5,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "D1-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 5,
+      "n_runs": 15
+    },
+    {
+      "item_id": "E1-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "ophl_type_i": "excluded",
+        "ophl_type_ii": "excluded",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 6,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P4",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-P5",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-GREY1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {},
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 0,
+      "n_runs": 15
+    },
+    {
+      "item_id": "F1-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS01",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS02",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS03",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS04",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS05",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS06",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS07",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS08",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS09",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS10",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL01",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL02",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL03",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-REL04",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ECOG-TUM",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ECOG-COM",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "carboplatin_5fu": "recommended",
+        "cetuximab_concurrent": "recommended",
+        "nonsurgical_lp": "recommended",
+        "cisplatin_high_dose": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-GREY-S70",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-ABS11",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "nonsurgical_lp": "recommended",
+        "rt_accelerated": "recommended",
+        "carboplatin_5fu": "excluded",
+        "cetuximab_concurrent": "excluded",
+        "cisplatin_high_dose": "excluded",
+        "concurrent_crt": "excluded",
+        "ict_rt": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "G1-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "cisplatin_high_dose": "recommended",
+        "carboplatin_5fu": "excluded",
+        "cetuximab_concurrent": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "rt_alone": "excluded",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H1-P4",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 2,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "H2-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended",
+        "rt_alone": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "rt_alone": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-NULL1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "I1-NULL2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "ophl_any": "recommended",
+        "ophl_type_ii": "recommended",
+        "surgical_lp": "recommended",
+        "tlm": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 7,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P1",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P2",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P3",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P4",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 3,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P5",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P6",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-P7",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "total_laryngectomy": "recommended"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 1,
+      "n_runs": 15
+    },
+    {
+      "item_id": "J1-NULL",
+      "model_name": "llama-3.1-8b",
+      "gold_source": "battery_expectation",
+      "gold": {
+        "concurrent_crt": "recommended",
+        "ict_rt": "recommended",
+        "nonsurgical_lp": "recommended",
+        "total_laryngectomy": "excluded"
+      },
+      "predicted": {},
+      "exact_match": false,
+      "n_compared": 4,
+      "n_runs": 15
+    }
+  ]
+}

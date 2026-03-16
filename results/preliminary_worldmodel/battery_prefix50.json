@@ -1,0 +1,2976 @@
+{
+  "baselines": [
+    {
+      "id": "A1-BASE",
+      "family": "glottic_cT2",
+      "subtype": "favorable_TLM_eligible",
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "unfavorable_ct2": "false",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.\n\nTumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with impaired mobility but no fixation.\n\nImaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.\n\nFunction: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.\n\nLabs: Normal blood panel, CrCl 102 mL/min.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_alone",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "concurrent_crt",
+        "total_laryngectomy"
+      ],
+      "expected_reasoning": "Favorable cT2N0: TLM viable (adequate exposure, no blocking features). RT alone adequate per S22. No indication for chemo at cT2N0.",
+      "num_perturbations": 4
+    },
+    {
+      "id": "A2-BASE",
+      "family": "glottic_cT2",
+      "subtype": "unfavorable_reduced_mobility",
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "unfavorable_ct2": "true",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_good_exposure",
+        "subglottic_extension": "under_10mm_anterior",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "laryngeal_exposure": "adequate",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).\n\nTumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.\n\nImaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.\n\nLabs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_accelerated",
+        "rt_alone",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "expected_reasoning": "Unfavorable cT2 (SA2): bulky, AC involvement, reduced cord, anterior subglottic. TLM technically feasible (exposure adequate, AC with good exposure per S8). Accelerated RT warranted given reduced cord (S23R).",
+      "num_perturbations": 4
+    },
+    {
+      "id": "B1-BASE",
+      "family": "glottic_cT3",
+      "subtype": "TLM_eligible_clean",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "expected_reasoning": "Clean cT3N0: TLM viable (adequate exposure, no S7R blockers). OPHL-II viable (no S15R/S16R/S17R blockers). CRT highest LP rate (S28). ICT viable (S30, LoE I).",
+      "num_perturbations": 11
+    },
+    {
+      "id": "C1-BASE",
+      "family": "supraglottic_cT3",
+      "subtype": "limited_PES",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "supraglottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "pre_epiglottic_space": "limited",
+        "posterior_paraglottic_space": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.\n\nTumor: cT3N1 supraglottic SCC arising from the epiglottis. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).\n\nImaging: MRI shows limited pre-epiglottic space invasion \u2014 the tumor extends into the anterior portion of the PES without reaching the thyroid cartilage. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.\n\nFunction: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.\n\nLabs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_i",
+        "surgical_lp",
+        "tlm",
+        "tors"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "expected_reasoning": "Supraglottic cT3 with limited PES: TLM/TORS viable per S10R. OPHL-I viable. CRT + ICT viable. N1 does not contraindicate surgical LP (S24R only for N2+).",
+      "num_perturbations": 5
+    },
+    {
+      "id": "D1-BASE",
+      "family": "hypopharyngeal",
+      "subtype": "cT3_advanced",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN2",
+        "primary_site": "hypopharyngeal",
+        "tumor_volume": "high",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "impaired_no_aspiration",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "1",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).\n\nTumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.\n\nImaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.\n\nFunction: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.\n\nLabs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.",
+      "question": "What are the treatment options for this patient, and what is the preferred strategy?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "expected_reasoning": "Hypopharyngeal advanced: TLM not first-line (S12). OPHL limited by unilateral arytenoid + N2 (S24R). ICT \u2192 response assessment especially relevant (S30). Hypopharyngeal origin = worse LP outcomes (S43).",
+      "num_perturbations": 4
+    },
+    {
+      "id": "E1-BASE",
+      "family": "cT4a_unselected",
+      "subtype": "significant_extralaryngeal",
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "true",
+        "extralaryngeal_extension": "significant",
+        "subglottic_extension": "significant",
+        "cricoid_cartilage_involvement": "extensive",
+        "magic_plane_crossing": "true",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "dysfunctional",
+        "swallowing_status": "impaired_no_aspiration",
+        "pretreatment_tracheostomy": "true",
+        "airway_obstruction": "true",
+        "laryngeal_exposure": "insufficient",
+        "age": "under_70",
+        "ecog_ps": "1",
+        "frailty_status": "fit",
+        "renal_function": "normal",
+        "cardiac_function": "normal"
+      },
+      "clinical_text": "Patient: 59-year-old male, ECOG 1. Active smoker (45 pack-years). Moderate alcohol intake. Otherwise healthy.\n\nTumor: cT4aN1 glottic SCC. Bulky transglottic tumor with left vocal cord fixation and left arytenoid fixation. Right cord mobile.\n\nImaging: CT shows full-thickness thyroid cartilage infiltration with significant extralaryngeal soft tissue extension invading the strap muscles bilaterally. Extensive subglottic extension (>15mm) with cricoid cartilage invasion. The tumor crosses the magic plane. Single ipsilateral level III lymph node (2.5cm).\n\nFunction: Severe dysphonia \u2014 largely non-communicative by voice. Emergency tracheostomy placed 1 week ago for critical airway obstruction. Moderate dysphagia to solids but tolerating liquids. Laryngeal function is considered globally dysfunctional.\n\nDirect laryngoscopy: Laryngeal exposure is insufficient due to tumor bulk and anatomy.\n\nLabs: CrCl 91, NYHA I, no neuropathy. Albumin 3.4, Hb 12.8.",
+      "question": "What is the recommended treatment for this patient?",
+      "expected_recommendations": [
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "expected_reasoning": "Unambiguous TL: significant extralaryngeal (S38R), extensive subglottic (S38R), TLM CI (S45/S5R), magic plane (S15R), dysfunctional larynx (S39R), tracheostomy (S19R-b/S115).",
+      "num_perturbations": 1
+    },
+    {
+      "id": "F1-BASE",
+      "family": "cT4a_selected",
+      "subtype": "minimal_anterior_favorable",
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "expected_reasoning": "Favorable cT4a: meets S46 criteria (N0, minimal anterior extralaryngeal, fit). OPHL viable. Non-surgical LP has very few but real indications (S49R). TL preferred for unselected but LP achieves equal outcomes in selected patients (S40R). TLM absolute CI (S45).",
+      "num_perturbations": 7
+    },
+    {
+      "id": "G1-BASE",
+      "family": "cisplatin_eligibility",
+      "subtype": "fully_eligible",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "ecog_ps": "0",
+        "ecog_ps_source": "null",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "liver_function": "normal",
+        "neuropathy": "none",
+        "hearing_status": "grade_0",
+        "bone_marrow": "normal",
+        "hiv_status": "negative",
+        "hepatitis": "negative",
+        "platinum_hypersensitivity": "false",
+        "psychiatric_disorders": "false",
+        "diabetes": "none",
+        "pregnancy_lactation": "false",
+        "social_support": "adequate",
+        "cisplatin_relative_ci_count": "0",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 60-year-old male, ECOG 0.\n\nTumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.\n\nRenal: CrCl 95 mL/min, normal electrolytes.\nCardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.\nHepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).\nNeurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.\nHaematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.\nInfectious: HIV negative, HBV surface antigen negative, HCV antibody negative.\nOther: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.\nNutritional status adequate (albumin 4.1, BMI 24).",
+      "question": "Is high-dose cisplatin (100 mg/m\u00b2 q3w, up to 300 mg/m\u00b2 cumulative) appropriate as the concurrent systemic agent?",
+      "expected_recommendations": [
+        "cisplatin_high_dose"
+      ],
+      "expected_excluded": [
+        "carboplatin_5fu",
+        "cetuximab_concurrent"
+      ],
+      "expected_reasoning": "No absolute or relative CIs. High-dose cisplatin preferred (S52R, LoE I-II).",
+      "num_perturbations": 19
+    },
+    {
+      "id": "H1-BASE",
+      "family": "post_ict_response",
+      "subtype": "complete_response",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "ict_response": "complete_response",
+        "vc_remobilization_post_ict": "true",
+        "vocal_cord_mobility": "normal",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 57-year-old male, ECOG 0. Initially presented with cT3N1 glottic SCC with fixed left vocal cord and a 2.5cm level III node.\n\nThe patient received 3 cycles of induction chemotherapy (TPF protocol). He tolerated treatment well with manageable toxicity.\n\nPost-ICT reassessment (8 weeks after cycle 3):\n- Imaging: CT and MRI show complete radiological response at the primary site. The level III node has resolved completely. No residual tumor visible on imaging.\n- Direct laryngoscopy: Complete endoscopic response. The previously fixed left vocal cord has regained normal mobility. Both arytenoids mobile. Mucosa appears normal.\n- PET-CT: No FDG-avid disease at the primary site or neck.\n\nCurrent function: Voice significantly improved. No dysphagia. No airway issues.",
+      "question": "What is the appropriate definitive treatment following this complete response to induction chemotherapy?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "rt_alone"
+      ],
+      "expected_excluded": [
+        "concurrent_crt",
+        "total_laryngectomy"
+      ],
+      "expected_reasoning": "CR + VC remobilization after ICT \u2192 RT alone (S31R, S120R). NOT CRT. VC remobilization predicts functional LP (S119R). ICT CR is favorable factor (S116).",
+      "num_perturbations": 4
+    },
+    {
+      "id": "H2-BASE",
+      "family": "post_ict_response",
+      "subtype": "cT4a_partial_response",
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN2",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "thyroid_cartilage_outer_cortex": "true",
+        "extralaryngeal_extension": "minimal_anterior",
+        "ict_response": "partial_response_50plus",
+        "vc_remobilization_post_ict": "false",
+        "vocal_cord_mobility": "fixed",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 52-year-old male, ECOG 0. Initially presented with cT4aN2b glottic SCC \u2014 bulky tumor with outer cortex TC invasion and moderate anterior extralaryngeal extension. Bilateral neck disease.\n\nReceived 3 cycles of TPF induction chemotherapy.\n\nPost-ICT reassessment:\n- Imaging: >50% reduction in tumor volume. Previously significant extralaryngeal extension now appears minimal. Thyroid cartilage still shows residual abnormality at outer cortex. Neck nodes reduced by >60%.\n- Direct laryngoscopy: Significant tumor shrinkage endoscopically. Left vocal cord still fixed (no remobilization). Arytenoids mobile bilaterally. Residual tumor visible but much reduced.\n- Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy.",
+      "question": "Is this patient eligible for non-surgical larynx preservation following this partial response to ICT?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "rt_alone"
+      ],
+      "expected_reasoning": "cT4a with PR\u226550% \u2192 eligible for non-surgical LP (S55R). But cord not remobilized (S119R negative), outer cortex residual (S41R). CRT is the non-surgical option (not RT alone \u2014 needs CR for that per S120R). TL valid alternative.",
+      "num_perturbations": 4
+    },
+    {
+      "id": "I1-BASE",
+      "family": "elderly_frail",
+      "subtype": "elderly_fit",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "laryngeal_exposure": "adequate",
+        "thyroid_cartilage_inner_cortex": "none",
+        "subglottic_extension": "none",
+        "pretreatment_tracheostomy": "false",
+        "age": "70_plus",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "g8_score": "above_14",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "nutritional_status": "adequate",
+        "comorbidity_burden": "none_mild",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none",
+        "hearing_status": "grade_1"
+      },
+      "clinical_text": "Patient: 76-year-old male, ECOG 0. Retired engineer. Non-smoker for 15 years (former 25 pack-years). Lives independently with wife. Walks 5km daily, plays golf twice weekly.\n\nComorbidities: controlled hypertension on single agent, mild hyperlipidemia on statin. No cardiac history, no diabetes, no neurological disease.\n\nGeriatric assessment: Comprehensive Geriatric Assessment (CGA) classifies patient as FIT. G8 screening score 15/17. No frailty markers. ADL and IADL fully independent. MMSE 29/30. Timed Up-and-Go test 9 seconds.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile. No cartilage involvement, no subglottic extension, no paraglottic invasion posteriorly. Adequate laryngeal exposure.\n\nLabs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1.",
+      "question": "Does this patient's age affect his eligibility for larynx preservation treatments?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [],
+      "expected_reasoning": "Age alone NOT CI for TLM (S6R) or any LP (S80) in fit patients. CGA fit \u2192 standard treatment (S84). CrCl 72 adequate for cisplatin (>60). Grade 1 hearing = relative CI cisplatin (S69R) but not absolute.",
+      "num_perturbations": 5
+    },
+    {
+      "id": "J1-BASE",
+      "family": "pretreatment_function",
+      "subtype": "airway_obstruction_isolated",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "airway_obstruction": "true",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "thyroid_cartilage_inner_cortex": "none",
+        "extralaryngeal_extension": "none",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "renal_function": "normal",
+        "dna_repair_disorder": "false",
+        "previous_neck_rt": "false"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0, no comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nThe patient presents with moderate airway obstruction \u2014 audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.\n\nNo subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.\n\nFunction: Voice severely impaired. Swallowing normal \u2014 full oral diet without difficulty. No aspiration on clinical assessment. No feeding tube. Baseline laryngeal function, apart from voice, is considered preserved.\n\nLabs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0.",
+      "question": "Is non-surgical larynx preservation appropriate despite the airway obstruction?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "expected_reasoning": "Airway obstruction alone is explicitly NOT CI for non-surgical LP (S21). No tracheostomy (S19R clear). Swallowing normal (S19R clear). CRT (S28) and ICT (S30) both viable.",
+      "num_perturbations": 8
+    }
+  ],
+  "perturbations": [
+    {
+      "id": "A1-P1",
+      "baseline_id": "A1-BASE",
+      "family": "glottic_cT2",
+      "type": "flip",
+      "label": "Laryngeal exposure insufficient",
+      "variables_changed": [
+        {
+          "variable": "laryngeal_exposure",
+          "from": "adequate",
+          "to": "insufficient"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "unfavorable_ct2": "false",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "insufficient",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.\n\nTumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with impaired mobility but no fixation.\n\nImaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.\n\nFunction: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Laryngeal exposure assessed as insufficient on preoperative suspension laryngoscopy simulation \u2014 limited visualisation of the posterior glottis due to anatomy.\n\nLabs: Normal blood panel, CrCl 102 mL/min.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_alone",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S5R",
+        "S22"
+      ],
+      "predicted_failure_mode": "Correctly blocks TLM while preserving other options",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A1-P2",
+      "baseline_id": "A1-BASE",
+      "family": "glottic_cT3",
+      "type": "escalate",
+      "label": "Vocal cord fixed \u2192 upstages to cT3 (STAGING PROPAGATION)",
+      "variables_changed": [
+        {
+          "variable": "vocal_cord_mobility",
+          "from": "partially_impaired",
+          "to": "fixed"
+        },
+        {
+          "variable": "t_stage",
+          "from": "cT2",
+          "to": "cT3"
+        }
+      ],
+      "staging_impact": "cT2 \u2192 cT3 (vocal cord fixation defines T3 by AJCC)",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "unfavorable_ct2": "false",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.\n\nTumor: cT3N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with complete fixation of the left vocal cord.\n\nImaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.\n\nFunction: Severe dysphonia (VHI-10: 32). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.\n\nLabs: Normal blood panel, CrCl 102 mL/min.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "edge_justification": [
+        "S23R",
+        "S4R",
+        "S28"
+      ],
+      "predicted_failure_mode": "Must recognize that fixed cord upstages to cT3 and open the full cT3 decision landscape including CRT and ICT, not just escalate RT",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A1-P3",
+      "baseline_id": "A1-BASE",
+      "family": "glottic_cT2",
+      "type": "flip",
+      "label": "Add unfavorable cT2 features without fixation (SA2)",
+      "variables_changed": [
+        {
+          "variable": "unfavorable_ct2",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "variable": "tumor_volume",
+          "from": "low",
+          "to": "high"
+        },
+        {
+          "variable": "anterior_commissure",
+          "from": "none",
+          "to": "present_good_exposure"
+        },
+        {
+          "variable": "subglottic_extension",
+          "from": "none",
+          "to": "under_10mm_anterior"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "unfavorable_ct2": "true",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_good_exposure",
+        "subglottic_extension": "under_10mm_anterior",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.\n\nTumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure and minor anterior subglottic extension (approximately 7mm). Cord mobility is impaired but not fixed.\n\nImaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, minor anterior subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia (VHI-10: 24). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.\n\nLabs: Normal blood panel, CrCl 102 mL/min.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_accelerated",
+        "rt_alone",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "edge_justification": [
+        "SA2",
+        "S23R",
+        "S8"
+      ],
+      "predicted_failure_mode": "Should recognise unfavorable cT2 features (bulky, AC, subglottic, impaired mobility) warrant consideration of accelerated RT (S23R) even though still staged cT2",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A1-NULL",
+      "baseline_id": "A1-BASE",
+      "family": "glottic_cT2",
+      "type": "null",
+      "label": "Age 74, fit \u2014 should NOT change options",
+      "variables_changed": [
+        {
+          "variable": "age",
+          "from": "under_70",
+          "to": "70_plus"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "unfavorable_ct2": "false",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "70_plus",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 74-year-old male, retired teacher, ECOG 0. Comprehensive Geriatric Assessment: fit. G8 score 15/17. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.\n\nTumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with impaired mobility but no fixation.\n\nImaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.\n\nFunction: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.\n\nLabs: Normal blood panel, CrCl 102 mL/min.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_alone",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "concurrent_crt",
+        "total_laryngectomy"
+      ],
+      "edge_justification": [
+        "S6R",
+        "S80"
+      ],
+      "predicted_failure_mode": "Over-sensitivity to age in fit patient",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A2-P1",
+      "baseline_id": "A2-BASE",
+      "family": "glottic_cT2",
+      "type": "flip",
+      "label": "AC difficult exposure \u2192 TLM relative CI",
+      "variables_changed": [
+        {
+          "variable": "anterior_commissure",
+          "from": "present_good_exposure",
+          "to": "present_difficult_exposure"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "unfavorable_ct2": "true",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_difficult_exposure",
+        "subglottic_extension": "under_10mm_anterior",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "laryngeal_exposure": "adequate",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).\n\nTumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.\n\nImaging: MRI shows anterior commissure involvement with difficult visualisation \u2014 office endoscopy shows limited access to the anterior commissure region. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.\n\nLabs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_accelerated",
+        "rt_alone",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S7R",
+        "S8"
+      ],
+      "predicted_failure_mode": "Should block TLM due to AC with difficult exposure (S7R absolute CI)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A2-P2",
+      "baseline_id": "A2-BASE",
+      "family": "glottic_cT2",
+      "type": "flip",
+      "label": "Laryngeal exposure insufficient",
+      "variables_changed": [
+        {
+          "variable": "laryngeal_exposure",
+          "from": "adequate",
+          "to": "insufficient"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "unfavorable_ct2": "true",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_good_exposure",
+        "subglottic_extension": "under_10mm_anterior",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "laryngeal_exposure": "insufficient",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).\n\nTumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.\n\nImaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as insufficient on preoperative evaluation \u2014 Cormack-Lehane grade III.\n\nLabs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_accelerated",
+        "rt_alone",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S5R"
+      ],
+      "predicted_failure_mode": "Absolute CI TLM (S5R, 100%)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A2-P3",
+      "baseline_id": "A2-BASE",
+      "family": "glottic_cT3",
+      "type": "escalate",
+      "label": "Vocal cord fixed \u2192 upstages to cT3",
+      "variables_changed": [
+        {
+          "variable": "vocal_cord_mobility",
+          "from": "partially_impaired",
+          "to": "fixed"
+        },
+        {
+          "variable": "t_stage",
+          "from": "cT2",
+          "to": "cT3"
+        }
+      ],
+      "staging_impact": "cT2 \u2192 cT3 (vocal cord fixation defines T3 by AJCC)",
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "unfavorable_ct2": "true",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_good_exposure",
+        "subglottic_extension": "under_10mm_anterior",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "laryngeal_exposure": "adequate",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).\n\nTumor: cT3N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord is fixed. The right cord is normal. Arytenoids bilaterally mobile.\n\nImaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.\n\nLabs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S23R",
+        "S4R",
+        "S28"
+      ],
+      "predicted_failure_mode": "Fixed cord = T3 by definition. Must upstage and offer full cT3 options including CRT/ICT.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "A2-NULL",
+      "baseline_id": "A2-BASE",
+      "family": "glottic_cT2",
+      "type": "null",
+      "label": "Age 73, fit",
+      "variables_changed": [
+        {
+          "variable": "age",
+          "from": "under_70",
+          "to": "70_plus"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT2",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "unfavorable_ct2": "true",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_good_exposure",
+        "subglottic_extension": "under_10mm_anterior",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "laryngeal_exposure": "adequate",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "age": "70_plus",
+        "ecog_ps": "0",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 73-year-old male, ECOG 0. Comprehensive Geriatric Assessment: fit. G8 15/17. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).\n\nTumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.\n\nImaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.\n\nLabs: CrCl 89 mL/min, albumin 4.0, Hb 13.8.",
+      "question": "What are the appropriate treatment options for this patient?",
+      "expected_recommendations": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_accelerated",
+        "rt_alone",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "edge_justification": [
+        "S6R",
+        "S80"
+      ],
+      "predicted_failure_mode": "Age alone should not change any recommendation",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P1",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Focal TC inner cortex (TREATMENT-CONDITIONAL)",
+      "variables_changed": [
+        {
+          "variable": "thyroid_cartilage_inner_cortex",
+          "from": "none",
+          "to": "focal"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "focal",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. MRI shows focal inner cortex involvement of the thyroid cartilage on the left, without outer cortex or full-thickness invasion. Outer cortex intact. No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S7R",
+        "S14",
+        "S27",
+        "S28"
+      ],
+      "predicted_failure_mode": "Over-generalisation: 'cartilage = no surgery' without distinguishing TLM from OPHL",
+      "grey_zone_statement": null,
+      "notes": "KEY TEST: TC inner cortex is absolute CI for TLM (S7R) but NOT CI for OPHL-II (S14) and NOT CI for CRT (S27)",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P2",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "escalate",
+      "label": "Outer cortex \u2192 cT4a (STAGING PROPAGATION)",
+      "variables_changed": [
+        {
+          "variable": "thyroid_cartilage_outer_cortex",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "variable": "extralaryngeal_extension",
+          "from": "none",
+          "to": "minimal_anterior"
+        },
+        {
+          "variable": "t_stage",
+          "from": "cT3",
+          "to": "cT4a"
+        }
+      ],
+      "staging_impact": "cT3 \u2192 cT4a (outer cortex invasion by AJCC definition)",
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "minimal_anterior",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. CT shows focal outer cortex invasion of the thyroid cartilage anteriorly with minimal anterior extralaryngeal soft tissue extension confined to the strap muscles. No deep muscle invasion, no magic plane crossing. No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S45",
+        "S46",
+        "S40R",
+        "S41R",
+        "S49R"
+      ],
+      "predicted_failure_mode": "Binary: 'cT4a = TL always' (misses selected LP exception per S46, S40R second clause)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P3",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Posterior paraglottic space \u2192 TLM blocked",
+      "variables_changed": [
+        {
+          "variable": "posterior_paraglottic_space",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "true",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. Posterior paraglottic space involvement on the left, extending to the posterior compartment. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S7R"
+      ],
+      "predicted_failure_mode": "Should block TLM specifically, not all surgery",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P4",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Massive PES abutting membrane \u2192 TLM blocked",
+      "variables_changed": [
+        {
+          "variable": "pre_epiglottic_space",
+          "from": "none",
+          "to": "massive_abutting_membrane"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "massive_abutting_membrane",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. Massive pre-epiglottic space invasion with tumor abutting the thyrohyoid membrane. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S7R"
+      ],
+      "predicted_failure_mode": "TLM absolute CI; OPHL/CRT remain viable",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P5",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Posterior subglottic <10mm \u2192 TLM blocked",
+      "variables_changed": [
+        {
+          "variable": "subglottic_extension",
+          "from": "none",
+          "to": "under_10mm_posterior"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "under_10mm_posterior",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. Subglottic extension of approximately 8mm posteriorly. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S7R"
+      ],
+      "predicted_failure_mode": "Subtle: posterior <10mm blocks TLM but anterior <10mm does not",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P6",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Laryngeal exposure insufficient",
+      "variables_changed": [
+        {
+          "variable": "laryngeal_exposure",
+          "from": "adequate",
+          "to": "insufficient"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "insufficient",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as insufficient on preoperative evaluation (Cormack-Lehane grade III) \u2014 limited visualisation due to anatomy.\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S5R"
+      ],
+      "predicted_failure_mode": "Absolute CI TLM (S5R, 100%)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P7",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "AC difficult exposure \u2192 TLM blocked",
+      "variables_changed": [
+        {
+          "variable": "anterior_commissure",
+          "from": "none",
+          "to": "present_difficult_exposure"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "present_difficult_exposure",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension to the anterior commissure and into the anterior paraglottic space on the left side. Anterior commissure exposure is assessed as difficult on preoperative evaluation.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S7R"
+      ],
+      "predicted_failure_mode": "AC with difficult exposure = absolute CI TLM",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P8",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Bilateral arytenoid \u2192 CI ALL conservative surgery (S16R)",
+      "variables_changed": [
+        {
+          "variable": "posterior_laryngeal_involvement",
+          "from": "none",
+          "to": "bilateral_arytenoid"
+        },
+        {
+          "variable": "arytenoid_mobility",
+          "from": "bilateral_mobile",
+          "to": "bilateral_fixed"
+        },
+        {
+          "variable": "baseline_laryngeal_function",
+          "from": "functional",
+          "to": "dysfunctional"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "bilateral_arytenoid",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_fixed",
+        "baseline_laryngeal_function": "dysfunctional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Both arytenoids fixed with bilateral posterior involvement. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. Bilateral posterior involvement with both arytenoids fixed. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Severe dysphonia with emerging aspiration risk due to bilateral arytenoid fixation. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S16R",
+        "S39R",
+        "S42R"
+      ],
+      "predicted_failure_mode": "Bilateral arytenoid = CI ALL conservative surgery (S16R, 98%). Must block OPHL too, not just TLM.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-P9",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Subglottic >10mm + CAJ invasion \u2192 CI OPHL-II (S17R)",
+      "variables_changed": [
+        {
+          "variable": "subglottic_extension",
+          "from": "none",
+          "to": "over_10mm"
+        },
+        {
+          "variable": "cricoarytenoid_joint_invasion",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "over_10mm",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "true",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). Cricoid involvement with CAJ invasion. No pre-epiglottic space invasion. Subglottic extension >10mm with cricoarytenoid joint invasion on the left. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_iii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "ophl_type_ii",
+        "tlm"
+      ],
+      "edge_justification": [
+        "S17R",
+        "S18R"
+      ],
+      "predicted_failure_mode": ">10mm subglottic + CAJ = absolute CI OPHL-II (S17R). But >10mm anterior subglottic may allow OPHL-III in expert centers (S18R).",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-NULL1",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "null",
+      "label": "Age 73, fit \u2014 should NOT change",
+      "variables_changed": [
+        {
+          "variable": "age",
+          "from": "under_70",
+          "to": "70_plus"
+        },
+        {
+          "variable": "frailty_status",
+          "from": "fit",
+          "to": "fit"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "70_plus",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 73-year-old male, ECOG 0. Comprehensive Geriatric Assessment: fit. G8 score 15/17. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "edge_justification": [
+        "S6R",
+        "S80"
+      ],
+      "predicted_failure_mode": "Over-sensitivity to age in fit elderly",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "B1-NULL2",
+      "baseline_id": "B1-BASE",
+      "family": "glottic_cT3",
+      "type": "null",
+      "label": "Focal TC inner cortex \u2014 CRT should NOT be blocked",
+      "variables_changed": [
+        {
+          "variable": "thyroid_cartilage_inner_cortex",
+          "from": "none",
+          "to": "focal"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "focal",
+        "thyroid_cartilage_outer_cortex": "false",
+        "thyroid_cartilage_erosion": "false",
+        "cricoid_cartilage_involvement": "none",
+        "posterior_paraglottic_space": "false",
+        "pre_epiglottic_space": "none",
+        "anterior_commissure": "none",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "cricoarytenoid_joint_invasion": "false",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none"
+      },
+      "clinical_text": "Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.\n\nTumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.\n\nImaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. MRI shows focal inner cortex involvement of the thyroid cartilage on the left, without outer cortex or full-thickness invasion. No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.\n\nFunction: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).\n\nLabs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5.",
+      "question": "Given the focal inner cortex thyroid cartilage involvement, is concurrent chemoradiotherapy contraindicated?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm"
+      ],
+      "expected_excluded": [
+        "total_laryngectomy"
+      ],
+      "edge_justification": [
+        "S27"
+      ],
+      "predicted_failure_mode": "Tests S27 specifically: TC inner cortex is NOT CI for CRT. Ask targeted: 'Is CRT contraindicated by the cartilage finding?'",
+      "grey_zone_statement": null,
+      "notes": "TARGETED QUESTION VARIANT: 'Given the focal inner cortex thyroid cartilage involvement, is concurrent chemoradiotherapy contraindicated?'",
+      "consistency_warnings": []
+    },
+    {
+      "id": "C1-P1",
+      "baseline_id": "C1-BASE",
+      "family": "supraglottic_cT3",
+      "type": "escalate",
+      "label": "PES pronounced \u2192 OPHL type I preferred",
+      "variables_changed": [
+        {
+          "variable": "pre_epiglottic_space",
+          "from": "limited",
+          "to": "massive_not_abutting_membrane"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "supraglottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "pre_epiglottic_space": "massive_not_abutting_membrane",
+        "posterior_paraglottic_space": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.\n\nTumor: cT3N1 supraglottic SCC arising from the epiglottis. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).\n\nImaging: MRI shows pronounced pre-epiglottic space invasion \u2014 the tumor fills most of the PES but does not abut the thyrohyoid membrane or thyroid cartilage. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.\n\nFunction: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.\n\nLabs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_i",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S10R"
+      ],
+      "predicted_failure_mode": "Pronounced PES shifts from TLM/TORS toward OPHL-I (S10R-b)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "C1-P2",
+      "baseline_id": "C1-BASE",
+      "family": "supraglottic_cT3",
+      "type": "escalate",
+      "label": "PES + TC erosion \u2192 OPHL-IIB (SITE-CONDITIONAL)",
+      "variables_changed": [
+        {
+          "variable": "pre_epiglottic_space",
+          "from": "limited",
+          "to": "massive_not_abutting_membrane"
+        },
+        {
+          "variable": "thyroid_cartilage_erosion",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "supraglottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "true",
+        "pre_epiglottic_space": "massive_not_abutting_membrane",
+        "posterior_paraglottic_space": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.\n\nTumor: cT3N1 supraglottic SCC arising from the epiglottis. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).\n\nImaging: MRI shows pronounced pre-epiglottic space invasion with thyroid cartilage erosion on CT. No full-thickness infiltration, no outer cortex invasion. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.\n\nFunction: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.\n\nLabs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_iib",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S10R"
+      ],
+      "predicted_failure_mode": "CRITICAL SITE-CONDITIONAL: TC erosion = INDICATION for OPHL-IIB in supraglottic (S10R) but would be CI for TLM in glottic (S9R)",
+      "grey_zone_statement": null,
+      "notes": "This is the site-conditional pattern: same finding (TC erosion) has opposite meaning at different sites",
+      "consistency_warnings": []
+    },
+    {
+      "id": "C1-P3",
+      "baseline_id": "C1-BASE",
+      "family": "glottic_cT3",
+      "type": "flip",
+      "label": "Change site to glottic + keep TC erosion (SITE CROSSOVER)",
+      "variables_changed": [
+        {
+          "variable": "primary_site",
+          "from": "supraglottic",
+          "to": "glottic"
+        },
+        {
+          "variable": "pre_epiglottic_space",
+          "from": "limited",
+          "to": "none"
+        },
+        {
+          "variable": "thyroid_cartilage_erosion",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "true",
+        "pre_epiglottic_space": "none",
+        "posterior_paraglottic_space": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.\n\nTumor: cT3N1 glottic SCC. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).\n\nImaging: MRI shows no pre-epiglottic space involvement. Thyroid cartilage erosion on CT, without full-thickness infiltration or outer cortex invasion. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.\n\nFunction: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.\n\nLabs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S9R",
+        "S10R"
+      ],
+      "predicted_failure_mode": "TC erosion now = CI for TLM (S9R) in glottic. NOT an indication for OPHL-IIB (that's supraglottic-specific). Tests site-conditionality.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "C1-P4",
+      "baseline_id": "C1-BASE",
+      "family": "supraglottic_cT3",
+      "type": "flip",
+      "label": "N2 \u2192 relative CI partial laryngectomy",
+      "variables_changed": [
+        {
+          "variable": "n_stage",
+          "from": "cN1",
+          "to": "cN2"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN2",
+        "primary_site": "supraglottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "pre_epiglottic_space": "limited",
+        "posterior_paraglottic_space": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.\n\nTumor: cT3N1 supraglottic SCC arising from the epiglottis. There is bilateral lymphadenopathy \u2014 3.0cm left level II, 2.5cm left level III, 1.8cm right level II. No extranodal extension on imaging.\n\nImaging: MRI shows limited pre-epiglottic space invasion \u2014 the tumor extends into the anterior portion of the PES without reaching the thyroid cartilage. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.\n\nFunction: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.\n\nLabs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S24R"
+      ],
+      "predicted_failure_mode": "N2+ = relative CI for partial laryngectomy (S24R), preference shifts to CRT",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "C1-P5",
+      "baseline_id": "C1-BASE",
+      "family": "supraglottic_cT3",
+      "type": "flip",
+      "label": "Site \u2192 hypopharyngeal (SITE-CONDITIONAL)",
+      "variables_changed": [
+        {
+          "variable": "primary_site",
+          "from": "supraglottic",
+          "to": "hypopharyngeal"
+        },
+        {
+          "variable": "pre_epiglottic_space",
+          "from": "limited",
+          "to": "none"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "hypopharyngeal",
+        "tumor_volume": "low",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_erosion": "false",
+        "pre_epiglottic_space": "none",
+        "posterior_paraglottic_space": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "none",
+        "magic_plane_crossing": "false",
+        "vocal_cord_mobility": "partially_impaired",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.\n\nTumor: cT3N1 SCC of the left piriform sinus. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).\n\nImaging: MRI shows tumor confined to the piriform sinus with extension to the medial wall. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.\n\nFunction: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.\n\nLabs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6.",
+      "question": "What larynx-preservation treatment options are appropriate for this patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S12",
+        "S43",
+        "S112"
+      ],
+      "predicted_failure_mode": "Hypopharyngeal: TLM not first-line (S12), worse outcomes with non-surgical (S43)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "D1-P1",
+      "baseline_id": "D1-BASE",
+      "family": "hypopharyngeal",
+      "type": "flip",
+      "label": "Site \u2192 glottic (SITE CROSSOVER)",
+      "variables_changed": [
+        {
+          "variable": "primary_site",
+          "from": "hypopharyngeal",
+          "to": "glottic"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN2",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "impaired_no_aspiration",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "1",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).\n\nTumor: cT3N2b glottic SCC with transglottic extension. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.\n\nImaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.\n\nFunction: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.\n\nLabs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.",
+      "question": "What are the treatment options for this patient, and what is the preferred strategy?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S12",
+        "S43"
+      ],
+      "predicted_failure_mode": "Removing site-specific penalties: TLM now discussable, non-surgical outcomes not penalised by site",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "D1-P2",
+      "baseline_id": "D1-BASE",
+      "family": "hypopharyngeal",
+      "type": "escalate",
+      "label": "Add aspiration pneumonia \u2192 absolute CI non-surgical",
+      "variables_changed": [
+        {
+          "variable": "swallowing_status",
+          "from": "impaired_no_aspiration",
+          "to": "recurrent_pneumonia"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN2",
+        "primary_site": "hypopharyngeal",
+        "tumor_volume": "high",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "recurrent_pneumonia",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "1",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).\n\nTumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.\n\nImaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.\n\nFunction: Severe dysphagia with documented aspiration. Two episodes of aspiration pneumonia in the past 6 weeks requiring hospitalisation. FEES shows penetration and aspiration with thin liquids. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.\n\nLabs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.",
+      "question": "What are the treatment options for this patient, and what is the preferred strategy?",
+      "expected_recommendations": [
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S19R"
+      ],
+      "predicted_failure_mode": "Recurrent aspiration pneumonia = absolute CI for non-surgical LP (S19R-a)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "D1-P3",
+      "baseline_id": "D1-BASE",
+      "family": "hypopharyngeal",
+      "type": "escalate",
+      "label": "Add tracheostomy",
+      "variables_changed": [
+        {
+          "variable": "pretreatment_tracheostomy",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "variable": "airway_obstruction",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN2",
+        "primary_site": "hypopharyngeal",
+        "tumor_volume": "high",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "impaired_no_aspiration",
+        "pretreatment_tracheostomy": "true",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "true",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "1",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).\n\nTumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.\n\nImaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.\n\nFunction: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. Severe airway obstruction requiring tracheostomy placement 2 weeks ago. No feeding tube.\n\nLabs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.",
+      "question": "What are the treatment options for this patient, and what is the preferred strategy?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S19R",
+        "S115"
+      ],
+      "predicted_failure_mode": "Tracheostomy = relative CI non-surgical (S19R-b) + poor functional prognosis (S115). Non-surgical not excluded but balance shifts.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "D1-NULL",
+      "baseline_id": "D1-BASE",
+      "family": "hypopharyngeal",
+      "type": "null",
+      "label": "Age 73, fit",
+      "variables_changed": [
+        {
+          "variable": "age",
+          "from": "under_70",
+          "to": "70_plus"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN2",
+        "primary_site": "hypopharyngeal",
+        "tumor_volume": "high",
+        "thyroid_cartilage_inner_cortex": "none",
+        "thyroid_cartilage_outer_cortex": "false",
+        "subglottic_extension": "none",
+        "extralaryngeal_extension": "none",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "impaired_no_aspiration",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "70_plus",
+        "ecog_ps": "1",
+        "renal_function": "normal",
+        "cardiac_function": "normal",
+        "neuropathy": "none",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 73-year-old male, ECOG 1. Comprehensive Geriatric Assessment: fit. G8 14/17. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).\n\nTumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.\n\nImaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.\n\nFunction: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.\n\nLabs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1.",
+      "question": "What are the treatment options for this patient, and what is the preferred strategy?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S80"
+      ],
+      "predicted_failure_mode": "Age alone should not change recommendation",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "E1-NULL",
+      "baseline_id": "E1-BASE",
+      "family": "cT4a_unselected",
+      "type": "null",
+      "label": "Add age 75, fit \u2014 TL still indicated",
+      "variables_changed": [
+        {
+          "variable": "age",
+          "from": "under_70",
+          "to": "70_plus"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "tumor_volume": "high",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "true",
+        "extralaryngeal_extension": "significant",
+        "subglottic_extension": "significant",
+        "cricoid_cartilage_involvement": "extensive",
+        "magic_plane_crossing": "true",
+        "posterior_laryngeal_involvement": "unilateral_arytenoid",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "unilateral_fixed",
+        "baseline_laryngeal_function": "dysfunctional",
+        "swallowing_status": "impaired_no_aspiration",
+        "pretreatment_tracheostomy": "true",
+        "airway_obstruction": "true",
+        "laryngeal_exposure": "insufficient",
+        "age": "70_plus",
+        "ecog_ps": "1",
+        "frailty_status": "fit",
+        "renal_function": "normal",
+        "cardiac_function": "normal"
+      },
+      "clinical_text": "Patient: 75-year-old male, ECOG 1. CGA: fit. G8 14/17. Active smoker (45 pack-years). Moderate alcohol intake. Otherwise healthy.\n\nTumor: cT4aN1 glottic SCC. Bulky transglottic tumor with left vocal cord fixation and left arytenoid fixation. Right cord mobile.\n\nImaging: CT shows full-thickness thyroid cartilage infiltration with significant extralaryngeal soft tissue extension invading the strap muscles bilaterally. Extensive subglottic extension (>15mm) with cricoid cartilage invasion. The tumor crosses the magic plane. Single ipsilateral level III lymph node (2.5cm).\n\nFunction: Severe dysphonia \u2014 largely non-communicative by voice. Emergency tracheostomy placed 1 week ago for critical airway obstruction. Moderate dysphagia to solids but tolerating liquids. Laryngeal function is considered globally dysfunctional.\n\nDirect laryngoscopy: Laryngeal exposure is insufficient due to tumor bulk and anatomy.\n\nLabs: CrCl 91, NYHA I, no neuropathy. Albumin 3.4, Hb 12.8.",
+      "question": "What is the recommended treatment for this patient?",
+      "expected_recommendations": [
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S80"
+      ],
+      "predicted_failure_mode": "Age should not change clear TL indication",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-P1",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "escalate",
+      "label": "Extralaryngeal \u2192 significant: LP collapses",
+      "variables_changed": [
+        {
+          "variable": "extralaryngeal_extension",
+          "from": "minimal_anterior",
+          "to": "significant"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "significant",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with significant extralaryngeal soft tissue extension invading the strap muscles bilaterally with deep muscle involvement. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S38R",
+        "S39R"
+      ],
+      "predicted_failure_mode": "Significant extralaryngeal = TL indication (S38R), CI for LP (S39R)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-P2",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "flip",
+      "label": "Magic plane crossing \u2192 OPHL-I/II blocked",
+      "variables_changed": [
+        {
+          "variable": "magic_plane_crossing",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "true",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. The tumor crosses the magic plane. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "ophl_type_i",
+        "ophl_type_ii",
+        "tlm"
+      ],
+      "edge_justification": [
+        "S15R"
+      ],
+      "predicted_failure_mode": "Magic plane = CI for OPHL-I and OPHL-II (S15R). Only OPHL-III or TL remain surgical options.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-P3",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "flip",
+      "label": "Baseline laryngeal function \u2192 dysfunctional",
+      "variables_changed": [
+        {
+          "variable": "baseline_laryngeal_function",
+          "from": "functional",
+          "to": "dysfunctional"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "dysfunctional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Severe dysphonia, largely non-communicative. Emerging dysphagia to solids. No airway obstruction. No tracheostomy. Baseline laryngeal function is considered globally dysfunctional \u2014 severe dysphonia, swallowing difficulties emerging. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S39R",
+        "S42R"
+      ],
+      "predicted_failure_mode": "Dysfunctional baseline = absolute CI for BOTH surgical and non-surgical LP (S39R). Forces TL.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-P4",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "flip",
+      "label": "N stage \u2192 cN2",
+      "variables_changed": [
+        {
+          "variable": "n_stage",
+          "from": "cN0",
+          "to": "cN2"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN2",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. Bilateral lymphadenopathy \u2014 2.8cm left level III, 2.0cm right level II. No extranodal extension.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S24R",
+        "S46"
+      ],
+      "predicted_failure_mode": "N2 = relative CI for partial laryngectomy (S24R). S46 requires N0-1 for OPHL in cT4a.",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-P5",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "flip",
+      "label": "Site \u2192 hypopharyngeal",
+      "variables_changed": [
+        {
+          "variable": "primary_site",
+          "from": "glottic",
+          "to": "hypopharyngeal"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "hypopharyngeal",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 SCC of the piriform sinus. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S12",
+        "S43"
+      ],
+      "predicted_failure_mode": "Hypopharynx at cT4a: worse outcomes non-surgical (S43), TLM not first-line (S12)",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-GREY1",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "grey_zone",
+      "label": "Post-OPHL: adjuvant RT for pT4aN0 neg margins no PNI/LVI?",
+      "variables_changed": [],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "under_70",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.\n\n[FOLLOW-UP SCENARIO]: The patient underwent OPHL. Final pathology: pT4aN0, all margins negative (>5mm), no perineural invasion, no lymphovascular invasion. Should adjuvant radiotherapy be administered?",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [],
+      "expected_excluded": [],
+      "edge_justification": [
+        "S47R",
+        "S35R"
+      ],
+      "predicted_failure_mode": "GREY ZONE S47R (61.4%): experts split on omitting adjuvant RT with favorable pathology. Model should express uncertainty.",
+      "grey_zone_statement": "S47R",
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "F1-NULL",
+      "baseline_id": "F1-BASE",
+      "family": "cT4a_selected",
+      "type": "null",
+      "label": "Age 74, fit",
+      "variables_changed": [
+        {
+          "variable": "age",
+          "from": "under_70",
+          "to": "70_plus"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT4a",
+        "n_stage": "cN0",
+        "primary_site": "glottic",
+        "tumor_volume": "low",
+        "thyroid_cartilage_outer_cortex": "true",
+        "thyroid_cartilage_full_thickness": "false",
+        "extralaryngeal_extension": "minimal_anterior",
+        "subglottic_extension": "none",
+        "cricoid_cartilage_involvement": "none",
+        "magic_plane_crossing": "false",
+        "posterior_laryngeal_involvement": "none",
+        "vocal_cord_mobility": "fixed",
+        "arytenoid_mobility": "bilateral_mobile",
+        "baseline_laryngeal_function": "functional",
+        "swallowing_status": "normal",
+        "pretreatment_tracheostomy": "false",
+        "pretreatment_feeding_tube": "false",
+        "airway_obstruction": "false",
+        "laryngeal_exposure": "adequate",
+        "age": "70_plus",
+        "ecog_ps": "0",
+        "frailty_status": "fit",
+        "cardiopulmonary_function": "good",
+        "neurological_function": "good",
+        "renal_function": "normal"
+      },
+      "clinical_text": "Patient: 74-year-old male, ECOG 0. CGA: fit. G8 15/17. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.\n\nTumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.\n\nImaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.\n\nFunction: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.\n\nLabs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.",
+      "question": "Is larynx preservation a viable option for this cT4a patient?",
+      "expected_recommendations": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "expected_excluded": [
+        "tlm"
+      ],
+      "edge_justification": [
+        "S80"
+      ],
+      "predicted_failure_mode": "Age alone should not change LP eligibility in fit patient",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "G1-ABS01",
+      "baseline_id": "G1-BASE",
+      "family": "cisplatin_eligibility",
+      "type": "flip",
+      "label": "CrCl <50 absolute CI",
+      "variables_changed": [
+        {
+          "variable": "renal_function",
+          "from": "normal",
+          "to": "under_50_ml_min"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "ecog_ps": "0",
+        "ecog_ps_source": "null",
+        "renal_function": "under_50_ml_min",
+        "cardiac_function": "normal",
+        "liver_function": "normal",
+        "neuropathy": "none",
+        "hearing_status": "grade_0",
+        "bone_marrow": "normal",
+        "hiv_status": "negative",
+        "hepatitis": "negative",
+        "platinum_hypersensitivity": "false",
+        "psychiatric_disorders": "false",
+        "diabetes": "none",
+        "pregnancy_lactation": "false",
+        "social_support": "adequate",
+        "cisplatin_relative_ci_count": "0",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 60-year-old male, ECOG 0.\n\nTumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.\n\nRenal: CrCl 38 mL/min (stage 3b CKD), elevated creatinine 2.1 mg/dL.\nCardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.\nHepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).\nNeurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.\nHaematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.\nInfectious: HIV negative, HBV surface antigen negative, HCV antibody negative.\nOther: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.\nNutritional status adequate (albumin 4.1, BMI 24).",
+      "question": "Is high-dose cisplatin (100 mg/m\u00b2 q3w, up to 300 mg/m\u00b2 cumulative) appropriate as the concurrent systemic agent?",
+      "expected_recommendations": [
+        "carboplatin_5fu",
+        "cetuximab_concurrent",
+        "nonsurgical_lp"
+      ],
+      "expected_excluded": [
+        "cisplatin_high_dose"
+      ],
+      "edge_justification": [
+        "S68R",
+        "S52R",
+        "S72R"
+      ],
+      "predicted_failure_mode": "Should identify renal_function as absolute CI and recommend alternative agent",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    },
+    {
+      "id": "G1-ABS02",
+      "baseline_id": "G1-BASE",
+      "family": "cisplatin_eligibility",
+      "type": "flip",
+      "label": "NYHA III-IV / LVEF \u226450 absolute CI",
+      "variables_changed": [
+        {
+          "variable": "cardiac_function",
+          "from": "normal",
+          "to": "nyha_III_IV"
+        }
+      ],
+      "staging_impact": null,
+      "variable_assignments": {
+        "t_stage": "cT3",
+        "n_stage": "cN1",
+        "primary_site": "glottic",
+        "ecog_ps": "0",
+        "ecog_ps_source": "null",
+        "renal_function": "normal",
+        "cardiac_function": "nyha_III_IV",
+        "liver_function": "normal",
+        "neuropathy": "none",
+        "hearing_status": "grade_0",
+        "bone_marrow": "normal",
+        "hiv_status": "negative",
+        "hepatitis": "negative",
+        "platinum_hypersensitivity": "false",
+        "psychiatric_disorders": "false",
+        "diabetes": "none",
+        "pregnancy_lactation": "false",
+        "social_support": "adequate",
+        "cisplatin_relative_ci_count": "0",
+        "comorbidity_burden": "none_mild"
+      },
+      "clinical_text": "Patient: 60-year-old male, ECOG 0.\n\nTumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.\n\nRenal: CrCl 95 mL/min, normal electrolytes.\nCardiac: NYHA class III congestive heart failure, LVEF 40%, on furosemide and carvedilol. History of myocardial infarction 2019.\nHepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).\nNeurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.\nHaematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.\nInfectious: HIV negative, HBV surface antigen negative, HCV antibody negative.\nOther: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.\nNutritional status adequate (albumin 4.1, BMI 24).",
+      "question": "Is high-dose cisplatin (100 mg/m\u00b2 q3w, up to 300 mg/m\u00b2 cumulative) appropriate as the concurrent systemic agent?",
+      "expected_recommendations": [
+        "carboplatin_5fu",
+        "cetuximab_concurrent",
+        "nonsurgical_lp"
+      ],
+      "expected_excluded": [
+        "cisplatin_high_dose"
+      ],
+      "edge_justification": [
+        "S68R",
+        "S52R",
+        "S72R"
+      ],
+      "predicted_failure_mode": "Should identify cardiac_function as absolute CI and recommend alternative agent",
+      "grey_zone_statement": null,
+      "notes": "",
+      "consistency_warnings": []
+    }
+  ]
+}

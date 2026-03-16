@@ -33,6 +33,9 @@ def parse_args():
     parser.add_argument("--outdir", required=True)
     parser.add_argument("--model-override", default=None,
                         help="Override manifest model, e.g. kimi-k2.5-thinking")
+    parser.add_argument("--preserve-manifest-identity", action="store_true",
+                        help="When used with --model-override, keep the original manifest model_name/hash "
+                             "in saved rows so reruns can merge back into the original study arm.")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--rpm", type=int, default=20)
     parser.add_argument("--max-retries", type=int, default=3)
@@ -97,20 +100,23 @@ def build_phase2_messages(item: dict, phase1_text: str, context_mode: str, phase
     return msgs
 
 
-def run_entry(item: dict, model_name: str, run_idx: int, api_key: str, rl: RateLimiter,
+def run_entry(item: dict, query_model_name: str, run_idx: int, api_key: str, rl: RateLimiter,
               context_mode: str, phase1_char_limit: int,
               force_max_tokens: int | None = None,
               force_reasoning_effort: str | None = None,
+              output_model_name: str | None = None,
+              output_hash: str | None = None,
               progress=None):
-    cfg = MODEL_REGISTRY[model_name]
+    cfg = MODEL_REGISTRY[query_model_name]
     max_tokens = force_max_tokens or cfg["max_tokens"]
     reasoning_effort = force_reasoning_effort if force_reasoning_effort is not None else cfg.get("reasoning_effort")
+    stored_model_name = output_model_name or query_model_name
     result = {
         "item_id": item["id"],
-        "model_name": model_name,
+        "model_name": stored_model_name,
         "model_id": cfg["model_id"],
         "run_idx": run_idx,
-        "hash": make_hash(item["id"], model_name, run_idx),
+        "hash": output_hash or make_hash(item["id"], stored_model_name, run_idx),
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "temperature": cfg["temperature"],
         "family": item["family"],
@@ -124,6 +130,8 @@ def run_entry(item: dict, model_name: str, run_idx: int, api_key: str, rl: RateL
         "phase2_usage": None,
         "error": None,
     }
+    if stored_model_name != query_model_name:
+        result["queried_with_model_name"] = query_model_name
 
     try:
         msgs1 = [
@@ -181,12 +189,13 @@ def main():
 
     work = []
     for row in rows:
-        model_name = args.model_override or row["model_name"]
+        query_model_name = args.model_override or row["model_name"]
+        output_model_name = row["model_name"] if args.preserve_manifest_identity else query_model_name
         item = battery_items[row["item_id"]]
-        rerun_hash = make_hash(item["id"], model_name, row["run_idx"])
+        rerun_hash = row["hash"] if args.preserve_manifest_identity else make_hash(item["id"], output_model_name, row["run_idx"])
         if rerun_hash in done:
             continue
-        work.append((item, model_name, row["run_idx"], row["hash"]))
+        work.append((item, query_model_name, output_model_name, row["run_idx"], row["hash"], rerun_hash))
 
     if not work:
         print("No remaining manifest entries to rerun.")
@@ -202,8 +211,8 @@ def main():
     file_lock = threading.Lock()
     print_lock = threading.Lock()
 
-    def process_one(index, item, model_name, run_idx, original_hash):
-        line_prefix = f"[{index}/{len(work)}] {item['id']} {model_name} run={run_idx}"
+    def process_one(index, item, query_model_name, output_model_name, run_idx, original_hash, output_hash):
+        line_prefix = f"[{index}/{len(work)}] {item['id']} {output_model_name} via {query_model_name} run={run_idx}"
 
         def log(message):
             with print_lock:
@@ -213,7 +222,7 @@ def main():
         for attempt in range(args.max_retries):
             result = run_entry(
                 item,
-                model_name,
+                query_model_name,
                 run_idx,
                 api_key,
                 rl,
@@ -221,6 +230,8 @@ def main():
                 args.phase1_char_limit,
                 args.force_max_tokens,
                 args.force_reasoning_effort,
+                output_model_name,
+                output_hash,
                 log,
             )
             if (
@@ -253,10 +264,10 @@ def main():
         while True:
             while len(pending) < max(1, args.workers):
                 try:
-                    idx, (item, model_name, run_idx, original_hash) = next(work_iter)
+                    idx, work_row = next(work_iter)
                 except StopIteration:
                     break
-                pending.add(executor.submit(process_one, idx, item, model_name, run_idx, original_hash))
+                pending.add(executor.submit(process_one, idx, *work_row))
 
             if not pending:
                 break

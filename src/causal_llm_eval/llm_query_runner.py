@@ -33,6 +33,11 @@ MODEL_REGISTRY = {
         "max_tokens": 4096, "temperature": 0.6,
         "tier": "general_large", "price_in": 0.20, "price_out": 0.60,
     },
+    "qwen3-next-80b-instruct": {
+        "model_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "max_tokens": 4096, "temperature": 0.6,
+        "tier": "general_large", "price_in": 0.15, "price_out": 1.50,
+    },
     "llama-4-maverick": {
         "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
         "max_tokens": 4096, "temperature": 0.6,
@@ -53,6 +58,11 @@ MODEL_REGISTRY = {
         "max_tokens": 4096, "temperature": 0.6,
         "tier": "scaling", "price_in": 0.18, "price_out": 0.18,
     },
+    "llama-3-8b-lite": {
+        "model_id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+        "max_tokens": 4096, "temperature": 0.6,
+        "tier": "scaling", "price_in": 0.10, "price_out": 0.10,
+    },
     "qwq-32b": {
         "model_id": "Qwen/QwQ-32B",
         "max_tokens": 16384, "temperature": 0.6,
@@ -68,6 +78,11 @@ MODEL_REGISTRY = {
         "max_tokens": 16384, "temperature": 1.0,
         "tier": "reasoning_small", "price_in": 0.50, "price_out": 2.80,
         "reasoning_effort": "high",
+    },
+    "mistral-small-24b": {
+        "model_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "max_tokens": 4096, "temperature": 0.6,
+        "tier": "general_medium", "price_in": 0.10, "price_out": 0.30,
     },
 }
 
@@ -146,6 +161,7 @@ TARGETED_QUESTIONS_BY_FAMILY = {
         "2. If not, what is the specific contraindication?",
         "3. Is the contraindication absolute or relative?",
         "4. What alternative concurrent systemic agent would you recommend?",
+        "5. If no concurrent systemic agent is safe and the patient declines total laryngectomy, is accelerated or hyperfractionated radiotherapy alone a reasonable fallback?",
     ],
     "post_ict_response": [
         "1. Is radiotherapy alone (without concurrent chemotherapy) the appropriate definitive treatment?",

@@ -310,6 +310,12 @@ TREATMENT_RULES = {
     },
 }
 
+DISPLAY_NAMES = {
+    "ophl_any": "Open partial horizontal laryngectomy (OPHL)",
+    "nonsurgical_lp": "Non-surgical larynx preservation",
+    "surgical_lp": "Surgical larynx preservation",
+}
+
 
 # ── Per-family stance determination logic ─────────────────────────────────────
 
@@ -318,6 +324,18 @@ def _parse_vars(va):
     if isinstance(va, str):
         return eval(va)
     return dict(va)
+
+
+def _display_name(treatment_key):
+    return TREATMENT_RULES.get(treatment_key, {}).get("full_name", DISPLAY_NAMES.get(treatment_key, treatment_key))
+
+
+def _treatments_for_item(family, expected_rec, expected_exc):
+    treatments = list(FAMILY_TREATMENTS.get(family, []))
+    for tx in list(expected_rec) + list(expected_exc):
+        if tx not in treatments:
+            treatments.append(tx)
+    return treatments
 
 
 def _is_blocked(treatment_key, va):
@@ -468,7 +486,7 @@ FAMILY_TREATMENTS = {
     "cT4a_selected": ["total_laryngectomy", "ophl_any", "ophl_type_ii",
                        "concurrent_crt", "ict_rt", "tlm"],
     "cisplatin_eligibility": ["cisplatin_high_dose", "cetuximab_concurrent",
-                               "carboplatin_5fu"],
+                               "carboplatin_5fu", "rt_accelerated"],
     "post_ict_response": ["rt_alone", "concurrent_crt", "total_laryngectomy"],
     "elderly_frail": ["tlm", "ophl_type_ii", "concurrent_crt", "ict_rt",
                        "rt_alone", "total_laryngectomy"],
@@ -499,7 +517,7 @@ def generate_gold_response(item, family=None):
     if isinstance(expected_exc, str):
         expected_exc = eval(expected_exc)
 
-    treatments = FAMILY_TREATMENTS.get(fam, [])
+    treatments = _treatments_for_item(fam, expected_rec, expected_exc)
 
     # ── Phase 1: Open-ended reasoning ──
     lines = []
@@ -542,7 +560,7 @@ def generate_gold_response(item, family=None):
     for tx in treatments:
         stance = determine_stance(tx, va, expected_rec, expected_exc)
         reasoning = generate_causal_reasoning(tx, stance, va, expected_rec, expected_exc)
-        full_name = TREATMENT_RULES.get(tx, {}).get("full_name", tx)
+        full_name = _display_name(tx)
 
         lines.append(f"**{full_name}**: {stance}")
         lines.append(f"Reasoning: {reasoning}\n")
@@ -567,9 +585,9 @@ def generate_gold_response(item, family=None):
                 )
 
     # ── Summary ──
-    rec_names = [TREATMENT_RULES.get(t, {}).get("full_name", t) for t in treatments
+    rec_names = [_display_name(t) for t in treatments
                  if determine_stance(t, va, expected_rec, expected_exc) == "APPROPRIATE"]
-    exc_names = [TREATMENT_RULES.get(t, {}).get("full_name", t) for t in treatments
+    exc_names = [_display_name(t) for t in treatments
                  if determine_stance(t, va, expected_rec, expected_exc) == "CONTRAINDICATED"]
 
     lines.append("## Summary\n")
@@ -601,7 +619,7 @@ def generate_null_response(item, baseline_item, variable_changed, change_desc):
     if isinstance(expected_exc, str):
         expected_exc = eval(expected_exc)
 
-    treatments = FAMILY_TREATMENTS.get(fam, [])
+    treatments = _treatments_for_item(fam, expected_rec, expected_exc)
 
     lines = []
     lines.append("## Clinical Assessment\n")
@@ -615,7 +633,7 @@ def generate_null_response(item, baseline_item, variable_changed, change_desc):
     lines.append("## Treatment Option Analysis\n")
     for tx in treatments:
         stance = determine_stance(tx, va, expected_rec, expected_exc)
-        full_name = TREATMENT_RULES.get(tx, {}).get("full_name", tx)
+        full_name = _display_name(tx)
         reasoning = generate_causal_reasoning(tx, stance, va, expected_rec, expected_exc)
 
         lines.append(f"**{full_name}**: {stance}")
@@ -660,7 +678,7 @@ def generate_contrastive_response(base_item, pert_item, variables_changed):
     if isinstance(rec_pert, str): rec_pert = eval(rec_pert)
     if isinstance(exc_pert, str): exc_pert = eval(exc_pert)
 
-    treatments = FAMILY_TREATMENTS.get(fam, [])
+    treatments = _treatments_for_item(fam, rec_pert, exc_pert)
     vc = variables_changed if isinstance(variables_changed, list) else eval(str(variables_changed))
 
     lines = []
@@ -675,7 +693,7 @@ def generate_contrastive_response(base_item, pert_item, variables_changed):
     for tx in treatments:
         stance_base = determine_stance(tx, va_base, rec_base, exc_base)
         stance_pert = determine_stance(tx, va_pert, rec_pert, exc_pert)
-        full_name = TREATMENT_RULES.get(tx, {}).get("full_name", tx)
+        full_name = _display_name(tx)
 
         if stance_base != stance_pert:
             lines.append(

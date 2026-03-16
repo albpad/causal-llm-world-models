@@ -8,7 +8,12 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from .response_parser import parse_result
+try:
+    from .label_space import derive_aggregate_labels, normalise_expected_label_lists
+    from .response_parser import parse_result
+except ImportError:
+    from label_space import derive_aggregate_labels, normalise_expected_label_lists
+    from response_parser import parse_result
 
 LABELS = ("recommended", "excluded", "relative_ci", "uncertain")
 
@@ -54,18 +59,19 @@ def annotation_gold(annotation: dict | None) -> dict[str, str]:
         gold[str(tx)] = "relative_ci"
     for tx in parser_validation.get("uncertain", []):
         gold[str(tx)] = "uncertain"
-    return gold
+    return derive_aggregate_labels(gold)
 
 
 def battery_gold(item: dict | None) -> dict[str, str]:
     if not item:
         return {}
+    rec, exc = normalise_expected_label_lists(item.get("expected_recommendations", []), item.get("expected_excluded", []))
     gold = {}
-    for tx in item.get("expected_recommendations", []):
+    for tx in rec:
         gold[str(tx)] = "recommended"
-    for tx in item.get("expected_excluded", []):
+    for tx in exc:
         gold[str(tx)] = "excluded"
-    return gold
+    return derive_aggregate_labels(gold)
 
 
 def choose_gold(item: dict | None, annotation: dict | None) -> tuple[dict[str, str], str]:
@@ -78,7 +84,7 @@ def choose_gold(item: dict | None, annotation: dict | None) -> tuple[dict[str, s
 def stance_map(parsed_row: dict | None) -> dict[str, str]:
     if not parsed_row:
         return {}
-    return {stance["treatment"]: stance["stance"] for stance in parsed_row.get("stances", [])}
+    return derive_aggregate_labels({stance["treatment"]: stance["stance"] for stance in parsed_row.get("stances", [])})
 
 
 def evaluate_predictions(

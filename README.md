@@ -107,23 +107,24 @@ The repository preserves the original project outputs, including:
 
 ## Current article-facing results
 
-The manuscript-facing comparison now uses the recovered Kimi run and a combined article analysis under:
+The final manuscript-facing comparison now uses the harmonised five-model 15-run dataset under:
 
-- `results/raw/kimi-k2.5_recovered/run_20260309_1924_merged.jsonl`
-- `results/analysis/article-metrics/`
-- `results/world_model/article-metrics/world_model_report.md`
-- `results/world_model/article-metrics/world_model_metrics.json`
+- `results/raw/article_models_5_h15/run_20260316_h15_5models.jsonl`
+- `results/analysis/article-metrics-5models/`
+- `results/world_model/article-metrics-5models/world_model_report.md`
+- `results/world_model/article-metrics-5models/world_model_metrics.json`
 
 Key metrics used in the article:
 
 | Model | Soft recall | Hard recall | Direction accuracy | SID | Mean causal JSD | Mean null JSD | SNR | Detection power |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Kimi K2.5 (recovered) | 74.5% (41/55) | 18.2% (10/55) | 70.0% | 37/165 (22.4%) | 0.229 | 0.078 | 2.95 | 28.5% |
-| Llama 3.1-8B | 7.3% (4/55) | 1.8% (1/55) | 100.0%* | 44/154 (28.6%) | 0.043 | 0.094 | 0.46 | 0.0% |
+| Kimi K2.5 | 74.1% (43/58) | 6.9% (4/58) | 50.0% | 41/246 (16.7%) | 0.187 | 0.076 | 2.46 | 20.7% |
+| DeepSeek-R1 | 62.1% (36/58) | 10.3% (6/58) | 66.7% | 34/243 (14.0%) | 0.154 | 0.072 | 2.14 | 17.3% |
+| Mistral-Small-24B | 43.1% (25/58) | 1.7% (1/58) | 0.0% | 31/236 (13.1%) | 0.116 | 0.070 | 1.66 | 13.1% |
+| Qwen3-Next-80B-A3B-Instruct | 39.7% (23/58) | 1.7% (1/58) | 0.0% | 32/237 (13.5%) | 0.103 | 0.055 | 1.87 | 15.6% |
+| Llama 3.1-8B | 17.2% (10/58) | 0.0% (0/58) | 0.0% | 45/233 (19.3%) | 0.059 | 0.074 | 0.80 | 2.6% |
 
-\* `100.0%` direction accuracy for Llama is computed only on the 4 soft-detected edges, so it should not be interpreted as evidence of a coherent graph-level world model.
-
-Use these article-facing outputs for manuscript text, tables, and figures. The `results/world_model/v2/` artifacts remain useful for the newer composite scoring framework, but they are not the primary results cited in the current manuscript draft.
+Use these article-facing outputs for manuscript text, tables, and figures. The `results/world_model/v2/` artifacts remain useful for the newer composite scoring framework, but they are not the primary results cited in the manuscript.
 
 ## Production-readiness improvements in this version
 

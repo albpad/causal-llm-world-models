@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept: Signal Matrix</title>
+  <style>
+    :root {
+      --bg: #f0f4f5;
+      --paper: #fbfdfd;
+      --ink: #15222c;
+      --muted: #5c6972;
+      --good: #11806a;
+      --weak: #d0d7df;
+      --partial: #c78f18;
+      --bad: #d75c49;
+      --navy: #183d69;
+      --shadow: 0 28px 58px rgba(24, 34, 42, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 14% 10%, rgba(17,128,106,0.12), transparent 25%),
+        radial-gradient(circle at 84% 10%, rgba(24,61,105,0.10), transparent 22%),
+        linear-gradient(180deg, #f5f8f8, #ebf0f2);
+    }
+    .page {
+      width: min(1360px, calc(100vw - 32px));
+      margin: 20px auto 32px;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(251, 253, 253, 0.92);
+      border: 1px solid rgba(21,34,44,0.08);
+      box-shadow: var(--shadow);
+    }
+    .header { margin-bottom: 20px; }
+    h1, h2 { margin: 0; font-family: "Iowan Old Style", serif; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.1rem, 4.5vw, 3.8rem); }
+    .lede { color: var(--muted); line-height: 1.55; max-width: 72ch; margin-top: 10px; }
+    .legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .pill { padding: 10px 14px; border-radius: 999px; font-weight: 700; font-size: 0.88rem; }
+    .pill.good { background: #dff5ef; color: var(--good); }
+    .pill.partial { background: #fff1d1; color: #8f6400; }
+    .pill.bad { background: #fde9e4; color: var(--bad); }
+    .pill.weak { background: #edf1f5; color: #637281; }
+    .layout {
+      display: grid;
+      grid-template-columns: 220px 1fr 280px;
+      gap: 18px;
+      align-items: start;
+    }
+    .side, .matrix, .detail {
+      border-radius: 24px;
+      border: 1px solid rgba(21,34,44,0.08);
+      background: var(--paper);
+    }
+    .side, .detail { padding: 18px; }
+    .side h2, .detail h2 { font-size: 1.3rem; margin-bottom: 12px; }
+    .mini {
+      padding: 14px;
+      border-radius: 18px;
+      background: #f3f7f8;
+      margin-top: 10px;
+    }
+    .mini strong { display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy); }
+    .mini span { display: block; font-size: 1.4rem; font-weight: 800; margin-top: 2px; }
+    .matrix { padding: 18px; overflow: auto; }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 8px;
+      min-width: 760px;
+    }
+    th, td {
+      padding: 12px 10px;
+      border-radius: 14px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    th {
+      color: var(--navy);
+      background: #eef3f7;
+      position: sticky;
+      top: 0;
+    }
+    td.row { text-align: left; color: var(--ink); background: #f6f8fa; }
+    td.good { background: #dff5ef; color: var(--good); }
+    td.partial { background: #fff1d1; color: #8f6400; }
+    td.bad { background: #fde9e4; color: var(--bad); }
+    td.weak { background: #edf1f5; color: #637281; }
+    .detail p { color: var(--muted); line-height: 1.5; }
+    @media (max-width: 1120px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>Signal Matrix</h1>
+      <p class="lede">A graph-comparison view for serious validation. It replaces tangled edge geometry with a crisp source-by-treatment matrix and lets JSD magnitude, correctness, and missingness share the same canvas.</p>
+      <div class="legend">
+        <span class="pill good">Recovered correctly</span>
+        <span class="pill partial">Weak or partial</span>
+        <span class="pill bad">Wrong or spurious</span>
+        <span class="pill weak">Not recovered</span>
+      </div>
+    </header>
+
+    <section class="layout">
+      <aside class="side">
+        <h2>What this solves</h2>
+        <div class="mini"><strong>No edge spaghetti</strong><span>55 edges fit cleanly</span></div>
+        <div class="mini"><strong>Direct comparison</strong><span>KG1, Kimi, Llama</span></div>
+        <div class="mini"><strong>Audit-ready</strong><span>Ideal for parser review</span></div>
+      </aside>
+
+      <div class="matrix">
+        <table>
+          <thead>
+            <tr>
+              <th>Clinical variable</th>
+              <th>Transoral</th>
+              <th>OPHL</th>
+              <th>CRT</th>
+              <th>RT alone</th>
+              <th>Total laryngectomy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row">Cartilage invasion</td>
+              <td class="bad">K wrong</td>
+              <td class="weak">L miss</td>
+              <td class="partial">K weak</td>
+              <td class="weak">L miss</td>
+              <td class="good">KG1 + K</td>
+            </tr>
+            <tr>
+              <td class="row">Laryngeal exposure</td>
+              <td class="good">K yes</td>
+              <td class="partial">K weak</td>
+              <td class="weak">none</td>
+              <td class="weak">none</td>
+              <td class="weak">none</td>
+            </tr>
+            <tr>
+              <td class="row">Aspiration pneumonia</td>
+              <td class="weak">none</td>
+              <td class="bad">K wrong</td>
+              <td class="weak">L miss</td>
+              <td class="bad">L noise</td>
+              <td class="good">K yes</td>
+            </tr>
+            <tr>
+              <td class="row">PES invasion</td>
+              <td class="weak">L miss</td>
+              <td class="partial">K weak</td>
+              <td class="good">K yes</td>
+              <td class="weak">none</td>
+              <td class="weak">none</td>
+            </tr>
+            <tr>
+              <td class="row">ICT stable disease</td>
+              <td class="weak">none</td>
+              <td class="weak">none</td>
+              <td class="bad">L wrong</td>
+              <td class="bad">K wrong</td>
+              <td class="good">K + L yes</td>
+            </tr>
+            <tr>
+              <td class="row">Frailty</td>
+              <td class="partial">K weak</td>
+              <td class="weak">L miss</td>
+              <td class="bad">L wrong</td>
+              <td class="partial">K weak</td>
+              <td class="good">K yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="detail">
+        <h2>Why it is smarter</h2>
+        <p>This view does not pretend every edge deserves the same attention. It is built for the actual questions you ask during review: which rule was missed, which treatment flipped in the wrong direction, and whether the model response was signal or noise.</p>
+        <div class="mini"><strong>Best for</strong><span>Validation app</span></div>
+        <div class="mini"><strong>Strength</strong><span>Density + clarity</span></div>
+        <div class="mini"><strong>Weakness</strong><span>Less cinematic</span></div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

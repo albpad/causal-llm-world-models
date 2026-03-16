@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept: Editorial Triptych</title>
+  <style>
+    :root {
+      --bg: #eef1f5;
+      --paper: #fbfcfe;
+      --ink: #17222f;
+      --muted: #5f6974;
+      --good: #11806a;
+      --warn: #c89017;
+      --bad: #d65d4b;
+      --gold: #1c4f8a;
+      --ghost: #d4dce6;
+      --shadow: 0 28px 56px rgba(26, 34, 42, 0.13);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 8%, rgba(28,79,138,0.12), transparent 26%),
+        radial-gradient(circle at 82% 12%, rgba(17,128,106,0.12), transparent 22%),
+        linear-gradient(180deg, #f3f5f8, #e9edf2);
+    }
+    .page {
+      width: min(1320px, calc(100vw - 32px));
+      margin: 20px auto 32px;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(251, 252, 254, 0.9);
+      border: 1px solid rgba(23,34,47,0.08);
+      box-shadow: var(--shadow);
+    }
+    .top { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 22px; align-items: end; }
+    h1, h2 { margin: 0; font-family: "Iowan Old Style", serif; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.2rem, 4.8vw, 4rem); }
+    .lede { color: var(--muted); margin-top: 10px; max-width: 70ch; line-height: 1.55; }
+    .legend { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pill { padding: 10px 14px; border-radius: 999px; font-size: 0.88rem; font-weight: 700; }
+    .pill.good { background: #dff5ef; color: var(--good); }
+    .pill.warn { background: #fff1d2; color: #8e6500; }
+    .pill.bad { background: #fde9e4; color: var(--bad); }
+    .pill.ghost { background: #edf1f5; color: #60707e; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .panel {
+      border-radius: 24px;
+      border: 1px solid rgba(23,34,47,0.08);
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .panel-head {
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(23,34,47,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .panel-head h2 { font-size: 1.55rem; }
+    .score {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: #edf1f5;
+      color: #425362;
+    }
+    .canvas { padding: 18px; }
+    .canvas svg { width: 100%; height: 540px; display: block; }
+    .note { padding: 0 18px 18px; color: var(--muted); line-height: 1.5; }
+    @media (max-width: 1080px) {
+      .grid { grid-template-columns: 1fr; }
+      .top { flex-direction: column; align-items: start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="top">
+      <div>
+        <h1>Editorial Triptych</h1>
+        <p class="lede">A fixed-layout comparison where the same graph anatomy is repeated three times. It looks deliberate, publishable, and easy to annotate in a manuscript or talk.</p>
+      </div>
+      <div class="legend">
+        <span class="pill good">Correct edge</span>
+        <span class="pill warn">Weak or uncertain</span>
+        <span class="pill bad">Wrong or spurious</span>
+        <span class="pill ghost">Missing edge</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="panel-head"><h2>Gold Standard KG1</h2><span class="score">Reference</span></div>
+        <div class="canvas">
+          <svg viewBox="0 0 360 540" aria-hidden="true">
+            <rect x="18" y="18" width="324" height="504" rx="26" fill="#fff" stroke="rgba(23,34,47,0.08)"/>
+            <g fill="#eff3f8" stroke="#d6dee8">
+              <rect x="42" y="74" width="110" height="42" rx="18"/>
+              <rect x="42" y="150" width="110" height="42" rx="18"/>
+              <rect x="42" y="226" width="110" height="42" rx="18"/>
+              <rect x="42" y="302" width="110" height="42" rx="18"/>
+              <rect x="210" y="94" width="108" height="42" rx="18"/>
+              <rect x="210" y="188" width="108" height="42" rx="18"/>
+              <rect x="210" y="282" width="108" height="42" rx="18"/>
+            </g>
+            <g fill="#1c4f8a" font-size="12" font-weight="700">
+              <text x="58" y="100">Tumor extent</text>
+              <text x="58" y="176">Function</text>
+              <text x="58" y="252">Access</text>
+              <text x="58" y="328">Response</text>
+              <text x="231" y="120">Transoral</text>
+              <text x="248" y="214">OPHL</text>
+              <text x="225" y="308">Laryngectomy</text>
+            </g>
+            <path d="M152 95 C182 95, 180 115, 210 115" fill="none" stroke="#1c4f8a" stroke-width="7" stroke-linecap="round"/>
+            <path d="M152 171 C186 171, 184 209, 210 209" fill="none" stroke="#1c4f8a" stroke-width="7" stroke-linecap="round"/>
+            <path d="M152 247 C188 247, 183 209, 210 209" fill="none" stroke="#1c4f8a" stroke-width="7" stroke-linecap="round"/>
+            <path d="M152 323 C188 323, 186 303, 210 303" fill="none" stroke="#1c4f8a" stroke-width="7" stroke-linecap="round"/>
+            <path d="M152 95 C188 95, 190 303, 210 303" fill="none" stroke="#1c4f8a" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="note">Base panel. This does not move. Reviewers compare overlays, not layouts.</div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head"><h2>Kimi K2.5</h2><span class="score">Recovered</span></div>
+        <div class="canvas">
+          <svg viewBox="0 0 360 540" aria-hidden="true">
+            <rect x="18" y="18" width="324" height="504" rx="26" fill="#fff" stroke="rgba(23,34,47,0.08)"/>
+            <g fill="#eff3f8" stroke="#d6dee8">
+              <rect x="42" y="74" width="110" height="42" rx="18"/>
+              <rect x="42" y="150" width="110" height="42" rx="18"/>
+              <rect x="42" y="226" width="110" height="42" rx="18"/>
+              <rect x="42" y="302" width="110" height="42" rx="18"/>
+              <rect x="210" y="94" width="108" height="42" rx="18"/>
+              <rect x="210" y="188" width="108" height="42" rx="18"/>
+              <rect x="210" y="282" width="108" height="42" rx="18"/>
+            </g>
+            <path d="M152 95 C182 95, 180 115, 210 115" fill="none" stroke="#11806a" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 171 C186 171, 184 209, 210 209" fill="none" stroke="#d6dee8" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 247 C188 247, 183 209, 210 209" fill="none" stroke="#c89017" stroke-width="9" stroke-linecap="round" stroke-dasharray="12 9"/>
+            <path d="M152 323 C188 323, 186 303, 210 303" fill="none" stroke="#11806a" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 95 C188 95, 190 303, 210 303" fill="none" stroke="#d65d4b" stroke-width="9" stroke-linecap="round"/>
+            <g fill="#17222f" font-size="12" font-weight="700">
+              <text x="54" y="404">41/55 soft edges</text>
+              <text x="54" y="425">70.0% direction accuracy</text>
+              <text x="54" y="446">22.4% SID</text>
+              <text x="54" y="467">SNR 2.95</text>
+            </g>
+          </svg>
+        </div>
+        <div class="note">Green dominates, but missing and wrong edges remain visible. This gives Kimi credit without hiding error structure.</div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head"><h2>Llama 3.1-8B</h2><span class="score">Recovered</span></div>
+        <div class="canvas">
+          <svg viewBox="0 0 360 540" aria-hidden="true">
+            <rect x="18" y="18" width="324" height="504" rx="26" fill="#fff" stroke="rgba(23,34,47,0.08)"/>
+            <g fill="#eff3f8" stroke="#d6dee8">
+              <rect x="42" y="74" width="110" height="42" rx="18"/>
+              <rect x="42" y="150" width="110" height="42" rx="18"/>
+              <rect x="42" y="226" width="110" height="42" rx="18"/>
+              <rect x="42" y="302" width="110" height="42" rx="18"/>
+              <rect x="210" y="94" width="108" height="42" rx="18"/>
+              <rect x="210" y="188" width="108" height="42" rx="18"/>
+              <rect x="210" y="282" width="108" height="42" rx="18"/>
+            </g>
+            <path d="M152 95 C182 95, 180 115, 210 115" fill="none" stroke="#11806a" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 171 C186 171, 184 209, 210 209" fill="none" stroke="#d6dee8" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 247 C188 247, 183 209, 210 209" fill="none" stroke="#d6dee8" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 323 C188 323, 186 303, 210 303" fill="none" stroke="#d6dee8" stroke-width="9" stroke-linecap="round"/>
+            <path d="M152 95 C188 95, 190 303, 210 303" fill="none" stroke="#d65d4b" stroke-width="9" stroke-linecap="round" stroke-dasharray="12 9"/>
+            <g fill="#17222f" font-size="12" font-weight="700">
+              <text x="54" y="404">4/55 soft edges</text>
+              <text x="54" y="425">100% direction on detected edges</text>
+              <text x="54" y="446">28.6% SID</text>
+              <text x="54" y="467">SNR 0.46</text>
+            </g>
+          </svg>
+        </div>
+        <div class="note">The figure makes the key point instantly: Llama’s few correct edges do not add up to a coherent graph.</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
