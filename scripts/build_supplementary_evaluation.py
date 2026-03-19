@@ -5,6 +5,12 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 
 from causal_llm_eval.domain_evaluation import run_supplementary_evaluation, write_figure_summary_csv
 

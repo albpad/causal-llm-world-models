@@ -351,7 +351,7 @@ def write_artifacts(summary: dict, traceability_rows: list[dict], outdir: str | 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Audit the vignette battery and KG1 traceability.")
     parser.add_argument("--battery", default="data/vignettes/vignette_battery.json")
-    parser.add_argument("--graph-comparison", default="results/analysis/article-metrics-5models/graph_comparison.json")
+    parser.add_argument("--graph-comparison", default="results/analysis/article-metrics-5models-final/graph_comparison.json")
     parser.add_argument("--outdir", required=True)
     return parser
 

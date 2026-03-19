@@ -28,8 +28,6 @@ causal-llm-parse = "causal_llm_eval.response_parser:main"
 causal-llm-validate-parser = "causal_llm_eval.parser_validation:main"
 causal-llm-audit-benchmark = "causal_llm_eval.benchmark_audit:main"
 causal-llm-world-model = "causal_llm_eval.world_model_metrics_v2:main"
-causal-llm-research = "causal_llm_eval.research_app:main"
-causal-llm-review = "causal_llm_eval.review_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
