@@ -1,0 +1,32 @@
+{
+  "deepseek-r1": {
+    "shd_mean": 11.46,
+    "shd_std": 3.6590162612374386,
+    "agreement": 0.8024137931034481,
+    "n_splits": 100
+  },
+  "mistral-small-24b": {
+    "shd_mean": 10.41,
+    "shd_std": 2.905494794350869,
+    "agreement": 0.8205172413793104,
+    "n_splits": 100
+  },
+  "kimi-k2.5": {
+    "shd_mean": 21.77,
+    "shd_std": 4.022076578087494,
+    "agreement": 0.6246551724137931,
+    "n_splits": 100
+  },
+  "qwen3-next-80b-instruct": {
+    "shd_mean": 6.48,
+    "shd_std": 2.7981422408448076,
+    "agreement": 0.8882758620689656,
+    "n_splits": 100
+  },
+  "llama-3.1-8b": {
+    "shd_mean": 6.4,
+    "shd_std": 2.4657656011875906,
+    "agreement": 0.889655172413793,
+    "n_splits": 100
+  }
+}

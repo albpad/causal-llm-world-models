@@ -1,0 +1,149 @@
+edge_id,family,item_id,baseline_id,type,label,expected_recommendations,expected_excluded,baseline_label
+S10R,glottic_cT3,C1-P3,C1-BASE,flip,Change site to glottic + keep TC erosion (SITE CROSSOVER),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,limited_PES
+S10R,supraglottic_cT3,C1-P1,C1-BASE,escalate,PES pronounced → OPHL type I preferred,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_i, surgical_lp",tlm,limited_PES
+S10R,supraglottic_cT3,C1-P2,C1-BASE,escalate,PES + TC erosion → OPHL-IIB (SITE-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iib, surgical_lp",tlm,limited_PES
+S111R,elderly_frail,I1-P1,I1-BASE,flip,"Frail → OPHL relative CI, adapted approach","concurrent_crt, nonsurgical_lp, rt_alone, total_laryngectomy",,elderly_fit
+S112,supraglottic_cT3,C1-P5,C1-BASE,flip,Site → hypopharyngeal (SITE-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",tlm,limited_PES
+S115,hypopharyngeal,D1-P3,D1-BASE,escalate,Add tracheostomy,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,cT3_advanced
+S115,pretreatment_function,J1-P1,J1-BASE,escalate,Tracheostomy required → relative CI,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,airway_obstruction_isolated
+S115,pretreatment_function,J1-P5,J1-BASE,multi,Tracheostomy + feeding tube + aspiration → convergent CIs,total_laryngectomy,,airway_obstruction_isolated
+S116,post_ict_response,H1-P1,H1-BASE,flip,PR ≥50% — shifts from RT alone to CRT,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy",complete_response
+S119R,post_ict_response,H1-P1,H1-BASE,flip,PR ≥50% — shifts from RT alone to CRT,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy",complete_response
+S119R,post_ict_response,H2-NULL,H2-BASE,null,VC remobilization (improves prognosis but doesn't change eligibility),"concurrent_crt, nonsurgical_lp, total_laryngectomy",rt_alone,cT4a_partial_response
+S12,cT4a_selected,F1-P5,F1-BASE,flip,Site → hypopharyngeal,"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,minimal_anterior_favorable
+S12,hypopharyngeal,D1-P1,D1-BASE,flip,Site → glottic (SITE CROSSOVER),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, total_laryngectomy",,cT3_advanced
+S12,supraglottic_cT3,C1-P5,C1-BASE,flip,Site → hypopharyngeal (SITE-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",tlm,limited_PES
+S120R,post_ict_response,H1-P1,H1-BASE,flip,PR ≥50% — shifts from RT alone to CRT,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy",complete_response
+S121R,post_ict_response,H1-P2,H1-BASE,grey_zone,PR <50% — GREY ZONE (SA6),"concurrent_crt, nonsurgical_lp, total_laryngectomy",,complete_response
+S121R,post_ict_response,H1-P3,H1-BASE,flip,Stable disease → TL preferred,total_laryngectomy,rt_alone,complete_response
+S121R,post_ict_response,H2-P1,H2-BASE,flip,Response → stable disease,total_laryngectomy,rt_alone,cT4a_partial_response
+S129,post_ict_response,H1-P4,H1-BASE,flip,Progression → TL clearly indicated,total_laryngectomy,rt_alone,complete_response
+S13,elderly_frail,I1-P2,I1-BASE,escalate,Frail + cT4a + precludes OPHL/chemo → TL preferred,total_laryngectomy,,elderly_fit
+S13,elderly_frail,I1-P3,I1-BASE,flip,Add neurodegenerative disease,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,elderly_fit
+S14,glottic_cT3,B1-P1,B1-BASE,flip,Focal TC inner cortex (TREATMENT-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S15R,cT4a_selected,F1-P2,F1-BASE,flip,Magic plane crossing → OPHL-I/II blocked,"concurrent_crt, nonsurgical_lp, total_laryngectomy","ophl_type_i, ophl_type_ii, tlm",minimal_anterior_favorable
+S16R,glottic_cT3,B1-P8,B1-BASE,flip,Bilateral arytenoid → CI ALL conservative surgery (S16R),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S17R,glottic_cT3,B1-P9,B1-BASE,flip,Subglottic >10mm + CAJ invasion → CI OPHL-II (S17R),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iii, surgical_lp","ophl_type_ii, tlm",TLM_eligible_clean
+S18R,glottic_cT3,B1-P9,B1-BASE,flip,Subglottic >10mm + CAJ invasion → CI OPHL-II (S17R),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iii, surgical_lp","ophl_type_ii, tlm",TLM_eligible_clean
+S19R,hypopharyngeal,D1-P2,D1-BASE,escalate,Add aspiration pneumonia → absolute CI non-surgical,total_laryngectomy,,cT3_advanced
+S19R,hypopharyngeal,D1-P3,D1-BASE,escalate,Add tracheostomy,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,cT3_advanced
+S19R,pretreatment_function,J1-P1,J1-BASE,escalate,Tracheostomy required → relative CI,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,airway_obstruction_isolated
+S19R,pretreatment_function,J1-P2,J1-BASE,escalate,Aspiration pneumonia → absolute CI non-surgical,total_laryngectomy,,airway_obstruction_isolated
+S19R,pretreatment_function,J1-P3,J1-BASE,flip,Add feeding tube,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,airway_obstruction_isolated
+S19R,pretreatment_function,J1-P5,J1-BASE,multi,Tracheostomy + feeding tube + aspiration → convergent CIs,total_laryngectomy,,airway_obstruction_isolated
+S20R,pretreatment_function,J1-P4,J1-BASE,escalate,Add significant subglottic + extensive cricoid,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,airway_obstruction_isolated
+S21,pretreatment_function,J1-NULL,J1-BASE,null,"Add age 72, fit — should NOT change","concurrent_crt, ict_rt, nonsurgical_lp",total_laryngectomy,airway_obstruction_isolated
+S22,glottic_cT2,A1-P1,A1-BASE,flip,Laryngeal exposure insufficient,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp",tlm,favorable_TLM_eligible
+S23R,glottic_cT2,A1-P3,A1-BASE,flip,Add unfavorable cT2 features without fixation (SA2),"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,favorable_TLM_eligible
+S23R,glottic_cT3,A1-P2,A1-BASE,escalate,Vocal cord fixed → upstages to cT3 (STAGING PROPAGATION),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,favorable_TLM_eligible
+S23R,glottic_cT3,A2-P3,A2-BASE,escalate,Vocal cord fixed → upstages to cT3,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,unfavorable_reduced_mobility
+S24R,cT4a_selected,F1-P4,F1-BASE,flip,N stage → cN2,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,minimal_anterior_favorable
+S24R,supraglottic_cT3,C1-P4,C1-BASE,flip,N2 → relative CI partial laryngectomy,"concurrent_crt, ict_rt, nonsurgical_lp",tlm,limited_PES
+S27,glottic_cT3,B1-NULL2,B1-BASE,null,Focal TC inner cortex — CRT should NOT be blocked,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,TLM_eligible_clean
+S27,glottic_cT3,B1-P1,B1-BASE,flip,Focal TC inner cortex (TREATMENT-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S28,glottic_cT3,A1-P2,A1-BASE,escalate,Vocal cord fixed → upstages to cT3 (STAGING PROPAGATION),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,favorable_TLM_eligible
+S28,glottic_cT3,A2-P3,A2-BASE,escalate,Vocal cord fixed → upstages to cT3,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,unfavorable_reduced_mobility
+S28,glottic_cT3,B1-P1,B1-BASE,flip,Focal TC inner cortex (TREATMENT-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S30,post_ict_response,H1-P1,H1-BASE,flip,PR ≥50% — shifts from RT alone to CRT,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy",complete_response
+S31R,post_ict_response,H1-P1,H1-BASE,flip,PR ≥50% — shifts from RT alone to CRT,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy",complete_response
+S35R,cT4a_selected,F1-GREY1,F1-BASE,grey_zone,Post-OPHL: adjuvant RT for pT4aN0 neg margins no PNI/LVI?,,,minimal_anterior_favorable
+S38R,cT4a_selected,F1-P1,F1-BASE,escalate,Extralaryngeal → significant: LP collapses,total_laryngectomy,tlm,minimal_anterior_favorable
+S39R,cT4a_selected,F1-P1,F1-BASE,escalate,Extralaryngeal → significant: LP collapses,total_laryngectomy,tlm,minimal_anterior_favorable
+S39R,cT4a_selected,F1-P3,F1-BASE,flip,Baseline laryngeal function → dysfunctional,total_laryngectomy,,minimal_anterior_favorable
+S39R,glottic_cT3,B1-P8,B1-BASE,flip,Bilateral arytenoid → CI ALL conservative surgery (S16R),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S39R,post_ict_response,H2-P2,H2-BASE,flip,Baseline laryngeal function → dysfunctional,total_laryngectomy,,cT4a_partial_response
+S39R,pretreatment_function,J1-P5,J1-BASE,multi,Tracheostomy + feeding tube + aspiration → convergent CIs,total_laryngectomy,,airway_obstruction_isolated
+S40R,glottic_cT3,B1-P2,B1-BASE,escalate,Outer cortex → cT4a (STAGING PROPAGATION),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S41R,glottic_cT3,B1-P2,B1-BASE,escalate,Outer cortex → cT4a (STAGING PROPAGATION),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S42R,cT4a_selected,F1-P3,F1-BASE,flip,Baseline laryngeal function → dysfunctional,total_laryngectomy,,minimal_anterior_favorable
+S42R,glottic_cT3,B1-P8,B1-BASE,flip,Bilateral arytenoid → CI ALL conservative surgery (S16R),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S43,cT4a_selected,F1-P5,F1-BASE,flip,Site → hypopharyngeal,"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,minimal_anterior_favorable
+S43,hypopharyngeal,D1-P1,D1-BASE,flip,Site → glottic (SITE CROSSOVER),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, total_laryngectomy",,cT3_advanced
+S43,post_ict_response,H2-P3,H2-BASE,flip,Site → hypopharyngeal,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,cT4a_partial_response
+S43,supraglottic_cT3,C1-P5,C1-BASE,flip,Site → hypopharyngeal (SITE-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",tlm,limited_PES
+S45,glottic_cT3,B1-P2,B1-BASE,escalate,Outer cortex → cT4a (STAGING PROPAGATION),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S46,cT4a_selected,F1-P4,F1-BASE,flip,N stage → cN2,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,minimal_anterior_favorable
+S46,glottic_cT3,B1-P2,B1-BASE,escalate,Outer cortex → cT4a (STAGING PROPAGATION),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S47R,cT4a_selected,F1-GREY1,F1-BASE,grey_zone,Post-OPHL: adjuvant RT for pT4aN0 neg margins no PNI/LVI?,,,minimal_anterior_favorable
+S49R,glottic_cT3,B1-P2,B1-BASE,escalate,Outer cortex → cT4a (STAGING PROPAGATION),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,TLM_eligible_clean
+S4R,glottic_cT3,A1-P2,A1-BASE,escalate,Vocal cord fixed → upstages to cT3 (STAGING PROPAGATION),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,favorable_TLM_eligible
+S4R,glottic_cT3,A2-P3,A2-BASE,escalate,Vocal cord fixed → upstages to cT3,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,unfavorable_reduced_mobility
+S52R,cisplatin_eligibility,G1-ABS01,G1-BASE,flip,CrCl <50 absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS02,G1-BASE,flip,NYHA III-IV / LVEF ≤50 absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS03,G1-BASE,flip,Child-Pugh B/C absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS04,G1-BASE,flip,Grade ≥2 neuropathy absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS05,G1-BASE,flip,CD4 <200/AIDS absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS06,G1-BASE,flip,Uncontrolled HBV absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS07,G1-BASE,flip,Platinum hypersensitivity absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS08,G1-BASE,flip,Severe psychiatric disorder absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS09,G1-BASE,flip,Uncontrolled insulin-dependent DM absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ABS10,G1-BASE,flip,Grade >2 bone marrow absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ECOG-COM,G1-BASE,flip,ECOG 2 comorbidity-driven → cisplatin ABSOLUTE CI (SOURCE-CONDITIONAL),"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S52R,cisplatin_eligibility,G1-ECOG-TUM,G1-BASE,flip,ECOG 2 tumor-driven → cisplatin STILL OK (SOURCE-CONDITIONAL),cisplatin_high_dose,,fully_eligible
+S55R,post_ict_response,H1-P1,H1-BASE,flip,PR ≥50% — shifts from RT alone to CRT,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy",complete_response
+S5R,glottic_cT2,A1-P1,A1-BASE,flip,Laryngeal exposure insufficient,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp",tlm,favorable_TLM_eligible
+S5R,glottic_cT2,A2-P2,A2-BASE,flip,Laryngeal exposure insufficient,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp",tlm,unfavorable_reduced_mobility
+S5R,glottic_cT3,B1-P6,B1-BASE,flip,Laryngeal exposure insufficient,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S67,cisplatin_eligibility,G1-ABS11,G1-BASE,flip,Severe comorbidity burden → unfit for chemo (S67),"nonsurgical_lp, rt_accelerated","carboplatin_5fu, cetuximab_concurrent, cisplatin_high_dose, concurrent_crt, ict_rt",fully_eligible
+S68R,cisplatin_eligibility,G1-ABS01,G1-BASE,flip,CrCl <50 absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS02,G1-BASE,flip,NYHA III-IV / LVEF ≤50 absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS03,G1-BASE,flip,Child-Pugh B/C absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS04,G1-BASE,flip,Grade ≥2 neuropathy absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS05,G1-BASE,flip,CD4 <200/AIDS absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS06,G1-BASE,flip,Uncontrolled HBV absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS07,G1-BASE,flip,Platinum hypersensitivity absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS08,G1-BASE,flip,Severe psychiatric disorder absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS09,G1-BASE,flip,Uncontrolled insulin-dependent DM absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ABS10,G1-BASE,flip,Grade >2 bone marrow absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S68R,cisplatin_eligibility,G1-ECOG-COM,G1-BASE,flip,ECOG 2 comorbidity-driven → cisplatin ABSOLUTE CI (SOURCE-CONDITIONAL),"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S69R,cisplatin_eligibility,G1-GREY-S70,G1-BASE,grey_zone,2 relative CIs — grey zone (ACCUMULATION-NON-PATTERN),cisplatin_high_dose,,fully_eligible
+S69R,cisplatin_eligibility,G1-REL01,G1-BASE,flip,"CrCl 50-60 = RELATIVE CI only, not absolute",cisplatin_high_dose,,fully_eligible
+S69R,cisplatin_eligibility,G1-REL02,G1-BASE,flip,Grade 1 hearing = RELATIVE CI only,cisplatin_high_dose,,fully_eligible
+S69R,cisplatin_eligibility,G1-REL03,G1-BASE,flip,Impaired social support = RELATIVE CI only,cisplatin_high_dose,,fully_eligible
+S69R,cisplatin_eligibility,G1-REL04,G1-BASE,flip,"CD4 200-350 = RELATIVE CI only, not absolute",cisplatin_high_dose,,fully_eligible
+S69R,elderly_frail,I1-NULL2,I1-BASE,null,CrCl 55 — only affects chemo choice,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,elderly_fit
+S6R,elderly_frail,I1-NULL1,I1-BASE,null,Age 82 but STILL fit → should NOT change,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,elderly_fit
+S6R,glottic_cT2,A1-NULL,A1-BASE,null,"Age 74, fit — should NOT change options","nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp, tlm","concurrent_crt, total_laryngectomy",favorable_TLM_eligible
+S6R,glottic_cT2,A2-NULL,A2-BASE,null,"Age 73, fit","nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,unfavorable_reduced_mobility
+S6R,glottic_cT3,B1-NULL1,B1-BASE,null,"Age 73, fit — should NOT change","concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,TLM_eligible_clean
+S70,cisplatin_eligibility,G1-GREY-S70,G1-BASE,grey_zone,2 relative CIs — grey zone (ACCUMULATION-NON-PATTERN),cisplatin_high_dose,,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS01,G1-BASE,flip,CrCl <50 absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS02,G1-BASE,flip,NYHA III-IV / LVEF ≤50 absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS03,G1-BASE,flip,Child-Pugh B/C absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS04,G1-BASE,flip,Grade ≥2 neuropathy absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS05,G1-BASE,flip,CD4 <200/AIDS absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS06,G1-BASE,flip,Uncontrolled HBV absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS07,G1-BASE,flip,Platinum hypersensitivity absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS08,G1-BASE,flip,Severe psychiatric disorder absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS09,G1-BASE,flip,Uncontrolled insulin-dependent DM absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ABS10,G1-BASE,flip,Grade >2 bone marrow absolute CI,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S72R,cisplatin_eligibility,G1-ECOG-COM,G1-BASE,flip,ECOG 2 comorbidity-driven → cisplatin ABSOLUTE CI (SOURCE-CONDITIONAL),"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S73R,cisplatin_eligibility,G1-ABS11,G1-BASE,flip,Severe comorbidity burden → unfit for chemo (S67),"nonsurgical_lp, rt_accelerated","carboplatin_5fu, cetuximab_concurrent, cisplatin_high_dose, concurrent_crt, ict_rt",fully_eligible
+S74R,pretreatment_function,J1-P6,J1-BASE,flip,DNA repair disorder → absolute CI non-surgical LP (S74R),total_laryngectomy,,airway_obstruction_isolated
+S74R,pretreatment_function,J1-P7,J1-BASE,flip,Previous neck RT → relative CI non-surgical LP (S74R),total_laryngectomy,,airway_obstruction_isolated
+S75R,elderly_frail,I1-P3,I1-BASE,flip,Add neurodegenerative disease,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,elderly_fit
+S77R,cisplatin_eligibility,G1-ECOG-COM,G1-BASE,flip,ECOG 2 comorbidity-driven → cisplatin ABSOLUTE CI (SOURCE-CONDITIONAL),"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,fully_eligible
+S77R,cisplatin_eligibility,G1-ECOG-TUM,G1-BASE,flip,ECOG 2 tumor-driven → cisplatin STILL OK (SOURCE-CONDITIONAL),cisplatin_high_dose,,fully_eligible
+S7R,glottic_cT2,A2-P1,A2-BASE,flip,AC difficult exposure → TLM relative CI,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp",tlm,unfavorable_reduced_mobility
+S7R,glottic_cT3,B1-P1,B1-BASE,flip,Focal TC inner cortex (TREATMENT-CONDITIONAL),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S7R,glottic_cT3,B1-P3,B1-BASE,flip,Posterior paraglottic space → TLM blocked,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S7R,glottic_cT3,B1-P4,B1-BASE,flip,Massive PES abutting membrane → TLM blocked,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S7R,glottic_cT3,B1-P5,B1-BASE,flip,Posterior subglottic <10mm → TLM blocked,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S7R,glottic_cT3,B1-P7,B1-BASE,flip,AC difficult exposure → TLM blocked,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,TLM_eligible_clean
+S8,glottic_cT2,A1-P3,A1-BASE,flip,Add unfavorable cT2 features without fixation (SA2),"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,favorable_TLM_eligible
+S8,glottic_cT2,A2-P1,A2-BASE,flip,AC difficult exposure → TLM relative CI,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp",tlm,unfavorable_reduced_mobility
+S80,cT4a_selected,F1-NULL,F1-BASE,null,"Age 74, fit","concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,minimal_anterior_favorable
+S80,cT4a_unselected,E1-NULL,E1-BASE,null,"Add age 75, fit — TL still indicated",total_laryngectomy,tlm,significant_extralaryngeal
+S80,elderly_frail,I1-NULL1,I1-BASE,null,Age 82 but STILL fit → should NOT change,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,elderly_fit
+S80,glottic_cT2,A1-NULL,A1-BASE,null,"Age 74, fit — should NOT change options","nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp, tlm","concurrent_crt, total_laryngectomy",favorable_TLM_eligible
+S80,glottic_cT2,A2-NULL,A2-BASE,null,"Age 73, fit","nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,unfavorable_reduced_mobility
+S80,glottic_cT3,B1-NULL1,B1-BASE,null,"Age 73, fit — should NOT change","concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,TLM_eligible_clean
+S80,hypopharyngeal,D1-NULL,D1-BASE,null,"Age 73, fit","concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",tlm,cT3_advanced
+S80,pretreatment_function,J1-NULL,J1-BASE,null,"Add age 72, fit — should NOT change","concurrent_crt, ict_rt, nonsurgical_lp",total_laryngectomy,airway_obstruction_isolated
+S84,elderly_frail,I1-P1,I1-BASE,flip,"Frail → OPHL relative CI, adapted approach","concurrent_crt, nonsurgical_lp, rt_alone, total_laryngectomy",,elderly_fit
+S88,elderly_frail,I1-P1,I1-BASE,flip,"Frail → OPHL relative CI, adapted approach","concurrent_crt, nonsurgical_lp, rt_alone, total_laryngectomy",,elderly_fit
+S88,elderly_frail,I1-P2,I1-BASE,escalate,Frail + cT4a + precludes OPHL/chemo → TL preferred,total_laryngectomy,,elderly_fit
+S89,elderly_frail,I1-P2,I1-BASE,escalate,Frail + cT4a + precludes OPHL/chemo → TL preferred,total_laryngectomy,,elderly_fit
+S9R,glottic_cT3,C1-P3,C1-BASE,flip,Change site to glottic + keep TC erosion (SITE CROSSOVER),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,limited_PES
+SA2,glottic_cT2,A1-P3,A1-BASE,flip,Add unfavorable cT2 features without fixation (SA2),"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,favorable_TLM_eligible
+SA6,post_ict_response,H1-P2,H1-BASE,grey_zone,PR <50% — GREY ZONE (SA6),"concurrent_crt, nonsurgical_lp, total_laryngectomy",,complete_response

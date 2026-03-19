@@ -1,21 +1,67 @@
 #!/usr/bin/env python3
-"""Evaluation and validation program for the response parser."""
+"""Layered validation program for the response parser."""
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
-    from .label_space import derive_aggregate_labels, normalise_expected_label_lists
-    from .response_parser import parse_result
+    from .causal_templates import generate_gold_response
+    from .json_utils import dump_json
+    from .label_space import AGGREGATE_LABELS, derive_aggregate_labels, normalise_expected_label_lists
+    from .llm_query_runner import TARGETED_QUESTIONS_BY_FAMILY
+    from .response_parser import TREATMENT_ALIASES, parse_result
 except ImportError:
-    from label_space import derive_aggregate_labels, normalise_expected_label_lists
-    from response_parser import parse_result
+    from causal_templates import generate_gold_response
+    from json_utils import dump_json
+    from label_space import AGGREGATE_LABELS, derive_aggregate_labels, normalise_expected_label_lists
+    from llm_query_runner import TARGETED_QUESTIONS_BY_FAMILY
+    from response_parser import TREATMENT_ALIASES, parse_result
 
 LABELS = ("recommended", "excluded", "relative_ci", "uncertain")
+MISMATCH_CAUSES = (
+    "not_in_query_space",
+    "aggregate_label_mismatch",
+    "model_omission",
+    "candidate_parser_miss",
+    "model_stance_disagreement",
+)
+
+CANONICAL_TREATMENT_NAMES = {
+    "tlm": "Transoral laser microsurgery (TLM)",
+    "tors": "Transoral robotic surgery (TORS)",
+    "ophl_type_i": "OPHL type I",
+    "ophl_type_ii": "OPHL type II",
+    "ophl_type_iib": "OPHL type IIB",
+    "ophl_type_iii": "OPHL type III",
+    "ophl_any": "Open partial horizontal laryngectomy (OPHL)",
+    "total_laryngectomy": "Total laryngectomy",
+    "concurrent_crt": "Concurrent chemoradiotherapy (CRT)",
+    "ict_rt": "Induction chemotherapy followed by response-adapted treatment",
+    "rt_alone": "Radiotherapy alone",
+    "rt_accelerated": "Accelerated or hyperfractionated radiotherapy",
+    "cisplatin_high_dose": "High-dose cisplatin",
+    "cetuximab_concurrent": "Cetuximab concurrent with radiotherapy",
+    "carboplatin_5fu": "Carboplatin + 5-FU concurrent with radiotherapy",
+    "nonsurgical_lp": "Non-surgical larynx preservation",
+    "surgical_lp": "Surgical larynx preservation",
+}
+
+STRUCTURED_LABEL_MAP = {
+    "recommended": "APPROPRIATE",
+    "excluded": "CONTRAINDICATED",
+    "relative_ci": "RELATIVELY CONTRAINDICATED",
+    "uncertain": "UNCERTAIN",
+}
+
+COMPILED_ALIASES = {
+    treatment: [re.compile(pattern, re.I) for pattern in patterns]
+    for treatment, patterns in TREATMENT_ALIASES.items()
+}
 
 
 def load_json(path: str | Path, default):
@@ -46,6 +92,11 @@ def load_battery_map(path: str | Path) -> dict[str, dict]:
     return items
 
 
+def ordered_battery_items(path: str | Path) -> list[dict]:
+    battery = load_json(path, {})
+    return list(battery.get("baselines", [])) + list(battery.get("perturbations", []))
+
+
 def annotation_gold(annotation: dict | None) -> dict[str, str]:
     if not annotation:
         return {}
@@ -65,7 +116,10 @@ def annotation_gold(annotation: dict | None) -> dict[str, str]:
 def battery_gold(item: dict | None) -> dict[str, str]:
     if not item:
         return {}
-    rec, exc = normalise_expected_label_lists(item.get("expected_recommendations", []), item.get("expected_excluded", []))
+    rec, exc = normalise_expected_label_lists(
+        item.get("expected_recommendations", []),
+        item.get("expected_excluded", []),
+    )
     gold = {}
     for tx in rec:
         gold[str(tx)] = "recommended"
@@ -84,7 +138,9 @@ def choose_gold(item: dict | None, annotation: dict | None) -> tuple[dict[str, s
 def stance_map(parsed_row: dict | None) -> dict[str, str]:
     if not parsed_row:
         return {}
-    return derive_aggregate_labels({stance["treatment"]: stance["stance"] for stance in parsed_row.get("stances", [])})
+    return derive_aggregate_labels(
+        {stance["treatment"]: stance["stance"] for stance in parsed_row.get("stances", [])}
+    )
 
 
 def evaluate_predictions(
@@ -132,6 +188,50 @@ def evaluate_predictions(
     }
 
 
+def evaluate_gold_targets_only(
+    predicted: dict[str, str],
+    gold: dict[str, str],
+    item_id: str,
+    model_name: str,
+    run_idx: int | str,
+) -> dict:
+    compare_set = sorted(gold)
+    per_treatment = []
+    label_counts = {label: {"tp": 0, "fp": 0, "fn": 0} for label in LABELS}
+    matches = 0
+
+    for treatment in compare_set:
+        pred_label = predicted.get(treatment, "absent")
+        gold_label = gold[treatment]
+        matched = pred_label == gold_label
+        matches += int(matched)
+        per_treatment.append(
+            {
+                "item_id": item_id,
+                "model_name": model_name,
+                "run_idx": run_idx,
+                "treatment": treatment,
+                "predicted": pred_label,
+                "gold": gold_label,
+                "matched": matched,
+            }
+        )
+        for label in LABELS:
+            if pred_label == label and gold_label == label:
+                label_counts[label]["tp"] += 1
+            elif pred_label != label and gold_label == label:
+                label_counts[label]["fn"] += 1
+            elif pred_label == label and gold_label != label:
+                label_counts[label]["fp"] += 1
+
+    return {
+        "per_treatment": per_treatment,
+        "label_counts": label_counts,
+        "exact_match": bool(compare_set) and matches == len(compare_set),
+        "n_compared": len(compare_set),
+    }
+
+
 def merge_label_counts(target: dict, update: dict) -> None:
     for label in LABELS:
         for key in ("tp", "fp", "fn"):
@@ -163,12 +263,103 @@ def summarise_label_counts(label_counts: dict) -> dict:
 def build_consensus(rows: list[dict]) -> dict[str, str]:
     votes = defaultdict(Counter)
     for row in rows:
-        for treatment, label in stance_map(row).items():
+        for treatment, label in row["predicted"].items():
             votes[treatment][label] += 1
-    consensus = {}
-    for treatment, counts in votes.items():
-        consensus[treatment] = counts.most_common(1)[0][0]
-    return consensus
+    return {treatment: counts.most_common(1)[0][0] for treatment, counts in votes.items()}
+
+
+def treatment_is_mentioned(text: str, treatment: str) -> bool:
+    return any(pattern.search(text) for pattern in COMPILED_ALIASES.get(treatment, []))
+
+
+def query_space_for_family(family: str) -> set[str]:
+    questions = "\n".join(TARGETED_QUESTIONS_BY_FAMILY.get(family, []))
+    return {
+        treatment
+        for treatment, patterns in COMPILED_ALIASES.items()
+        if any(pattern.search(questions) for pattern in patterns)
+    }
+
+
+def classify_real_output_mismatch(row: dict, treatment: str, predicted: str, family: str) -> str:
+    if treatment in AGGREGATE_LABELS:
+        return "aggregate_label_mismatch"
+    text = f"{row.get('phase1_response', '')}\n{row.get('phase2_response', '')}"
+    in_query_space = treatment in query_space_for_family(family)
+    mentioned = treatment_is_mentioned(text, treatment)
+    if not in_query_space and not mentioned:
+        return "not_in_query_space"
+    if predicted == "absent":
+        return "candidate_parser_miss" if mentioned else "model_omission"
+    return "model_stance_disagreement"
+
+
+def summarise_eval_records(records: list[dict], label_counts: dict) -> dict:
+    exact_matches = sum(1 for record in records if record["exact_match"])
+    return {
+        "n_rows": len(records),
+        "exact_match_rate": exact_matches / len(records) if records else None,
+        "label_metrics": summarise_label_counts(label_counts),
+    }
+
+
+def validate_gold_templates(items: list[dict], max_examples: int = 10) -> dict:
+    records = []
+    label_counts = {label: {"tp": 0, "fp": 0, "fn": 0} for label in LABELS}
+    examples = []
+    for item in items:
+        row = {
+            "item_id": item["id"],
+            "model_name": "gold-template",
+            "run_idx": 0,
+            "error": None,
+            "phase1_response": generate_gold_response(item, family=item.get("family")),
+            "phase2_response": "",
+        }
+        parsed = parse_result(row)
+        predicted = stance_map(parsed)
+        gold = battery_gold(item)
+        evaluation = evaluate_gold_targets_only(predicted, gold, item["id"], "gold-template", 0)
+        merge_label_counts(label_counts, evaluation["label_counts"])
+        records.append({"item_id": item["id"], "predicted": predicted, "gold": gold, "exact_match": evaluation["exact_match"]})
+        for mismatch in evaluation["per_treatment"]:
+            if mismatch["matched"] or len(examples) >= max_examples:
+                continue
+            examples.append(mismatch)
+    return {
+        "summary": summarise_eval_records(records, label_counts),
+        "examples": examples,
+    }
+
+
+def validate_structured_snippets(max_examples: int = 10) -> dict:
+    records = []
+    label_counts = {label: {"tp": 0, "fp": 0, "fn": 0} for label in LABELS}
+    examples = []
+    for treatment, display_name in CANONICAL_TREATMENT_NAMES.items():
+        for label, structured in STRUCTURED_LABEL_MAP.items():
+            row = {
+                "item_id": f"structured-{treatment}-{label}",
+                "model_name": "structured-snippet",
+                "run_idx": 0,
+                "error": None,
+                "phase1_response": "",
+                "phase2_response": f"**{display_name}**: {structured}\nReasoning: Validation snippet.",
+            }
+            parsed = parse_result(row)
+            predicted = stance_map(parsed)
+            gold = derive_aggregate_labels({treatment: label})
+            evaluation = evaluate_gold_targets_only(predicted, gold, row["item_id"], row["model_name"], 0)
+            merge_label_counts(label_counts, evaluation["label_counts"])
+            records.append({"item_id": row["item_id"], "predicted": predicted, "gold": gold, "exact_match": evaluation["exact_match"]})
+            for mismatch in evaluation["per_treatment"]:
+                if mismatch["matched"] or len(examples) >= max_examples:
+                    continue
+                examples.append(mismatch)
+    return {
+        "summary": summarise_eval_records(records, label_counts),
+        "examples": examples,
+    }
 
 
 def validate_parser(
@@ -191,6 +382,9 @@ def validate_parser(
     grouped = defaultdict(list)
     source_counts = Counter()
     completeness = Counter()
+    mismatch_cause_counts = Counter()
+    mismatch_cause_by_treatment = defaultdict(Counter)
+    mismatch_cause_examples = defaultdict(list)
 
     for row in rows:
         parsed = parse_result(row)
@@ -232,6 +426,7 @@ def validate_parser(
             "predicted": predicted,
             "exact_match": evaluation["exact_match"],
             "n_compared": evaluation["n_compared"],
+            "family": item.get("family", "") if item else "",
         }
         parsed_rows.append(row_payload)
         grouped[(item_id, model_name)].append(row_payload)
@@ -239,13 +434,34 @@ def validate_parser(
         for mismatch in evaluation["per_treatment"]:
             if mismatch["matched"]:
                 continue
+            cause = classify_real_output_mismatch(
+                row=row,
+                treatment=mismatch["treatment"],
+                predicted=mismatch["predicted"],
+                family=row_payload["family"],
+            )
+            mismatch_cause_counts[cause] += 1
+            mismatch_cause_by_treatment[mismatch["treatment"]][cause] += 1
+            if len(mismatch_cause_examples[cause]) < max_examples:
+                mismatch_cause_examples[cause].append(
+                    {
+                        **mismatch,
+                        "item_id": item_id,
+                        "model_name": model_name,
+                        "run_idx": run_idx,
+                        "phase1_preview": (row.get("phase1_response") or "")[:220],
+                        "phase2_preview": (row.get("phase2_response") or "")[:220],
+                    }
+                )
             if len(row_examples) < max_examples:
-                example = {
-                    **mismatch,
-                    "phase1_preview": (row.get("phase1_response") or "")[:220],
-                    "phase2_preview": (row.get("phase2_response") or "")[:220],
-                }
-                row_examples.append(example)
+                row_examples.append(
+                    {
+                        **mismatch,
+                        "mismatch_cause": cause,
+                        "phase1_preview": (row.get("phase1_response") or "")[:220],
+                        "phase2_preview": (row.get("phase2_response") or "")[:220],
+                    }
+                )
 
     consensus_rows = []
     for (item_id, model_name), group in grouped.items():
@@ -287,22 +503,25 @@ def validate_parser(
             "n": stats["n"],
             "accuracy": stats["correct"] / stats["n"] if stats["n"] else None,
             "top_errors": stats["errors"].most_common(5),
+            "mismatch_causes": dict(mismatch_cause_by_treatment.get(treatment, {})),
         }
+
+    battery_items_ordered = ordered_battery_items(battery_path)
+    gold_template_validation = validate_gold_templates(battery_items_ordered, max_examples=max_examples)
+    structured_snippet_validation = validate_structured_snippets(max_examples=max_examples)
 
     summary = {
         "results_file": str(results_path),
         "battery_file": str(battery_path),
         "annotations_file": str(annotations_path) if annotations_path else None,
         "model_filter": model_filter,
-        "row_level": {
-            "n_rows": len(parsed_rows),
-            "exact_match_rate": completeness["row_exact_matches"] / len(parsed_rows) if parsed_rows else None,
-            "label_metrics": summarise_label_counts(row_label_counts),
-        },
-        "consensus_level": {
-            "n_cases": len(consensus_rows),
-            "exact_match_rate": completeness["consensus_exact_matches"] / len(consensus_rows) if consensus_rows else None,
-            "label_metrics": summarise_label_counts(consensus_label_counts),
+        "battery_alignment": summarise_eval_records(parsed_rows, row_label_counts),
+        "consensus_alignment": summarise_eval_records(consensus_rows, consensus_label_counts),
+        "gold_template_validation": gold_template_validation,
+        "structured_snippet_validation": structured_snippet_validation,
+        "real_output_audit": {
+            "mismatch_cause_counts": dict(mismatch_cause_counts),
+            "mismatch_cause_examples": dict(mismatch_cause_examples),
         },
         "completeness": {
             "rows": completeness["rows"],
@@ -325,10 +544,8 @@ def write_report(summary: dict, output_dir: str | Path) -> None:
     outdir = Path(output_dir)
     outdir.mkdir(parents=True, exist_ok=True)
 
-    with open(outdir / "parser_validation_summary.json", "w") as f:
-        json.dump(summary, f, indent=2)
-    with open(outdir / "parser_validation_examples.json", "w") as f:
-        json.dump(summary["examples"], f, indent=2)
+    dump_json(outdir / "parser_validation_summary.json", summary)
+    dump_json(outdir / "parser_validation_examples.json", summary["examples"])
 
     lines = []
     lines.append("# Parser Validation Report\n")
@@ -339,11 +556,14 @@ def write_report(summary: dict, output_dir: str | Path) -> None:
     if summary["model_filter"]:
         lines.append(f"- Model filter: `{summary['model_filter']}`")
     lines.append("")
-    lines.append("## Row-Level Performance")
-    lines.append(f"- Rows evaluated: `{summary['row_level']['n_rows']}`")
-    erm = summary["row_level"]["exact_match_rate"]
+
+    lines.append("## 1. Battery Alignment on Real Model Outputs")
+    lines.append("This section is **not** pure parser accuracy. It measures alignment between parsed model outputs and battery expectations, so disagreement can come from query-space gaps, model omissions, or true parser misses.")
+    bal = summary["battery_alignment"]
+    lines.append(f"- Rows evaluated: `{bal['n_rows']}`")
+    erm = bal["exact_match_rate"]
     lines.append(f"- Exact match rate: `{erm:.1%}`" if erm is not None else "- Exact match rate: `n/a`")
-    for label, metrics in summary["row_level"]["label_metrics"].items():
+    for label, metrics in bal["label_metrics"].items():
         p = metrics["precision"]
         r = metrics["recall"]
         f1 = metrics["f1"]
@@ -353,11 +573,13 @@ def write_report(summary: dict, output_dir: str | Path) -> None:
             else f"- `{label}`: insufficient support"
         )
     lines.append("")
-    lines.append("## Consensus-Level Performance")
-    lines.append(f"- Case/model groups: `{summary['consensus_level']['n_cases']}`")
-    cem = summary["consensus_level"]["exact_match_rate"]
+
+    lines.append("## 2. Consensus Alignment Across Runs")
+    cal = summary["consensus_alignment"]
+    lines.append(f"- Case/model groups: `{cal['n_rows']}`")
+    cem = cal["exact_match_rate"]
     lines.append(f"- Exact match rate: `{cem:.1%}`" if cem is not None else "- Exact match rate: `n/a`")
-    for label, metrics in summary["consensus_level"]["label_metrics"].items():
+    for label, metrics in cal["label_metrics"].items():
         p = metrics["precision"]
         r = metrics["recall"]
         f1 = metrics["f1"]
@@ -367,25 +589,69 @@ def write_report(summary: dict, output_dir: str | Path) -> None:
             else f"- `{label}`: insufficient support"
         )
     lines.append("")
-    lines.append("## Completeness")
+
+    lines.append("## 3. Deterministic Gold-Template Validation")
+    gtv = summary["gold_template_validation"]["summary"]
+    lines.append(f"- Cases evaluated: `{gtv['n_rows']}`")
+    gem = gtv["exact_match_rate"]
+    lines.append(f"- Exact match rate: `{gem:.1%}`" if gem is not None else "- Exact match rate: `n/a`")
+    for label, metrics in gtv["label_metrics"].items():
+        p = metrics["precision"]
+        r = metrics["recall"]
+        f1 = metrics["f1"]
+        lines.append(
+            f"- `{label}`: precision `{p:.1%}` recall `{r:.1%}` f1 `{f1:.1%}`"
+            if None not in (p, r, f1)
+            else f"- `{label}`: insufficient support"
+        )
+    lines.append("")
+
+    lines.append("## 4. Structured Label Validation")
+    ssv = summary["structured_snippet_validation"]["summary"]
+    lines.append(f"- Snippets evaluated: `{ssv['n_rows']}`")
+    sem = ssv["exact_match_rate"]
+    lines.append(f"- Exact match rate: `{sem:.1%}`" if sem is not None else "- Exact match rate: `n/a`")
+    for label, metrics in ssv["label_metrics"].items():
+        p = metrics["precision"]
+        r = metrics["recall"]
+        f1 = metrics["f1"]
+        lines.append(
+            f"- `{label}`: precision `{p:.1%}` recall `{r:.1%}` f1 `{f1:.1%}`"
+            if None not in (p, r, f1)
+            else f"- `{label}`: insufficient support"
+        )
+    lines.append("")
+
+    lines.append("## 5. Real-Output Mismatch Audit")
+    lines.append("These counts separate benchmark/query issues from model behavior and candidate parser misses.")
+    for cause in MISMATCH_CAUSES:
+        lines.append(f"- `{cause}`: `{summary['real_output_audit']['mismatch_cause_counts'].get(cause, 0)}`")
+    lines.append("")
+
+    lines.append("## 6. Completeness")
     for key, value in summary["completeness"].items():
         lines.append(f"- `{key}`: `{value}`")
     lines.append("")
-    lines.append("## Gold Sources")
+
+    lines.append("## 7. Gold Sources")
     for source, count in sorted(summary["gold_sources"].items()):
         lines.append(f"- `{source}`: `{count}` rows")
     lines.append("")
-    lines.append("## Frequent Treatment Errors")
+
+    lines.append("## 8. Frequent Treatment-Level Error Clusters")
     for treatment, stats in sorted(summary["by_treatment"].items(), key=lambda item: (item[1]["accuracy"] or 0, item[0]))[:10]:
         acc = stats["accuracy"]
         top_error = ", ".join(f"{label} x{count}" for label, count in stats["top_errors"]) or "none"
-        lines.append(f"- `{treatment}`: accuracy `{acc:.1%}`; top errors `{top_error}`")
+        cause_mix = ", ".join(f"{label} x{count}" for label, count in sorted(stats["mismatch_causes"].items())) or "none"
+        lines.append(f"- `{treatment}`: accuracy `{acc:.1%}`; top errors `{top_error}`; cause mix `{cause_mix}`")
     lines.append("")
-    lines.append("## Example Mismatches")
+
+    lines.append("## 9. Example Real-Output Mismatches")
     for example in summary["examples"][:15]:
         lines.append(
             f"- `{example['item_id']}` / `{example['model_name']}` / `{example['treatment']}`: "
-            f"gold `{example['gold']}` vs predicted `{example['predicted']}`"
+            f"gold `{example['gold']}` vs predicted `{example['predicted']}` "
+            f"(`{example['mismatch_cause']}`)"
         )
 
     with open(outdir / "parser_validation_report.md", "w") as f:
@@ -393,7 +659,9 @@ def write_report(summary: dict, output_dir: str | Path) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Validate parser outputs against battery expectations or clinician adjudication.")
+    parser = argparse.ArgumentParser(
+        description="Validate parser outputs against battery expectations or clinician adjudication."
+    )
     parser.add_argument("--results", required=True, help="Raw run_*.jsonl file to validate.")
     parser.add_argument("--battery", default="data/vignettes/vignette_battery.json")
     parser.add_argument("--annotations", help="Optional review annotation file from results/review_annotations.")

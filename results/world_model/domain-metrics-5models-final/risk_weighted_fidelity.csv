@@ -1,0 +1,6 @@
+model,weighted_wrong_direction_rate,weighted_sid_rate,edge_total_weight,edge_wrong_weight,sid_total_weight,sid_wrong_weight,tier3_wrong_direction_edges,tier3_sid_errors
+mistral-small-24b,0.25396825396825395,0.1316348195329087,63,16,471,62,3,3
+llama-3.1-8b,0.4444444444444444,0.17419354838709677,27,12,465,81,2,3
+qwen3-next-80b-instruct,0.25862068965517243,0.13742071881606766,58,15,473,65,4,4
+deepseek-r1,0.21875,0.13814432989690723,96,21,485,67,6,3
+kimi-k2.5,0.3130434782608696,0.15885947046843177,115,36,491,78,9,3

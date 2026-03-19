@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KG1 Benchmark Review</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --ink: #202020;
+      --muted: #6a6258;
+      --panel: #fffdf8;
+      --line: #d9cfc0;
+      --ok: #2d6a4f;
+      --warn: #b35c1e;
+      --accent: #173f5f;
+    }
+    body { font-family: Georgia, 'Times New Roman', serif; background: linear-gradient(180deg, #efe7d7 0%, var(--bg) 100%); color: var(--ink); margin: 0; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 40px 24px 64px; }
+    h1, h2, h3 { margin: 0 0 12px; }
+    p, li { line-height: 1.5; }
+    .hero { background: var(--panel); border: 1px solid var(--line); border-radius: 24px; padding: 28px; box-shadow: 0 12px 32px rgba(32,32,32,0.06); }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 20px; }
+    .stat { background: #faf6ef; border: 1px solid var(--line); border-radius: 18px; padding: 16px; }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .value { font-size: 32px; font-weight: 700; margin-top: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 24px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 20px; }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; margin: 10px 0; }
+    .pill.ok { background: rgba(45,106,79,0.1); color: var(--ok); }
+    .pill.warn { background: rgba(179,92,30,0.12); color: var(--warn); }
+    .small { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Final KG1 / Vignette Benchmark Review</h1>
+      <p class="small">Clinician-facing audit of the final benchmark used for the five-model study.</p>
+      <div class="stats">
+        <div class="stat"><div class="label">Baselines</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">Perturbations</div><div class="value">76</div></div>
+        <div class="stat"><div class="label">Total Items</div><div class="value">88</div></div>
+        <div class="stat"><div class="label">Statement-Linked Rules</div><div class="value">60</div></div>
+        <div class="stat"><div class="label">Article Evaluation Edges</div><div class="value">58</div></div>
+      </div>
+    </section>
+    <section class="grid">
+      <section class="card">
+        <h2>Integrity Summary</h2>
+        <p><strong>Missing traceability:</strong> 0</p>
+        <p><strong>Null drift:</strong> 0</p>
+        <p><strong>Staging warnings:</strong> 0</p>
+      </section>
+      <section class="card">
+        <h2>Perturbation Types</h2>
+        <ul>
+          <li>escalate: 12</li><li>flip: 48</li><li>grey_zone: 3</li><li>multi: 1</li><li>null: 12</li>
+        </ul>
+      </section>
+    </section>
+    <h2 style="margin-top: 28px;">Family Query-Space Audit</h2>
+    <div class="grid">
+      
+            <section class="card">
+              <h3>cT4a_selected</h3>
+              <p><strong>Query space:</strong> concurrent_crt, nonsurgical_lp, ophl_any, surgical_lp, tlm, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, nonsurgical_lp, ophl_type_i, ophl_type_ii, tlm, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>ophl_type_i</li><li>ophl_type_ii</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>cT4a_unselected</h3>
+              <p><strong>Query space:</strong> concurrent_crt, nonsurgical_lp, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> tlm, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>tlm</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>cisplatin_eligibility</h3>
+              <p><strong>Query space:</strong> cisplatin_high_dose, rt_accelerated, rt_alone, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> carboplatin_5fu, cetuximab_concurrent, cisplatin_high_dose, concurrent_crt, ict_rt, nonsurgical_lp, rt_accelerated</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>carboplatin_5fu</li><li>cetuximab_concurrent</li><li>concurrent_crt</li><li>ict_rt</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>elderly_frail</h3>
+              <p><strong>Query space:</strong> concurrent_crt, ophl_any, tlm</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp, tlm, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>ict_rt</li><li>ophl_type_ii</li><li>rt_alone</li><li>total_laryngectomy</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>glottic_cT2</h3>
+              <p><strong>Query space:</strong> concurrent_crt, rt_accelerated, rt_alone, tlm</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>ophl_type_ii</li><li>total_laryngectomy</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>glottic_cT3</h3>
+              <p><strong>Query space:</strong> concurrent_crt, ict_rt, ophl_any, ophl_type_ii, tlm, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, ophl_type_iii, surgical_lp, tlm, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>ophl_type_iii</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>hypopharyngeal</h3>
+              <p><strong>Query space:</strong> concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, surgical_lp, tlm, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>ophl_type_ii</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>post_ict_response</h3>
+              <p><strong>Query space:</strong> concurrent_crt, ict_rt, nonsurgical_lp, rt_alone, surgical_lp, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, nonsurgical_lp, rt_alone, total_laryngectomy</p>
+              <div class="pill ok">No concrete query-space gaps</div>
+              <ul><li>None</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>pretreatment_function</h3>
+              <p><strong>Query space:</strong> concurrent_crt, ict_rt, nonsurgical_lp, surgical_lp, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy</p>
+              <div class="pill ok">No concrete query-space gaps</div>
+              <ul><li>None</li></ul>
+            </section>
+            
+            <section class="card">
+              <h3>supraglottic_cT3</h3>
+              <p><strong>Query space:</strong> concurrent_crt, ophl_any, ophl_type_i, ophl_type_iib, tlm, tors, total_laryngectomy</p>
+              <p><strong>Expected labels:</strong> concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_i, ophl_type_iib, surgical_lp, tlm, tors, total_laryngectomy</p>
+              <div class="pill warn">Concrete gaps present</div>
+              <ul><li>ict_rt</li></ul>
+            </section>
+            
+    </div>
+  </div>
+</body>
+</html>

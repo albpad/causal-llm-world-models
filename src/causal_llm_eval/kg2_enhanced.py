@@ -28,6 +28,11 @@ from dataclasses import dataclass, field, asdict
 from typing import Optional
 import numpy as np
 
+try:
+    from .json_utils import dump_json
+except ImportError:
+    from json_utils import dump_json
+
 # =====================================================================
 # DATA STRUCTURES
 # =====================================================================
@@ -81,20 +86,28 @@ class GraphComparison:
     true_positives: int = 0        # KG1 edge present, KG2 detected (hard)
     false_negatives: int = 0       # KG1 edge present, KG2 missed (hard)
     false_positives: int = 0       # KG1 no edge, KG2 detected (spurious)
+    hard_false_positives: int = 0
     # Derived
     precision: float = 0.0
+    hard_precision: float = 0.0
+    hard_fdr: float = 0.0
     recall: float = 0.0
     f1: float = 0.0
     shd: int = 0                   # Structural Hamming Distance
 
     # Soft detection (omnibus significant OR det_rate >= 0.25)
     soft_true_positives: int = 0
+    soft_false_positives: int = 0
     soft_recall: float = 0.0
+    soft_precision: float = 0.0
+    soft_fdr: float = 0.0
     soft_f1: float = 0.0
 
     # Direction-sensitive
     direction_errors: int = 0      # Detected but wrong direction
-    direction_accuracy: float = 0.0
+    direction_accuracy: float = 0.0       # Primary: soft-edge direction accuracy
+    hard_direction_accuracy: float = 0.0  # Secondary: hard-edge direction accuracy
+    mean_direction_rate: float = 0.0      # Mean probe-level direction rate on soft edges
 
     # Weighted metrics (by KG1 consensus strength)
     weighted_recall: float = 0.0   # Recall weighted by consensus weight
@@ -496,7 +509,58 @@ def detect_spurious_edges(all_parsed, battery_items, edge_tests):
 # GRAPH COMPARISON METRICS
 # =====================================================================
 
-def compute_graph_comparison(kg2_enhanced, kg1_edges=None, spurious_data=None):
+def _edge_detection_flags(edge, soft_detection_rate=None, hard_detection_rate=None, hard_mean_jsd_threshold=None):
+    """Classify an edge using the locked defaults or explicit sensitivity thresholds."""
+    if soft_detection_rate is None:
+        soft_detected = edge.soft_detected
+    else:
+        soft_detected = bool(edge.omnibus_significant) or edge.detection_rate >= soft_detection_rate
+
+    if hard_detection_rate is None and hard_mean_jsd_threshold is None:
+        hard_detected = edge.detected
+    else:
+        rate_thr = 0.5 if hard_detection_rate is None else hard_detection_rate
+        jsd_thr = 0.0 if hard_mean_jsd_threshold is None else hard_mean_jsd_threshold
+        hard_detected = edge.detection_rate >= rate_thr and edge.mean_jsd >= jsd_thr
+
+    return hard_detected, soft_detected
+
+
+def _phantom_candidates(edge_tests):
+    by_model = defaultdict(list)
+    for t in edge_tests or []:
+        tx = t["treatment"]
+        exp_rec = set(t.get("exp_rec", []))
+        exp_exc = set(t.get("exp_exc", []))
+        if tx in exp_rec or tx in exp_exc:
+            continue
+        by_model[t["model"]].append(t)
+    return by_model
+
+
+def _count_thresholded_false_positives(candidate_rows, hard_mean_jsd_threshold=0.0):
+    soft_pairs = set()
+    hard_pairs = set()
+    for row in candidate_rows:
+        if not row.get("significant"):
+            continue
+        pair = (row["pert_id"], row["treatment"])
+        soft_pairs.add(pair)
+        if row.get("jsd", 0.0) >= hard_mean_jsd_threshold:
+            hard_pairs.add(pair)
+    return len(soft_pairs), len(hard_pairs)
+
+
+def compute_graph_comparison(
+    kg2_enhanced,
+    kg1_edges=None,
+    spurious_data=None,
+    *,
+    edge_tests=None,
+    soft_detection_rate=None,
+    hard_detection_rate=None,
+    hard_mean_jsd_threshold=None,
+):
     """
     Compute publication-ready comparison metrics between KG1 and KG2.
 
@@ -505,11 +569,17 @@ def compute_graph_comparison(kg2_enhanced, kg1_edges=None, spurious_data=None):
         kg1_edges: optional dict {edge_id: KG1Edge} with consensus weights
                    If None, all edges in KG2 are assumed to be in KG1 (confirmatory mode)
         spurious_data: output from detect_spurious_edges()
+        edge_tests: optional edge-test rows, required for threshold-sensitivity FP counts
+        soft_detection_rate: optional override for soft detection threshold
+        hard_detection_rate: optional override for hard detection threshold
+        hard_mean_jsd_threshold: optional override for hard mean-JSD threshold
 
     Returns:
         dict {model: GraphComparison}
     """
     comparisons = {}
+    threshold_mode = any(v is not None for v in (soft_detection_rate, hard_detection_rate, hard_mean_jsd_threshold))
+    phantom_by_model = _phantom_candidates(edge_tests) if threshold_mode else None
 
     for model, edges in kg2_enhanced.items():
         comp = GraphComparison(model=model)
@@ -517,8 +587,17 @@ def compute_graph_comparison(kg2_enhanced, kg1_edges=None, spurious_data=None):
         # All KG1 edges that were tested for this model
         kg1_tested = set(edges.keys())
 
-        detected_edges = {eid for eid, e in edges.items() if e.detected}
-        soft_detected_edges = {eid for eid, e in edges.items() if e.soft_detected}
+        detection_flags = {
+            eid: _edge_detection_flags(
+                e,
+                soft_detection_rate=soft_detection_rate,
+                hard_detection_rate=hard_detection_rate,
+                hard_mean_jsd_threshold=hard_mean_jsd_threshold,
+            )
+            for eid, e in edges.items()
+        }
+        detected_edges = {eid for eid, (hard_detected, _) in detection_flags.items() if hard_detected}
+        soft_detected_edges = {eid for eid, (_, soft_detected) in detection_flags.items() if soft_detected}
         missed_edges = kg1_tested - detected_edges
 
         comp.true_positives = len(detected_edges)
@@ -526,13 +605,25 @@ def compute_graph_comparison(kg2_enhanced, kg1_edges=None, spurious_data=None):
         comp.soft_true_positives = len(soft_detected_edges)
 
         # Spurious edges (false positives)
-        if spurious_data:
+        if threshold_mode and phantom_by_model is not None:
+            soft_fp, hard_fp = _count_thresholded_false_positives(
+                phantom_by_model.get(model, []),
+                hard_mean_jsd_threshold=0.0 if hard_mean_jsd_threshold is None else hard_mean_jsd_threshold,
+            )
+            comp.soft_false_positives = soft_fp
+            comp.false_positives = hard_fp
+            comp.hard_false_positives = hard_fp
+        elif spurious_data:
             phantom = [p for p in spurious_data.get("phantom_edges", []) if p["model"] == model]
             comp.false_positives = len(set((p["pert_id"], p["treatment"]) for p in phantom))
+            comp.hard_false_positives = comp.false_positives
+            comp.soft_false_positives = comp.false_positives
 
         # Precision, recall, F1
         tp, fn, fp = comp.true_positives, comp.false_negatives, comp.false_positives
         comp.precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        comp.hard_precision = comp.precision
+        comp.hard_fdr = fp / (tp + fp) if (tp + fp) > 0 else 0.0
         comp.recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
         comp.f1 = (2 * comp.precision * comp.recall / (comp.precision + comp.recall)
                     if (comp.precision + comp.recall) > 0 else 0.0)
@@ -541,22 +632,38 @@ def compute_graph_comparison(kg2_enhanced, kg1_edges=None, spurious_data=None):
         stp = comp.soft_true_positives
         sfn = len(kg1_tested) - stp
         comp.soft_recall = stp / (stp + sfn) if (stp + sfn) > 0 else 0.0
-        soft_prec = stp / (stp + fp) if (stp + fp) > 0 else 0.0
-        comp.soft_f1 = (2 * soft_prec * comp.soft_recall / (soft_prec + comp.soft_recall)
-                        if (soft_prec + comp.soft_recall) > 0 else 0.0)
+        sfp = comp.soft_false_positives
+        comp.soft_precision = stp / (stp + sfp) if (stp + sfp) > 0 else 0.0
+        comp.soft_fdr = sfp / (stp + sfp) if (stp + sfp) > 0 else 0.0
+        comp.soft_f1 = (2 * comp.soft_precision * comp.soft_recall / (comp.soft_precision + comp.soft_recall)
+                        if (comp.soft_precision + comp.soft_recall) > 0 else 0.0)
 
         # SHD = false positives + false negatives + direction errors
         direction_errors = sum(
             1 for e in edges.values()
-            if e.detected and e.direction_correct is False
+            if detection_flags[e.edge_id][0] and e.direction_correct is False
         )
         comp.direction_errors = direction_errors
         comp.shd = fp + len(missed_edges) + direction_errors
 
-        # Direction accuracy (among detected edges)
-        detected_with_dir = [e for e in edges.values() if e.detected and e.direction_correct is not None]
+        # Direction accuracy
+        # Primary metric: among soft-detected edges, because fidelity in this study
+        # is interpreted on the recovered soft graph rather than only on the tiny
+        # hard-edge subset. Preserve the hard-edge variant separately.
+        soft_with_dir = [
+            e for eid, e in edges.items()
+            if detection_flags[eid][1] and e.direction_correct is not None
+        ]
+        if soft_with_dir:
+            comp.direction_accuracy = sum(1 for e in soft_with_dir if e.direction_correct) / len(soft_with_dir)
+            comp.mean_direction_rate = float(np.mean([e.direction_rate for e in soft_with_dir]))
+
+        detected_with_dir = [
+            e for eid, e in edges.items()
+            if detection_flags[eid][0] and e.direction_correct is not None
+        ]
         if detected_with_dir:
-            comp.direction_accuracy = sum(
+            comp.hard_direction_accuracy = sum(
                 1 for e in detected_with_dir if e.direction_correct
             ) / len(detected_with_dir)
 
@@ -606,15 +713,15 @@ def generate_enhanced_report(kg2_enhanced, comparisons, spurious_data, out_path)
     L.append("## 1. Graph Comparison Metrics\n")
 
     models = sorted(comparisons.keys())
-    L.append("| Model | TP | FN | FP | Prec | Recall | F1 | Soft TP | Soft Recall | Soft F1 | SHD | Dir Acc | Null JSD 95 |")
-    L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+    L.append("| Model | Hard TP | Hard FN | Hard FP | Hard Prec | Hard FDR | Hard Recall | Soft TP | Soft FP | Soft Prec | Soft FDR | Soft Recall | SHD | Soft Dir Acc | Hard Dir Acc | Null JSD 95 |")
+    L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for m in models:
         c = comparisons[m]
         L.append(
             f"| {m} | {c.true_positives} | {c.false_negatives} | {c.false_positives} "
-            f"| {c.precision:.2f} | {c.recall:.2f} | {c.f1:.2f} "
-            f"| {c.soft_true_positives} | {c.soft_recall:.2f} | {c.soft_f1:.2f} "
-            f"| {c.shd} | {c.direction_accuracy:.0%} | {c.null_jsd_95:.4f} |"
+            f"| {c.hard_precision:.2f} | {c.hard_fdr:.2f} | {c.recall:.2f} "
+            f"| {c.soft_true_positives} | {c.soft_false_positives} | {c.soft_precision:.2f} | {c.soft_fdr:.2f} | {c.soft_recall:.2f} "
+            f"| {c.shd} | {c.direction_accuracy:.0%} | {c.hard_direction_accuracy:.0%} | {c.null_jsd_95:.4f} |"
         )
 
     L.append("\n## 2. Edge-Level Detail\n")
@@ -705,9 +812,10 @@ def run_enhanced_analysis(edge_tests, all_parsed, battery_items, output_dir=None
     comparisons = compute_graph_comparison(kg2, kg1_edges=None, spurious_data=spurious_data)
     for m in sorted(comparisons.keys()):
         c = comparisons[m]
-        print(f"  {m}: P={c.precision:.2f} R={c.recall:.2f} F1={c.f1:.2f} "
-              f"SoftR={c.soft_recall:.2f} SoftF1={c.soft_f1:.2f} "
-              f"SHD={c.shd} DirAcc={c.direction_accuracy:.0%}")
+        print(f"  {m}: HardP={c.hard_precision:.2f} HardR={c.recall:.2f} "
+              f"SoftP={c.soft_precision:.2f} SoftFDR={c.soft_fdr:.2f} SoftR={c.soft_recall:.2f} "
+              f"SHD={c.shd} SoftDirAcc={c.direction_accuracy:.0%} "
+              f"HardDirAcc={c.hard_direction_accuracy:.0%}")
 
     # 4. Save outputs
     if output_dir:
@@ -722,17 +830,14 @@ def run_enhanced_analysis(edge_tests, all_parsed, battery_items, output_dir=None
                 d = asdict(e)
                 d.pop("jsd_values", None)  # Don't dump raw arrays
                 kg2_serial[m][eid] = d
-        with open(out / "kg2_enhanced.json", "w") as f:
-            json.dump(kg2_serial, f, indent=2)
+        dump_json(out / "kg2_enhanced.json", kg2_serial)
 
         # Comparisons
         comp_serial = {m: asdict(c) for m, c in comparisons.items()}
-        with open(out / "graph_comparison.json", "w") as f:
-            json.dump(comp_serial, f, indent=2)
+        dump_json(out / "graph_comparison.json", comp_serial)
 
         # Spurious
-        with open(out / "spurious_edges.json", "w") as f:
-            json.dump(spurious_data, f, indent=2, default=str)
+        dump_json(out / "spurious_edges.json", spurious_data, default=str)
 
         # Report
         print("\n[4/4] Generating report...")

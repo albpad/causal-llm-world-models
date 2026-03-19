@@ -10,7 +10,7 @@ The project builds a structured vignette battery, probes models under controlled
 - **Model querying** through Together.ai-compatible chat completions
 - **Response parsing** into treatment stances and exclusions
 - **Graph reconstruction** and KG1↔KG2 comparison
-- **World-model scoring** with the revised v2 framework
+- **Domain-based evaluation** using Coverage, Fidelity, Discriminability, and auxiliary Stability
 - **Synthetic fine-tuning data generation** from observed failure modes
 - **Manuscript materials** and preserved result artifacts
 
@@ -25,7 +25,7 @@ causal-llm-world-models-production/
 ├── results/
 │   ├── raw/                      # raw JSONL model outputs
 │   ├── analysis/                 # parsed and graph-level analyses
-│   └── world_model/              # v1/v2 world-model metrics
+│   └── world_model/              # domain metrics and auxiliary legacy outputs
 ├── notebooks/                    # original exploratory notebooks
 ├── scripts/                      # convenience entrypoints and colab helpers
 ├── tests/                        # smoke and package tests
@@ -71,10 +71,12 @@ python -m causal_llm_eval.llm_query_runner       --battery data/vignettes/vignet
 python -m causal_llm_eval.response_parser       --results results/raw/kimi-k2.5/run_YYYYMMDD_HHMM.jsonl       --battery data/vignettes/vignette_battery.json       --outdir results/analysis/kimi-k2.5
 ```
 
-### 6) Compute world-model metrics
+### 6) Build the domain-based evaluation package
 
 ```bash
-python -m causal_llm_eval.world_model_metrics_v2       --analysis-dir results/analysis/kimi-k2.5       --outdir results/world_model/v2
+python -m causal_llm_eval.world_model_metrics       --analysis-dir results/analysis/kimi-k2.5       --outdir results/world_model/kimi-k2.5
+python -m causal_llm_eval.world_model_metrics_v2       --analysis-dir results/analysis/kimi-k2.5       --outdir results/world_model/v2/kimi-k2.5
+PYTHONPATH=src python scripts/build_supplementary_evaluation.py       --analysis-dir results/analysis/kimi-k2.5       --world-model-dir results/world_model/kimi-k2.5       --world-model-v2-dir results/world_model/v2/kimi-k2.5       --battery data/vignettes/vignette_battery.json       --outdir results/world_model/domain-metrics/kimi-k2.5
 ```
 
 ### 7) Run the research app
@@ -99,32 +101,65 @@ Then open `http://127.0.0.1:8765`.
 
 ## Current included artifacts
 
-The repository preserves the original project outputs, including:
-- Kimi K2.5 raw runs and parsed analyses
-- Llama 3.1 8B raw runs and parsed analyses
-- v1 and v2 world-model reports
-- the draft manuscript and a plain-text export for quick browsing
+The repository preserves the original exploratory outputs and the final locked study package, including:
+- benchmark review artifacts for the final KG1/vignette battery
+- parser-validation artifacts for the final five-model study
+- harmonised raw outputs for the canonical 15-run comparison
+- base and enhanced graph analyses
+- article-facing domain-metric summaries plus auxiliary stability decomposition
+- the manuscript draft and plain-text export
 
 ## Current article-facing results
 
-The final manuscript-facing comparison now uses the harmonised five-model 15-run dataset under:
+The final manuscript-facing comparison uses the harmonised five-model 15-run dataset under:
 
 - `results/raw/article_models_5_h15/run_20260316_h15_5models.jsonl`
-- `results/analysis/article-metrics-5models/`
-- `results/world_model/article-metrics-5models/world_model_report.md`
-- `results/world_model/article-metrics-5models/world_model_metrics.json`
+- `docs/review/final_benchmark_lock/`
+- `results/parser_validation/article-metrics-5models-final/`
+- `results/analysis/article-metrics-5models-final/`
+- `results/world_model/domain-metrics-5models-final/domain_summary.md`
+- `results/world_model/domain-metrics-5models-final/threshold_sensitivity_report.md`
+- `results/world_model/domain-metrics-5models-final/family_stratified_report.md`
+- `results/world_model/domain-metrics-5models-final/risk_weighted_fidelity.md`
 
-Key metrics used in the article:
+The final benchmark audit confirms:
+- `12` baselines and `76` perturbations (`88` total items)
+- `60` statement-linked treatment rules and `58` evaluation edges
+- `0` missing non-null source traceability items
+- `0` null-control drift items
+- `0` staging inconsistency warnings
 
-| Model | Soft recall | Hard recall | Direction accuracy | SID | Mean causal JSD | Mean null JSD | SNR | Detection power |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Kimi K2.5 | 74.1% (43/58) | 6.9% (4/58) | 50.0% | 41/246 (16.7%) | 0.187 | 0.076 | 2.46 | 20.7% |
-| DeepSeek-R1 | 62.1% (36/58) | 10.3% (6/58) | 66.7% | 34/243 (14.0%) | 0.154 | 0.072 | 2.14 | 17.3% |
-| Mistral-Small-24B | 43.1% (25/58) | 1.7% (1/58) | 0.0% | 31/236 (13.1%) | 0.116 | 0.070 | 1.66 | 13.1% |
-| Qwen3-Next-80B-A3B-Instruct | 39.7% (23/58) | 1.7% (1/58) | 0.0% | 32/237 (13.5%) | 0.103 | 0.055 | 1.87 | 15.6% |
-| Llama 3.1-8B | 17.2% (10/58) | 0.0% (0/58) | 0.0% | 45/233 (19.3%) | 0.059 | 0.074 | 0.80 | 2.6% |
+The remaining benchmark caveat is query-space undercoverage in some family-specific structured menus. The benchmark is source-clean and clinically coherent, but certain concrete labels are under-probed in the Phase 2 menus, so the final interpretation relies on both Phase 1 open-ended recommendations and deterministic aggregate-label derivation.
 
-Use these article-facing outputs for manuscript text, tables, and figures. The `results/world_model/v2/` artifacts remain useful for the newer composite scoring framework, but they are not the primary results cited in the manuscript.
+The final parser-validation package shows:
+- deterministic gold-template validation: `98.9%` exact match
+- structured snippet validation: `100%` exact match
+- real-output mismatch audit dominated by model disagreement and query-space effects, not widespread parser failure
+
+Primary manuscript-facing metrics:
+
+| Model | Soft recall | Soft precision | Soft FDR | Soft dir. acc. | SID rate | SNR | Detection power | Veridical split-half | Regime |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| DeepSeek-R1 | 62.1% | 60.0% | 40.0% | 77.8% | 14.0% | 2.14 | 17.3% | 78.2% | balanced |
+| Kimi K2.5 | 74.1% | 66.2% | 33.8% | 67.4% | 16.7% | 2.46 | 20.7% | 49.2% | broad but noisy |
+| Qwen3-Next-80B-A3B-Instruct | 39.7% | 53.5% | 46.5% | 73.9% | 13.5% | 1.87 | 15.6% | 90.9% | partial and brittle |
+| Mistral-Small-24B | 43.1% | 62.5% | 37.5% | 72.0% | 13.1% | 1.66 | 13.1% | 83.1% | partial and brittle |
+| Llama 3.1-8B | 17.2% | 71.4% | 28.6% | 50.0% | 19.3% | 0.80 | 2.6% | 62.4% | fragmentary |
+
+Primary interpretation should rely on the domain metrics above, not on a single composite index. In particular:
+
+- Kimi K2.5 has the broadest recovered graph and the strongest signal-to-noise separation.
+- DeepSeek-R1 has the strongest fidelity-balanced profile once direction control, SID, and auxiliary stability are interpreted jointly.
+- Qwen3-Next-80B-A3B-Instruct and Mistral-Small-24B recover partial but brittle structure.
+- Llama 3.1-8B remains fragmentary despite superficially favorable conditional precision on a sparse graph.
+
+The main supplementary upgrades now included in the repo are:
+- threshold sensitivity for soft and hard detection thresholds
+- bootstrap confidence intervals for the primary manuscript metrics
+- family-stratified analysis across the 10 clinical families
+- clinically weighted fidelity analyses that treat total-laryngectomy-related errors as highest risk
+
+Use the `article-metrics-5models-final` directories for manuscript text, tables, and figures. The earlier `article-metrics-5models` outputs remain preserved as intermediate artifacts and should not be treated as the final manuscript lock.
 
 ## Production-readiness improvements in this version
 

@@ -28,6 +28,8 @@ Five evaluation dimensions (no longer independent):
 Composite:
     World Model Score (WMS) integrates all five, with confabulatory rigidity
     acting as a multiplicative penalty rather than an independent axis.
+    In the final study, however, primary interpretation should still rely on
+    the individual domain metrics rather than on a single scalar summary.
 
 References:
     - Craik (1943): cognition builds "small-scale models" of reality
@@ -42,6 +44,11 @@ from collections import defaultdict, Counter
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Dict, List, Tuple, Set
 import numpy as np
+
+try:
+    from .json_utils import dump_json
+except ImportError:
+    from json_utils import dump_json
 
 
 # =====================================================================
@@ -844,9 +851,6 @@ def compute_world_model_metrics_v2(all_parsed, edge_tests, battery_items,
         print(f"  WMS = {m.wms:.3f} — {m.wms_label}")
 
         # Compare to v1
-        print(f"\n  [v1 comparison: old WMI would have been ~"
-              f"{math.sqrt(max(0.001, m.coverage_score * 0.35 + m.direction_accuracy * 0.25 + max(0, 1 - m.sid_normalised) * 0.25 + 0.15 * 0.5) * max(0.001, m.raw_split_half * 0.3 + (1 - m.veridical_entropy) * 0.25 + min(m.snr/5, 1) * 0.25 + (1 - m.null_jsd_95) * 0.2)):.3f}"
-              f" with raw split-half={m.raw_split_half:.1%}]")
 
     # Save outputs
     if output_dir:
@@ -857,8 +861,7 @@ def compute_world_model_metrics_v2(all_parsed, edge_tests, battery_items,
         for model, m in metrics_by_model.items():
             serial[model] = asdict(m)
 
-        with open(out / "world_model_metrics_v2.json", "w") as f:
-            json.dump(serial, f, indent=2, default=str)
+        dump_json(out / "world_model_metrics_v2.json", serial, default=str)
 
         # Generate report
         _generate_report_v2(metrics_by_model, split_results, entropy_results,

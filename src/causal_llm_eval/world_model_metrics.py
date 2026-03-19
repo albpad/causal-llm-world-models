@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 """
-World Model Evaluation Metrics
-===============================
-Quantifies the quality and solidity of an LLM's implicit causal world model
+World Model Evaluation Metrics (Legacy v1)
+==========================================
+Legacy composite evaluation for an LLM's implicit causal world model
 as recovered through behavioural causal discovery (counterfactual vignette perturbation).
+
+Important:
+    This v1 module is retained for archival reproducibility only.
+    `WMI` should not be used as a primary interpretation metric because it can
+    over-reward sparse but reproducible failure modes. Prefer the domain-based
+    interpretation layer (Coverage, Fidelity, Discriminability, Stability) and,
+    if a composite is needed for sensitivity analysis, the corrected v2 outputs.
 
 Theoretical grounding:
 - Craik (1943): cognition builds "small-scale models" of reality for simulation
@@ -28,7 +35,7 @@ Metrics:
         - Null stability: 95th percentile of null perturbation JSD
 
     Composite:
-        - World Model Index (WMI): geometric mean of normalised quality and solidity
+        - World Model Index (WMI): legacy exploratory composite; not recommended
 
 Usage:
     python world_model_metrics.py --results results/run_XXX.jsonl \
@@ -44,6 +51,11 @@ from collections import defaultdict, Counter
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Dict, List, Tuple
 import numpy as np
+
+try:
+    from .json_utils import dump_json
+except ImportError:
+    from json_utils import dump_json
 
 
 # =====================================================================
@@ -847,8 +859,7 @@ def compute_world_model_metrics(all_parsed, edge_tests, battery_items,
                 "quality": asdict(idx.quality),
                 "solidity": asdict(idx.solidity),
             }
-        with open(out / "world_model_metrics.json", "w") as f:
-            json.dump(serial, f, indent=2, default=str)
+        dump_json(out / "world_model_metrics.json", serial, default=str)
 
         # SID details
         sid_serial = {}
@@ -859,8 +870,7 @@ def compute_world_model_metrics(all_parsed, edge_tests, battery_items,
                 "sid_normalised": data["wrong"] / data["total"] if data["total"] > 0 else 0,
                 "details": data["details"],
             }
-        with open(out / "sid_details.json", "w") as f:
-            json.dump(sid_serial, f, indent=2)
+        dump_json(out / "sid_details.json", sid_serial)
 
         # Entropy details
         entropy_serial = {}
@@ -872,16 +882,13 @@ def compute_world_model_metrics(all_parsed, edge_tests, battery_items,
                 "most_entropic": data["most_entropic"],
                 "most_stable": data["most_stable"],
             }
-        with open(out / "edge_entropy.json", "w") as f:
-            json.dump(entropy_serial, f, indent=2)
+        dump_json(out / "edge_entropy.json", entropy_serial)
 
         # SNR details
-        with open(out / "snr_details.json", "w") as f:
-            json.dump(dict(snr_results), f, indent=2)
+        dump_json(out / "snr_details.json", dict(snr_results))
 
         # Split-half details
-        with open(out / "split_half.json", "w") as f:
-            json.dump(dict(split_results), f, indent=2)
+        dump_json(out / "split_half.json", dict(split_results))
 
         # Markdown report
         _generate_report(indices, sid_results, entropy_results,

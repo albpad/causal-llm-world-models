@@ -1,0 +1,413 @@
+{
+  "counts": {
+    "baselines": 12,
+    "perturbations": 76,
+    "items_total": 88,
+    "statement_linked_rules": 60,
+    "evaluation_edges_in_article_metrics": 58,
+    "perturbation_type_counts": {
+      "flip": 48,
+      "escalate": 12,
+      "null": 12,
+      "grey_zone": 3,
+      "multi": 1
+    }
+  },
+  "unique_statement_ids": [
+    "S10R",
+    "S111R",
+    "S112",
+    "S115",
+    "S116",
+    "S119R",
+    "S12",
+    "S120R",
+    "S121R",
+    "S129",
+    "S13",
+    "S14",
+    "S15R",
+    "S16R",
+    "S17R",
+    "S18R",
+    "S19R",
+    "S20R",
+    "S21",
+    "S22",
+    "S23R",
+    "S24R",
+    "S27",
+    "S28",
+    "S30",
+    "S31R",
+    "S35R",
+    "S38R",
+    "S39R",
+    "S40R",
+    "S41R",
+    "S42R",
+    "S43",
+    "S45",
+    "S46",
+    "S47R",
+    "S49R",
+    "S4R",
+    "S52R",
+    "S55R",
+    "S5R",
+    "S67",
+    "S68R",
+    "S69R",
+    "S6R",
+    "S70",
+    "S72R",
+    "S73R",
+    "S74R",
+    "S75R",
+    "S77R",
+    "S7R",
+    "S8",
+    "S80",
+    "S84",
+    "S88",
+    "S89",
+    "S9R",
+    "SA2",
+    "SA6"
+  ],
+  "missing_traceability": [],
+  "null_drift": [],
+  "staging_warnings": {},
+  "family_query_space": {
+    "cT4a_selected": [
+      "concurrent_crt",
+      "nonsurgical_lp",
+      "ophl_any",
+      "surgical_lp",
+      "tlm",
+      "total_laryngectomy"
+    ],
+    "cT4a_unselected": [
+      "concurrent_crt",
+      "nonsurgical_lp",
+      "total_laryngectomy"
+    ],
+    "cisplatin_eligibility": [
+      "cisplatin_high_dose",
+      "rt_accelerated",
+      "rt_alone",
+      "total_laryngectomy"
+    ],
+    "elderly_frail": [
+      "concurrent_crt",
+      "ophl_any",
+      "tlm"
+    ],
+    "glottic_cT2": [
+      "concurrent_crt",
+      "rt_accelerated",
+      "rt_alone",
+      "tlm"
+    ],
+    "glottic_cT3": [
+      "concurrent_crt",
+      "ict_rt",
+      "ophl_any",
+      "ophl_type_ii",
+      "tlm",
+      "total_laryngectomy"
+    ],
+    "hypopharyngeal": [
+      "concurrent_crt",
+      "ict_rt",
+      "nonsurgical_lp",
+      "ophl_any",
+      "surgical_lp",
+      "tlm",
+      "total_laryngectomy"
+    ],
+    "post_ict_response": [
+      "concurrent_crt",
+      "ict_rt",
+      "nonsurgical_lp",
+      "rt_alone",
+      "surgical_lp",
+      "total_laryngectomy"
+    ],
+    "pretreatment_function": [
+      "concurrent_crt",
+      "ict_rt",
+      "nonsurgical_lp",
+      "surgical_lp",
+      "total_laryngectomy"
+    ],
+    "supraglottic_cT3": [
+      "concurrent_crt",
+      "ophl_any",
+      "ophl_type_i",
+      "ophl_type_iib",
+      "tlm",
+      "tors",
+      "total_laryngectomy"
+    ]
+  },
+  "query_space_gaps": {
+    "cT4a_selected": {
+      "expected_labels": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "ophl_type_i",
+        "ophl_type_ii",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "surgical_lp",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [
+        "ophl_type_i",
+        "ophl_type_ii"
+      ],
+      "concrete_missing_from_query_space": [
+        "ophl_type_i",
+        "ophl_type_ii"
+      ]
+    },
+    "cT4a_unselected": {
+      "expected_labels": [
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [
+        "tlm"
+      ],
+      "concrete_missing_from_query_space": [
+        "tlm"
+      ]
+    },
+    "cisplatin_eligibility": {
+      "expected_labels": [
+        "carboplatin_5fu",
+        "cetuximab_concurrent",
+        "cisplatin_high_dose",
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "rt_accelerated"
+      ],
+      "query_space": [
+        "cisplatin_high_dose",
+        "rt_accelerated",
+        "rt_alone",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [
+        "carboplatin_5fu",
+        "cetuximab_concurrent",
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp"
+      ],
+      "concrete_missing_from_query_space": [
+        "carboplatin_5fu",
+        "cetuximab_concurrent",
+        "concurrent_crt",
+        "ict_rt"
+      ]
+    },
+    "elderly_frail": {
+      "expected_labels": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_alone",
+        "surgical_lp",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "ophl_any",
+        "tlm"
+      ],
+      "missing_from_query_space": [
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_type_ii",
+        "rt_alone",
+        "surgical_lp",
+        "total_laryngectomy"
+      ],
+      "concrete_missing_from_query_space": [
+        "ict_rt",
+        "ophl_type_ii",
+        "rt_alone",
+        "total_laryngectomy"
+      ]
+    },
+    "glottic_cT2": {
+      "expected_labels": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "rt_accelerated",
+        "rt_alone",
+        "surgical_lp",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "rt_accelerated",
+        "rt_alone",
+        "tlm"
+      ],
+      "missing_from_query_space": [
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "total_laryngectomy"
+      ],
+      "concrete_missing_from_query_space": [
+        "ophl_type_ii",
+        "total_laryngectomy"
+      ]
+    },
+    "glottic_cT3": {
+      "expected_labels": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "ophl_type_iii",
+        "surgical_lp",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "ict_rt",
+        "ophl_any",
+        "ophl_type_ii",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [
+        "nonsurgical_lp",
+        "ophl_type_iii",
+        "surgical_lp"
+      ],
+      "concrete_missing_from_query_space": [
+        "ophl_type_iii"
+      ]
+    },
+    "hypopharyngeal": {
+      "expected_labels": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_ii",
+        "surgical_lp",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "surgical_lp",
+        "tlm",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [
+        "ophl_type_ii"
+      ],
+      "concrete_missing_from_query_space": [
+        "ophl_type_ii"
+      ]
+    },
+    "post_ict_response": {
+      "expected_labels": [
+        "concurrent_crt",
+        "nonsurgical_lp",
+        "rt_alone",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "rt_alone",
+        "surgical_lp",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [],
+      "concrete_missing_from_query_space": []
+    },
+    "pretreatment_function": {
+      "expected_labels": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "surgical_lp",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [],
+      "concrete_missing_from_query_space": []
+    },
+    "supraglottic_cT3": {
+      "expected_labels": [
+        "concurrent_crt",
+        "ict_rt",
+        "nonsurgical_lp",
+        "ophl_any",
+        "ophl_type_i",
+        "ophl_type_iib",
+        "surgical_lp",
+        "tlm",
+        "tors",
+        "total_laryngectomy"
+      ],
+      "query_space": [
+        "concurrent_crt",
+        "ophl_any",
+        "ophl_type_i",
+        "ophl_type_iib",
+        "tlm",
+        "tors",
+        "total_laryngectomy"
+      ],
+      "missing_from_query_space": [
+        "ict_rt",
+        "nonsurgical_lp",
+        "surgical_lp"
+      ],
+      "concrete_missing_from_query_space": [
+        "ict_rt"
+      ]
+    }
+  }
+}

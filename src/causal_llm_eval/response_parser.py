@@ -16,8 +16,10 @@ from collections import defaultdict
 from dataclasses import dataclass, asdict
 
 try:
+    from .json_utils import dump_json
     from .label_space import derive_aggregate_stance_records
 except ImportError:
+    from json_utils import dump_json
     from label_space import derive_aggregate_stance_records
 
 # =====================================================================
@@ -620,11 +622,11 @@ def run_analysis(results_path, battery_path, output_dir):
     kg2 = assemble_kg2(edge_tests)
 
     # Save outputs
-    with open(out/"metrics.json", "w") as f: json.dump(metrics, f, indent=2)
-    with open(out/"edge_tests.json", "w") as f: json.dump(edge_tests, f, indent=2, default=str)
-    with open(out/"divergences.json", "w") as f: json.dump(divergences, f, indent=2, default=str)
-    with open(out/"kg2.json", "w") as f: json.dump(kg2, f, indent=2)
-    with open(out/"parsed.json", "w") as f: json.dump(all_parsed, f, indent=2, default=str)
+    dump_json(out/"metrics.json", metrics)
+    dump_json(out/"edge_tests.json", edge_tests, default=str)
+    dump_json(out/"divergences.json", divergences, default=str)
+    dump_json(out/"kg2.json", kg2)
+    dump_json(out/"parsed.json", all_parsed, default=str)
     generate_report(metrics, kg2, divergences, edge_tests, out/"report.md")
 
     print(f"\nOutputs: {out}/")
@@ -636,6 +638,7 @@ def main():
     p.add_argument("--results", required=True)
     p.add_argument("--battery", required=True)
     p.add_argument("--outdir", default="analysis")
-    run_analysis(**vars(p.parse_args()))
+    args = p.parse_args()
+    run_analysis(args.results, args.battery, args.outdir)
 
 if __name__ == "__main__": main()
