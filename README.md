@@ -1,6 +1,6 @@
 # Behavioural Causal Discovery for LLM Evaluation
 
-This repository is the **clean publication package** for the final NEJM AI submission. It contains only the benchmark, code, figures, tests, and audited result artifacts needed to inspect or reproduce the analyses reported in the manuscript. It intentionally **does not** include the manuscript files or prior manuscript versions.
+This repository is the **publication package** for the final submission. It contains only the benchmark, code, figures, tests, and audited result artifacts needed to inspect or reproduce the analyses reported in the manuscript. 
 
 ## Included scope
 
