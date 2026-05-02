@@ -1,0 +1,11 @@
+family,treatments_evaluated
+cT4a_selected,"total_laryngectomy, ophl_any, ophl_type_ii, concurrent_crt, ict_rt, tlm"
+cT4a_unselected,"total_laryngectomy, ophl_any, concurrent_crt, tlm"
+cisplatin_eligibility,"cisplatin_high_dose, cetuximab_concurrent, carboplatin_5fu, rt_accelerated"
+elderly_frail,"tlm, ophl_type_ii, concurrent_crt, ict_rt, rt_alone, total_laryngectomy"
+glottic_cT2,"tlm, rt_alone, rt_accelerated, concurrent_crt, ophl_type_ii, total_laryngectomy"
+glottic_cT3,"tlm, ophl_type_ii, ophl_type_iii, concurrent_crt, ict_rt, total_laryngectomy"
+hypopharyngeal,"tlm, ophl_type_ii, concurrent_crt, ict_rt, total_laryngectomy"
+post_ict_response,"rt_alone, concurrent_crt, total_laryngectomy"
+pretreatment_function,"concurrent_crt, ict_rt, total_laryngectomy, nonsurgical_lp"
+supraglottic_cT3,"tlm, tors, ophl_type_i, ophl_type_iib, concurrent_crt, ict_rt, total_laryngectomy"

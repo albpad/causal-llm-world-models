@@ -1,0 +1,7 @@
+model,model_label,total_edges,soft_correct,soft_wrong,soft_undetected,hard_correct,hard_wrong
+deepseek-r1,DeepSeek-R1,58,28,8,22,4,2
+kimi-k2.5,Kimi K2.5,58,29,14,15,2,2
+qwen3-next-80b-instruct,Qwen3-Next-80B-A3B-Instruct,58,17,6,35,0,1
+mistral-small-24b,Mistral-Small-24B,58,18,7,33,0,1
+gemma-4-31b-it,Gemma 4 31B,58,17,7,34,1,3
+llama-3.1-8b,Llama 3.1-8B,58,5,5,48,0,0

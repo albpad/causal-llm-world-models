@@ -286,7 +286,7 @@ def write_html(summary: dict, outdir: Path) -> None:
   <div class="wrap">
     <section class="hero">
       <h1>Final KG1 / Vignette Benchmark Review</h1>
-      <p class="small">Clinician-facing audit of the final benchmark used for the five-model study.</p>
+      <p class="small">Clinician-facing audit of the final benchmark used for the six-model study.</p>
       <div class="stats">
         <div class="stat"><div class="label">Baselines</div><div class="value">{counts['baselines']}</div></div>
         <div class="stat"><div class="label">Perturbations</div><div class="value">{counts['perturbations']}</div></div>
@@ -351,7 +351,7 @@ def write_artifacts(summary: dict, traceability_rows: list[dict], outdir: str | 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Audit the vignette battery and KG1 traceability.")
     parser.add_argument("--battery", default="data/vignettes/vignette_battery.json")
-    parser.add_argument("--graph-comparison", default="results/analysis/article-metrics-5models-final/graph_comparison.json")
+    parser.add_argument("--graph-comparison", default="results/analysis/article-metrics-6models-gemma4/graph_comparison.json")
     parser.add_argument("--outdir", required=True)
     return parser
 

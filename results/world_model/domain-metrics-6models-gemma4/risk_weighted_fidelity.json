@@ -1,0 +1,62 @@
+{
+  "deepseek-r1": {
+    "weighted_wrong_direction_rate": 0.21875,
+    "weighted_sid_rate": 0.13814432989690723,
+    "edge_total_weight": 96,
+    "edge_wrong_weight": 21,
+    "sid_total_weight": 485,
+    "sid_wrong_weight": 67,
+    "tier3_wrong_direction_edges": 6,
+    "tier3_sid_errors": 3
+  },
+  "llama-3.1-8b": {
+    "weighted_wrong_direction_rate": 0.4444444444444444,
+    "weighted_sid_rate": 0.17419354838709677,
+    "edge_total_weight": 27,
+    "edge_wrong_weight": 12,
+    "sid_total_weight": 465,
+    "sid_wrong_weight": 81,
+    "tier3_wrong_direction_edges": 2,
+    "tier3_sid_errors": 3
+  },
+  "gemma-4-31b-it": {
+    "weighted_wrong_direction_rate": 0.2727272727272727,
+    "weighted_sid_rate": 0.15517241379310345,
+    "edge_total_weight": 66,
+    "edge_wrong_weight": 18,
+    "sid_total_weight": 464,
+    "sid_wrong_weight": 72,
+    "tier3_wrong_direction_edges": 4,
+    "tier3_sid_errors": 3
+  },
+  "mistral-small-24b": {
+    "weighted_wrong_direction_rate": 0.25396825396825395,
+    "weighted_sid_rate": 0.1316348195329087,
+    "edge_total_weight": 63,
+    "edge_wrong_weight": 16,
+    "sid_total_weight": 471,
+    "sid_wrong_weight": 62,
+    "tier3_wrong_direction_edges": 3,
+    "tier3_sid_errors": 3
+  },
+  "kimi-k2.5": {
+    "weighted_wrong_direction_rate": 0.3130434782608696,
+    "weighted_sid_rate": 0.15885947046843177,
+    "edge_total_weight": 115,
+    "edge_wrong_weight": 36,
+    "sid_total_weight": 491,
+    "sid_wrong_weight": 78,
+    "tier3_wrong_direction_edges": 9,
+    "tier3_sid_errors": 3
+  },
+  "qwen3-next-80b-instruct": {
+    "weighted_wrong_direction_rate": 0.25862068965517243,
+    "weighted_sid_rate": 0.13742071881606766,
+    "edge_total_weight": 58,
+    "edge_wrong_weight": 15,
+    "sid_total_weight": 473,
+    "sid_wrong_weight": 65,
+    "tier3_wrong_direction_edges": 4,
+    "tier3_sid_errors": 4
+  }
+}

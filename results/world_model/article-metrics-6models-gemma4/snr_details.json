@@ -1,0 +1,68 @@
+{
+  "deepseek-r1": {
+    "snr": 2.1408706737732324,
+    "mean_causal_jsd": 0.15449163185327258,
+    "mean_null_jsd": 0.07216299132211702,
+    "median_causal_jsd": 0.057794813211979906,
+    "median_null_jsd": 0.03232124067226308,
+    "null_jsd_95": 0.3053701901371547,
+    "n_causal": 243,
+    "n_null": 107,
+    "detection_power": 0.1728395061728395
+  },
+  "llama-3.1-8b": {
+    "snr": 0.8001029095532727,
+    "mean_causal_jsd": 0.05931946195658941,
+    "mean_null_jsd": 0.07413979032985854,
+    "median_causal_jsd": 0.023679731614670758,
+    "median_null_jsd": 0.026754500450763392,
+    "null_jsd_95": 0.3283363239702811,
+    "n_causal": 233,
+    "n_null": 88,
+    "detection_power": 0.02575107296137339
+  },
+  "gemma-4-31b-it": {
+    "snr": 1.7962213342215099,
+    "mean_causal_jsd": 0.12106758908264507,
+    "mean_null_jsd": 0.06740126440771638,
+    "median_causal_jsd": 0.05832182608027382,
+    "median_null_jsd": 0.025514436477206772,
+    "null_jsd_95": 0.3182570831105359,
+    "n_causal": 234,
+    "n_null": 88,
+    "detection_power": 0.11965811965811966
+  },
+  "mistral-small-24b": {
+    "snr": 1.6619754525347188,
+    "mean_causal_jsd": 0.11574388163219146,
+    "mean_null_jsd": 0.0696423532944892,
+    "median_causal_jsd": 0.04867594260585162,
+    "median_null_jsd": 0.038138609759936645,
+    "null_jsd_95": 0.22106692654404328,
+    "n_causal": 236,
+    "n_null": 97,
+    "detection_power": 0.13135593220338984
+  },
+  "kimi-k2.5": {
+    "snr": 2.45643773212848,
+    "mean_causal_jsd": 0.18737096784730958,
+    "mean_null_jsd": 0.07627751576872027,
+    "median_causal_jsd": 0.10271687996151607,
+    "median_null_jsd": 0.03786615025090049,
+    "null_jsd_95": 0.27537974993715236,
+    "n_causal": 246,
+    "n_null": 120,
+    "detection_power": 0.2073170731707317
+  },
+  "qwen3-next-80b-instruct": {
+    "snr": 1.8720564546673022,
+    "mean_causal_jsd": 0.10307350503776751,
+    "mean_null_jsd": 0.05505897259710873,
+    "median_causal_jsd": 0.0325893494810736,
+    "median_null_jsd": 0.023701030895300748,
+    "null_jsd_95": 0.22417293588466866,
+    "n_causal": 237,
+    "n_null": 112,
+    "detection_power": 0.15611814345991562
+  }
+}

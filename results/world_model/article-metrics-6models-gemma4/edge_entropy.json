@@ -1,0 +1,1578 @@
+{
+  "deepseek-r1": {
+    "mean_entropy": 0.56093075827122,
+    "median_entropy": 0.6840384356361563,
+    "stance_flip_rate": 0.49663526244952894,
+    "most_entropic": [
+      {
+        "item_id": "F1-P1",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "uncertain",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "uncertain": 1,
+          "relative_ci": 1,
+          "excluded": 1
+        }
+      },
+      {
+        "item_id": "G1-NULL",
+        "treatment": "cetuximab_concurrent",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 5,
+          "excluded": 5,
+          "recommended": 5
+        }
+      },
+      {
+        "item_id": "I1-P1",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 9,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 3,
+          "recommended": 3,
+          "excluded": 3
+        }
+      },
+      {
+        "item_id": "A1-P1",
+        "treatment": "ophl_type_ii",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 6,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 3,
+          "recommended": 3
+        }
+      },
+      {
+        "item_id": "A2-BASE",
+        "treatment": "ophl_any",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 12,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 6,
+          "recommended": 6
+        }
+      },
+      {
+        "item_id": "C1-P3",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 6,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 3,
+          "relative_ci": 3
+        }
+      },
+      {
+        "item_id": "C1-P5",
+        "treatment": "ophl_type_ii",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "F1-BASE",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 6,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 3,
+          "recommended": 3
+        }
+      },
+      {
+        "item_id": "G1-ABS11",
+        "treatment": "surgical_lp",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "relative_ci": 2
+        }
+      },
+      {
+        "item_id": "I1-NULL2",
+        "treatment": "nonsurgical_lp",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 10,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "relative_ci": 5,
+          "recommended": 5
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "total_laryngectomy",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 14,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 14
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "total_laryngectomy",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 14,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 14
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "concurrent_crt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 13,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 13
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 14,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 14
+        }
+      }
+    ]
+  },
+  "gemma-4-31b-it": {
+    "mean_entropy": 0.5235388891525349,
+    "median_entropy": 0.597094843285261,
+    "stance_flip_rate": 0.45757071547420963,
+    "most_entropic": [
+      {
+        "item_id": "C1-P4",
+        "treatment": "concurrent_crt",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 5,
+          "relative_ci": 5,
+          "excluded": 5
+        }
+      },
+      {
+        "item_id": "G1-ABS04",
+        "treatment": "total_laryngectomy",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "excluded": 1,
+          "recommended": 1,
+          "relative_ci": 1
+        }
+      },
+      {
+        "item_id": "G1-ABS09",
+        "treatment": "carboplatin_5fu",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 1,
+          "relative_ci": 1,
+          "excluded": 1
+        }
+      },
+      {
+        "item_id": "A2-P1",
+        "treatment": "ophl_any",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "relative_ci": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "G1-GREY-S70",
+        "treatment": "cetuximab_concurrent",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "F1-NULL",
+        "treatment": "tlm",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "excluded": 7,
+          "recommended": 8
+        }
+      },
+      {
+        "item_id": "H2-BASE",
+        "treatment": "nonsurgical_lp",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "recommended": 7,
+          "relative_ci": 8
+        }
+      },
+      {
+        "item_id": "J1-P1",
+        "treatment": "concurrent_crt",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "excluded": 8,
+          "recommended": 7
+        }
+      },
+      {
+        "item_id": "J1-P1",
+        "treatment": "ict_rt",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "excluded": 8,
+          "recommended": 7
+        }
+      },
+      {
+        "item_id": "J1-P1",
+        "treatment": "surgical_lp",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "recommended": 8,
+          "excluded": 7
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 13,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 13
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 13,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 13
+        }
+      }
+    ]
+  },
+  "kimi-k2.5": {
+    "mean_entropy": 0.5876337958153109,
+    "median_entropy": 0.7219280948844771,
+    "stance_flip_rate": 0.5300546448087432,
+    "most_entropic": [
+      {
+        "item_id": "B1-NULL1",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 6,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 2,
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "C1-P2",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 1,
+          "excluded": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "C1-P4",
+        "treatment": "ophl_type_ii",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 6,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 2,
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "G1-BASE",
+        "treatment": "ict_rt",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "excluded": 1,
+          "relative_ci": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "A1-P3",
+        "treatment": "ict_rt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "B1-P7",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 6,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 3,
+          "relative_ci": 3
+        }
+      },
+      {
+        "item_id": "C1-P5",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "relative_ci": 2
+        }
+      },
+      {
+        "item_id": "G1-ABS09",
+        "treatment": "concurrent_crt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 12,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 6,
+          "excluded": 6
+        }
+      },
+      {
+        "item_id": "G1-REL02",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "J1-NULL",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 3
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_accelerated",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "relative_ci": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      }
+    ]
+  },
+  "llama-3.1-8b": {
+    "mean_entropy": 0.4094686238645014,
+    "median_entropy": 0.353359335018536,
+    "stance_flip_rate": 0.34003350083752093,
+    "most_entropic": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "A1-P3",
+        "treatment": "ict_rt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "A2-BASE",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 8,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 4,
+          "excluded": 4
+        }
+      },
+      {
+        "item_id": "G1-BASE",
+        "treatment": "cetuximab_concurrent",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "H1-BASE",
+        "treatment": "ophl_any",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 6,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 3,
+          "recommended": 3
+        }
+      },
+      {
+        "item_id": "H1-P1",
+        "treatment": "ophl_any",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "H1-P3",
+        "treatment": "tlm",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 12,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 6,
+          "recommended": 6
+        }
+      },
+      {
+        "item_id": "I1-NULL2",
+        "treatment": "total_laryngectomy",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 10,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 5,
+          "excluded": 5
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "ophl_type_ii",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "recommended": 8,
+          "relative_ci": 7
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "ophl_any",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "recommended": 8,
+          "relative_ci": 7
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_accelerated",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_accelerated",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      }
+    ]
+  },
+  "mistral-small-24b": {
+    "mean_entropy": 0.6227628549036578,
+    "median_entropy": 0.7312088026174961,
+    "stance_flip_rate": 0.5873925501432665,
+    "most_entropic": [
+      {
+        "item_id": "A1-NULL",
+        "treatment": "concurrent_crt",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "excluded": 5,
+          "recommended": 5,
+          "relative_ci": 5
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "uncertain",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "uncertain": 1,
+          "excluded": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "B1-P1",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 1,
+          "relative_ci": 1,
+          "excluded": 1
+        }
+      },
+      {
+        "item_id": "B1-P4",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 1,
+          "relative_ci": 1,
+          "excluded": 1
+        }
+      },
+      {
+        "item_id": "D1-P2",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "excluded": 1,
+          "relative_ci": 1,
+          "recommended": 1
+        }
+      },
+      {
+        "item_id": "G1-ABS02",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 5,
+          "uncertain": 5,
+          "recommended": 5
+        }
+      },
+      {
+        "item_id": "G1-ABS02",
+        "treatment": "rt_accelerated",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 5,
+          "uncertain": 5,
+          "recommended": 5
+        }
+      },
+      {
+        "item_id": "G1-ABS05",
+        "treatment": "concurrent_crt",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 6,
+        "dominant_stance": "uncertain",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "uncertain": 2,
+          "excluded": 2,
+          "recommended": 2
+        }
+      },
+      {
+        "item_id": "G1-GREY-S70",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 5,
+          "uncertain": 5,
+          "relative_ci": 5
+        }
+      },
+      {
+        "item_id": "G1-GREY-S70",
+        "treatment": "rt_accelerated",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 5,
+          "uncertain": 5,
+          "relative_ci": 5
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 13,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 13
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "concurrent_crt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-P2",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-P3",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-P3",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      }
+    ]
+  },
+  "qwen3-next-80b-instruct": {
+    "mean_entropy": 0.5024954472081304,
+    "median_entropy": 0.5713619478580036,
+    "stance_flip_rate": 0.4272959183673469,
+    "most_entropic": [
+      {
+        "item_id": "F1-P5",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "relative_ci",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "relative_ci": 1,
+          "recommended": 1,
+          "excluded": 1
+        }
+      },
+      {
+        "item_id": "J1-BASE",
+        "treatment": "rt_alone",
+        "entropy": 1.584962500716828,
+        "normalised_entropy": 0.9999999999972693,
+        "n_runs": 3,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.3333333333333333,
+        "distribution": {
+          "recommended": 1,
+          "excluded": 1,
+          "relative_ci": 1
+        }
+      },
+      {
+        "item_id": "A2-NULL",
+        "treatment": "ophl_any",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 12,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 6,
+          "recommended": 6
+        }
+      },
+      {
+        "item_id": "C1-P3",
+        "treatment": "rt_alone",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 8,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 4,
+          "excluded": 4
+        }
+      },
+      {
+        "item_id": "D1-P3",
+        "treatment": "cisplatin_high_dose",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 4,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 2,
+          "excluded": 2
+        }
+      },
+      {
+        "item_id": "G1-ABS01",
+        "treatment": "concurrent_crt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 14,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "recommended": 7,
+          "excluded": 7
+        }
+      },
+      {
+        "item_id": "G1-ABS02",
+        "treatment": "concurrent_crt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 12,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 6,
+          "recommended": 6
+        }
+      },
+      {
+        "item_id": "G1-ECOG-COM",
+        "treatment": "cetuximab_concurrent",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 14,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 7,
+          "recommended": 7
+        }
+      },
+      {
+        "item_id": "G1-ECOG-TUM",
+        "treatment": "concurrent_crt",
+        "entropy": 0.9999999999971146,
+        "normalised_entropy": 0.9999999999971146,
+        "n_runs": 14,
+        "dominant_stance": "excluded",
+        "dominant_rate": 0.5,
+        "distribution": {
+          "excluded": 7,
+          "recommended": 7
+        }
+      },
+      {
+        "item_id": "A2-P2",
+        "treatment": "ophl_any",
+        "entropy": 0.9967916319787513,
+        "normalised_entropy": 0.9967916319787513,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 0.5333333333333333,
+        "distribution": {
+          "excluded": 7,
+          "recommended": 8
+        }
+      }
+    ],
+    "most_stable": [
+      {
+        "item_id": "A1-BASE",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "concurrent_crt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "ict_rt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 13,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 13
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "surgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-BASE",
+        "treatment": "nonsurgical_lp",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "tlm",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "ophl_any",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 10,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 10
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "concurrent_crt",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "excluded",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "excluded": 15
+        }
+      },
+      {
+        "item_id": "A1-NULL",
+        "treatment": "rt_alone",
+        "entropy": -1.4428232973175175e-12,
+        "normalised_entropy": -1.4428232973175175e-12,
+        "n_runs": 15,
+        "dominant_stance": "recommended",
+        "dominant_rate": 1.0,
+        "distribution": {
+          "recommended": 15
+        }
+      }
+    ]
+  }
+}

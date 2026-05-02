@@ -1,6 +1,7 @@
 from causal_llm_eval.domain_evaluation import (
     build_edge_risk_map,
     compute_risk_weighted_fidelity,
+    ordered_models,
     treatment_risk_weight,
 )
 from causal_llm_eval.kg2_enhanced import KG2Edge
@@ -55,3 +56,8 @@ def test_compute_risk_weighted_fidelity_uses_tl_weighting():
     assert summary["weighted_sid_rate"] == 3 / 5
     assert summary["tier3_wrong_direction_edges"] == 1
     assert summary["tier3_sid_errors"] == 1
+
+
+def test_ordered_models_handles_subsets_and_gemma():
+    models = ordered_models({"gemma-4-31b-it", "kimi-k2.5"})
+    assert models == ["kimi-k2.5", "gemma-4-31b-it"]

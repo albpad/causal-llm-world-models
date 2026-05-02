@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build supplementary evaluation artifacts for the final five-model study."""
+"""Build supplementary evaluation artifacts for the final publication study."""
 
 from __future__ import annotations
 

@@ -9,4 +9,9 @@ build/
 *.egg-info/
 htmlcov/
 .coverage
-results/raw/*/run_*.jsonl
+
+# Raw model outputs can be large. Keep only the canonical publication dataset
+# needed to reproduce the article; ignore ad hoc provider runs and smoke tests.
+results/raw/**/run_*.jsonl
+!results/raw/article_models_6_h15/run_20260410_h15_6models.jsonl
+results/tmp_*/

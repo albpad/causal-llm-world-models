@@ -7,6 +7,7 @@ from causal_llm_eval.response_parser import extract_stances, detect_conditionali
 def test_registry_not_empty():
     assert len(MODEL_REGISTRY) >= 2
     assert all("model_id" in cfg for cfg in MODEL_REGISTRY.values())
+    assert MODEL_REGISTRY["gemma-4-31b-it"]["model_id"] == "google/gemma-4-31B-it"
 
 
 def test_battery_loads():

@@ -1,0 +1,51 @@
+{
+  "source_pdf": "/Users/albertopaderno/Downloads/doc 3.pdf",
+  "counts": {
+    "statement_rows_extracted": 148,
+    "unique_statement_ids_extracted": 148,
+    "statement_rows_meeting_80pct_table_threshold": 135,
+    "statement_rows_below_80pct_table_threshold": 13,
+    "candidate_rules_total": 505,
+    "candidate_rules_with_explicit_target": 472,
+    "candidate_rules_with_decision_scope": 496,
+    "benchmark_statement_ids": 60,
+    "benchmark_statement_ids_found_in_pdf": 60,
+    "benchmark_statement_ids_with_candidate_rules": 60
+  },
+  "coverage": {
+    "benchmark_missing_from_pdf": [],
+    "benchmark_without_candidate_rules": [],
+    "benchmark_below_80pct_table_threshold": [
+      "S47R",
+      "S70",
+      "SA6"
+    ]
+  },
+  "class_counts": {
+    "candidate_rule_classes": {
+      "absolute_contraindication": 114,
+      "contextual_selection": 161,
+      "selection_factor": 10,
+      "exception": 7,
+      "relative_contraindication": 73,
+      "recommendation": 81,
+      "fallback_option": 12,
+      "response_adapted": 47
+    },
+    "benchmark_statement_classes": {
+      "contextual_selection": 17,
+      "selection_factor": 6,
+      "response_adapted": 6,
+      "absolute_contraindication": 10,
+      "fallback_option": 3,
+      "relative_contraindication": 10,
+      "exception": 4,
+      "recommendation": 4
+    }
+  },
+  "notes": [
+    "The PDF table is treated as a source table, not as the sole source of final approval status.",
+    "The article reports 137 approved statements, but the visible PDF table includes rows below the 80% threshold and does not encode the appendix-level revision history required to reconstruct final conference approvals deterministically.",
+    "Validation therefore checks source-table extraction coverage and benchmark alignment, not conference-level adjudication."
+  ]
+}

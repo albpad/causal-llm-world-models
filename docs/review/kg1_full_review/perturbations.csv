@@ -1,0 +1,762 @@
+id,baseline_id,family,type,label,variables_changed,staging_impact,expected_recommendations,expected_excluded,edge_justification,grey_zone_statement,predicted_failure_mode,notes,clinical_text
+A1-P1,A1-BASE,glottic_cT2,flip,Laryngeal exposure insufficient,laryngeal_exposure: adequate -> insufficient,,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp",tlm,"S5R, S22",,Correctly blocks TLM while preserving other options,,"Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.
+
+Tumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with impaired mobility but no fixation.
+
+Imaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.
+
+Function: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Laryngeal exposure assessed as insufficient on preoperative suspension laryngoscopy simulation — limited visualisation of the posterior glottis due to anatomy.
+
+Labs: Normal blood panel, CrCl 102 mL/min."
+A1-P2,A1-BASE,glottic_cT3,escalate,Vocal cord fixed → upstages to cT3 (STAGING PROPAGATION),vocal_cord_mobility: partially_impaired -> fixed; t_stage: cT2 -> cT3,cT2 → cT3 (vocal cord fixation defines T3 by AJCC),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,"S23R, S4R, S28",,"Must recognize that fixed cord upstages to cT3 and open the full cT3 decision landscape including CRT and ICT, not just escalate RT",,"Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.
+
+Tumor: cT3N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with complete fixation of the left vocal cord.
+
+Imaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.
+
+Function: Severe dysphonia (VHI-10: 32). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.
+
+Labs: Normal blood panel, CrCl 102 mL/min."
+A1-P3,A1-BASE,glottic_cT2,flip,Add unfavorable cT2 features without fixation (SA2),unfavorable_ct2: false -> true; tumor_volume: low -> high; anterior_commissure: none -> present_good_exposure; subglottic_extension: none -> under_10mm_anterior,,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,"SA2, S23R, S8",,"Should recognise unfavorable cT2 features (bulky, AC, subglottic, impaired mobility) warrant consideration of accelerated RT (S23R) even though still staged cT2",,"Patient: 54-year-old male, retired teacher, ECOG 0. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.
+
+Tumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure and minor anterior subglottic extension (approximately 7mm). Cord mobility is impaired but not fixed.
+
+Imaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, minor anterior subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia (VHI-10: 24). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.
+
+Labs: Normal blood panel, CrCl 102 mL/min."
+A1-NULL,A1-BASE,glottic_cT2,null,"Age 74, fit — should NOT change options",age: under_70 -> 70_plus,,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_alone, surgical_lp, tlm","concurrent_crt, total_laryngectomy","S6R, S80",,Over-sensitivity to age in fit patient,,"Patient: 74-year-old male, retired teacher, ECOG 0. Comprehensive Geriatric Assessment: fit. G8 score 15/17. Non-smoker for 8 years (former 20 pack-year history). Moderate alcohol intake. No significant comorbidities.
+
+Tumor: cT2N0 glottic squamous cell carcinoma of the left true vocal cord. The lesion involves the middle and anterior third of the left vocal cord with impaired mobility but no fixation.
+
+Imaging: CT and MRI show no cartilage involvement, no paraglottic space invasion, no subglottic extension, and no pre-epiglottic space involvement. No suspicious lymph nodes.
+
+Function: Mild dysphonia (VHI-10: 18). No dysphagia. No airway compromise. Adequate laryngeal exposure confirmed on clinic suspension laryngoscopy simulation.
+
+Labs: Normal blood panel, CrCl 102 mL/min."
+A2-P1,A2-BASE,glottic_cT2,flip,AC difficult exposure → TLM relative CI,anterior_commissure: present_good_exposure -> present_difficult_exposure,,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp",tlm,"S7R, S8",,Should block TLM due to AC with difficult exposure (S7R absolute CI),,"Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).
+
+Tumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.
+
+Imaging: MRI shows anterior commissure involvement with difficult visualisation — office endoscopy shows limited access to the anterior commissure region. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.
+
+Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8."
+A2-P2,A2-BASE,glottic_cT2,flip,Laryngeal exposure insufficient,laryngeal_exposure: adequate -> insufficient,,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp",tlm,S5R,,"Absolute CI TLM (S5R, 100%)",,"Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).
+
+Tumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.
+
+Imaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as insufficient on preoperative evaluation — Cormack-Lehane grade III.
+
+Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8."
+A2-P3,A2-BASE,glottic_cT3,escalate,Vocal cord fixed → upstages to cT3,vocal_cord_mobility: partially_impaired -> fixed; t_stage: cT2 -> cT3,cT2 → cT3 (vocal cord fixation defines T3 by AJCC),"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,"S23R, S4R, S28",,Fixed cord = T3 by definition. Must upstage and offer full cT3 options including CRT/ICT.,,"Patient: 61-year-old male, ECOG 0. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).
+
+Tumor: cT3N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord is fixed. The right cord is normal. Arytenoids bilaterally mobile.
+
+Imaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.
+
+Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8."
+A2-NULL,A2-BASE,glottic_cT2,null,"Age 73, fit",age: under_70 -> 70_plus,,"nonsurgical_lp, ophl_any, ophl_type_ii, rt_accelerated, rt_alone, surgical_lp, tlm",total_laryngectomy,"S6R, S80",,Age alone should not change any recommendation,,"Patient: 73-year-old male, ECOG 0. Comprehensive Geriatric Assessment: fit. G8 15/17. Active smoker (35 pack-years). No significant comorbidities apart from mild COPD (GOLD I).
+
+Tumor: cT2N0 glottic SCC. The lesion is bulky, involving the entire left vocal cord with extension to the anterior commissure. Left vocal cord mobility is reduced. The right cord is normal. Arytenoids bilaterally mobile.
+
+Imaging: MRI shows anterior commissure involvement with adequate visualisation on office endoscopy. There is minor anterior subglottic extension (approximately 7mm). No paraglottic space invasion. No cartilage involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia. No dysphagia, no airway compromise. Laryngeal exposure assessed as adequate.
+
+Labs: CrCl 89 mL/min, albumin 4.0, Hb 13.8."
+B1-P1,B1-BASE,glottic_cT3,flip,Focal TC inner cortex (TREATMENT-CONDITIONAL),thyroid_cartilage_inner_cortex: none -> focal,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,"S7R, S14, S27, S28",,Over-generalisation: 'cartilage = no surgery' without distinguishing TLM from OPHL,KEY TEST: TC inner cortex is absolute CI for TLM (S7R) but NOT CI for OPHL-II (S14) and NOT CI for CRT (S27),"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. MRI shows focal inner cortex involvement of the thyroid cartilage on the left, without outer cortex or full-thickness invasion. Outer cortex intact. No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P2,B1-BASE,glottic_cT3,escalate,Outer cortex → cT4a (STAGING PROPAGATION),thyroid_cartilage_outer_cortex: false -> true; extralaryngeal_extension: none -> minimal_anterior; t_stage: cT3 -> cT4a,cT3 → cT4a (outer cortex invasion by AJCC definition),"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,"S45, S46, S40R, S41R, S49R",,"Binary: 'cT4a = TL always' (misses selected LP exception per S46, S40R second clause)",,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. CT shows focal outer cortex invasion of the thyroid cartilage anteriorly with minimal anterior extralaryngeal soft tissue extension confined to the strap muscles. No deep muscle invasion, no magic plane crossing. No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P3,B1-BASE,glottic_cT3,flip,Posterior paraglottic space → TLM blocked,posterior_paraglottic_space: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,S7R,,"Should block TLM specifically, not all surgery",,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. Posterior paraglottic space involvement on the left, extending to the posterior compartment. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P4,B1-BASE,glottic_cT3,flip,Massive PES abutting membrane → TLM blocked,pre_epiglottic_space: none -> massive_abutting_membrane,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,S7R,,TLM absolute CI; OPHL/CRT remain viable,,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. Massive pre-epiglottic space invasion with tumor abutting the thyrohyoid membrane. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P5,B1-BASE,glottic_cT3,flip,Posterior subglottic <10mm → TLM blocked,subglottic_extension: none -> under_10mm_posterior,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,S7R,,Subtle: posterior <10mm blocks TLM but anterior <10mm does not,,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. Subglottic extension of approximately 8mm posteriorly. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P6,B1-BASE,glottic_cT3,flip,Laryngeal exposure insufficient,laryngeal_exposure: adequate -> insufficient,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,S5R,,"Absolute CI TLM (S5R, 100%)",,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as insufficient on preoperative evaluation (Cormack-Lehane grade III) — limited visualisation due to anatomy.
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P7,B1-BASE,glottic_cT3,flip,AC difficult exposure → TLM blocked,anterior_commissure: none -> present_difficult_exposure,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,S7R,,AC with difficult exposure = absolute CI TLM,,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension to the anterior commissure and into the anterior paraglottic space on the left side. Anterior commissure exposure is assessed as difficult on preoperative evaluation.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P8,B1-BASE,glottic_cT3,flip,Bilateral arytenoid → CI ALL conservative surgery (S16R),posterior_laryngeal_involvement: none -> bilateral_arytenoid; arytenoid_mobility: bilateral_mobile -> bilateral_fixed; baseline_laryngeal_function: functional -> dysfunctional,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,"S16R, S39R, S42R",,"Bilateral arytenoid = CI ALL conservative surgery (S16R, 98%). Must block OPHL too, not just TLM.",,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Both arytenoids fixed with bilateral posterior involvement. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. Bilateral posterior involvement with both arytenoids fixed. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Severe dysphonia with emerging aspiration risk due to bilateral arytenoid fixation. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-P9,B1-BASE,glottic_cT3,flip,Subglottic >10mm + CAJ invasion → CI OPHL-II (S17R),subglottic_extension: none -> over_10mm; cricoarytenoid_joint_invasion: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iii, surgical_lp","ophl_type_ii, tlm","S17R, S18R",,>10mm subglottic + CAJ = absolute CI OPHL-II (S17R). But >10mm anterior subglottic may allow OPHL-III in expert centers (S18R).,,"Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). Cricoid involvement with CAJ invasion. No pre-epiglottic space invasion. Subglottic extension >10mm with cricoarytenoid joint invasion on the left. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-NULL1,B1-BASE,glottic_cT3,null,"Age 73, fit — should NOT change",age: under_70 -> 70_plus; frailty_status: fit -> fit,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,"S6R, S80",,Over-sensitivity to age in fit elderly,,"Patient: 73-year-old male, ECOG 0. Comprehensive Geriatric Assessment: fit. G8 score 15/17. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. No thyroid cartilage involvement (inner or outer cortex intact). No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+B1-NULL2,B1-BASE,glottic_cT3,null,Focal TC inner cortex — CRT should NOT be blocked,thyroid_cartilage_inner_cortex: none -> focal,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",total_laryngectomy,S27,,Tests S27 specifically: TC inner cortex is NOT CI for CRT. Ask targeted: 'Is CRT contraindicated by the cartilage finding?',"TARGETED QUESTION VARIANT: 'Given the focal inner cortex thyroid cartilage involvement, is concurrent chemoradiotherapy contraindicated?'","Patient: 58-year-old male, ECOG 0. Former smoker (quit 3 years ago, 25 pack-years). Social drinker. No significant comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right cord fully mobile. Arytenoids bilaterally mobile. The lesion involves the left vocal cord with extension into the anterior paraglottic space on the left side only.
+
+Imaging: MRI shows paraglottic space invasion confined to the anterior compartment on the left. No posterior paraglottic involvement. MRI shows focal inner cortex involvement of the thyroid cartilage on the left, without outer cortex or full-thickness invasion. No cricoid involvement. No pre-epiglottic space invasion. No subglottic extension. No suspicious lymph nodes.
+
+Function: Moderate-to-severe dysphonia. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Laryngeal exposure assessed as adequate on preoperative evaluation (Cormack-Lehane grade I).
+
+Labs: CrCl 98 mL/min, NYHA I, no neuropathy, normal hearing. Albumin 4.2, Hb 14.5."
+C1-P1,C1-BASE,supraglottic_cT3,escalate,PES pronounced → OPHL type I preferred,pre_epiglottic_space: limited -> massive_not_abutting_membrane,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_i, surgical_lp",tlm,S10R,,Pronounced PES shifts from TLM/TORS toward OPHL-I (S10R-b),,"Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.
+
+Tumor: cT3N1 supraglottic SCC arising from the epiglottis. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).
+
+Imaging: MRI shows pronounced pre-epiglottic space invasion — the tumor fills most of the PES but does not abut the thyrohyoid membrane or thyroid cartilage. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.
+
+Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.
+
+Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6."
+C1-P2,C1-BASE,supraglottic_cT3,escalate,PES + TC erosion → OPHL-IIB (SITE-CONDITIONAL),pre_epiglottic_space: limited -> massive_not_abutting_membrane; thyroid_cartilage_erosion: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_iib, surgical_lp",tlm,S10R,,CRITICAL SITE-CONDITIONAL: TC erosion = INDICATION for OPHL-IIB in supraglottic (S10R) but would be CI for TLM in glottic (S9R),This is the site-conditional pattern: same finding (TC erosion) has opposite meaning at different sites,"Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.
+
+Tumor: cT3N1 supraglottic SCC arising from the epiglottis. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).
+
+Imaging: MRI shows pronounced pre-epiglottic space invasion with thyroid cartilage erosion on CT. No full-thickness infiltration, no outer cortex invasion. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.
+
+Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.
+
+Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6."
+C1-P3,C1-BASE,glottic_cT3,flip,Change site to glottic + keep TC erosion (SITE CROSSOVER),primary_site: supraglottic -> glottic; pre_epiglottic_space: limited -> none; thyroid_cartilage_erosion: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,"S9R, S10R",,TC erosion now = CI for TLM (S9R) in glottic. NOT an indication for OPHL-IIB (that's supraglottic-specific). Tests site-conditionality.,,"Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.
+
+Tumor: cT3N1 glottic SCC. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).
+
+Imaging: MRI shows no pre-epiglottic space involvement. Thyroid cartilage erosion on CT, without full-thickness infiltration or outer cortex invasion. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.
+
+Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.
+
+Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6."
+C1-P4,C1-BASE,supraglottic_cT3,flip,N2 → relative CI partial laryngectomy,n_stage: cN1 -> cN2,,"concurrent_crt, ict_rt, nonsurgical_lp",tlm,S24R,,"N2+ = relative CI for partial laryngectomy (S24R), preference shifts to CRT",,"Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.
+
+Tumor: cT3N1 supraglottic SCC arising from the epiglottis. There is bilateral lymphadenopathy — 3.0cm left level II, 2.5cm left level III, 1.8cm right level II. No extranodal extension on imaging.
+
+Imaging: MRI shows limited pre-epiglottic space invasion — the tumor extends into the anterior portion of the PES without reaching the thyroid cartilage. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.
+
+Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.
+
+Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6."
+C1-P5,C1-BASE,supraglottic_cT3,flip,Site → hypopharyngeal (SITE-CONDITIONAL),primary_site: supraglottic -> hypopharyngeal; pre_epiglottic_space: limited -> none,,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",tlm,"S12, S43, S112",,"Hypopharyngeal: TLM not first-line (S12), worse outcomes with non-surgical (S43)",,"Patient: 56-year-old male, ECOG 0. Former smoker (quit 6 years, 30 pack-years). No significant comorbidities.
+
+Tumor: cT3N1 SCC of the left piriform sinus. There is a single ipsilateral level II lymph node (2.2cm, no extranodal extension on imaging).
+
+Imaging: MRI shows tumor confined to the piriform sinus with extension to the medial wall. No thyroid cartilage erosion or involvement. No paraglottic space invasion posteriorly. Vocal cord mobility mildly reduced on the left but not fixed. Arytenoids bilaterally mobile. No subglottic extension.
+
+Function: Mild dysphagia to solids (no aspiration on FEES). Voice mildly altered. No airway obstruction. No tracheostomy. Laryngeal exposure adequate.
+
+Labs: CrCl 94, NYHA I, normal hearing. Albumin 3.9, Hb 13.6."
+D1-P1,D1-BASE,hypopharyngeal,flip,Site → glottic (SITE CROSSOVER),primary_site: hypopharyngeal -> glottic,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, total_laryngectomy",,"S12, S43",,"Removing site-specific penalties: TLM now discussable, non-surgical outcomes not penalised by site",,"Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).
+
+Tumor: cT3N2b glottic SCC with transglottic extension. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.
+
+Imaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.
+
+Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.
+
+Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1."
+D1-P2,D1-BASE,hypopharyngeal,escalate,Add aspiration pneumonia → absolute CI non-surgical,swallowing_status: impaired_no_aspiration -> recurrent_pneumonia,,total_laryngectomy,,S19R,,Recurrent aspiration pneumonia = absolute CI for non-surgical LP (S19R-a),,"Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).
+
+Tumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.
+
+Imaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.
+
+Function: Severe dysphagia with documented aspiration. Two episodes of aspiration pneumonia in the past 6 weeks requiring hospitalisation. FEES shows penetration and aspiration with thin liquids. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.
+
+Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1."
+D1-P3,D1-BASE,hypopharyngeal,escalate,Add tracheostomy,pretreatment_tracheostomy: false -> true; airway_obstruction: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,"S19R, S115",,Tracheostomy = relative CI non-surgical (S19R-b) + poor functional prognosis (S115). Non-surgical not excluded but balance shifts.,,"Patient: 63-year-old male, ECOG 1. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).
+
+Tumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.
+
+Imaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.
+
+Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. Severe airway obstruction requiring tracheostomy placement 2 weeks ago. No feeding tube.
+
+Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1."
+D1-NULL,D1-BASE,hypopharyngeal,null,"Age 73, fit",age: under_70 -> 70_plus,,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",tlm,S80,,Age alone should not change recommendation,,"Patient: 73-year-old male, ECOG 1. Comprehensive Geriatric Assessment: fit. G8 14/17. Current smoker (40 pack-years), heavy alcohol use (>14 units/week). Mild malnutrition (albumin 3.3, BMI 19.2, unintentional weight loss 5kg over 3 months).
+
+Tumor: cT3N2b SCC of the left piriform sinus extending to the postcricoid area. Left vocal cord fixed, left arytenoid fixed. Right cord and arytenoid mobile. No cartilage invasion on imaging.
+
+Imaging: CT and MRI show bulky primary with bilateral level II-IV lymphadenopathy (largest 3.5cm left level III, 2.0cm right level II), no extranodal extension. No subglottic extension. No extralaryngeal extension. No carotid artery encasement.
+
+Function: Moderate dysphagia to solids, managing liquids and soft diet. No aspiration on FEES. Voice severely impaired. No airway obstruction, no tracheostomy, no feeding tube.
+
+Labs: CrCl 82, NYHA I, no neuropathy, normal hearing, Hb 12.1."
+E1-NULL,E1-BASE,cT4a_unselected,null,"Add age 75, fit — TL still indicated",age: under_70 -> 70_plus,,total_laryngectomy,tlm,S80,,Age should not change clear TL indication,,"Patient: 75-year-old male, ECOG 1. CGA: fit. G8 14/17. Active smoker (45 pack-years). Moderate alcohol intake. Otherwise healthy.
+
+Tumor: cT4aN1 glottic SCC. Bulky transglottic tumor with left vocal cord fixation and left arytenoid fixation. Right cord mobile.
+
+Imaging: CT shows full-thickness thyroid cartilage infiltration with significant extralaryngeal soft tissue extension invading the strap muscles bilaterally. Extensive subglottic extension (>15mm) with cricoid cartilage invasion. The tumor crosses the magic plane. Single ipsilateral level III lymph node (2.5cm).
+
+Function: Severe dysphonia — largely non-communicative by voice. Emergency tracheostomy placed 1 week ago for critical airway obstruction. Moderate dysphagia to solids but tolerating liquids. Laryngeal function is considered globally dysfunctional.
+
+Direct laryngoscopy: Laryngeal exposure is insufficient due to tumor bulk and anatomy.
+
+Labs: CrCl 91, NYHA I, no neuropathy. Albumin 3.4, Hb 12.8."
+F1-P1,F1-BASE,cT4a_selected,escalate,Extralaryngeal → significant: LP collapses,extralaryngeal_extension: minimal_anterior -> significant,,total_laryngectomy,tlm,"S38R, S39R",,"Significant extralaryngeal = TL indication (S38R), CI for LP (S39R)",,"Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with significant extralaryngeal soft tissue extension invading the strap muscles bilaterally with deep muscle involvement. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8."
+F1-P2,F1-BASE,cT4a_selected,flip,Magic plane crossing → OPHL-I/II blocked,magic_plane_crossing: false -> true,,"concurrent_crt, nonsurgical_lp, total_laryngectomy","ophl_type_i, ophl_type_ii, tlm",S15R,,Magic plane = CI for OPHL-I and OPHL-II (S15R). Only OPHL-III or TL remain surgical options.,,"Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. The tumor crosses the magic plane. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8."
+F1-P3,F1-BASE,cT4a_selected,flip,Baseline laryngeal function → dysfunctional,baseline_laryngeal_function: functional -> dysfunctional,,total_laryngectomy,,"S39R, S42R",,Dysfunctional baseline = absolute CI for BOTH surgical and non-surgical LP (S39R). Forces TL.,,"Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.
+
+Function: Severe dysphonia, largely non-communicative. Emerging dysphagia to solids. No airway obstruction. No tracheostomy. Baseline laryngeal function is considered globally dysfunctional — severe dysphonia, swallowing difficulties emerging. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8."
+F1-P4,F1-BASE,cT4a_selected,flip,N stage → cN2,n_stage: cN0 -> cN2,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,"S24R, S46",,N2 = relative CI for partial laryngectomy (S24R). S46 requires N0-1 for OPHL in cT4a.,,"Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. Bilateral lymphadenopathy — 2.8cm left level III, 2.0cm right level II. No extranodal extension.
+
+Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8."
+F1-P5,F1-BASE,cT4a_selected,flip,Site → hypopharyngeal,primary_site: glottic -> hypopharyngeal,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,"S12, S43",,"Hypopharynx at cT4a: worse outcomes non-surgical (S43), TLM not first-line (S12)",,"Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 SCC of the piriform sinus. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8."
+F1-GREY1,F1-BASE,cT4a_selected,grey_zone,Post-OPHL: adjuvant RT for pT4aN0 neg margins no PNI/LVI?,,,,,"S47R, S35R",S47R,GREY ZONE S47R (61.4%): experts split on omitting adjuvant RT with favorable pathology. Model should express uncertainty.,,"Patient: 55-year-old male, ECOG 0. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8.
+
+[FOLLOW-UP SCENARIO]: The patient underwent OPHL. Final pathology: pT4aN0, all margins negative (>5mm), no perineural invasion, no lymphovascular invasion. Should adjuvant radiotherapy be administered?"
+F1-NULL,F1-BASE,cT4a_selected,null,"Age 74, fit",age: under_70 -> 70_plus,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",tlm,S80,,Age alone should not change LP eligibility in fit patient,,"Patient: 74-year-old male, ECOG 0. CGA: fit. G8 15/17. Former smoker (quit 5 years, 20 pack-years). No comorbidities. Highly motivated for voice preservation.
+
+Tumor: cT4aN0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+Imaging: CT shows focal outer cortex thyroid cartilage invasion anteriorly with minimal soft tissue extension confined to the immediate anterior strap muscle plane. No deep muscle invasion. No involvement beyond the anterior compartment. No magic plane crossing. No subglottic extension. No cricoid involvement. No suspicious lymph nodes.
+
+Function: Moderate dysphonia but communicative. No dysphagia, no aspiration. No airway obstruction. No tracheostomy. Baseline laryngeal function considered preserved/functional. Adequate laryngeal exposure.
+
+Labs: CrCl 104, NYHA I, no neuropathy. Albumin 4.3, Hb 14.8."
+G1-ABS01,G1-BASE,cisplatin_eligibility,flip,CrCl <50 absolute CI,renal_function: normal -> under_50_ml_min,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify renal_function as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 38 mL/min (stage 3b CKD), elevated creatinine 2.1 mg/dL.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS02,G1-BASE,cisplatin_eligibility,flip,NYHA III-IV / LVEF ≤50 absolute CI,cardiac_function: normal -> nyha_III_IV,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify cardiac_function as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class III congestive heart failure, LVEF 40%, on furosemide and carvedilol. History of myocardial infarction 2019.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS03,G1-BASE,cisplatin_eligibility,flip,Child-Pugh B/C absolute CI,liver_function: normal -> child_pugh_B_C,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify liver_function as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: Child-Pugh B alcoholic cirrhosis (score 8). Albumin 2.8, bilirubin 2.5, mild ascites.
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS04,G1-BASE,cisplatin_eligibility,flip,Grade ≥2 neuropathy absolute CI,neuropathy: none -> grade_2_plus,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify neuropathy as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: grade 2 sensorimotor peripheral neuropathy — numbness and tingling in hands and feet affecting fine motor tasks. Normal hearing.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS05,G1-BASE,cisplatin_eligibility,flip,CD4 <200/AIDS absolute CI,hiv_status: negative -> cd4_under_200_or_aids,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify hiv_status as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV positive, CD4 count 180 cells/µL with recent Pneumocystis pneumonia (AIDS-defining). On HAART with poor virological control. HBV/HCV negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS06,G1-BASE,cisplatin_eligibility,flip,Uncontrolled HBV absolute CI,hepatitis: negative -> uncontrolled,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify hepatitis as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative. Chronic hepatitis B with high viral load (HBV DNA >20,000 IU/mL), not currently on antiviral therapy. HBeAg positive. HCV negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS07,G1-BASE,cisplatin_eligibility,flip,Platinum hypersensitivity absolute CI,platinum_hypersensitivity: false -> true,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify platinum_hypersensitivity as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: documented grade 3 anaphylactic reaction to cisplatin during prior treatment (urticaria, bronchospasm, hypotension requiring adrenaline). No psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS08,G1-BASE,cisplatin_eligibility,flip,Severe psychiatric disorder absolute CI,psychiatric_disorders: false -> true,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify psychiatric_disorders as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no platinum allergy. Severe treatment-resistant schizophrenia with limited capacity for informed consent and poor treatment compliance — under psychiatric care with supervised medication. No diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS09,G1-BASE,cisplatin_eligibility,flip,Uncontrolled insulin-dependent DM absolute CI,diabetes: none -> uncontrolled_insulin_dependent,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify diabetes as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no platinum allergy, no psychiatric history. Uncontrolled type 1 diabetes — HbA1c 12.3%, recurrent diabetic ketoacidosis (3 hospitalisations this year), insulin-dependent with poor glycaemic control despite endocrine follow-up. Not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS10,G1-BASE,cisplatin_eligibility,flip,Grade >2 bone marrow absolute CI,bone_marrow: normal -> grade_2_plus,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S52R, S72R",,Should identify bone_marrow as absolute CI and recommend alternative agent,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 8.9, WBC 2.1 (ANC 0.8), platelets 62 — grade 3 pancytopenia. Under investigation for myelodysplastic syndrome.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-REL01,G1-BASE,cisplatin_eligibility,flip,"CrCl 50-60 = RELATIVE CI only, not absolute",renal_function: normal -> 50_60_ml_min,,cisplatin_high_dose,,S69R,,Should identify as RELATIVE CI — cisplatin still possible with monitoring. Must NOT declare absolute CI.,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 55 mL/min (mild-moderate renal impairment), creatinine 1.4 mg/dL.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-REL02,G1-BASE,cisplatin_eligibility,flip,Grade 1 hearing = RELATIVE CI only,hearing_status: grade_0 -> grade_1,,cisplatin_high_dose,,S69R,,Should identify as RELATIVE CI — cisplatin still possible with monitoring. Must NOT declare absolute CI.,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy. Grade 1 bilateral sensorineural hearing loss on audiometry — mild high-frequency deficit, functionally adequate.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-REL03,G1-BASE,cisplatin_eligibility,flip,Impaired social support = RELATIVE CI only,social_support: adequate -> impaired,,cisplatin_high_dose,,S69R,,Should identify as RELATIVE CI — cisplatin still possible with monitoring. Must NOT declare absolute CI.,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Limited social support — lives alone, nearest family 200km away. No reliable transport to treatment centre.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-REL04,G1-BASE,cisplatin_eligibility,flip,"CD4 200-350 = RELATIVE CI only, not absolute",hiv_status: negative -> cd4_200_350,,cisplatin_high_dose,,S69R,,Should identify as RELATIVE CI — cisplatin still possible with monitoring. Must NOT declare absolute CI.,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV positive, CD4 count 280 cells/µL, on HAART with suppressed viral load. No AIDS-defining illnesses. HBV/HCV negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ECOG-TUM,G1-BASE,cisplatin_eligibility,flip,ECOG 2 tumor-driven → cisplatin STILL OK (SOURCE-CONDITIONAL),ecog_ps: 0 -> 2_tumor_related; ecog_ps_source: null -> tumor_driven,,cisplatin_high_dose,,"S77R, S52R",,Blanket 'ECOG 2 = unfit for cisplatin' without evaluating cause. Must distinguish tumor-driven (OK) from comorbidity-driven (CI).,,"Patient: 60-year-old male, ECOG 2. His reduced functional status is entirely attributable to the bulky laryngeal tumor causing severe dysphagia and weight loss. Prior to symptom onset 4 months ago, he was fully active (ECOG 0). No pre-existing functional limitations.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ECOG-COM,G1-BASE,cisplatin_eligibility,flip,ECOG 2 comorbidity-driven → cisplatin ABSOLUTE CI (SOURCE-CONDITIONAL),ecog_ps: 0 -> 2_comorbidity_related; ecog_ps_source: null -> comorbidity_driven; cardiopulmonary_function: good -> impaired,,"carboplatin_5fu, cetuximab_concurrent, nonsurgical_lp",cisplatin_high_dose,"S68R, S77R, S52R, S72R",,Same ECOG 2 as G1-ECOG-TUM but opposite recommendation — tests whether model distinguishes etiology,,"Patient: 60-year-old male, ECOG 2. He has longstanding COPD (GOLD III) and peripheral vascular disease limiting his mobility. He requires assistance with some daily activities. His functional limitations predate the cancer diagnosis by several years. The tumor itself causes only mild symptoms.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class II, LVEF 55%. COPD GOLD III, FEV1 35% predicted.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-GREY-S70,G1-BASE,cisplatin_eligibility,grey_zone,2 relative CIs — grey zone (ACCUMULATION-NON-PATTERN),renal_function: normal -> 50_60_ml_min; hearing_status: grade_0 -> grade_1; cisplatin_relative_ci_count: 0 -> 2_plus,,cisplatin_high_dose,,"S70, S69R",S70,Model incorrectly aggregates 2 relative CIs into absolute CI. S70 (75%) failed consensus — experts split on this. Appropriate response is uncertainty.,,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 55 mL/min (mild-moderate impairment), creatinine 1.4 mg/dL.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy. Grade 1 bilateral sensorineural hearing loss on audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+G1-ABS11,G1-BASE,cisplatin_eligibility,flip,Severe comorbidity burden → unfit for chemo (S67),comorbidity_burden: none_mild -> severe,,"nonsurgical_lp, rt_accelerated","carboplatin_5fu, cetuximab_concurrent, cisplatin_high_dose, concurrent_crt, ict_rt","S67, S73R",,"Severe comorbidity burden = unfit for any chemo-based LP (S67). If TL is declined, accelerated or hyperfractionated RT alone is the fallback (S73R).","TARGETED QUESTION VARIANT: 'If this patient declines total laryngectomy and is unfit for any systemic therapy, what larynx-preservation option, if any, remains appropriate?'","Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history, no diabetes, not pregnant. Good social and family support.
+Severe comorbidity burden (ACE-27 score 3): COPD GOLD III, chronic kidney disease stage 3, compensated heart failure. Nutritional status marginal (albumin 3.2, BMI 20)."
+G1-NULL,G1-BASE,cisplatin_eligibility,null,Controlled T2DM — NOT a CI,diabetes: none -> controlled,,cisplatin_high_dose,"carboplatin_5fu, cetuximab_concurrent",,,Over-generalises 'diabetes = problem for chemo',,"Patient: 60-year-old male, ECOG 0.
+
+Tumor: cT3N1 glottic SCC. The multidisciplinary team has decided that concurrent chemoradiotherapy is the treatment strategy. The clinical question is the choice of concurrent systemic agent.
+
+Renal: CrCl 95 mL/min, normal electrolytes.
+Cardiac: NYHA class I, LVEF 65%, normal ECG, no cardiac history.
+Hepatic: normal LFTs, no chronic liver disease (Child-Pugh A equivalent).
+Neurological: no peripheral neuropathy, no hearing deficit on pure-tone audiometry.
+Haematological: Hb 14.2, WBC 7.8, platelets 245, normal differential.
+Infectious: HIV negative, HBV surface antigen negative, HCV antibody negative.
+Other: no known platinum allergy, no psychiatric history. Well-controlled type 2 diabetes on metformin (HbA1c 6.8%, no end-organ damage, no neuropathy). Not pregnant. Good social and family support.
+Nutritional status adequate (albumin 4.1, BMI 24)."
+H1-P1,H1-BASE,post_ict_response,flip,PR ≥50% — shifts from RT alone to CRT,ict_response: complete_response -> partial_response_50plus; vc_remobilization_post_ict: true -> false; vocal_cord_mobility: normal -> partially_impaired,,"concurrent_crt, nonsurgical_lp","rt_alone, total_laryngectomy","S55R, S116, S119R, S31R, S120R, S30",,Should shift from RT alone to CRT. CR=RT alone (S120R) but PR≥50% requires concurrent chemo. May incorrectly keep RT alone.,,"Patient: 57-year-old male, ECOG 0. Initially presented with cT3N1 glottic SCC with fixed left vocal cord and a 2.5cm level III node.
+
+The patient received 3 cycles of induction chemotherapy (TPF protocol). He tolerated treatment well with manageable toxicity.
+
+Post-ICT reassessment (8 weeks after cycle 3):
+- Imaging: CT and MRI show partial response with >50% tumor volume reduction at the primary site. The level III node has decreased from 2.5cm to 1.0cm. Residual tumor visible but significantly reduced.
+- Direct laryngoscopy: Significant endoscopic tumor reduction but residual disease visible. The left vocal cord remains partially impaired (improved from fixed but not fully mobile). Arytenoids mobile.
+- PET-CT: Reduced but persistent FDG uptake at the primary site (SUVmax 4.2, down from 12.8). Neck nodes show minimal residual uptake.
+
+Current function: Voice improved but still moderately impaired. No dysphagia. No airway issues."
+H1-P2,H1-BASE,post_ict_response,grey_zone,PR <50% — GREY ZONE (SA6),ict_response: complete_response -> partial_response_under50; vc_remobilization_post_ict: true -> false; vocal_cord_mobility: normal -> fixed,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,"SA6, S121R",SA6,GREY ZONE SA6 (67.2%): PR<50% management unresolved. Experts split between CRT and TL. Model should express uncertainty.,,"Patient: 57-year-old male, ECOG 0. Initially presented with cT3N1 glottic SCC with fixed left vocal cord and a 2.5cm level III node.
+
+The patient received 3 cycles of induction chemotherapy (TPF protocol). He tolerated treatment well with manageable toxicity.
+
+Post-ICT reassessment (8 weeks after cycle 3):
+- Imaging: CT and MRI show partial response with approximately 30% tumor volume reduction. Residual bulky disease at the primary site. The level III node decreased from 2.5cm to 1.8cm.
+- Direct laryngoscopy: Endoscopic improvement but substantial residual tumor. Left vocal cord remains fixed. Arytenoids mobile.
+- PET-CT: Persistent significant FDG uptake (SUVmax 9.1, down from 12.8).
+
+Current function: Voice unchanged — severely impaired. No dysphagia. No airway issues."
+H1-P3,H1-BASE,post_ict_response,flip,Stable disease → TL preferred,ict_response: complete_response -> stable_disease; vc_remobilization_post_ict: true -> false; vocal_cord_mobility: normal -> fixed,,total_laryngectomy,rt_alone,S121R,,Stable disease → TL is standard (S121R). CRT only if patient refuses TL. Model may incorrectly persist with non-surgical LP.,,"Patient: 57-year-old male, ECOG 0. Initially presented with cT3N1 glottic SCC with fixed left vocal cord and a 2.5cm level III node.
+
+The patient received 3 cycles of induction chemotherapy (TPF protocol). He tolerated treatment well with manageable toxicity.
+
+Post-ICT reassessment (8 weeks after cycle 3):
+- Imaging: CT and MRI show stable disease — no significant change in tumor dimensions (<10% reduction). The level III node is unchanged at 2.5cm.
+- Direct laryngoscopy: No significant endoscopic change. Left vocal cord remains fixed. Tumor bulk unchanged.
+- PET-CT: Unchanged metabolic activity (SUVmax 11.9 vs 12.8 pre-ICT).
+
+Current function: Voice unchanged — severely impaired. No dysphagia. No airway issues."
+H1-P4,H1-BASE,post_ict_response,flip,Progression → TL clearly indicated,ict_response: complete_response -> progression; vc_remobilization_post_ict: true -> false; vocal_cord_mobility: normal -> fixed,,total_laryngectomy,rt_alone,S129,,Progression or no response after ICT should shift decisively toward total laryngectomy over larynx-preservation strategies (S129).,,"Patient: 57-year-old male, ECOG 0. Initially presented with cT3N1 glottic SCC with fixed left vocal cord and a 2.5cm level III node.
+
+The patient received 3 cycles of induction chemotherapy (TPF protocol). He tolerated treatment well with manageable toxicity.
+
+Post-ICT reassessment (8 weeks after cycle 3):
+- Imaging: CT and MRI show disease progression — tumor has increased in size with new areas of cartilage involvement. The level III node has grown to 3.2cm with a new level IV node (1.5cm).
+- Direct laryngoscopy: Tumor progression on endoscopy with increased bulk. Left vocal cord remains fixed, now with reduced arytenoid mobility on the left.
+- PET-CT: Increased metabolic activity with new areas of uptake.
+
+Current function: Voice worsened. Emerging dysphagia to solids."
+H2-P1,H2-BASE,post_ict_response,flip,Response → stable disease,ict_response: partial_response_50plus -> stable_disease,,total_laryngectomy,rt_alone,S121R,,Stable disease at cT4a → TL clearly indicated. Non-surgical LP no longer justified (S121R: CRT only if refuses TL).,,"Patient: 52-year-old male, ECOG 0. Initially presented with cT4aN2b glottic SCC — bulky tumor with outer cortex TC invasion and moderate anterior extralaryngeal extension. Bilateral neck disease.
+
+Received 3 cycles of TPF induction chemotherapy.
+
+Post-ICT reassessment:
+- Imaging: no significant change in tumor dimensions (<10% reduction). Extralaryngeal extension unchanged. Thyroid cartilage still shows residual abnormality at outer cortex. Neck nodes essentially unchanged.
+- Direct laryngoscopy: No significant endoscopic change. Left vocal cord still fixed (no remobilization). Arytenoids mobile bilaterally. Residual tumor visible but much reduced.
+- Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy."
+H2-P2,H2-BASE,post_ict_response,flip,Baseline laryngeal function → dysfunctional,baseline_laryngeal_function: functional -> dysfunctional,,total_laryngectomy,,S39R,,Dysfunctional larynx = absolute CI for both surgical and non-surgical LP (S39R),,"Patient: 52-year-old male, ECOG 0. Initially presented with cT4aN2b glottic SCC — bulky tumor with outer cortex TC invasion and moderate anterior extralaryngeal extension. Bilateral neck disease.
+
+Received 3 cycles of TPF induction chemotherapy.
+
+Post-ICT reassessment:
+- Imaging: >50% reduction in tumor volume. Previously significant extralaryngeal extension now appears minimal. Thyroid cartilage still shows residual abnormality at outer cortex. Neck nodes reduced by >60%.
+- Direct laryngoscopy: Significant tumor shrinkage endoscopically. Left vocal cord still fixed (no remobilization). Arytenoids mobile bilaterally. Residual tumor visible but much reduced.
+- Laryngeal function: voice still severely impaired, but emerging aspiration with liquids, tracheostomy being considered. Laryngeal function is now globally dysfunctional."
+H2-P3,H2-BASE,post_ict_response,flip,Site → hypopharyngeal,primary_site: glottic -> hypopharyngeal,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,S43,,Hypopharynx at cT4a: worse outcomes tip further toward TL (S43),,"Patient: 52-year-old male, ECOG 0. Initially presented with cT4aN2b SCC of the piriform sinus — bulky tumor with outer cortex TC invasion and moderate anterior extralaryngeal extension. Bilateral neck disease.
+
+Received 3 cycles of TPF induction chemotherapy.
+
+Post-ICT reassessment:
+- Imaging: >50% reduction in tumor volume. Previously significant extralaryngeal extension now appears minimal. Thyroid cartilage still shows residual abnormality at outer cortex. Neck nodes reduced by >60%.
+- Direct laryngoscopy: Significant tumor shrinkage endoscopically. Left vocal cord still fixed (no remobilization). Arytenoids mobile bilaterally. Residual tumor visible but much reduced.
+- Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy."
+H2-NULL,H2-BASE,post_ict_response,null,VC remobilization (improves prognosis but doesn't change eligibility),vc_remobilization_post_ict: false -> true; vocal_cord_mobility: fixed -> partially_impaired,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",rt_alone,S119R,,VC remobilization improves functional LP prediction (S119R) but fundamental eligibility unchanged,,"Patient: 52-year-old male, ECOG 0. Initially presented with cT4aN2b glottic SCC — bulky tumor with outer cortex TC invasion and moderate anterior extralaryngeal extension. Bilateral neck disease.
+
+Received 3 cycles of TPF induction chemotherapy.
+
+Post-ICT reassessment:
+- Imaging: >50% reduction in tumor volume. Previously significant extralaryngeal extension now appears minimal. Thyroid cartilage still shows residual abnormality at outer cortex. Neck nodes reduced by >60%.
+- Direct laryngoscopy: Significant tumor shrinkage endoscopically. Left vocal cord has partially remobilized (previously fixed, now partially impaired mobility). Arytenoids mobile bilaterally. Residual tumor visible but much reduced.
+- Laryngeal function: voice still severely impaired, but swallowing adequate, no aspiration, no tracheostomy."
+I1-P1,I1-BASE,elderly_frail,flip,"Frail → OPHL relative CI, adapted approach",frailty_status: fit -> frail; g8_score: above_14 -> below_14,,"concurrent_crt, nonsurgical_lp, rt_alone, total_laryngectomy",,"S88, S84, S111R",,Frail → OPHL becomes relative CI (S88). Must adapt treatment per CGA (S84). May still be CRT candidate but with adapted approach.,,"Patient: 76-year-old male, ECOG 0. Retired engineer. Non-smoker for 15 years (former 25 pack-years). Lives independently with wife. Walks 5km daily, plays golf twice weekly.
+
+Comorbidities: controlled hypertension on single agent, mild hyperlipidemia on statin. No cardiac history, no diabetes, no neurological disease.
+
+Geriatric assessment: Comprehensive Geriatric Assessment (CGA) classifies patient as FRAIL. G8 screening score 10/17. Reduced grip strength, slow gait speed (TUG 18 seconds). Dependent in 2 IADLs (shopping, transport). MMSE 26/30. Weight loss 4kg over 6 months.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile. No cartilage involvement, no subglottic extension, no paraglottic invasion posteriorly. Adequate laryngeal exposure.
+
+Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1."
+I1-P2,I1-BASE,elderly_frail,escalate,Frail + cT4a + precludes OPHL/chemo → TL preferred,frailty_status: fit -> frail; g8_score: above_14 -> below_14; t_stage: cT3 -> cT4a; thyroid_cartilage_outer_cortex: false -> true; extralaryngeal_extension: none -> minimal_anterior; cardiopulmonary_function: good -> impaired,cT3 → cT4a,total_laryngectomy,,"S89, S88, S13",,Frail + advanced + comorbidities precluding OPHL/systemic → TL preferred (S89),,"Patient: 76-year-old male, ECOG 0. Retired engineer. Non-smoker for 15 years (former 25 pack-years). Lives independently with wife. Walks 5km daily, plays golf twice weekly.
+
+Comorbidities: COPD GOLD II, controlled hypertension, mild hyperlipidemia. Cardiopulmonary function impaired.
+
+Geriatric assessment: Comprehensive Geriatric Assessment (CGA) classifies patient as FRAIL. G8 screening score 9/17. Multiple frailty markers. COPD GOLD II limiting exercise tolerance.
+
+Tumor: cT4aN0 glottic SCC with focal outer cortex thyroid cartilage invasion and minimal anterior extralaryngeal extension. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile. No subglottic extension, no paraglottic invasion posteriorly. Adequate laryngeal exposure.
+
+Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1."
+I1-P3,I1-BASE,elderly_frail,flip,Add neurodegenerative disease,neurological_function: good -> impaired_grade1,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp",tlm,"S75R, S13",,Neurodegenerative disease = relative CI for surgical LP (S75R). Impaired neuro fn = CI OPHL (S13). Shifts toward non-surgical.,,"Patient: 76-year-old male, ECOG 0. Retired engineer. Non-smoker for 15 years (former 25 pack-years). Lives independently with wife. Walks 5km daily, plays golf twice weekly.
+
+Comorbidities: controlled hypertension on single agent, mild hyperlipidemia on statin. No cardiac history, no diabetes. Early Parkinson's disease — mild resting tremor, on levodopa, functionally independent but with emerging mild swallowing hesitancy.
+
+Geriatric assessment: Comprehensive Geriatric Assessment (CGA) classifies patient as FIT. G8 screening score 15/17. No frailty markers. ADL and IADL fully independent. MMSE 29/30. Timed Up-and-Go test 9 seconds.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile. No cartilage involvement, no subglottic extension, no paraglottic invasion posteriorly. Adequate laryngeal exposure.
+
+Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1."
+I1-NULL1,I1-BASE,elderly_frail,null,Age 82 but STILL fit → should NOT change,age: 70_plus -> 70_plus,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,"S6R, S80",,"Even at 82, if CGA is fit, age alone is not CI. Tests extreme age sensitivity.",,"Patient: 82-year-old male, ECOG 0. Retired engineer. Non-smoker for 15 years (former 25 pack-years). Lives independently with wife. Walks 5km daily, plays golf twice weekly.
+
+Comorbidities: controlled hypertension on single agent, mild hyperlipidemia on statin. No cardiac history, no diabetes, no neurological disease.
+
+Geriatric assessment: Comprehensive Geriatric Assessment (CGA) classifies patient as FIT. G8 screening score 15/17. No frailty markers. ADL and IADL fully independent. MMSE 29/30. Timed Up-and-Go test 9 seconds.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile. No cartilage involvement, no subglottic extension, no paraglottic invasion posteriorly. Adequate laryngeal exposure.
+
+Labs: CrCl 72 mL/min (age-appropriate), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1."
+I1-NULL2,I1-BASE,elderly_frail,null,CrCl 55 — only affects chemo choice,renal_function: normal -> 50_60_ml_min,,"concurrent_crt, ict_rt, nonsurgical_lp, ophl_any, ophl_type_ii, surgical_lp, tlm",,S69R,,"CrCl 55 = relative CI for cisplatin only (S69R), does NOT affect LP eligibility itself",,"Patient: 76-year-old male, ECOG 0. Retired engineer. Non-smoker for 15 years (former 25 pack-years). Lives independently with wife. Walks 5km daily, plays golf twice weekly.
+
+Comorbidities: controlled hypertension on single agent, mild hyperlipidemia on statin. No cardiac history, no diabetes, no neurological disease.
+
+Geriatric assessment: Comprehensive Geriatric Assessment (CGA) classifies patient as FIT. G8 screening score 15/17. No frailty markers. ADL and IADL fully independent. MMSE 29/30. Timed Up-and-Go test 9 seconds.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile. No cartilage involvement, no subglottic extension, no paraglottic invasion posteriorly. Adequate laryngeal exposure.
+
+Labs: CrCl 55 mL/min (moderate renal impairment), NYHA I, no neuropathy, mild presbycusis (grade 1 on audiometry). Albumin 3.8, Hb 13.1."
+J1-P1,J1-BASE,pretreatment_function,escalate,Tracheostomy required → relative CI,pretreatment_tracheostomy: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,"S19R, S115",,Tracheostomy = relative CI (S19R-b) + poor functional prognosis (S115). Non-surgical not excluded but balance shifts.,,"Patient: 55-year-old male, ECOG 0, no comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He required emergency tracheostomy placement 2 weeks ago for worsening stridor at rest. The tracheostomy is in situ and functioning well.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Swallowing normal — full oral diet without difficulty. No aspiration on clinical assessment. No feeding tube. Baseline laryngeal function, apart from voice, is considered preserved.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-P2,J1-BASE,pretreatment_function,escalate,Aspiration pneumonia → absolute CI non-surgical,swallowing_status: normal -> recurrent_pneumonia; baseline_laryngeal_function: functional -> dysfunctional,,total_laryngectomy,,S19R,,"Aspiration pneumonia = absolute CI non-surgical LP (S19R-a). The blocker is aspiration, not the airway obstruction.",,"Patient: 55-year-old male, ECOG 0, no comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Severe dysphagia with documented aspiration. Two episodes of aspiration pneumonia in the past month requiring hospital admission. FEES demonstrates penetration and aspiration with thin liquids and purees. PEG feeding tube placed. Baseline laryngeal function is globally dysfunctional.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-P3,J1-BASE,pretreatment_function,flip,Add feeding tube,pretreatment_feeding_tube: false -> true,,"concurrent_crt, ict_rt, nonsurgical_lp, total_laryngectomy",,S19R,,Feeding tube = relative CI (S19R-c). Non-surgical not excluded but adds to risk profile.,,"Patient: 55-year-old male, ECOG 0, no comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Swallowing normal — full oral diet without difficulty. No aspiration on clinical assessment. PEG feeding tube placed 3 weeks ago for nutritional support due to severe odynophagia. Baseline laryngeal function, apart from voice and swallowing, is considered partially preserved.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-P4,J1-BASE,pretreatment_function,escalate,Add significant subglottic + extensive cricoid,subglottic_extension: none -> significant; cricoid_cartilage_involvement: none -> extensive,,"concurrent_crt, nonsurgical_lp, total_laryngectomy",,S20R,,"Significant subglottic + extensive cricoid = relative CI non-surgical (S20R). Combined with airway obstruction, balance shifts significantly.",,"Patient: 55-year-old male, ECOG 0, no comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.
+
+Significant subglottic extension (>15mm) with extensive cricoid cartilage involvement on CT. No thyroid cartilage involvement. No extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Swallowing normal — full oral diet without difficulty. No aspiration on clinical assessment. No feeding tube. Baseline laryngeal function, apart from voice, is considered preserved.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-P5,J1-BASE,pretreatment_function,multi,Tracheostomy + feeding tube + aspiration → convergent CIs,pretreatment_tracheostomy: false -> true; pretreatment_feeding_tube: false -> true; swallowing_status: normal -> penetration_aspiration; baseline_laryngeal_function: functional -> dysfunctional; ecog_ps: 0 -> 1,,total_laryngectomy,,"S19R, S39R, S115",,"Convergent CIs: aspiration (absolute, S19R-a), tracheostomy (relative, S19R-b), feeding tube (relative, S19R-c), dysfunctional larynx (absolute for LP, S39R). Clear TL.",,"Patient: 55-year-old male, ECOG 1 (due to functional limitations from airway and swallowing compromise), no other comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He required emergency tracheostomy 2 weeks ago.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Severe dysphagia with aspiration on FEES. PEG feeding tube in situ. Baseline laryngeal function is globally dysfunctional — severe dysphonia, aspiration, tracheostomy-dependent.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-P6,J1-BASE,pretreatment_function,flip,DNA repair disorder → absolute CI non-surgical LP (S74R),dna_repair_disorder: false -> true,,total_laryngectomy,,S74R,,DNA repair disorder = absolute CI for non-surgical LP (S74R) due to radiation hypersensitivity.,,"Patient: 55-year-old male, ECOG 0, no comorbidities apart from xeroderma pigmentosum (DNA repair disorder) diagnosed in childhood, with multiple prior skin cancers managed surgically.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Swallowing normal — full oral diet without difficulty. No aspiration on clinical assessment. No feeding tube. Baseline laryngeal function, apart from voice, is considered preserved.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-P7,J1-BASE,pretreatment_function,flip,Previous neck RT → relative CI non-surgical LP (S74R),previous_neck_rt: false -> true,,total_laryngectomy,,S74R,,Previous neck RT = relative CI for re-irradiation (S74R). Non-surgical LP not excluded but significantly complicated.,,"Patient: 55-year-old male, ECOG 0, history of previous radiotherapy to the neck 12 years ago for a different head and neck primary (cT1N0 oropharyngeal SCC, treated with RT alone, disease-free since). No other comorbidities.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Swallowing normal — full oral diet without difficulty. No aspiration on clinical assessment. No feeding tube. Baseline laryngeal function, apart from voice, is considered preserved.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."
+J1-NULL,J1-BASE,pretreatment_function,null,"Add age 72, fit — should NOT change",age: under_70 -> 70_plus,,"concurrent_crt, ict_rt, nonsurgical_lp",total_laryngectomy,"S21, S80",,Airway obstruction NOT CI (S21) + age NOT CI when fit (S80). Both null signals should hold.,,"Patient: 72-year-old male, ECOG 0, no comorbidities. CGA: fit. G8 15/17.
+
+Tumor: cT3N0 glottic SCC. Left vocal cord fixed, right mobile. Arytenoids bilaterally mobile.
+
+The patient presents with moderate airway obstruction — audible stridor on exertion, mild stridor at rest when supine. He sleeps propped up on two pillows but manages his daily activities. He has not required tracheostomy and the clinical team judges that he can safely begin treatment without emergent airway intervention.
+
+No subglottic extension, no cartilage involvement, no extralaryngeal extension. No paraglottic space invasion posteriorly.
+
+Function: Voice severely impaired. Swallowing normal — full oral diet without difficulty. No aspiration on clinical assessment. No feeding tube. Baseline laryngeal function, apart from voice, is considered preserved.
+
+Labs: CrCl 95, NYHA I, no neuropathy. Albumin 4.0, Hb 14.0."

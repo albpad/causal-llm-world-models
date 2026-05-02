@@ -1,0 +1,3354 @@
+[
+  {
+    "statement_id": "S1R",
+    "kind": "statement",
+    "number_text": "1",
+    "number_start": 1,
+    "number_end": 1,
+    "section": "Investigations and general aspects",
+    "statement_text": "When CT, often used as first-level imaging, cannot clearly confirm or exclude cartilage involvement in patients with laryngeal squamous cell carcinoma, multiparametric MRI is the most accurate diagnostic method to assess this finding.",
+    "level_of_evidence": "III",
+    "consensus_pct": 98.4,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S2R",
+    "kind": "statement",
+    "number_text": "2",
+    "number_start": 2,
+    "number_end": 2,
+    "section": "Investigations and general aspects",
+    "statement_text": "Arytenoid fixation in laryngeal cancers might be due to different causes that should be thoroughly investigated with imaging and endoscopy before planning partial surgery.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.6,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA1",
+    "kind": "additional_statement",
+    "number_text": "1",
+    "number_start": 1,
+    "number_end": 1,
+    "section": "Investigations and general aspects",
+    "statement_text": "When CT cannot clearly confirm or exclude involvement of the posterior portion of the inferior paraglottic space (also referred to as the thyrocricoarytenoid space) in patients with laryngeal squamous cell carcinoma determining vocal cord or arytenoid mobility impairment, multiparametric MRI is the most accurate diagnostic method to assess this finding.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.2,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S3R",
+    "kind": "statement",
+    "number_text": "3",
+    "number_start": 3,
+    "number_end": 3,
+    "section": "Investigations and general aspects",
+    "statement_text": "The four extensions potentially determining vocal cord or arytenoid mobility impairment are associated with different management when surgery is indicated: (1) the mass effect determined by supraglottic cancers does not necessarily preclude type I or II open partial horizontal laryngectomy; (2) inferior paraglottic space involvement with no other critical extensions could be treated with type II open partial horizontal laryngectomy extended to the ipsilateral arytenoid; (3) involvement of the cricoarytenoid joint could be managed with type III open partial horizontal laryngectomy extended to the ipsilateral CAU (in well selected patients and in centres with adequate experience) or total laryngectomy. If partial laryngectomy is planned, the patient should also give consent to a possible intraoperative conversion to total laryngectomy; or (4) involvement of the posterior cricoarytenoid muscle and hypopharyngeal mucosa or submucosa calls for total laryngectomy with partial hypopharyngectomy if surgery is indicated.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 97.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 5
+  },
+  {
+    "statement_id": "S4R",
+    "kind": "statement",
+    "number_text": "4",
+    "number_start": 4,
+    "number_end": 4,
+    "section": "Investigations and general aspects",
+    "statement_text": "Endoscopic evidence of impaired vocal cord mobility has a negative effect on local control with both radiotherapy and transoral laser microsurgery.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 97.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA2",
+    "kind": "additional_statement",
+    "number_text": "2",
+    "number_start": 2,
+    "number_end": 2,
+    "section": "Investigations and general aspects",
+    "statement_text": "Some unfavourable cT2 (eg, radiological invasion of intrinsic muscles, partially impaired vocal cord mobility, or bulky supraglottic component) laryngeal squamous cell carcinomas have outcomes that are more similar to cT3 tumours and might require more aggressive management than is normally given for cT2 tumours.",
+    "level_of_evidence": "V",
+    "consensus_pct": 87.5,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA3",
+    "kind": "additional_statement",
+    "number_text": "3",
+    "number_start": 3,
+    "number_end": 3,
+    "section": "Investigations and general aspects",
+    "statement_text": "Larynx-preservation treatment, whether unimodal or multimodal, should be preferably performed in centres with a high volume of patients with laryngeal squamous cell carcinomas.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.5,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S5R",
+    "kind": "statement",
+    "number_text": "5",
+    "number_start": 5,
+    "number_end": 5,
+    "section": "Transoral surgery",
+    "statement_text": "In transoral laser microsurgery, inadequate exposure is the primary factor preventing the achievement of negative margins. Exposure mostly depends on the patient\u2019s anatomical characteristics, the surgeon\u2019s expertise, and the availability of adequate equipment.",
+    "level_of_evidence": "III",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S6R",
+    "kind": "statement",
+    "number_text": "6",
+    "number_start": 6,
+    "number_end": 6,
+    "section": "Transoral surgery",
+    "statement_text": "Older age (>70 years) alone is not a contraindication for transoral laser microsurgery in patients with T3 laryngeal cancer without severe neurological or respiratory comorbidities.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 92.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "exception",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S7R",
+    "kind": "statement",
+    "number_text": "7",
+    "number_start": 7,
+    "number_end": 7,
+    "section": "Transoral surgery",
+    "statement_text": "The following extensions are absolute contraindications for transoral laser microsurgery in T3 laryngeal cancer: posterior laryngeal involvement requiring bilateral arytenoid resection (LoE: V); inner cortical infiltration (even if focal) of the thyroid cartilage (LoE: IV); posterior paraglottic involvement (LoE: IV); anterior commissure involvement with difficult exposure (LoE: IV); extensive supraglottic tumours with massive infiltration of the pre-epiglottic space (LoE: V); and subglottic extension under 10 mm in the posterior part of the glottis (LoE: IV).",
+    "level_of_evidence": "IV-V",
+    "consensus_pct": 100.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 6
+  },
+  {
+    "statement_id": "S8",
+    "kind": "statement",
+    "number_text": "8",
+    "number_start": 8,
+    "number_end": 8,
+    "section": "Transoral surgery",
+    "statement_text": "The following extensions are relative contraindications to transoral laser microsurgery in T3 laryngeal cancers: anterior commissure involvement with difficult exposure (LoE: IV); focal cartilage infiltration of the thyroid cartilage (LoE: IV); subglottic extension under 10 mm in the posterior part of the glottis (LoE: IV); and extensive supraglottic tumours with massive infiltration of the pre-epiglottic space (LoE: V).",
+    "level_of_evidence": "IV-V",
+    "consensus_pct": 95.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 4
+  },
+  {
+    "statement_id": "S9R",
+    "kind": "statement",
+    "number_text": "9",
+    "number_start": 9,
+    "number_end": 9,
+    "section": "Transoral surgery",
+    "statement_text": "Thyroid cartilage erosion is a contraindication for transoral laser microsurgery in glottic cT3 lesions. In such cases, type II open partial horizontal laryngectomy or non-surgical organ preservation protocols are more appropriate options.",
+    "level_of_evidence": "III",
+    "consensus_pct": 95.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any",
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S10R",
+    "kind": "statement",
+    "number_text": "10",
+    "number_start": 10,
+    "number_end": 10,
+    "section": "Transoral surgery",
+    "statement_text": "In supraglottic cT3 lesions, transoral laser microsurgery, and transoral robotic surgery are viable strategies in the case of limited invasion of the preepiglottic space (ie, not abutting the thyrohyoid membrane). Otherwise, type I (in the case of more pronounced pre-epiglottic space involvement) or IIB open partial horizontal laryngectomy (in patients with thyroid cartilage erosion) or non-surgical organ preservation protocols should be considered.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 100.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm",
+      "tors",
+      "ophl_any",
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S11",
+    "kind": "statement",
+    "number_text": "11",
+    "number_start": 11,
+    "number_end": 11,
+    "section": "Transoral surgery",
+    "statement_text": "Multiple positive superficial margins, one or more positive deep margins, or both after transoral laser microsurgery necessitate additional treatment.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA4R",
+    "kind": "additional_statement",
+    "number_text": "4",
+    "number_start": 4,
+    "number_end": 4,
+    "section": "Transoral surgery",
+    "statement_text": "In the case of multiple positive superficial margins, one or more positive deep margins, or both following transoral laser microsurgery, redo surgery is the preferred option unless the areas at risk of bearing microscopic disease cannot be adequately and safely exposed or resected. For instance, when inner laryngeal perichondrium is the site of margin involvement, redo surgery cannot be performed with transoral laser microsurgery.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 92.7,
+    "voting_round": "third",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA5",
+    "kind": "additional_statement",
+    "number_text": "5",
+    "number_start": 5,
+    "number_end": 5,
+    "section": "Transoral surgery",
+    "statement_text": "A single positive superficial margin does not necessarily call for additional treatment. Follow-up with periodic endoscopic and bioendoscopic evaluation might be indicated.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 82.8,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S12",
+    "kind": "statement",
+    "number_text": "12",
+    "number_start": 12,
+    "number_end": 12,
+    "section": "Transoral surgery",
+    "statement_text": "Transoral laser microsurgery is not indicated as a first-line treatment in locally advanced hypopharyngeal cancer.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 3,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S13",
+    "kind": "statement",
+    "number_text": "13",
+    "number_start": 13,
+    "number_end": 13,
+    "section": "Open partial horizontal laryngectomy",
+    "statement_text": "The identification of suitable candidates for open partial horizontal laryngectomy should consider the baseline clinical factors and physiological stress that follows the surgical procedure. Good cardiopulmonary and neurological functions and a good performance status are necessary prerequisites.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S14",
+    "kind": "statement",
+    "number_text": "14",
+    "number_start": 14,
+    "number_end": 14,
+    "section": "Open partial horizontal laryngectomy",
+    "statement_text": "cT3 laryngeal cancers with involvement of the anterior compartments of the larynx can be treated with open partial horizontal laryngectomy type II with excellent oncological results even if there is focal invasion or the thyroid cartilage.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 89.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S15R",
+    "kind": "statement",
+    "number_text": "15",
+    "number_start": 15,
+    "number_end": 15,
+    "section": "Open partial horizontal laryngectomy",
+    "statement_text": "cT3 laryngeal cancers that cross the magic plane (ie, the virtual paracoronal plane passing through the vocal process of the arytenoid and reaching the thyroid lamina perpendicularly) posteriorly with involvement of the posterior portion of the inferior paraglottic space or causing arytenoid fixation should not be treated with type I or type II open partial horizontal laryngectomy.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 97.8,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S16R",
+    "kind": "statement",
+    "number_text": "16",
+    "number_start": 16,
+    "number_end": 16,
+    "section": "Open partial horizontal laryngectomy",
+    "statement_text": "Posterior laryngeal involvement requiring bilateral arytenoid resection is an absolute contraindication to any type of conservative surgery",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S17R",
+    "kind": "statement",
+    "number_text": "17",
+    "number_start": 17,
+    "number_end": 17,
+    "section": "Open partial horizontal laryngectomy",
+    "statement_text": "The following extensions are contraindications for type II open partial horizontal laryngectomy in cT3 laryngeal cancer: inferior laryngeal involvement extending over 10 mm in the subglottis and cricoarytenoid joint invasion.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S18R",
+    "kind": "statement",
+    "number_text": "18",
+    "number_start": 18,
+    "number_end": 18,
+    "section": "Open partial horizontal laryngectomy",
+    "statement_text": "In centres with great experience, selected patients affected by cT3 laryngeal cancer with anterior subglottic extension over 10 mm could be offered type III open partial horizontal laryngectomy with or without CAU resection, provided that the contralateral CAU is mobile and sensate.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 87.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "fallback_option",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S19R",
+    "kind": "statement",
+    "number_text": "19",
+    "number_start": 19,
+    "number_end": 19,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Non-surgical organ preservation treatments are contraindicated in patients with severe pretreatment laryngo-oesophageal dysfunction, which is clinically defined by the following elements: laryngeal penetration or aspiration, or recurrent pneumonia. Relative contraindications are pretreatment tracheostomy or pretreatment feeding tube, particularly regarding the recovery of laryngeal and oesophageal function.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 95.2,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 3
+  },
+  {
+    "statement_id": "S20R",
+    "kind": "statement",
+    "number_text": "20",
+    "number_start": 20,
+    "number_end": 20,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Significant subglottic extension and extensive involvement of the cricoid cartilage are relative contraindications for non-surgical organ preservation treatments.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 91.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S21",
+    "kind": "statement",
+    "number_text": "21",
+    "number_start": 21,
+    "number_end": 21,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Airway obstruction alone is not a sufficient criterion to contraindicate non-surgical organ preservation treatment.",
+    "level_of_evidence": "V",
+    "consensus_pct": 88.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "exception",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S22",
+    "kind": "statement",
+    "number_text": "22",
+    "number_start": 22,
+    "number_end": 22,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "For cT2N0 cancer of the larynx or hypopharynx that is unsuitable for transoral laser microsurgery and open partial horizontal laryngectomy, radiotherapy is an adequate treatment option.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 94.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S23R",
+    "kind": "statement",
+    "number_text": "23",
+    "number_start": 23,
+    "number_end": 23,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "For cT2N0 laryngeal cancer treated with radiotherapy, accelerated or hyperfractionated radiotherapy might be favoured in the case of reduced cord mobility.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 95.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "rt_accelerated"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S24R",
+    "kind": "statement",
+    "number_text": "24",
+    "number_start": 24,
+    "number_end": 24,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "High nodal burden (ie, cN2 or higher) is a relative contraindication for partial laryngectomy. Non-surgical treatment with a combination of chemotherapy and radiation should be preferred in these cases.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 88.3,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S25-S26R",
+    "kind": "statement",
+    "number_text": "25\u201326",
+    "number_start": 25,
+    "number_end": 26,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "In the case of non-T4 laryngeal cancer with nodal involvement for which a non-surgical treatment strategy is indicated, the choice of the treatment could vary between concurrent chemoradiation or induction chemotherapy followed by radiation in case of response. The following criteria should be considered for a tailored choice: burden of nodal disease, T category, foreseen acute and late toxicities of the two different regimens, patient\u2019s functionality, and patient\u2019s preference.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 95.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 5
+  },
+  {
+    "statement_id": "S27",
+    "kind": "statement",
+    "number_text": "27",
+    "number_start": 27,
+    "number_end": 27,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Involvement of the inner cortex of thyroid cartilage is not a contraindication to chemoradiation in cT3 glottic cancers.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "exception",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S28",
+    "kind": "statement",
+    "number_text": "28",
+    "number_start": 28,
+    "number_end": 28,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "For cT3 cancers, concomitant chemoradiation yields the highest laryngeal preservation rate among non-surgical strategies.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 92.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S29R",
+    "kind": "statement",
+    "number_text": "29",
+    "number_start": 29,
+    "number_end": 29,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Concomitant chemoradiation for cT3 laryngeal cancer has been associated with increased non-cancer-related mortality in the long term when compared with other therapeutic strategies such as total laryngectomy and induction chemotherapy-based treatment.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 81.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "concurrent_crt",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S30",
+    "kind": "statement",
+    "number_text": "30",
+    "number_start": 30,
+    "number_end": 30,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Induction chemotherapy could be used to select patients for organ preservation protocols in cT3 laryngeal and hypopharyngeal cancer.",
+    "level_of_evidence": "I",
+    "consensus_pct": 95.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ict_rt",
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S31R",
+    "kind": "statement",
+    "number_text": "31",
+    "number_start": 31,
+    "number_end": 31,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "In the case of complete response and normal vocal cord mobilisation after induction chemotherapy in laryngeal or hypopharyngeal cancer, the subsequent treatment should be radiotherapy alone (ie, not concomitant chemoradiotherapy).",
+    "level_of_evidence": "III",
+    "consensus_pct": 95.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "ict_rt",
+      "rt_alone"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S32",
+    "kind": "statement",
+    "number_text": "32",
+    "number_start": 32,
+    "number_end": 32,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Induction chemotherapy before organ preservation surgery (eg, open partial horizontal laryngectomy) is not recommended outside of a clinical trial.",
+    "level_of_evidence": "V",
+    "consensus_pct": 88.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "surgical_lp",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S33",
+    "kind": "statement",
+    "number_text": "33",
+    "number_start": 33,
+    "number_end": 33,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "The addition of cetuximab to the docetaxel, cisplatin, and fluorouracil induction regimen is not recommended.",
+    "level_of_evidence": "II",
+    "consensus_pct": 92.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "cetuximab_concurrent"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S34R",
+    "kind": "statement",
+    "number_text": "34",
+    "number_start": 34,
+    "number_end": 34,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "For locally advanced laryngeal or hypopharyngeal carcinoma (stage IV) treated with concomitant chemoradiotherapy or induction chemotherapy followed up by radiotherapy, neck dissection should be performed in cases where residual disease is identified on evaluation with 18F-FDG-PET.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 97.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S35R",
+    "kind": "statement",
+    "number_text": "35",
+    "number_start": 35,
+    "number_end": 35,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "In patients with pT3N0 laryngeal cancer who have undergone open partial horizontal laryngectomy with negative margins and did not show risk factors such as perineural invasion and lymphovascular invasion, avoidance of adjuvant radiation therapy should be considered.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 86.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S36R",
+    "kind": "statement",
+    "number_text": "36",
+    "number_start": 36,
+    "number_end": 36,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "Adjuvant radiotherapy or chemoradiotherapy following transoral laser microsurgery for locally advanced laryngeal tumours might increase local control while mildly and slowly reducing functional outcomes. It can be considered in very selected cases: more than 1 nodal metastasis, perineural or lymphovascular invasion, and unintentionally positive or uncertain deep margins, unsuitable for redo surgery.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 93.3,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "tlm",
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 4
+  },
+  {
+    "statement_id": "S37R",
+    "kind": "statement",
+    "number_text": "37",
+    "number_start": 37,
+    "number_end": 37,
+    "section": "Radiotherapy and chemotherapy",
+    "statement_text": "When induction chemotherapy is administered, response to treatment should be defined considering the following elements: a change in symptoms, endoscopic appearance, contrast-enhanced morphological imaging (CT, MRI, or both) and, optionally, metabolic modification evaluated through 18F-FDG-PET.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.9,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 4,
+    "mentioned_treatments": [
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 5
+  },
+  {
+    "statement_id": "S38R",
+    "kind": "statement",
+    "number_text": "38",
+    "number_start": 38,
+    "number_end": 38,
+    "section": "Indications for T4a cancer",
+    "statement_text": "The treatment of choice for cT4a laryngeal cancer with significant extralaryngeal or extensive subglottic involvement is total laryngectomy followed by adjuvant treatment (radiotherapy with or without chemotherapy).",
+    "level_of_evidence": "III\u2013IV",
+    "consensus_pct": 98.6,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "total_laryngectomy"
+    ],
+    "decision_scopes": [],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S39R",
+    "kind": "statement",
+    "number_text": "39",
+    "number_start": 39,
+    "number_end": 39,
+    "section": "Indications for T4a cancer",
+    "statement_text": "In high-volume cT4a laryngeal SCC, significant extralaryngeal extension, substantial loss of laryngeal function at presentation, or both are contraindications to surgical and non-surgical organ preservation treatment. Non-surgical preservation can be considered only in patients who decline total laryngectomy provided that they are extensively informed about the inferior oncological outcome and the higher risk of toxic effects.",
+    "level_of_evidence": "III",
+    "consensus_pct": 100.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S40R",
+    "kind": "statement",
+    "number_text": "40",
+    "number_start": 40,
+    "number_end": 40,
+    "section": "Indications for T4a cancer",
+    "statement_text": "Overall, total laryngectomy with adjuvant treatment (radiotherapy with or without chemotherapy) confers longer survival, better functional outcomes, and better quality of life than non-surgical treatment in patients affected by unselected cT4a laryngeal SCC (LoE: III). However, equal outcomes are achievable through organ-preserving treatments in carefully selected patients with preserved laryngeal function and minimal anterior extra-laryngeal extension.",
+    "level_of_evidence": "III\u2013IV",
+    "consensus_pct": 93.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "total_laryngectomy"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 2
+  },
+  {
+    "statement_id": "S41R",
+    "kind": "statement",
+    "number_text": "41",
+    "number_start": 41,
+    "number_end": 41,
+    "section": "Indications for T4a cancer",
+    "statement_text": "Cartilage invasion through the outer cortex is associated with an increased risk of adverse events and poorer functional and survival outcomes in patients with laryngeal squamous cell carcinoma treated with non-surgical organ conservation protocols.",
+    "level_of_evidence": "II",
+    "consensus_pct": 100.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S42R",
+    "kind": "statement",
+    "number_text": "42",
+    "number_start": 42,
+    "number_end": 42,
+    "section": "Indications for T4a cancer",
+    "statement_text": "In patients affected by cT4a laryngeal cancer and who are unfit for chemotherapy or with substantial airway obstruction, a need for pre-treatment tracheostomy, base of tongue infiltration, cricoid cartilage infiltration, full-thickness thyroid cartilage infiltration, or clinical evidence of a dysfunctional larynx, non-surgical treatment is associated with poorer survival compared with total laryngectomy followed by adjuvant treatment.",
+    "level_of_evidence": "III",
+    "consensus_pct": 95.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "total_laryngectomy"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S43",
+    "kind": "statement",
+    "number_text": "43",
+    "number_start": 43,
+    "number_end": 43,
+    "section": "Indications for T4a cancer",
+    "statement_text": "Non-surgical treatments result in lower rates of organ preservation and overall survival for hypopharyngeal cT4a cancers compared with cT4a laryngeal cancers, assuming that other variables remain unchanged.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 90.3,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S44R",
+    "kind": "statement",
+    "number_text": "44",
+    "number_start": 44,
+    "number_end": 44,
+    "section": "Indications for T4a cancer",
+    "statement_text": "Clinical data such as nutritional status, number and severity of unhealthy habits (eg, smoking and alcohol), performance status (eg, Eastern Cooperative Oncology Group performance scale), patient\u2019s frailty, and social and family support should be taken into account when considering organ preservation treatments, particularly in patients affected by cT4a laryngeal cancer.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.9,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S45",
+    "kind": "statement",
+    "number_text": "45",
+    "number_start": 45,
+    "number_end": 45,
+    "section": "Indications for T4a cancer",
+    "statement_text": "cT4 laryngeal SCC represents an absolute contraindication to transoral laser microsurgery.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S46",
+    "kind": "statement",
+    "number_text": "46",
+    "number_start": 46,
+    "number_end": 46,
+    "section": "Indications for T4a cancer",
+    "statement_text": "In fit patients with cT4aN0 or cT4aN1 glottic SCC with minimal anterior extra-laryngeal extension and no extension posterior to the magic plane, open partial horizontal laryngectomy with neck dissection is a potential option.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 87.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S48",
+    "kind": "statement",
+    "number_text": "48",
+    "number_start": 48,
+    "number_end": 48,
+    "section": "Indications for T4a cancer",
+    "statement_text": "Adding adjuvant treatment (radiotherapy or chemoradiation) after open partial horizontal laryngectomy reduces the functional outcomes, increasing the likelihood of requiring long-term or permanent tracheostomy or gastrostomy.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 91.9,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "ophl_any",
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S49R",
+    "kind": "statement",
+    "number_text": "49",
+    "number_start": 49,
+    "number_end": 49,
+    "section": "Indications for T4a cancer",
+    "statement_text": "There are very few indications for a non-surgical organ preservation approach in cT4a laryngeal tumour. These indications are minimal extralaryngeal extension, low-burden cartilage invasion, and a functional larynx.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 93.5,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S52R",
+    "kind": "statement",
+    "number_text": "52",
+    "number_start": 52,
+    "number_end": 52,
+    "section": "Indications for T4a cancer",
+    "statement_text": "The most active concurrent chemotherapy to be used with radiation is cisplatin, up to a total dose of 300 mg/m 2. If the patient is not eligible for cisplatin (in any schedule), cetuximab (LoE: I), or carboplatin and fluorouracil (LoE: II) could be suggested as an alternative.",
+    "level_of_evidence": "I\u2013II",
+    "consensus_pct": 94.1,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 2
+  },
+  {
+    "statement_id": "S53R",
+    "kind": "statement",
+    "number_text": "53",
+    "number_start": 53,
+    "number_end": 53,
+    "section": "Indications for T4a cancer",
+    "statement_text": "In cT4a laryngeal cancer treated through radiotherapy without concurrent chemotherapy, accelerated or hyperfractionated radiotherapy might be preferred after accounting for toxicity.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 89.4,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "rt_accelerated"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S55R",
+    "kind": "statement",
+    "number_text": "55",
+    "number_start": 55,
+    "number_end": 55,
+    "section": "Indications for T4a cancer",
+    "statement_text": "Patients affected by cT4a laryngeal or hypopharyngeal cancers that respond (ie, partial response >50% or complete response) to induction chemotherapy are eligible for non-surgical organ preservation treatment.",
+    "level_of_evidence": "III",
+    "consensus_pct": 90.3,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 5,
+    "mentioned_treatments": [
+      "ict_rt",
+      "nonsurgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S47R",
+    "kind": "statement",
+    "number_text": "47",
+    "number_start": 47,
+    "number_end": 47,
+    "section": "Indications for T4a cancer",
+    "statement_text": "In patients who received margin-negative open partial horizontal laryngectomy for a pT4aN0 laryngeal cancer with T category exclusively determined by minimal anterior extralaryngeal extension and no perineural or lymphovascular invasion, avoidance of adjuvant radiotherapy with strict endoscopic and radiological follow-up can be considered.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 61.4,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S50",
+    "kind": "statement",
+    "number_text": "50",
+    "number_start": 50,
+    "number_end": 50,
+    "section": "Indications for T4a cancer",
+    "statement_text": "For a cT4a larynx cancer for which non-surgical treatment is indicated, concurrent chemoradiation should be performed over induction chemotherapy.",
+    "level_of_evidence": "V",
+    "consensus_pct": 67.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S51",
+    "kind": "statement",
+    "number_text": "51",
+    "number_start": 51,
+    "number_end": 51,
+    "section": "Indications for T4a cancer",
+    "statement_text": "For a cT4a larynx cancer for which a non-surgical treatment strategy is adopted, induction chemotherapy followed up by radiation should be performed over concurrent chemoradiation.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 46.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S54",
+    "kind": "statement",
+    "number_text": "54",
+    "number_start": 54,
+    "number_end": 54,
+    "section": "Indications for T4a cancer",
+    "statement_text": "For a cT4a larynx cancer for which non-surgical treatment is indicated, dose-escalation of radiotherapy is recommended.",
+    "level_of_evidence": "III",
+    "consensus_pct": 45.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S66",
+    "kind": "statement",
+    "number_text": "66",
+    "number_start": 66,
+    "number_end": 66,
+    "section": "Laryngeal function at baseline",
+    "statement_text": "The pretreatment assessment of patients who are being considered for larynx-preservation treatment should include voice evaluation through a validated method (eg, Voice Handicap Index-10).",
+    "level_of_evidence": "V",
+    "consensus_pct": 66.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S70",
+    "kind": "statement",
+    "number_text": "70",
+    "number_start": 70,
+    "number_end": 70,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Two or more relative contraindications to cisplatin mean an absolute contraindication for cisplatin.",
+    "level_of_evidence": "V",
+    "consensus_pct": 75.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S82",
+    "kind": "statement",
+    "number_text": "82",
+    "number_start": 82,
+    "number_end": 82,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "Post-operative radiotherapy should be performed in the same hospital where conservative laryngeal surgery (transoral laser microsurgery or open partial horizontal laryngectomy) took place, particularly for patients aged >65 years.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 61.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any",
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S95",
+    "kind": "statement",
+    "number_text": "95",
+    "number_start": 95,
+    "number_end": 95,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Early detection of a distant relapse on imaging does not lead to better overall survival in asymptomatic patients.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 64.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S97",
+    "kind": "statement",
+    "number_text": "97",
+    "number_start": 97,
+    "number_end": 97,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Scheduled referral of asymptomatic patients does not lead to better survival outcomes compared with a self-referral of symptomatic patients.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 63.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S117",
+    "kind": "statement",
+    "number_text": "117",
+    "number_start": 117,
+    "number_end": 117,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "Response to induction chemotherapy classified according to the change in tumour volume predicts laryngectomy-free survival better than bidimensional assessment.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 67.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S118",
+    "kind": "statement",
+    "number_text": "118",
+    "number_start": 118,
+    "number_end": 118,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "The choice between a conservative non-surgical approach vs total laryngectomy might be made also in a dynamic way by considering the early response after one cycle of induction chemotherapy.",
+    "level_of_evidence": "III",
+    "consensus_pct": 77.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA6",
+    "kind": "additional_statement",
+    "number_text": "6",
+    "number_start": 6,
+    "number_end": 6,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "In patients with laryngeal cancer who have a partial response after induction chemotherapy, subsequent curative treatment should entail radiotherapy alone (without concomitant chemotherapy).",
+    "level_of_evidence": "II",
+    "consensus_pct": 67.2,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "ict_rt",
+      "rt_alone"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S137",
+    "kind": "statement",
+    "number_text": "137",
+    "number_start": 137,
+    "number_end": 137,
+    "section": "Prehabilitation and rehabilitation",
+    "statement_text": "Induction chemotherapy in patients with laryngeal or hypopharyngeal cancer has the advantage of allowing them to start early prehabilitation (physical therapy, nutritional assessment and support, and psychological support). This strategy might lead to an improvement in functional capability that allows them to tolerate a curative radiation treatment.",
+    "level_of_evidence": "V",
+    "consensus_pct": 74.6,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": false,
+    "page_hint": 6,
+    "mentioned_treatments": [
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S56",
+    "kind": "statement",
+    "number_text": "56",
+    "number_start": 56,
+    "number_end": 56,
+    "section": "Indications for salvage organ preservation surgery after radiotherapy or chemoradiotherapy failure",
+    "statement_text": "In the case of organ preservation salvage surgery after radiotherapy or chemoradiotherapy failure, functional swallowing should be preserved.",
+    "level_of_evidence": "V",
+    "consensus_pct": 84.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S57",
+    "kind": "statement",
+    "number_text": "57",
+    "number_start": 57,
+    "number_end": 57,
+    "section": "Indications for salvage organ preservation surgery after radiotherapy or chemoradiotherapy failure",
+    "statement_text": "Any salvage surgical preservation strategy should aim at achieving negative margins.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S58R",
+    "kind": "statement",
+    "number_text": "58",
+    "number_start": 58,
+    "number_end": 58,
+    "section": "Indications for salvage organ preservation surgery after radiotherapy or chemoradiotherapy failure",
+    "statement_text": "Indications to salvage organ-preservation surgery should take into account the expected laryngeal function following tissue resection.",
+    "level_of_evidence": "V",
+    "consensus_pct": 93.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S59",
+    "kind": "statement",
+    "number_text": "59",
+    "number_start": 59,
+    "number_end": 59,
+    "section": "Indications for salvage organ preservation surgery after radiotherapy or chemoradiotherapy failure",
+    "statement_text": "Transoral laser microsurgery is contraindicated in rT3 laryngo-pharyngeal tumours due to lower local control and functional outcomes compared with open surgery.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 89.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S60R",
+    "kind": "statement",
+    "number_text": "60",
+    "number_start": 60,
+    "number_end": 60,
+    "section": "Indications for salvage organ preservation surgery after radiotherapy or chemoradiotherapy failure",
+    "statement_text": "In well selected patients affected by rT1\u20133 laryngeal cancer, open partial horizontal laryngectomy might be considered as salvage surgery after radiotherapy or chemoradiotherapy. Selection should include rigorous and objective swallowing assessment that excludes relevant pharyngo\u2013laryngeal dysfunction.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.3,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [
+      "ophl_any",
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S61R",
+    "kind": "statement",
+    "number_text": "61",
+    "number_start": 61,
+    "number_end": 61,
+    "section": "Indications for salvage organ preservation surgery after radiotherapy or chemoradiotherapy failure",
+    "statement_text": "In well selected patients affected by rT1\u20132 laryngeal cancer with no anterior commissure involvement extension, transoral laser microsurgery might be considered as salvage surgery after no response to radiotherapy.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.1,
+    "voting_round": "third",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [
+      "tlm"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S92R",
+    "kind": "statement",
+    "number_text": "92",
+    "number_start": 92,
+    "number_end": 92,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Swallowing should be regularly assessed in patients who received a larynx-preservation treatment. Fiberoptic endoscopic evaluation of swallowing and videofluoroscopic swallowing study are both valuable methods to assess deglutition. Instrumental tests should be rated using validated tools (eg, Modified Barium Swallowing Study Tool, DIGEST, and DIGEST for Flexible Endoscopic Evaluation of Swallowing). The use of the same validated questionnaires used at baseline to collect patient-reported outcome measures is also suggested (eg, MD Anderson Dysphagia Inventory or Sydney Swallow Questionnaire). The timing of the assessment should mirror the timing of the clinical evaluation.",
+    "level_of_evidence": "V",
+    "consensus_pct": 95.1,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S93R",
+    "kind": "statement",
+    "number_text": "93",
+    "number_start": 93,
+    "number_end": 93,
+    "section": "Post-treatment surveillance",
+    "statement_text": "A speech and language therapist, phoniatrician or ear, nose, and throat doctor with phoniatrics expertise should ideally take part in the follow-up of patients who received a larynx-preservation treatment to periodically assess the voice outcome through validated methods (eg, Voice Handicap Index-10).",
+    "level_of_evidence": "V",
+    "consensus_pct": 96.8,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S94R",
+    "kind": "statement",
+    "number_text": "94",
+    "number_start": 94,
+    "number_end": 94,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Nutritional status should be regularly assessed in patients who received a larynx-preservation treatment. Weight, BMI, and food habits are the minimal nutritional aspects that need to be considered at each clinical evaluation in the follow-up.",
+    "level_of_evidence": "III",
+    "consensus_pct": 98.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S96R2",
+    "kind": "statement",
+    "number_text": "96",
+    "number_start": 96,
+    "number_end": 96,
+    "section": "Post-treatment surveillance",
+    "statement_text": "There is currently no convincing evidence that an intensive follow-up in terms of clinical visits translates into better overall survival of patients treated with larynx-preservation strategies. However, close follow-up might allow for early detection of toxic effects, low-burden recurrent or metastatic disease, or psychosocial problems.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.5,
+    "voting_round": "third",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S98",
+    "kind": "statement",
+    "number_text": "98",
+    "number_start": 98,
+    "number_end": 98,
+    "section": "Post-treatment surveillance",
+    "statement_text": "In comparison with a self-referral of patients who are symptomatic, scheduled referral of patients who are asymptomatic offers advantages such as enhanced identification and handling of late toxicity. It also allows for the comprehensive addressing of various quality-of-life issues spanning physical, functional, psychological, and psychosocial domains.",
+    "level_of_evidence": "V",
+    "consensus_pct": 89.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S99",
+    "kind": "statement",
+    "number_text": "99",
+    "number_start": 99,
+    "number_end": 99,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Thyroid function should be monitored through measuring thyroid-stimulating hormone every 6 to 12 months in patients who received neck irradiation in the context of a larynx-preservation treatment.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S100R",
+    "kind": "statement",
+    "number_text": "100",
+    "number_start": 100,
+    "number_end": 100,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Clinical surveillance for larynx or hypopharynx cancer survivors should occur at least four times during the first year, at least three times during the second year, and at least twice from the third to the fifth year, personalising the schedule based on cancer stage and the patient\u2019s symptoms.",
+    "level_of_evidence": "V",
+    "consensus_pct": 92.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S101",
+    "kind": "statement",
+    "number_text": "101",
+    "number_start": 101,
+    "number_end": 101,
+    "section": "Post-treatment surveillance",
+    "statement_text": "A follow-up for up to 10 years is controversial, but it is generally recommended because of the potential late onset of recurrences, second tumours, therapy-related complications, depression, and anxiety.",
+    "level_of_evidence": "V",
+    "consensus_pct": 86.6,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S102",
+    "kind": "statement",
+    "number_text": "102",
+    "number_start": 102,
+    "number_end": 102,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Neck imaging reporting and data systems should be adopted to guide imaging interpretation, timing, and selection of the appropriate modality during surveillance of patients who received a larynx-preservation treatment.",
+    "level_of_evidence": "II",
+    "consensus_pct": 82.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S103",
+    "kind": "statement",
+    "number_text": "103",
+    "number_start": 103,
+    "number_end": 103,
+    "section": "Post-treatment surveillance",
+    "statement_text": "All health-care providers should proactively encourage their patients to stop using tobacco products and advise against alcohol consumption at the time of referral and all throughout follow-up.",
+    "level_of_evidence": "V",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S104",
+    "kind": "statement",
+    "number_text": "104",
+    "number_start": 104,
+    "number_end": 104,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Low-dose non-contrast-enhanced CT scan of the thorax should be incorporated in the long-term follow-up (ie, beyond five years) of patients with a history of 20 pack-years of smoking who received a larynx-preservation treatment, to reduce lung cancer-specific mortality.",
+    "level_of_evidence": "I",
+    "consensus_pct": 91.3,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S105",
+    "kind": "statement",
+    "number_text": "105",
+    "number_start": 105,
+    "number_end": 105,
+    "section": "Post-treatment surveillance",
+    "statement_text": "In view of the peculiar oncological and functional implications of larynx-preservation treatment, a scheduled surveillance should be preferred over a symptom-based referral.",
+    "level_of_evidence": "I",
+    "consensus_pct": 95.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S106R",
+    "kind": "statement",
+    "number_text": "106",
+    "number_start": 106,
+    "number_end": 106,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Close surveillance is recommended after larynx-preservation treatment, since the early detection of a persisting or recurrent laryngeal or hypopharyngeal cancer might prompt the indication to salvage treatment. Salvage treatment leads to higher cure rates than for other head and neck subsites.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 97.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S107R",
+    "kind": "statement",
+    "number_text": "107",
+    "number_start": 107,
+    "number_end": 107,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Swallowing exercises should be recommended before, during, and after larynx-preservation treatment.",
+    "level_of_evidence": "II",
+    "consensus_pct": 95.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S108",
+    "kind": "statement",
+    "number_text": "108",
+    "number_start": 108,
+    "number_end": 108,
+    "section": "Post-treatment surveillance",
+    "statement_text": "A holistic, multidimensional post-treatment surveillance is recommended for patients who receive larynx-preservation treatment.",
+    "level_of_evidence": "V",
+    "consensus_pct": 88.6,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S109R",
+    "kind": "statement",
+    "number_text": "109",
+    "number_start": 109,
+    "number_end": 109,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Office-based endoscopy of the upper aerodigestive tract, preferably integrated with video recording, image storage, and bioendoscopy is an indispensable clinical tool for patient follow-up.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 93.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S110R",
+    "kind": "statement",
+    "number_text": "110",
+    "number_start": 110,
+    "number_end": 110,
+    "section": "Post-treatment surveillance",
+    "statement_text": "Multimodal follow-up including neck ultrasound, MRI (with diffusion-weighted imaging), or contrast-enhanced CT is indicated when there is a moderate-to-high risk of locoregional recurrence after transoral laser microsurgery or open partial horizontal laryngectomy for glottic and supraglottic cancers.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 83.3,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 7,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S111R",
+    "kind": "statement",
+    "number_text": "111",
+    "number_start": 111,
+    "number_end": 111,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "Performance status, comorbidities, and tumour-node-metastasis stage have prognostic significance for overall survival in laryngeal and hypopharyngeal cancer treated with larynx-preservation strategies.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S112",
+    "kind": "statement",
+    "number_text": "112",
+    "number_start": 112,
+    "number_end": 112,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "Tumour stage, volume of primary and nodal disease, comorbidities, hypopharyngeal origin, and tumour metabolic activity have been associated with progression-free survival and laryngeal preservation.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.9,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S113",
+    "kind": "statement",
+    "number_text": "113",
+    "number_start": 113,
+    "number_end": 113,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "When looking at circulating biomarkers, high neutrophil and monocyte count, low lymphocyte count, and low haemoglobin concentration at baseline are associated with worse overall and disease-free survival. Similarly, low albumin concentration in serum, as an expression of poor nutritional status, has the same prognostic value as the other biomarkers just mentioned. The Host Index, which summarises all these biomarkers, could be used as an additional prognostic factor.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 83.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S114",
+    "kind": "statement",
+    "number_text": "114",
+    "number_start": 114,
+    "number_end": 114,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "The TALK score (based on T stage, serum albumin, maximum alcohol use, and Karnofsky performance status) is an easily applied tool that establishes a prognostic gradient concerning larynx non-surgical preservation outcomes.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 80.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S115",
+    "kind": "statement",
+    "number_text": "115",
+    "number_start": 115,
+    "number_end": 115,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "Having an impaired pharyngolaryngeal functional status (tumour-related dysphagia requiring feeding tube, or recurring pneumonia within 12 months requiring hospitalisation) or a tracheostomy before non-surgical larynx-preservation treatments are associated with poor functional outcomes.",
+    "level_of_evidence": "III",
+    "consensus_pct": 98.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S116",
+    "kind": "statement",
+    "number_text": "116",
+    "number_start": 116,
+    "number_end": 116,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "Response to induction chemotherapy (complete or partial response) allows for the appropriate selection of patients who might benefit from non-surgical laryngeal preservation strategy. The evaluation of response to induction chemotherapy should take into account both clinical assessment (ie, symptoms and endoscopic findings) and morphological imaging (ie, contrast-enhanced CT, MRI, or both). Metabolic imaging (ie, PET\u2013CT) might be useful to complete the evaluation, if feasible. A radiological response of at least 50% is considered a favourable prognostic factor and a predictor of response for non-surgical larynx-preservation treatment.",
+    "level_of_evidence": "II",
+    "consensus_pct": 94.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S119R",
+    "kind": "statement",
+    "number_text": "119",
+    "number_start": 119,
+    "number_end": 119,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "In the case of vocal cord fixation, larynx remobilisation is associated with functional larynx preservation after definitive radiotherapy in organ-preservation protocols that include induction chemotherapy.",
+    "level_of_evidence": "III",
+    "consensus_pct": 93.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "ict_rt",
+      "rt_alone"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S120R",
+    "kind": "statement",
+    "number_text": "120",
+    "number_start": 120,
+    "number_end": 120,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "In patients with laryngeal cancer who have a complete response after induction chemotherapy, subsequent curative treatment should entail radiotherapy alone (without concomitant chemotherapy).",
+    "level_of_evidence": "II",
+    "consensus_pct": 96.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "ict_rt",
+      "rt_alone"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S121R",
+    "kind": "statement",
+    "number_text": "121",
+    "number_start": 121,
+    "number_end": 121,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "Subsequent curative treatment with radiotherapy and concomitant platinum-based chemotherapy is indicated for patients with stable disease after induction chemotherapy who refuse total laryngectomy.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 81.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S122R",
+    "kind": "statement",
+    "number_text": "122",
+    "number_start": 122,
+    "number_end": 122,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "A margin of at least 2 mm of uninvolved tissue at pathological evaluation indicates adequate surgical ablation in patients who received conservative laryngeal surgery (transoral laser microsurgery, open partial horizontal laryngectomy, or transoral robotic surgery). Since the shrinkage of intra laryngeal and perilaryngeal soft tissues that follows excision and histological processing determines about 30% of reduction in diameter, a clinical margin of at least 3 mm should be planned preoperatively and delineated intraoperatively when conservative laryngeal surgery is indicated.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 87.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "tlm",
+      "tors",
+      "ophl_any",
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA7",
+    "kind": "additional_statement",
+    "number_text": "7",
+    "number_start": 7,
+    "number_end": 7,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "The definition of adequate pathological and clinical margins might change slightly according to the involvement of different subsites of the larynx (ie, the threshold might be lower for glottic cancer compared with supraglottic cancer).",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "SA8",
+    "kind": "additional_statement",
+    "number_text": "8",
+    "number_start": 8,
+    "number_end": 8,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "The definition of adequate pathological and clinical margins might change slightly according to the technique used to perform ablation (ie, the threshold might be lower for transoral techniques [transoral laser microsurgery and transoral robotic surgery] compared with open surgery).",
+    "level_of_evidence": "IV",
+    "consensus_pct": 87.2,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "tlm",
+      "tors"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S123R",
+    "kind": "statement",
+    "number_text": "123",
+    "number_start": 123,
+    "number_end": 123,
+    "section": "Prognostic and predictive factors",
+    "statement_text": "If the planned surgical ablation has no chances of providing an adequate clinical margin, then conservative laryngeal surgery is contraindicated.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 95.3,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S138R2",
+    "kind": "statement",
+    "number_text": "138",
+    "number_start": 138,
+    "number_end": 138,
+    "section": "Cost-effectiveness of different laryngeal preservation approaches",
+    "statement_text": "In countries with lower health-care budgets and fewer facilities, total laryngectomy might be preferred over non-surgical larynx preservation approaches due to a better cost-effectiveness profile. When local resources reduce the feasibility of organ preservation strategies, each patient should be informed about larynx preservation treatments that can be delivered elsewhere.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.9,
+    "voting_round": "third",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S139R",
+    "kind": "statement",
+    "number_text": "139",
+    "number_start": 139,
+    "number_end": 139,
+    "section": "Cost-effectiveness of different laryngeal preservation approaches",
+    "statement_text": "Financial toxicity represents a relevant patient-reported outcome in patients with cancer and specifically in those affected by laryngeal or hypopharyngeal cancer. Therefore, each patient should be informed of the effect of available treatments not only in terms of survival outcomes, but also in terms of financial toxicity.",
+    "level_of_evidence": "III",
+    "consensus_pct": 81.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S140R",
+    "kind": "statement",
+    "number_text": "140",
+    "number_start": 140,
+    "number_end": 140,
+    "section": "Cost-effectiveness of different laryngeal preservation approaches",
+    "statement_text": "Voice rehabilitation should be offered to patients who underwent total laryngectomy.",
+    "level_of_evidence": "II",
+    "consensus_pct": 98.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [
+      "total_laryngectomy"
+    ],
+    "decision_scopes": [],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S141",
+    "kind": "statement",
+    "number_text": "141",
+    "number_start": 141,
+    "number_end": 141,
+    "section": "Cost-effectiveness of different laryngeal preservation approaches",
+    "statement_text": "Tailoring the treatment for locally advanced laryngeal and hypopharyngeal carcinoma might also translate into an increase of functional results. It is imperative that any new trial in this setting studies functional outcome, and also quality-of-life parameters and the consequent effect on financial toxicity. Health-care and non-health-care resource consumption, productivity losses, and health-related quality of life need to be assessed with validated questionnaires.",
+    "level_of_evidence": "V",
+    "consensus_pct": 95.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 8,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S62",
+    "kind": "statement",
+    "number_text": "62",
+    "number_start": 62,
+    "number_end": 62,
+    "section": "Laryngeal function at baseline",
+    "statement_text": "An instrumental swallowing assessment should be performed to exclude swallowing impairment unrelated to the tumour before indicating an organ preservation treatment.",
+    "level_of_evidence": "III",
+    "consensus_pct": 92.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S63",
+    "kind": "statement",
+    "number_text": "63",
+    "number_start": 63,
+    "number_end": 63,
+    "section": "Laryngeal function at baseline",
+    "statement_text": "Fibreoptic endoscopic evaluation of swallowing and videofluoroscopic swallowing studies are both valuable methods to assess swallowing in patients suitable for laryngeal-preservation treatment.",
+    "level_of_evidence": "III",
+    "consensus_pct": 93.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S64R",
+    "kind": "statement",
+    "number_text": "64",
+    "number_start": 64,
+    "number_end": 64,
+    "section": "Laryngeal function at baseline",
+    "statement_text": "Hypopharyngeal\u2013laryngeal function assessment before organ preservation treatment should include patient-reported outcome measures using a validated questionnaire, such as the MD Anderson Dysphagia Inventory or Sydney Swallow Questionnaire, especially when the patient reports dysphagia.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.7,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S65",
+    "kind": "statement",
+    "number_text": "65",
+    "number_start": 65,
+    "number_end": 65,
+    "section": "Laryngeal function at baseline",
+    "statement_text": "Impaired pharyngolaryngeal functional status and tracheostomy before any larynx preservation protocol are associated with poor functional outcomes.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.9,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S67",
+    "kind": "statement",
+    "number_text": "67",
+    "number_start": 67,
+    "number_end": 67,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Patients unfit for chemotherapy are not suitable candidates for induction chemotherapy-based or chemoradiation-based approaches for laryngeal preservation.",
+    "level_of_evidence": "V",
+    "consensus_pct": 93.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S68R",
+    "kind": "statement",
+    "number_text": "68",
+    "number_start": 68,
+    "number_end": 68,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Absolute contraindications to high-dose cisplatin-based chemotherapy (administered as induction chemotherapy or concurrent treatment) include: any comorbidity that independently results in an ECOG performance status of 2 or more, renal failure (defined as a creatinine clearance <50 mL/min), grade \u22652 neurological disorders (diabetic neuropathy, peripheral sensory neuropathy, orthostatic hypotension, Lhermitte\u2019s sign, seizures, and focal encephalopathy), pregnancy or lactation, child-Pugh B or C liver disease, grade >2 bone marrow disorders (haemoglobin level under 8 g/dL; neutrophil count <1000 cells per \u00b5L or platelet count < 100 000 cells per \u00b5L), congestive heart failure class III or IV according to the New York Heart Association despite cardiovascular optimisation therapy, congestive heart failure NYHA class I or II with left ventricular ejection fraction equal to or under 50%, uncontrolled chronic viral HBV or HCV infection without antiviral treatment, HIV infection with a CD4 cell count <200 cells per \u00b5L, detectable viral load, and AIDS, hypersensitivity to platinum-based therapy, severe psychiatric disorders interfering with treatment compliance, and uncontrolled insulin-dependent diabetes.",
+    "level_of_evidence": "V",
+    "consensus_pct": 100.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [
+      "ict_rt",
+      "cisplatin_high_dose"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "absolute_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 15
+  },
+  {
+    "statement_id": "S69R",
+    "kind": "statement",
+    "number_text": "69",
+    "number_start": 69,
+    "number_end": 69,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Relative contraindications to high-dose cisplatin-based chemotherapy (administered as induction chemotherapy or concurrent treatment) include: reatinine clearance of 50\u201360 mL/min, grade >1 hearing or neurological disorders, grade 2 bone marrow, liver, and lung disorders, previous heart disease, diabetes, recurrent pulmonary infections, concomitant use of nephrotoxic drugs, HIV infection with CD4 cell count 200\u2013350 cells per \u00b5L, and impaired social and economic support.",
+    "level_of_evidence": "V",
+    "consensus_pct": 91.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [
+      "ict_rt",
+      "cisplatin_high_dose"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 11
+  },
+  {
+    "statement_id": "S71R",
+    "kind": "statement",
+    "number_text": "71",
+    "number_start": 71,
+    "number_end": 71,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "To evaluate both absolute and relative contraindications to administering cisplatin, every patient considered for cisplatin treatment should undergo a blood test including a complete blood count, renal and liver function, audiometry, and nutritional status evaluation. Other tests that might be useful to evaluate patients are serology for hepatitis B and C, HIV, and, in patients with a previous history of cardiac or pulmonary comorbidities, left ventricular ejection fraction (echocardiogram or multigated acquisition scan) and lung function (spirometry).",
+    "level_of_evidence": "V",
+    "consensus_pct": 100.0,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S72R",
+    "kind": "statement",
+    "number_text": "72",
+    "number_start": 72,
+    "number_end": 72,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Carboplatin-based treatment or cetuximab can be considered as concurrent treatment in patients unfit for any schedule of cisplatin-based chemotherapy who refuse total laryngectomy.",
+    "level_of_evidence": "II",
+    "consensus_pct": 90.4,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [
+      "cetuximab_concurrent",
+      "carboplatin_5fu"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "fallback_option",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S73R",
+    "kind": "statement",
+    "number_text": "73",
+    "number_start": 73,
+    "number_end": 73,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "For patients unfit for any systemic treatment who decline total laryngectomy , hyperfractionated or accelerated radiotherapy alone could be offered. Due to the expected lower oncological outcome compared with the two validated chemoradiation approaches, careful follow-up is suggested to avoid delay in salvage surgery.",
+    "level_of_evidence": "II",
+    "consensus_pct": 98.1,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [
+      "concurrent_crt",
+      "rt_accelerated",
+      "rt_alone"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "fallback_option",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S74R",
+    "kind": "statement",
+    "number_text": "74",
+    "number_start": 74,
+    "number_end": 74,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Gene repair disorders (ie, xeroderma pigmentosum, ataxia-telangiectasia, and Fanconi anaemia) preclude a non-surgical larynx-preservation approach; previous radiotherapy to the neck is a relative contraindication depending on previous doses, volumes, and time elapsed from treatment.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 94.5,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S75R",
+    "kind": "statement",
+    "number_text": "75",
+    "number_start": 75,
+    "number_end": 75,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "Neurodegenerative and neuromuscular diseases potentially affecting swallowing and respiratory functions might be a contraindication to larynx preservation treatments (surgical and non-surgical).",
+    "level_of_evidence": "V",
+    "consensus_pct": 95.2,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S76",
+    "kind": "statement",
+    "number_text": "76",
+    "number_start": 76,
+    "number_end": 76,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "It is important to define pre-existing comorbidities (and their clinical effect) when making treatment decisions in the organ preservation setting. Since performance status is not reliable as a prognostic measure substitute for assessing comorbidities, different tools have been developed to measure and quantify patient comorbidities. Some of the more commonly used assessment tools are the Adult Comorbidity Evaluation-27 and the Charlson Comorbidity Index.",
+    "level_of_evidence": "III",
+    "consensus_pct": 95.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S77R",
+    "kind": "statement",
+    "number_text": "77",
+    "number_start": 77,
+    "number_end": 77,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "In patients with moderate comorbidities and an ECOG performance status of 2, it is crucial to distinguish whether the performace status is the result of tumour progression or the patient\u2019s comorbidities. This differentiation is essential to determine the appropriate indication for cisplatin in laryngeal preservation. Specifically, if the performance scale of 2 is influenced by the disease itself, cisplatin could be indicated if there are no absolute or relative contraindications to cisplatin-based chemotherapy; and if the performance scale of 2 is influenced by comorbidities or toxicity due to previous treatments, cisplatin is contraindicated.",
+    "level_of_evidence": "V",
+    "consensus_pct": 82.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S78R",
+    "kind": "statement",
+    "number_text": "78",
+    "number_start": 78,
+    "number_end": 78,
+    "section": "Which comorbidities are contraindications and to what extent?",
+    "statement_text": "The cisplatin administration schedule (weekly vs every 3 weeks) does not influence the contraindications to cisplatin itself, except for patients with mild cardiac dysfunction who might not tolerate high-volume fluid administration that is required for high-dose cisplatin and for patients with mild baseline renal impairment (creatinine clearance 50\u201360 mL/min) or with hearing impairment (grade >1).",
+    "level_of_evidence": "V",
+    "consensus_pct": 84.9,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 10,
+    "mentioned_treatments": [
+      "cisplatin_high_dose"
+    ],
+    "decision_scopes": [],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S132R",
+    "kind": "statement",
+    "number_text": "132",
+    "number_start": 132,
+    "number_end": 132,
+    "section": "Prehabilitation and rehabilitation",
+    "statement_text": "A speech therapist (ie, a medical or non-medical expert in voice, speech, and deglutition) should be involved in the pretreatment assessment of patients considered for larynx-preservation treatments.",
+    "level_of_evidence": "V",
+    "consensus_pct": 94.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 11,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S133R",
+    "kind": "statement",
+    "number_text": "133",
+    "number_start": 133,
+    "number_end": 133,
+    "section": "Prehabilitation and rehabilitation",
+    "statement_text": "Swallowing exercises that are indicated before, during, and after treatment in patients who receive conservative laryngeal surgery (transoral laser microsurgery or open partial horizontal laryngectomy) or non-surgical larynx-preservation treatment should be overseen by a speech therapist until the patient is deemed independent (ie, a medical or non-medical expert in voice, speech, and deglutition).",
+    "level_of_evidence": "II",
+    "consensus_pct": 96.8,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 11,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any",
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S134R",
+    "kind": "statement",
+    "number_text": "134",
+    "number_start": 134,
+    "number_end": 134,
+    "section": "Prehabilitation and rehabilitation",
+    "statement_text": "Adherence to swallowing exercises in patients who underwent laryngeal preservation therapeutic strategies should be regularly checked.",
+    "level_of_evidence": "II",
+    "consensus_pct": 87.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 11,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S135R",
+    "kind": "statement",
+    "number_text": "135",
+    "number_start": 135,
+    "number_end": 135,
+    "section": "Prehabilitation and rehabilitation",
+    "statement_text": "Prophylactic swallowing exercises in patients undergoing radiotherapy or chemoradiotherapy for laryngeal or hypopharyngeal cancer should aim at strengthening the tongue muscles and those muscles that determine laryngeal elevation.",
+    "level_of_evidence": "III",
+    "consensus_pct": 93.3,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 11,
+    "mentioned_treatments": [
+      "concurrent_crt"
+    ],
+    "decision_scopes": [
+      "nonsurgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S136R",
+    "kind": "statement",
+    "number_text": "136",
+    "number_start": 136,
+    "number_end": 136,
+    "section": "Prehabilitation and rehabilitation",
+    "statement_text": "Rehabilitation (ie, exercises aimed at rehabilitating voice, speech, and swallowing) should be started as soon as possible after surgery in patients who undergo conservative laryngeal surgery (ie, transoral laser microsurgery and open partial horizontal laryngectomy).",
+    "level_of_evidence": "V",
+    "consensus_pct": 98.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 11,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any",
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S79",
+    "kind": "statement",
+    "number_text": "79",
+    "number_start": 79,
+    "number_end": 79,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "As there is often a remarkable difference between biological and chronological age, it is essential to evaluate the global health status of older patients (\u226570 years). This evaluation is particularly important in patients affected by laryngeal and hypopharyngeal cancers, due to the relevant consequences of treatment on the vital functions linked to these organs.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S80",
+    "kind": "statement",
+    "number_text": "80",
+    "number_start": 80,
+    "number_end": 80,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "Age itself is not a contraindication to surgical and non-surgical laryngeal preservation approaches. However, the common comorbidities and frailty associated with age might have a great effect on both treatment choice and outcome. Fit older patients (\u226570 years) should be offered the same larynx-preservation strategies as their younger counterparts.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 94.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "exception",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S81",
+    "kind": "statement",
+    "number_text": "81",
+    "number_start": 81,
+    "number_end": 81,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "Older patients (\u226570 years) for whom a surgical or non-surgical larynx preservation treatment is hypothesised should be screened for frailty and comorbidities using validated tools.",
+    "level_of_evidence": "III",
+    "consensus_pct": 97.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp",
+      "surgical_lp"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S83",
+    "kind": "statement",
+    "number_text": "83",
+    "number_start": 83,
+    "number_end": 83,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "The standard reference to classify patients according to their frailty profile is the Comprehensive Geriatric Assessment. The G8 screening tool is useful to determine the need for a Comprehensive Geriatric Assessment. The Charlson Comorbidity Index and Adult Comorbidity Evaluation 27 are validated tools for the assessment of comorbidities in the head and neck cancer population.",
+    "level_of_evidence": "III",
+    "consensus_pct": 96.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S84",
+    "kind": "statement",
+    "number_text": "84",
+    "number_start": 84,
+    "number_end": 84,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "Vulnerable and frail patients are at higher risk of treatment complications and face a higher risk of non-cancer-related death, due to comorbidities and treatment-induced toxic effects. Therefore, organ preservation strategies in this group of patients should be carefully weighed against the risks.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 98.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [],
+    "decision_scopes": [
+      "larynx_preservation_any"
+    ],
+    "statement_class": "selection_factor",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S85",
+    "kind": "statement",
+    "number_text": "85",
+    "number_start": 85,
+    "number_end": 85,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "In older patients (\u226570 years) diagnosed with cT2N0\u20131 glottic or supraglottic cancer, both radiotherapy and transoral laser microsurgery (with neck dissection, if required) are viable treatment options. However, open partial horizontal laryngectomy should be considered only in older patients with favourable frailty and comorbidity profile.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 96.4,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [
+      "tlm",
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S86R2",
+    "kind": "statement",
+    "number_text": "86",
+    "number_start": 86,
+    "number_end": 86,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "In intermediate laryngeal cancers (cT2N0 and selected cT3N0 with neither of vocal cord fixation, arytenoid fixation, involvement of the posterior portion of the paraglottic space, and involvement of the cartilaginous framework), transoral laser microsurgery (for both glottic and supraglottic tumours) and transoral robotic surgery (for supraglottic tumours) are low-morbidity options in older patients, with favourable oncological and functional outcomes and short hospitalisation.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 81.8,
+    "voting_round": "third",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [
+      "tlm",
+      "tors"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S87R",
+    "kind": "statement",
+    "number_text": "87",
+    "number_start": 87,
+    "number_end": 87,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "In patients \u226570 years deemed vulnerable by the Comprehensive Geriatric Assessment, open partial horizontal laryngectomy should be considered only if swallowing function is not impaired at preoperative assessment and both arytenoids can be preserved.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 84.9,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "contextual_selection",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S88",
+    "kind": "statement",
+    "number_text": "88",
+    "number_start": 88,
+    "number_end": 88,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "In patients aged \u226570 years, frailty (defined by the Comprehensive Geriatric Assessment) is a relative contraindication to open partial horizontal laryngectomy, even in the absence of severe neurological or cardio-respiratory comorbidities.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 92.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S89",
+    "kind": "statement",
+    "number_text": "89",
+    "number_start": 89,
+    "number_end": 89,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "For older patients (aged \u226570 years) with advanced-stage laryngeal cancer (cT3, cT4a, or cN+) whose frailty or comorbidity profile precludes the use of systemic therapy and indication to open partial horizontal laryngectomy, total laryngectomy is the preferred option.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 93.7,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "ophl_any"
+    ],
+    "decision_scopes": [
+      "surgical_lp",
+      "larynx_preservation_any"
+    ],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S90",
+    "kind": "statement",
+    "number_text": "90",
+    "number_start": 90,
+    "number_end": 90,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "As there are no clear indications concerning reduced toxic effects in patients treated with weekly concomitant 40 mg/m 2 of cisplatin in respect to 100 mg/m\u00b2 every 3 weeks, there is no best treatment schedule option for older fit patients.",
+    "level_of_evidence": "I",
+    "consensus_pct": 87.5,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S91R",
+    "kind": "statement",
+    "number_text": "91",
+    "number_start": 91,
+    "number_end": 91,
+    "section": "Organ preservation in older patients: selection criteria",
+    "statement_text": "Older patients are more susceptible to developing more severe cisplatin-related ototoxicity. Therefore, hearing loss or tinnitus of grade >1 (CTCAE) is a relative contraindication for cisplatin administration in larynx-preservation protocols in older patients, and this should be discussed with the patient.",
+    "level_of_evidence": "V",
+    "consensus_pct": 94.2,
+    "voting_round": "second",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 12,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "relative_contraindication",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S124",
+    "kind": "statement",
+    "number_text": "124",
+    "number_start": 124,
+    "number_end": 124,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "Ascertaining the attitude of patients that have been newly diagnosed with locally advanced laryngeal cancer towards their treatment journey should be a central factor in the communication with physicians.",
+    "level_of_evidence": "V",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S125R",
+    "kind": "statement",
+    "number_text": "125",
+    "number_start": 125,
+    "number_end": 125,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "The preferences of patients affected by laryngeal cancer should be thoroughly analysed by the treating multidisciplinary team, since a substantial proportion of patients might be willing to prefer quality over quantity of life (preserving normal or nearly normal speech at the cost of lower chances of survival).",
+    "level_of_evidence": "V",
+    "consensus_pct": 94.2,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S126R",
+    "kind": "statement",
+    "number_text": "126",
+    "number_start": 126,
+    "number_end": 126,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "The ability to swallow and keep a normal voice are the most important functional priorities for patients with laryngeal cancer. Priorities and attitudes influence how patients reflect on their choices regarding the management of laryngeal cancer. These priorities should be closely investigated and taken into consideration for every patient before recommending treatment options.",
+    "level_of_evidence": "V",
+    "consensus_pct": 97.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S127",
+    "kind": "statement",
+    "number_text": "127",
+    "number_start": 127,
+    "number_end": 127,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "There is a substantial absence of high-quality research in the field of patient preferences. Shared decision making in the care of patients with locally advanced laryngeal cancer should be implemented, taking into account the massive psychological implications that treatment strategies might affect the patient\u2019s wellbeing.",
+    "level_of_evidence": "V",
+    "consensus_pct": 97.1,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S128",
+    "kind": "statement",
+    "number_text": "128",
+    "number_start": 128,
+    "number_end": 128,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "Tools to assess the priorities of patients with locally advanced laryngeal cancer should be specifically developed. Areas of research should entail developing questionnaires with a specific focus on larynx-preservation through standardised methodology, validating and divulging specific patient decision aids to empower patients and their caregivers in the clinical decision making, and addressing treatment-decision-making dynamics via specific qualitative studies, as are already available for other head and neck subsites.",
+    "level_of_evidence": "V",
+    "consensus_pct": 97.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "recommendation",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S129",
+    "kind": "statement",
+    "number_text": "129",
+    "number_start": 129,
+    "number_end": 129,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "In cases of advanced disease (such as cT4a tumours with high-volume extralaryngeal extension) or no response to induction chemotherapy, the treating multidisciplinary team should be clear that larynx-preservation strategies have a reduced functional and survival outcome compared with total laryngectomy. Patients should undergo extensive counselling to be able to fully grasp the potential detrimental consequences of tentatively favouring quality over quantity of life when making a decision concerning treatment.",
+    "level_of_evidence": "III",
+    "consensus_pct": 100.0,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [
+      "total_laryngectomy",
+      "ict_rt"
+    ],
+    "decision_scopes": [
+      "larynx_preservation_any",
+      "nonsurgical_lp"
+    ],
+    "statement_class": "response_adapted",
+    "graph_candidate": true,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S130",
+    "kind": "statement",
+    "number_text": "130",
+    "number_start": 130,
+    "number_end": 130,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "Patients with laryngeal cancer might have a high decisional conflict (uncertainty in the decision making process) that could expose them to more decisional regret and nervousness. At the same time, patients with laryngeal cancer have a high perception of shared decision making. Physicians should be aware of this, so as to propose the different treatment options in the most appropriate way.",
+    "level_of_evidence": "IV",
+    "consensus_pct": 93.8,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  },
+  {
+    "statement_id": "S131",
+    "kind": "statement",
+    "number_text": "131",
+    "number_start": 131,
+    "number_end": 131,
+    "section": "Listening to the patient\u2019s preferences: tools and implementation",
+    "statement_text": "Patient-related factors such as availability of caregivers, patient\u2019s quality of life, needs, and preferences should be simultaneously considered.",
+    "level_of_evidence": "V",
+    "consensus_pct": 98.6,
+    "voting_round": "first",
+    "meets_80pct_table_threshold": true,
+    "page_hint": 13,
+    "mentioned_treatments": [],
+    "decision_scopes": [],
+    "statement_class": "non_decisional",
+    "graph_candidate": false,
+    "atomic_condition_count": 1
+  }
+]

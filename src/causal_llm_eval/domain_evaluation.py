@@ -8,7 +8,6 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 
 from .benchmark_audit import build_traceability_rows, load_battery
@@ -21,6 +20,7 @@ MODEL_ORDER = [
     "kimi-k2.5",
     "qwen3-next-80b-instruct",
     "mistral-small-24b",
+    "gemma-4-31b-it",
     "llama-3.1-8b",
 ]
 
@@ -29,6 +29,7 @@ MODEL_LABELS = {
     "kimi-k2.5": "Kimi K2.5",
     "qwen3-next-80b-instruct": "Qwen3-Next-80B-A3B-Instruct",
     "mistral-small-24b": "Mistral-Small-24B",
+    "gemma-4-31b-it": "Gemma 4 31B",
     "llama-3.1-8b": "Llama 3.1-8B",
 }
 
@@ -37,6 +38,7 @@ MODEL_COLORS = {
     "kimi-k2.5": "#0B7285",
     "qwen3-next-80b-instruct": "#3A7D44",
     "mistral-small-24b": "#7C5CFF",
+    "gemma-4-31b-it": "#C27C0E",
     "llama-3.1-8b": "#B42318",
 }
 
@@ -45,12 +47,22 @@ FAILURE_REGIMES = {
     "kimi-k2.5": "broad but noisy",
     "qwen3-next-80b-instruct": "partial and brittle",
     "mistral-small-24b": "partial and brittle",
+    "gemma-4-31b-it": "partial and brittle",
     "llama-3.1-8b": "fragmentary",
 }
 
 SOFT_SWEEP_VALUES = [0.15, 0.25, 0.35]
 HARD_RATE_VALUES = [0.40, 0.50, 0.60]
 HARD_JSD_VALUES = [0.05, 0.10, 0.15]
+
+_FALLBACK_COLORS = [
+    "#1D4ED8",
+    "#047857",
+    "#7C3AED",
+    "#B45309",
+    "#BE123C",
+    "#0F766E",
+]
 
 TIER3_TREATMENTS = {"total_laryngectomy"}
 TIER2_TREATMENTS = {
@@ -73,6 +85,27 @@ TIER2_TREATMENTS = {
 def load_json(path: str | Path) -> dict:
     with open(path) as f:
         return json.load(f)
+
+
+def ordered_models(models) -> list[str]:
+    model_set = set(models.keys() if hasattr(models, "keys") else models)
+    preferred = [model for model in MODEL_ORDER if model in model_set]
+    extras = sorted(model_set - set(MODEL_ORDER))
+    return preferred + extras
+
+
+def model_label(model: str) -> str:
+    return MODEL_LABELS.get(model, model)
+
+
+def model_color(model: str) -> str:
+    if model in MODEL_COLORS:
+        return MODEL_COLORS[model]
+    return _FALLBACK_COLORS[sum(ord(ch) for ch in model) % len(_FALLBACK_COLORS)]
+
+
+def failure_regime(model: str) -> str:
+    return FAILURE_REGIMES.get(model, "unclassified")
 
 
 def pct(value: float | None) -> str:
@@ -157,13 +190,13 @@ def compute_threshold_sensitivity(kg2_enhanced: dict, edge_tests: list[dict], sp
     rows = []
 
     def append_rows(mode: str, comparisons: dict, *, soft_detection_rate=None, hard_detection_rate=None, hard_mean_jsd_threshold=None):
-        for model in MODEL_ORDER:
+        for model in ordered_models(comparisons):
             comp = comparisons[model]
             rows.append(
                 {
                     "mode": mode,
                     "model": model,
-                    "model_label": MODEL_LABELS[model],
+                    "model_label": model_label(model),
                     "soft_detection_rate": soft_detection_rate,
                     "hard_detection_rate": hard_detection_rate,
                     "hard_mean_jsd_threshold": hard_mean_jsd_threshold,
@@ -211,59 +244,79 @@ def write_threshold_report(rows: list[dict], outdir: Path) -> None:
     by_mode = defaultdict(list)
     for row in rows:
         by_mode[row["mode"]].append(row)
+    models = ordered_models({row["model"] for row in rows})
 
     soft_rows = by_mode["soft_sweep"]
     hard_rows = by_mode["hard_sweep"]
-    soft_leaders = {
-        row["soft_detection_rate"]: max(
-            (r for r in soft_rows if r["soft_detection_rate"] == row["soft_detection_rate"]),
-            key=lambda item: item["soft_recall"],
-        )["model"]
-        for row in soft_rows
-    }
+    soft_leaders = {}
+    for threshold in sorted({row["soft_detection_rate"] for row in soft_rows}):
+        configs = [r for r in soft_rows if r["soft_detection_rate"] == threshold]
+        soft_leaders[threshold] = max(configs, key=lambda item: item["soft_recall"])["model"]
     hard_leaders = {}
     for row in hard_rows:
         key = (row["hard_detection_rate"], row["hard_mean_jsd_threshold"])
         configs = [r for r in hard_rows if (r["hard_detection_rate"], r["hard_mean_jsd_threshold"]) == key]
         hard_leaders[key] = max(configs, key=lambda item: item["hard_recall"])["model"]
+    hard_win_counts = defaultdict(int)
+    for leader in hard_leaders.values():
+        hard_win_counts[leader] += 1
+    soft_dir_means = {
+        model: float(np.mean([r["soft_direction_accuracy"] for r in soft_rows if r["model"] == model]))
+        for model in models
+    }
+    strongest_soft_dir = max(soft_dir_means.items(), key=lambda item: item[1])[0]
+    weakest_locked_default = min(
+        [r for r in rows if r["mode"] == "locked_default"],
+        key=lambda item: item["soft_recall"],
+    )["model"]
 
     lines = []
     lines.append("# Threshold Sensitivity Analysis\n")
     lines.append("This supplementary analysis evaluates how the main detection-dependent metrics vary across threshold choices.")
     lines.append("The locked default outputs are preserved; the sweeps are used only as robustness checks.\n")
     lines.append("## Qualitative Summary")
-    lines.append(f"- Across all soft-threshold settings, the highest soft recall remained with `{MODEL_LABELS[soft_leaders[0.15]]}`.")
-    kimi_hard_wins = sum(1 for leader in hard_leaders.values() if leader == "kimi-k2.5")
-    deepseek_soft_dir = [r["soft_direction_accuracy"] for r in soft_rows if r["model"] == "deepseek-r1"]
+    if len(set(soft_leaders.values())) == 1:
+        leader = next(iter(soft_leaders.values()))
+        lines.append(f"- Across all soft-threshold settings, the highest soft recall remained with `{model_label(leader)}`.")
+    else:
+        leader_map = ", ".join(
+            f"`{threshold:.2f}`: `{model_label(model)}`" for threshold, model in sorted(soft_leaders.items())
+        )
+        lines.append(f"- The soft-recall leader varied modestly across thresholds: {leader_map}.")
+    strongest_soft_dir_values = [r["soft_direction_accuracy"] for r in soft_rows if r["model"] == strongest_soft_dir]
     lines.append(
-        f"- DeepSeek-R1 retained the strongest soft-edge direction accuracy across the soft-threshold sweep "
-        f"({pct(min(deepseek_soft_dir))} to {pct(max(deepseek_soft_dir))})."
+        f"- `{model_label(strongest_soft_dir)}` retained the strongest soft-edge direction accuracy across the soft-threshold sweep "
+        f"({pct(min(strongest_soft_dir_values))} to {pct(max(strongest_soft_dir_values))})."
+    )
+    most_common_hard_leader = max(hard_win_counts.items(), key=lambda item: item[1])[0]
+    lines.append(
+        f"- `{model_label(most_common_hard_leader)}` had the highest hard recall in `{hard_win_counts[most_common_hard_leader]}` of "
+        f"`{len(hard_leaders)}` hard-threshold configurations."
     )
     lines.append(
-        f"- Kimi K2.5 had the highest hard recall in `{kimi_hard_wins}` of `{len(hard_leaders)}` hard-threshold configurations, "
-        "whereas DeepSeek-R1 preserved the strongest fidelity-balanced profile because its higher directional control is not driven by a sparse graph."
+        f"- `{model_label(weakest_locked_default)}` remained the weakest locked-default coverage model; "
+        "discriminability is unchanged because SNR and detection power are threshold-independent.\n"
     )
-    lines.append("- Llama 3.1-8B remained the weakest coverage model across all sweeps; discriminability is unchanged because SNR and detection power are threshold-independent.\n")
 
     lines.append("## Soft-Threshold Sweep")
     lines.append("| Model | Threshold | Soft recall | Soft precision | Soft FDR | Soft-edge direction accuracy |")
     lines.append("|---|---:|---:|---:|---:|---:|")
-    for model in MODEL_ORDER:
+    for model in models:
         for row in sorted((r for r in soft_rows if r["model"] == model), key=lambda item: item["soft_detection_rate"]):
             lines.append(
-                f"| {MODEL_LABELS[model]} | {row['soft_detection_rate']:.2f} | {pct(row['soft_recall'])} | "
+                f"| {model_label(model)} | {row['soft_detection_rate']:.2f} | {pct(row['soft_recall'])} | "
                 f"{pct(row['soft_precision'])} | {pct(row['soft_fdr'])} | {pct(row['soft_direction_accuracy'])} |"
             )
 
     lines.append("\n## Hard-Threshold Sweep")
     lines.append("| Model | Rate threshold | JSD threshold | Hard recall | Hard precision | Hard FDR | Hard-edge direction accuracy |")
     lines.append("|---|---:|---:|---:|---:|---:|---:|")
-    for model in MODEL_ORDER:
+    for model in models:
         model_rows = [r for r in hard_rows if r["model"] == model]
         model_rows.sort(key=lambda item: (item["hard_detection_rate"], item["hard_mean_jsd_threshold"]))
         for row in model_rows:
             lines.append(
-                f"| {MODEL_LABELS[model]} | {row['hard_detection_rate']:.2f} | {row['hard_mean_jsd_threshold']:.2f} | "
+                f"| {model_label(model)} | {row['hard_detection_rate']:.2f} | {row['hard_mean_jsd_threshold']:.2f} | "
                 f"{pct(row['hard_recall'])} | {pct(row['hard_precision'])} | {pct(row['hard_fdr'])} | "
                 f"{pct(row['hard_direction_accuracy'])} |"
             )
@@ -272,15 +325,18 @@ def write_threshold_report(rows: list[dict], outdir: Path) -> None:
 
 
 def plot_threshold_sensitivity(rows: list[dict], outdir: Path) -> None:
+    import matplotlib.pyplot as plt
+
     soft_rows = [r for r in rows if r["mode"] == "soft_sweep"]
     hard_rows = [r for r in rows if r["mode"] == "hard_sweep"]
     hard_labels = [f"{rate:.2f}/{jsd:.2f}" for rate in HARD_RATE_VALUES for jsd in HARD_JSD_VALUES]
+    models = ordered_models({row["model"] for row in rows})
 
     fig, axes = plt.subplots(2, 2, figsize=(14.5, 9))
     fig.subplots_adjust(left=0.08, right=0.98, top=0.9, bottom=0.12, wspace=0.24, hspace=0.32)
 
-    for model in MODEL_ORDER:
-        color = MODEL_COLORS[model]
+    for model in models:
+        color = model_color(model)
         model_soft = sorted((r for r in soft_rows if r["model"] == model), key=lambda item: item["soft_detection_rate"])
         axes[0, 0].plot(
             [r["soft_detection_rate"] for r in model_soft],
@@ -288,7 +344,7 @@ def plot_threshold_sensitivity(rows: list[dict], outdir: Path) -> None:
             marker="o",
             linewidth=2,
             color=color,
-            label=MODEL_LABELS[model],
+            label=model_label(model),
         )
         axes[0, 1].plot(
             [r["soft_detection_rate"] for r in model_soft],
@@ -326,8 +382,8 @@ def plot_threshold_sensitivity(rows: list[dict], outdir: Path) -> None:
     axes[0, 0].legend(loc="lower left", frameon=False, fontsize=9)
     fig.suptitle("Supplementary Figure S1. Threshold sensitivity of detection-dependent metrics", fontsize=14.5, fontweight="bold")
     outdir.mkdir(parents=True, exist_ok=True)
-    fig.savefig(outdir / "figureS1_threshold_sensitivity.svg", bbox_inches="tight")
-    fig.savefig(outdir / "figureS1_threshold_sensitivity.png", dpi=300, bbox_inches="tight")
+    fig.savefig(outdir / "supplementary_figureS1_threshold_sensitivity.svg", bbox_inches="tight")
+    fig.savefig(outdir / "supplementary_figureS1_threshold_sensitivity.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -389,7 +445,7 @@ def compute_bootstrap_cis(
             causal_jsd_by_model[row["model"]].append(float(jsd))
 
     summary = {}
-    for model in MODEL_ORDER:
+    for model in ordered_models(kg2_enhanced):
         edges = edge_records[model]
         phantoms = phantom_records.get(model, [])
         sid_rows = sid_details[model]["details"]
@@ -506,10 +562,10 @@ def write_bootstrap_report(summary: dict, outdir: Path) -> None:
     lines.append("# Bootstrap Confidence Intervals for Primary Metrics\n")
     lines.append("| Model | Soft recall | Hard recall | Soft precision | Soft FDR | Soft dir. acc. | Hard dir. acc. | SID rate | SNR | Detection power |")
     lines.append("|---|---|---|---|---|---|---|---|---|---|")
-    for model in MODEL_ORDER:
+    for model in ordered_models(summary):
         row = summary[model]
         lines.append(
-            f"| {MODEL_LABELS[model]} | {fmt_ci(row['soft_recall'])} | {fmt_ci(row['hard_recall'])} | "
+            f"| {model_label(model)} | {fmt_ci(row['soft_recall'])} | {fmt_ci(row['hard_recall'])} | "
             f"{fmt_ci(row['soft_precision'])} | {fmt_ci(row['soft_fdr'])} | "
             f"{fmt_ci(row['soft_direction_accuracy'])} | {fmt_ci(row['hard_direction_accuracy'])} | "
             f"{fmt_ci(row['sid_rate'])} | {fmt_num_ci(row['snr'])} | {fmt_ci(row['detection_power'])} |"
@@ -563,10 +619,10 @@ def write_risk_report(summary: dict, outdir: Path) -> None:
     lines.append("Weights: Tier 3 = total laryngectomy-related errors; Tier 2 = organ-preservation regime shifts; Tier 1 = fallback nuances.\n")
     lines.append("| Model | Weighted wrong-direction rate | Weighted SID rate | Tier-3 wrong-direction edges | Tier-3 SID errors |")
     lines.append("|---|---:|---:|---:|---:|")
-    for model in MODEL_ORDER:
+    for model in ordered_models(summary):
         row = summary[model]
         lines.append(
-            f"| {MODEL_LABELS[model]} | {pct(row['weighted_wrong_direction_rate'])} | {pct(row['weighted_sid_rate'])} | "
+            f"| {model_label(model)} | {pct(row['weighted_wrong_direction_rate'])} | {pct(row['weighted_sid_rate'])} | "
             f"{row['tier3_wrong_direction_edges']} | {row['tier3_sid_errors']} |"
         )
     (outdir / "risk_weighted_fidelity.md").write_text("\n".join(lines) + "\n")
@@ -588,7 +644,7 @@ def compute_family_stratified(
             for row in edge_tests
             if item_map[row["pert_id"]]["family"] == family and item_map[row["pert_id"]].get("type") != "null"
         ]
-        for model in MODEL_ORDER:
+        for model in ordered_models(kg2_enhanced):
             edges = kg2_enhanced[model]
             tested_edges = [edges[edge_id] for edge_id in sorted(edge_ids) if edge_id in edges]
             soft_tp = sum(1 for edge in tested_edges if edge.soft_detected)
@@ -609,7 +665,7 @@ def compute_family_stratified(
                 {
                     "family": family,
                     "model": model,
-                    "model_label": MODEL_LABELS[model],
+                    "model_label": model_label(model),
                     "gold_edges_in_family": len(edge_ids),
                     "soft_recall": soft_tp / len(edge_ids) if edge_ids else None,
                     "soft_precision": soft_tp / (soft_tp + len(phantom_pairs)) if (soft_tp + len(phantom_pairs)) else None,
@@ -635,6 +691,8 @@ def compute_family_stratified(
 
 def write_family_report(rows: list[dict], outdir: Path, family_edge_map: dict) -> None:
     unique_edges = sorted({edge for edges in family_edge_map.values() for edge in edges})
+    model_order = ordered_models({row["model"] for row in rows})
+    model_rank = {model: idx for idx, model in enumerate(model_order)}
     lines = []
     lines.append("# Family-Stratified Supplementary Analysis\n")
     lines.append(f"- Families represented: `{len(family_edge_map)}`")
@@ -643,7 +701,7 @@ def write_family_report(rows: list[dict], outdir: Path, family_edge_map: dict) -
     lines.append("- Note: `cT4a_unselected` is retained as baseline/null-control context and therefore carries no directional gold-edge denominator.\n")
     lines.append("| Family | Model | Gold edges | Soft recall | Soft precision | Soft FDR | Soft dir. acc. | SID rate | Mean causal JSD | Fraction above global null 95th |")
     lines.append("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|")
-    order = sorted(rows, key=lambda row: (row["family"], MODEL_ORDER.index(row["model"])))
+    order = sorted(rows, key=lambda row: (row["family"], model_rank[row["model"]]))
     for row in order:
         mean_jsd = "NA" if row["mean_causal_jsd"] is None else f"{row['mean_causal_jsd']:.3f}"
         lines.append(
@@ -665,10 +723,10 @@ def build_domain_summary(
     risk_metrics: dict,
 ) -> dict:
     summary = {}
-    for model in MODEL_ORDER:
+    for model in ordered_models(graph_comparison):
         summary[model] = {
-            "label": MODEL_LABELS[model],
-            "failure_regime": FAILURE_REGIMES[model],
+            "label": model_label(model),
+            "failure_regime": failure_regime(model),
             "soft_recall": bootstrap_summary[model]["soft_recall"],
             "soft_precision": bootstrap_summary[model]["soft_precision"],
             "soft_fdr": bootstrap_summary[model]["soft_fdr"],
@@ -702,7 +760,7 @@ def write_domain_summary(summary: dict, outdir: Path) -> None:
     lines.append("Primary interpretation uses Coverage, Fidelity, and Discriminability. Stability is auxiliary and interpreted only conditionally on coverage.\n")
     lines.append("| Model | Soft recall | Soft precision | Soft FDR | Soft dir. acc. | Hard dir. acc. | SID rate | SNR | Detection power | Veridical split-half | Regime |")
     lines.append("|---|---|---|---|---|---|---|---|---|---:|---|")
-    for model in MODEL_ORDER:
+    for model in ordered_models(summary):
         row = summary[model]
         lines.append(
             f"| {row['label']} | {fmt_ci(row['soft_recall'])} | {fmt_ci(row['soft_precision'])} | "
@@ -732,7 +790,7 @@ def write_figure_summary_csv(summary: dict, outpath: Path) -> None:
             "snr": summary[model]["snr"]["estimate"],
             "detection_power": summary[model]["detection_power"]["estimate"],
         }
-        for model in MODEL_ORDER
+        for model in ordered_models(summary)
     ]
     serialise_csv(outpath, rows)
 

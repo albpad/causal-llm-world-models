@@ -13,7 +13,8 @@ Usage:
 Environment: TOGETHER_API_KEY
 """
 
-import json, os, sys, time, hashlib, argparse, re
+import json, os, sys, time, hashlib, argparse, re, threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -83,6 +84,11 @@ MODEL_REGISTRY = {
         "model_id": "mistralai/Mistral-Small-24B-Instruct-2501",
         "max_tokens": 4096, "temperature": 0.6,
         "tier": "general_medium", "price_in": 0.10, "price_out": 0.30,
+    },
+    "gemma-4-31b-it": {
+        "model_id": "google/gemma-4-31B-it",
+        "max_tokens": 1024, "temperature": 0.6,
+        "tier": "reasoning_medium", "price_in": 0.20, "price_out": 0.50,
     },
 }
 
@@ -231,12 +237,16 @@ def call_together(model_id, messages, temperature, max_tokens, api_key,
     # Method 1: reasoning_content field (some providers return this)
     if msg.get("reasoning_content"):
         reasoning = msg["reasoning_content"].strip()
+    if not reasoning and msg.get("reasoning"):
+        reasoning = msg["reasoning"].strip()
     # Method 2: <think> tags (Together.ai standard for reasoning models)
     if not reasoning and "<think>" in content:
         m = re.search(r"<think>(.*?)</think>", content, re.DOTALL)
         if m:
             reasoning = m.group(1).strip()
             content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+    if not content and reasoning:
+        content = reasoning
 
     return {"content": content, "reasoning": reasoning,
             "usage": data.get("usage", {}),
@@ -247,10 +257,13 @@ class RateLimiter:
     def __init__(self, rpm=50):
         self._interval = 60.0 / rpm
         self._last = 0
+        self._lock = threading.Lock()
     def wait(self):
-        w = max(0, self._interval - (time.time() - self._last))
-        if w > 0: time.sleep(w)
-        self._last = time.time()
+        with self._lock:
+            w = max(0, self._interval - (time.time() - self._last))
+            if w > 0:
+                time.sleep(w)
+            self._last = time.time()
 
 
 def make_hash(item_id, model, run):
@@ -352,7 +365,7 @@ def load_completed(path, require_phase1=True, require_phase2=True):
 
 def run_battery(battery_path, model_names, n_runs=30, item_filter=None,
                 output_dir="results", dry_run=False, max_retries=3,
-                require_phase1=True, require_phase2=True):
+                require_phase1=True, require_phase2=True, workers=1, rpm=50):
     items = load_battery(battery_path)
     if item_filter:
         items = [i for i in items if i["id"] in item_filter]
@@ -390,23 +403,61 @@ def run_battery(battery_path, model_names, n_runs=30, item_filter=None,
     print(f"Remaining: {len(work)}\n")
     if not work: print("All done!"); return str(cp)
 
-    rl = RateLimiter()
-    n_done = n_err = 0; t0 = time.time()
+    rl = RateLimiter(rpm=rpm)
+    write_lock = threading.Lock()
+    print_lock = threading.Lock()
+    stats_lock = threading.Lock()
+    n_done = 0
+    n_err = 0
+    t0 = time.time()
+    total = len(work)
 
-    for item, mn, ri in work:
-        n_done += 1
-        eta = (len(work)-n_done) / (n_done/(time.time()-t0)) / 60 if n_done > 0 and time.time() > t0 else 0
-        print(f"[{n_done}/{len(work)}] {item['id']} x {mn} r{ri} | ETA {eta:.0f}m", end="")
-
+    def process_task(task):
+        nonlocal n_done, n_err
+        item, mn, ri = task
+        retries = 0
         res = None
         for att in range(max_retries):
+            retries = att
             res = run_single_query(item, mn, ri, rl, api_key, dry_run)
-            if res["error"] is None: break
-            w = 2**att * 5; print(f" [retry {att+1} in {w}s]", end=""); time.sleep(w)
+            if res["error"] is None:
+                break
+            if att < max_retries - 1:
+                time.sleep(2 ** att * 5)
 
-        with open(cp, "a") as f: f.write(json.dumps(res, default=str) + "\n")
-        if res["error"]: n_err += 1; print(f" X {res['error'][:60]}")
-        else: print(f" ok ({len(res['phase1_response'] or '')}+{len(res['phase2_response'] or '')}c)")
+        with write_lock:
+            with open(cp, "a") as f:
+                f.write(json.dumps(res, default=str) + "\n")
+
+        with stats_lock:
+            n_done += 1
+            if res["error"]:
+                n_err += 1
+            elapsed = max(time.time() - t0, 1e-9)
+            rate = n_done / elapsed
+            eta = (total - n_done) / rate / 60 if rate > 0 else 0
+
+        with print_lock:
+            prefix = f"[{n_done}/{total}] {item['id']} x {mn} r{ri} | ETA {eta:.0f}m"
+            if res["error"]:
+                retry_note = f" after {retries + 1} attempts" if retries else ""
+                print(f"{prefix} X {res['error'][:60]}{retry_note}")
+            else:
+                retry_note = f" retried {retries}x" if retries else ""
+                print(
+                    f"{prefix} ok ({len(res['phase1_response'] or '')}+{len(res['phase2_response'] or '')}c){retry_note}"
+                )
+        return res
+
+    if workers <= 1:
+        for task in work:
+            process_task(task)
+    else:
+        print(f"Workers: {workers} (shared global throttle: {rpm} rpm)")
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            futures = [ex.submit(process_task, task) for task in work]
+            for fut in as_completed(futures):
+                fut.result()
 
     print(f"\nDone: {n_done} in {(time.time()-t0)/60:.1f}m, {n_err} errors")
     return str(cp)
@@ -421,6 +472,11 @@ def main():
     p.add_argument("--outdir", default="results")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--list-models", action="store_true")
+    p.add_argument("--workers", type=int, default=1,
+                   help="Concurrent worker threads sharing one global rate limiter.")
+    p.add_argument("--rpm", type=int, default=50,
+                   help="Global requests per minute across all workers and both phases.")
+    p.add_argument("--max-retries", type=int, default=3)
     p.add_argument("--allow-empty-phase1", action="store_true",
                    help="Treat rows with blank phase 1 as completed when resuming.")
     p.add_argument("--allow-empty-phase2", action="store_true",
@@ -443,8 +499,11 @@ def main():
         filt,
         args.outdir,
         args.dry_run,
+        args.max_retries,
         require_phase1=not args.allow_empty_phase1,
         require_phase2=not args.allow_empty_phase2,
+        workers=args.workers,
+        rpm=args.rpm,
     )
 
 if __name__ == "__main__":

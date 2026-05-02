@@ -1,0 +1,7 @@
+model,model_label,provider_endpoint,registry_model_id,observed_model_ids,temperature,observed_temperature_values,max_tokens,reasoning_effort,tier,runs_per_item,retained_records
+deepseek-r1,DeepSeek-R1,Together.ai chat-completions API,deepseek-ai/DeepSeek-R1,deepseek-ai/DeepSeek-R1 (1320),0.6,0.6 (1320),8192,,reasoning,15,1320
+kimi-k2.5,Kimi K2.5,Together.ai chat-completions API,moonshotai/Kimi-K2.5,moonshotai/Kimi-K2.5 (1320),1.0,1.0 (1320),4096,,reasoning_small,15,1320
+qwen3-next-80b-instruct,Qwen3-Next-80B-A3B-Instruct,Together.ai chat-completions API,Qwen/Qwen3-Next-80B-A3B-Instruct,Qwen/Qwen3-Next-80B-A3B-Instruct (1320),0.6,0.6 (1320),4096,,general_large,15,1320
+mistral-small-24b,Mistral-Small-24B,Together.ai chat-completions API,mistralai/Mistral-Small-24B-Instruct-2501,mistralai/Mistral-Small-24B-Instruct-2501 (1320),0.6,0.6 (1320),4096,,general_medium,15,1320
+gemma-4-31b-it,Gemma 4 31B,Together.ai chat-completions API,google/gemma-4-31B-it,google/gemma-4-31B-it (1320),0.6,0.6 (1320),1024,,reasoning_medium,15,1320
+llama-3.1-8b,Llama 3.1-8B,Together.ai chat-completions API,meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo,meta-llama/Meta-Llama-3-8B-Instruct-Lite (60); meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo (1260),0.6,0.6 (1320),4096,,scaling,15,1320
